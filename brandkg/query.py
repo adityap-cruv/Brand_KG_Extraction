@@ -2,7 +2,7 @@
 
 Brand-agnostic: brand/buckets/tiers come from config. Retrieval = intent routing
 (leadership->senior tiers, bucket words->that bucket) + full-text entity search +
-1-hop relationship expansion + TextUnit fallback. The engine (claude/codex)
+1-hop relationship expansion. The engine (claude/codex)
 synthesizes the final answer from the retrieved context — no API key.
 """
 from __future__ import annotations
@@ -79,20 +79,11 @@ def answer(question: str) -> str:
         rels = [r.data() for r in s.run(
             "MATCH (a)-[r]-(b) WHERE a.layer=2 AND a.name IN $names AND b.layer=2 "
             "RETURN a.name AS source, type(r) AS rel, b.name AS target LIMIT 40", names=names)] if names else []
-        texts = []
-        if kws:
-            try:
-                texts = [r.data() for r in s.run(
-                    "CALL db.index.fulltext.queryNodes('tuFulltext',$q) YIELD node,score "
-                    "RETURN node.doc AS doc, node.text AS text ORDER BY score DESC LIMIT 6", q=" OR ".join(kws))]
-            except Exception:
-                pass
     drv.close()
     ctx = (f"You are running the `{skill_name()}` skill; follow its query guidance.\n\n"
            f"===== GRAPHITI SKILL (source of truth) =====\n{skill_body()}\n"
            f"=============================================\n\n"
            f"Question: {question}\n\n## Entities ({len(seeds)})\n{json.dumps(seeds, indent=2, default=str)}\n\n"
            f"## Relationships ({len(rels)})\n{json.dumps(rels, indent=2, default=str)}\n\n"
-           f"## Source excerpts ({len(texts)})\n{json.dumps(texts, indent=2, default=str)}\n\n"
            f"{ANSWER_SYSTEM}\n\nAnswer using ONLY the context above.")
     return engine.complete(ctx, timeout=300)

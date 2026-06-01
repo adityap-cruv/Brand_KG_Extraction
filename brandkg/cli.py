@@ -4,6 +4,7 @@ Commands:
   build              full pipeline: extract text -> engine extracts entities ->
                      scaffold -> load -> retier -> hierarchy -> text layer -> verify
   query "<q>"        answer a question against the KG (engine synthesizes)
+  bench [ids...]     run the 13-question benchmark (query + judge via engine/OAuth)
   stats              print graph statistics
   verify             check schema invariants
   wipe               delete all graph data + constraints
@@ -33,14 +34,14 @@ def cmd_build(force: bool = False):
     payloads = [json.loads(p.read_text()) for p in sorted(config.ENTITIES_DIR.glob("*.json"))]
     drv = graph.driver()
     with drv.session() as s:
-        print("\n[3/7] scaffold (Brand + 7 buckets + tiers)"); graph.build_scaffold(s)
-        print("[4/7] load entities + relationships")
+        print("\n[3/6] scaffold (Brand + 7 buckets + tiers)"); graph.build_scaffold(s)
+        print("[4/6] load entities + relationships")
         te, tr = graph.load_entities(s, payloads, _stamp(s))
         print(f"      {te} entities, {tr} relationships")
-        print("[5/7] retier people from titles"); n = graph.retier_people(s); print(f"      retiered {n}")
+        print("[5/6] retier people from titles"); n = graph.retier_people(s); print(f"      retiered {n}")
         print("      build hierarchy"); graph.build_hierarchy(s)
-        print("[6/7] text layer"); ntu = graph.ingest_textunits(s); print(f"      {ntu} TextUnits")
-        print("[7/7] verify"); v = graph.verify(s)
+        print("      entity search index"); graph.ensure_entity_index(s)
+        print("[6/6] verify"); v = graph.verify(s)
     drv.close()
     print("\n== RESULT ==")
     print(f"  labels: {v['labels']}")
@@ -93,6 +94,10 @@ def main(argv=None):
         cmd_verify()
     elif cmd == "wipe":
         cmd_wipe()
+    elif cmd == "bench":
+        from . import bench
+        ids = [int(x) for x in rest if x.isdigit()] or None
+        bench.run(ids=ids)
     else:
         print(__doc__); return 1
     return 0

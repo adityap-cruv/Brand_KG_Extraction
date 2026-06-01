@@ -2,9 +2,9 @@
 text layer, verification. Ported from the validated reference implementation and
 parameterized entirely by config/brand_schema.json (brand-agnostic).
 
-Node-type policy: the ONLY labels are Brand + the 7 bucket names + RoleTier (+
-TextUnit scaffolding). Data nodes carry only their bucket label; descriptive type
-is a property. Brand connects to exactly the 7 bucket nodes — nothing else.
+Node-type policy: the ONLY labels are Brand + the 7 bucket names + RoleTier. Data
+nodes carry only their bucket label; descriptive type is a property. Brand connects
+to exactly the 7 bucket nodes — nothing else. (No raw-text/TextUnit layer.)
 """
 from __future__ import annotations
 import json
@@ -212,44 +212,26 @@ def build_hierarchy(s):
                   "MERGE (p)-[r:REPORTS_TO]->(m) ON CREATE SET r.inferred=true", pk=k, mk=mgr)
 
 
-# ---------------------------------------------------------------- text layer
-def ingest_textunits(s, chunk_chars=1200, overlap=150):
-    s.run("CREATE CONSTRAINT tu_id IF NOT EXISTS FOR (t:TextUnit) REQUIRE t.id IS UNIQUE")
-    s.run("CREATE FULLTEXT INDEX tuFulltext IF NOT EXISTS FOR (t:TextUnit) ON EACH [t.text]")
+# ---------------------------------------------------------------- entity search index
+def ensure_entity_index(s):
+    """Full-text index over entity name+description for query retrieval.
+
+    (No TextUnit/raw-text layer is created — the graph holds only Brand, the 7
+    buckets, and RoleTier. Queries retrieve from entities + relationships.)
+    """
     bucket_list = "|".join(BUCKETS)
     try:
-        s.run(f"CREATE FULLTEXT INDEX entityFulltext IF NOT EXISTS FOR (n:{bucket_list}) ON EACH [n.name, n.description]")
+        s.run(f"CREATE FULLTEXT INDEX entityFulltext IF NOT EXISTS "
+              f"FOR (n:{bucket_list}) ON EACH [n.name, n.description]")
     except Exception:
         pass
-    s.run("MATCH (t:TextUnit) DETACH DELETE t")
-    ents = [(r["name"], r["k"]) for r in s.run("MATCH (n) WHERE n.layer=2 RETURN n.name AS name, n.name_key AS k")]
-    ents.sort(key=lambda x: -len(x[0]))
-    n_tu = 0
-    for f in sorted(config.EXTRACTED_DIR.glob("*.txt")):
-        doc = re.sub(r"__(docx|pptx|md|txt)$", "", f.stem)
-        text = re.sub(r"\n{3,}", "\n\n", f.read_text(encoding="utf-8", errors="ignore"))
-        i = 0
-        ci = 0
-        while i < len(text):
-            ch = text[i:i + chunk_chars].strip()
-            i += chunk_chars - overlap
-            if len(ch) <= 40:
-                continue
-            tid = f"{f.stem}#{ci}"; ci += 1; n_tu += 1
-            s.run("MERGE (t:TextUnit {id:$id}) SET t.text=$txt, t.doc=$doc", id=tid, txt=ch, doc=doc)
-            low = ch.lower()
-            for name, key in ents:
-                if len(name) >= 4 and name.lower() in low:
-                    s.run("MATCH (t:TextUnit {id:$id}),(n {name_key:$k}) MERGE (n)-[:MENTIONED_IN]->(t)",
-                          id=tid, k=key)
-    return n_tu
 
 
 # ---------------------------------------------------------------- verify
 def verify(s) -> dict:
     one = lambda q: s.run(q).single()[0]
     labels = sorted(r["label"] for r in s.run("CALL db.labels() YIELD label RETURN label"))
-    allowed = set(["Brand", "RoleTier", "TextUnit"] + BUCKETS)
+    allowed = set(["Brand", "RoleTier"] + BUCKETS)
     return {
         "labels": labels,
         "unexpected_labels": [l for l in labels if l not in allowed],
