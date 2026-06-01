@@ -1,0 +1,18 @@
+services:
+  neo4j:
+    image: neo4j:5
+    container_name: brandkg-neo4j
+    restart: unless-stopped
+    # Host networking avoids the docker bridge (some hosts have a docker0 bridge
+    # with no IP, which silently breaks host->container bolt connections). With
+    # host net, Neo4j binds the host's own interfaces directly.
+    network_mode: host
+    environment:
+      - NEO4J_AUTH=neo4j/brandkg2026
+      - NEO4J_server_bolt_listen__address=:7688    # bolt  -> bolt://localhost:7688
+      - NEO4J_server_http_listen__address=:7475    # browser-> http://localhost:7475
+    volumes:
+      - brandkg-neo4j-data:/data
+
+volumes:
+  brandkg-neo4j-data:

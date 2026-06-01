@@ -1,0 +1,34 @@
+{
+  "brand_name": "Genuin",
+  "brand_aliases": [],
+  "brand_attrs": {
+    "description": "Root brand for this knowledge graph."
+  },
+  "buckets": [
+    "Product", "People", "Business", "Engineering", "Marketing", "Audience", "Partnerships"
+  ],
+  "brand_to_bucket_rel": {
+    "Product": "OFFERS",
+    "People": "HAS_PERSON",
+    "Business": "OPERATES_AS",
+    "Engineering": "BUILT_WITH",
+    "Marketing": "COMMUNICATES_VIA",
+    "Audience": "SERVES",
+    "Partnerships": "HAS_PARTNERSHIP"
+  },
+  "membership_rel": "CONTAINS",
+  "seniority_tiers": [
+    "FOUNDER", "C_SUITE", "SVP", "VP", "DIRECTOR", "MANAGER", "IC", "ADVISOR", "OTHER"
+  ],
+  "allowed_cross_child_rels": [
+    "FOUNDED", "LEADS", "CREATED", "WORKS_FOR", "WORKS_ON", "ENDORSES", "APPEARS_IN",
+    "REPORTS_TO", "AT_TIER",
+    "POWERS", "INTEGRATES_WITH", "OWNED_BY", "USES", "BUILT_BY",
+    "PROMOTES", "TARGETED_AT", "FEATURES", "RUN_BY",
+    "SOLD_THROUGH", "DEPENDS_ON", "PROMOTED_BY",
+    "REVIEWS", "MENTIONS", "COMPARED_TO", "RESPONDS_TO",
+    "HAS_AGREEMENT_WITH", "DISTRIBUTES", "EMPLOYS", "INVESTS_IN",
+    "SUPPLIES", "CO_BRANDS_WITH", "SPONSORS", "REPRESENTED_BY", "OPERATES_IN", "PARTNERS_WITH",
+    "PART_OF", "INCLUDES", "RELATES_TO"
+  ]
+}

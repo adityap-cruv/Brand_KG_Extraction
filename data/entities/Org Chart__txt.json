@@ -1,0 +1,957 @@
+{
+  "source_doc": "Org Chart",
+  "entities": [
+    {
+      "name": "Bhargav",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "CEO of Genuin, sitting at the top of the Q1'26 leadership structure with direct reports across Finance/Ops, Marketing, Engineering, Product, Sales, and Principal Engineering.",
+      "seniority_tier": "FOUNDER",
+      "role_title": "CEO",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Rahul",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Direct report to the CEO who oversees Finance, Operations, HR/Legal/Ops, and Customer Integration; also listed alongside Bhargav on the advisors page.",
+      "seniority_tier": "C_SUITE",
+      "role_title": "Head of Finance & Operations",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Matt",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "CMO leading the Marketing function \u2014 brand awareness, events, PR, and product marketing.",
+      "seniority_tier": "C_SUITE",
+      "role_title": "CMO",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Nayan",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Head of Engineering at Genuin, leading the full engineering team across PE, VP, mobile, frontend, backend, QA, DevOps, and DS.",
+      "seniority_tier": "C_SUITE",
+      "role_title": "Head of Engineering",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Vishal D",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Heads the Product organization, taking over from Sanch who is in transition; oversees PMs, designers, analyst, and the AI sub-team.",
+      "seniority_tier": "VP",
+      "role_title": "Head of Product",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sanch",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Previously led Product and AI at Genuin; currently in transition as Vishal D assumes the product leadership role.",
+      "seniority_tier": "VP",
+      "role_title": "Product (in transition)",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Peter",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Head of Sales reporting directly to the CEO.",
+      "seniority_tier": "VP",
+      "role_title": "Head of Sales",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Ivan Kozhuharov",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Ivan"
+      ],
+      "description": "Principal Engineer reporting directly to the CEO; leads a small group including a Product Architect and TAMs.",
+      "seniority_tier": "IC",
+      "role_title": "Principal Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Saloni",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Handles Human Resources within Rahul's Finance/Ops/HR group.",
+      "seniority_tier": "MANAGER",
+      "role_title": "HR",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jayanthi",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Handles Revenue Operations and Ad Operations under Rahul; planned to move under the VP of CSM once that role is hired.",
+      "seniority_tier": "IC",
+      "role_title": "Rev Ops / Ad Ops",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Pinkal Chauhan",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Pinkal"
+      ],
+      "description": "TAM responsible for deploying the platform for non-US or tier 2-3 customers, supporting onboarding, and leading compliance/certification (SOC).",
+      "seniority_tier": "IC",
+      "role_title": "TAM",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Charmie",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Content writer in Matt's Marketing organization.",
+      "seniority_tier": "IC",
+      "role_title": "Content Writer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Shrushti",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Associate Product Manager (APM) currently leading customer integration; transitioning to a full-time product manager role once a USA replacement is hired.",
+      "seniority_tier": "IC",
+      "role_title": "Associate Product Manager",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Devanshu",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Product team member currently leading customer integration; transitioning to a full-time product manager role over 1-2 months.",
+      "seniority_tier": "IC",
+      "role_title": "Product (transitioning to PM)",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Smit",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Product Manager on the Product team.",
+      "seniority_tier": "MANAGER",
+      "role_title": "Product Manager",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sanidhya",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Leads the AI sub-team within Product; also responsible for assigning a resource for the 24/7 team (in progress).",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "AI Team Lead",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Moon",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Lead Product Designer on the Product team.",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "Lead Product Designer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Ruchita",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Product Analyst on the Product team.",
+      "seniority_tier": "IC",
+      "role_title": "Product Analyst",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sandeep",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Technical Writer on the Product team.",
+      "seniority_tier": "IC",
+      "role_title": "Technical Writer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Shubhangi",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Product Designer on the Product team.",
+      "seniority_tier": "IC",
+      "role_title": "Product Designer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sushant Singh",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Sushant"
+      ],
+      "description": "Product Architect on Ivan Kozhuharov's team.",
+      "seniority_tier": "IC",
+      "role_title": "Product Architect",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Ankit Gabani",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Ankit"
+      ],
+      "description": "Principal Engineer focused on Mobile Tech within the Engineering organization.",
+      "seniority_tier": "IC",
+      "role_title": "Principal Engineer (Mobile Tech)",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Vishal Nirmal",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Principal Engineer focused on Google Tech within the Engineering organization.",
+      "seniority_tier": "IC",
+      "role_title": "Principal Engineer (Google Tech)",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Krunal Shah",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Krunal"
+      ],
+      "description": "Principal Engineer in the Engineering team reporting to the Head of Engineering.",
+      "seniority_tier": "IC",
+      "role_title": "Principal Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Nilesh",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "VP of Engineering within Nayan's Engineering organization.",
+      "seniority_tier": "VP",
+      "role_title": "VP of Engineering",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Arjav",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Head of Mobile within the Engineering organization, overseeing iOS and Android development.",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "Head of Mobile",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Meet",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Principal Engineer in the Engineering team; previously led ad exchanges and monetization integrations before transitioning that responsibility to Kaushal.",
+      "seniority_tier": "IC",
+      "role_title": "Principal Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Suhanee",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "iOS Developer on the mobile sub-team within Engineering.",
+      "seniority_tier": "IC",
+      "role_title": "iOS Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Ashish",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "iOS Developer on the mobile sub-team within Engineering.",
+      "seniority_tier": "IC",
+      "role_title": "iOS Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Shubh",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Android Developer on the mobile sub-team within Engineering.",
+      "seniority_tier": "IC",
+      "role_title": "Android Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dev Changela",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "iOS Developer on the mobile sub-team within Engineering.",
+      "seniority_tier": "IC",
+      "role_title": "iOS Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jemish Khunt",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "iOS Developer on the mobile sub-team within Engineering.",
+      "seniority_tier": "IC",
+      "role_title": "iOS Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sujal",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "QA engineer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "QA",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Bhavesh",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "QA II engineer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "QA II",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Kashish",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "QA II engineer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "QA II",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Himanshu",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Frontend Developer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dev",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Frontend Developer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Rohit",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Frontend Developer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jaydeep",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Frontend Developer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dhruv P.",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Dhruv P"
+      ],
+      "description": "Backend Developer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Backend Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dhruv G.",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Dhruv G"
+      ],
+      "description": "SDE (Software Development Engineer) in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "SDE",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Om",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "SDE (Software Development Engineer) in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "SDE",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jimit",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Solution Architect in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Solution Architect",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dhairya",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Full Stack Developer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Full Stack Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jalay",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Full Stack Developer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Full Stack Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Kaushal",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Full Stack Developer who will lead ad exchanges and monetization integrations, taking over from Meet.",
+      "seniority_tier": "IC",
+      "role_title": "Full Stack Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dharmil",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Full Stack Intern in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Full Stack Intern",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Neel",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "DevOps engineer in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "DevOps Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Riken",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "DevOps Intern in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "DevOps Intern",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Harshit",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Data Scientist (DS) in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Data Scientist",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Umang",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Data Scientist (DS) in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Data Scientist",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Vedant",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Data Scientist (DS) in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Data Scientist",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Kirtan",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Data Scientist (DS) in the Engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Data Scientist",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jim Spare",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Advisor to the CEO focused on investment and customers.",
+      "seniority_tier": "ADVISOR",
+      "role_title": "Advisor (Investment, Customers)",
+      "affiliation": "External Advisor"
+    },
+    {
+      "name": "Jared",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Advisor to the CEO focused on connecting pipes (introductions and networking).",
+      "seniority_tier": "ADVISOR",
+      "role_title": "Advisor (Connecting Pipes)",
+      "affiliation": "External Advisor"
+    },
+    {
+      "name": "Keyur",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Advisor to the CEO focused on AI technical guidance.",
+      "seniority_tier": "ADVISOR",
+      "role_title": "Advisor (AI Technical)",
+      "affiliation": "External Advisor"
+    },
+    {
+      "name": "Elizabeth",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Advisor to the CEO focused on customer introductions.",
+      "seniority_tier": "ADVISOR",
+      "role_title": "Advisor (Customer Intro)",
+      "affiliation": "External Advisor"
+    },
+    {
+      "name": "Genuin Inc.",
+      "bucket": "Business",
+      "type": "LegalEntity",
+      "aliases": [
+        "Genuin Inc"
+      ],
+      "description": "Parent company of the corporate group; a Delaware C Corporation."
+    },
+    {
+      "name": "Genuin Codebase LLP",
+      "bucket": "Business",
+      "type": "LegalEntity",
+      "aliases": [],
+      "description": "India entity that is a wholly-owned subsidiary of the parent company Genuin Inc."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Rahul",
+      "target": "Bhargav",
+      "type": "REPORTS_TO",
+      "description": "Rahul reports to the CEO and owns Finance, Operations, HR/Legal/Ops, and Customer Integration."
+    },
+    {
+      "source": "Matt",
+      "target": "Bhargav",
+      "type": "REPORTS_TO",
+      "description": "CMO reports directly to the CEO."
+    },
+    {
+      "source": "Nayan",
+      "target": "Bhargav",
+      "type": "REPORTS_TO",
+      "description": "Head of Engineering reports directly to the CEO."
+    },
+    {
+      "source": "Vishal D",
+      "target": "Bhargav",
+      "type": "REPORTS_TO",
+      "description": "Head of Product reports directly to the CEO."
+    },
+    {
+      "source": "Sanch",
+      "target": "Bhargav",
+      "type": "REPORTS_TO",
+      "description": "Sanch previously reported to the CEO for Product/AI and is currently in transition as Vishal D takes over."
+    },
+    {
+      "source": "Peter",
+      "target": "Bhargav",
+      "type": "REPORTS_TO",
+      "description": "Head of Sales reports directly to the CEO."
+    },
+    {
+      "source": "Ivan Kozhuharov",
+      "target": "Bhargav",
+      "type": "REPORTS_TO",
+      "description": "Principal Engineer Ivan reports directly to the CEO."
+    },
+    {
+      "source": "Saloni",
+      "target": "Rahul",
+      "type": "REPORTS_TO",
+      "description": "Saloni handles HR within Rahul's HR/Legal/Ops group."
+    },
+    {
+      "source": "Jayanthi",
+      "target": "Rahul",
+      "type": "REPORTS_TO",
+      "description": "Jayanthi (Rev Ops/Ad Ops) currently sits under Rahul; planned to move under the VP of CSM once hired."
+    },
+    {
+      "source": "Charmie",
+      "target": "Matt",
+      "type": "REPORTS_TO",
+      "description": "Content writer in Matt's marketing organization."
+    },
+    {
+      "source": "Shrushti",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "APM on the Product team under Vishal D."
+    },
+    {
+      "source": "Devanshu",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Product team member under Vishal D, transitioning to full-time PM role."
+    },
+    {
+      "source": "Smit",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Product Manager on Vishal D's Product team."
+    },
+    {
+      "source": "Sanidhya",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "AI sub-team lead sits within the Product organization under Vishal D."
+    },
+    {
+      "source": "Moon",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Lead Product Designer on Vishal D's Product team."
+    },
+    {
+      "source": "Ruchita",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Product Analyst on Vishal D's Product team."
+    },
+    {
+      "source": "Sandeep",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Technical Writer on Vishal D's Product team."
+    },
+    {
+      "source": "Shubhangi",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Product Designer on Vishal D's Product team."
+    },
+    {
+      "source": "Sushant Singh",
+      "target": "Ivan Kozhuharov",
+      "type": "REPORTS_TO",
+      "description": "Product Architect on Ivan's team per slide 5."
+    },
+    {
+      "source": "Pinkal Chauhan",
+      "target": "Ivan Kozhuharov",
+      "type": "REPORTS_TO",
+      "description": "TAM Pinkal sits on Ivan's team handling non-US/tier 2-3 customer deployments and compliance."
+    },
+    {
+      "source": "Nilesh",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "VP of Engineering reports to Head of Engineering."
+    },
+    {
+      "source": "Krunal Shah",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Principal Engineer in Nayan's Engineering team."
+    },
+    {
+      "source": "Ankit Gabani",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Principal Engineer (Mobile Tech) in Nayan's Engineering team."
+    },
+    {
+      "source": "Vishal Nirmal",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Principal Engineer (Google Tech) in Nayan's Engineering team."
+    },
+    {
+      "source": "Meet",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Principal Engineer in Nayan's Engineering team."
+    },
+    {
+      "source": "Arjav",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Head of Mobile reports to Head of Engineering."
+    },
+    {
+      "source": "Suhanee",
+      "target": "Arjav",
+      "type": "REPORTS_TO",
+      "description": "iOS Developer under the Head of Mobile."
+    },
+    {
+      "source": "Ashish",
+      "target": "Arjav",
+      "type": "REPORTS_TO",
+      "description": "iOS Developer under the Head of Mobile."
+    },
+    {
+      "source": "Shubh",
+      "target": "Arjav",
+      "type": "REPORTS_TO",
+      "description": "Android Developer under the Head of Mobile."
+    },
+    {
+      "source": "Dev Changela",
+      "target": "Arjav",
+      "type": "REPORTS_TO",
+      "description": "iOS Developer under the Head of Mobile."
+    },
+    {
+      "source": "Jemish Khunt",
+      "target": "Arjav",
+      "type": "REPORTS_TO",
+      "description": "iOS Developer under the Head of Mobile."
+    },
+    {
+      "source": "Sujal",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "QA engineer within the VP of Engineering's group."
+    },
+    {
+      "source": "Bhavesh",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "QA II engineer within the VP of Engineering's group."
+    },
+    {
+      "source": "Kashish",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "QA II engineer within the VP of Engineering's group."
+    },
+    {
+      "source": "Himanshu",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Frontend Developer within the VP of Engineering's group."
+    },
+    {
+      "source": "Dev",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Frontend Developer within the VP of Engineering's group."
+    },
+    {
+      "source": "Rohit",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Frontend Developer within the VP of Engineering's group."
+    },
+    {
+      "source": "Jaydeep",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Frontend Developer within the VP of Engineering's group."
+    },
+    {
+      "source": "Dhruv P.",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Backend Developer within the VP of Engineering's group."
+    },
+    {
+      "source": "Dhruv G.",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "SDE within the VP of Engineering's group."
+    },
+    {
+      "source": "Om",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "SDE within the VP of Engineering's group."
+    },
+    {
+      "source": "Jimit",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Solution Architect within the VP of Engineering's group."
+    },
+    {
+      "source": "Dhairya",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Full Stack Developer within the VP of Engineering's group."
+    },
+    {
+      "source": "Jalay",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Full Stack Developer within the VP of Engineering's group."
+    },
+    {
+      "source": "Kaushal",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Full Stack Developer within the VP of Engineering's group; will lead ad-exchange and monetization integrations transitioned from Meet."
+    },
+    {
+      "source": "Dharmil",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Full Stack Intern within the VP of Engineering's group."
+    },
+    {
+      "source": "Neel",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "DevOps engineer within the VP of Engineering's group."
+    },
+    {
+      "source": "Riken",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "DevOps Intern within the VP of Engineering's group."
+    },
+    {
+      "source": "Harshit",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Data Scientist within the VP of Engineering's group."
+    },
+    {
+      "source": "Umang",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Data Scientist within the VP of Engineering's group."
+    },
+    {
+      "source": "Vedant",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Data Scientist within the VP of Engineering's group."
+    },
+    {
+      "source": "Kirtan",
+      "target": "Nilesh",
+      "type": "REPORTS_TO",
+      "description": "Data Scientist within the VP of Engineering's group."
+    },
+    {
+      "source": "Jim Spare",
+      "target": "Bhargav",
+      "type": "PARTNERS_WITH",
+      "description": "Advises the CEO on investment and customers."
+    },
+    {
+      "source": "Jared",
+      "target": "Bhargav",
+      "type": "PARTNERS_WITH",
+      "description": "Advises the CEO on connecting pipes (introductions/networking)."
+    },
+    {
+      "source": "Keyur",
+      "target": "Bhargav",
+      "type": "PARTNERS_WITH",
+      "description": "Advises the CEO on AI technical matters."
+    },
+    {
+      "source": "Elizabeth",
+      "target": "Bhargav",
+      "type": "PARTNERS_WITH",
+      "description": "Advises the CEO on customer introductions."
+    },
+    {
+      "source": "Bhargav",
+      "target": "Genuin Inc.",
+      "type": "LEADS",
+      "description": "Bhargav serves as CEO of the parent company Genuin Inc."
+    },
+    {
+      "source": "Genuin Codebase LLP",
+      "target": "Genuin Inc.",
+      "type": "PART_OF",
+      "description": "Genuin Codebase LLP is the India entity and a wholly-owned subsidiary of parent company Genuin Inc."
+    }
+  ],
+  "_src_hash": "13e9632b77696421722b09cbf03cb49bc106d3d15414a132cce35dc2c7d77d17",
+  "_skill_sig": "4edd28021f3312b1"
+}
