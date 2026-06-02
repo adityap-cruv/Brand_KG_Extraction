@@ -48,6 +48,15 @@ def _route(q):
 
 
 def answer(question: str) -> str:
+    """Dispatch to the configured retrieval method (graphrag = Claude-generated
+    Cypher; keyword = deterministic routing)."""
+    if config.QUERY_METHOD == "graphrag":
+        from . import query_graphrag
+        return query_graphrag.answer(question)
+    return answer_keyword(question)
+
+
+def answer_keyword(question: str) -> str:
     engine = get_engine(config.ENGINE)
     drv = graph.driver()
     with drv.session() as s:

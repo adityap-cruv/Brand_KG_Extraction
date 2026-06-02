@@ -39,6 +39,8 @@ def cmd_build(force: bool = False):
         te, tr = graph.load_entities(s, payloads, _stamp(s))
         print(f"      {te} entities, {tr} relationships")
         print("[5/6] retier people from titles"); n = graph.retier_people(s); print(f"      retiered {n}")
+        print("      resolve people (merge dupes + canonical title)")
+        rt, mg = graph.resolve_people(s, payloads); print(f"      retitled {rt}, merged {mg} duplicates")
         print("      build hierarchy"); graph.build_hierarchy(s)
         print("      entity search index"); graph.ensure_entity_index(s)
         print("[6/6] verify"); v = graph.verify(s)

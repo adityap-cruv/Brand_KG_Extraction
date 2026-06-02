@@ -36,3 +36,7 @@ NEO4J_AUTH = (env("BRANDKG_NEO4J_USER", "neo4j"), env("BRANDKG_NEO4J_PASSWORD", 
 SOURCE_DIR = env("BRANDKG_SOURCE_DIR", "")
 ENGINE = env("BRANDKG_ENGINE", "claude")
 CONCURRENCY = int(env("BRANDKG_CONCURRENCY", "6"))
+# Query retrieval method:
+#   graphrag -> Claude generates Cypher from the schema (GraphRAG local search)
+#   keyword  -> deterministic keyword/bucket routing (query.py)
+QUERY_METHOD = env("BRANDKG_QUERY_METHOD", "graphrag")

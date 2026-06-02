@@ -212,6 +212,99 @@ def build_hierarchy(s):
                   "MERGE (p)-[r:REPORTS_TO]->(m) ON CREATE SET r.inferred=true", pk=k, mk=mgr)
 
 
+# ---------------------------------------------------------------- people resolution
+def resolve_people(s, payloads):
+    """Fix two People problems, generalized (no hardcoded names):
+
+    1. CANONICAL TITLE: a person appears in many docs, each stating a doc-local
+       role; the loader kept the last-written one, which can outrank the real
+       title (e.g. 'Requirement Initiator' overwriting 'CEO'). We re-scan ALL
+       source payloads and assign each person their MOST-SENIOR title/tier seen.
+    2. NAME DEDUPE: merge a single-token person ('Bhargav') into a unique
+       full-name person ('Bhargav Patel') — move edges/sources/aliases, delete
+       the short node.
+
+    Returns (retitled_count, merged_count).
+    """
+    # --- 1. best title/tier per name_key, across all payloads ---
+    best = {}   # name_key -> (tier, title)
+    for p in payloads:
+        for e in p.get("entities", []):
+            if e.get("bucket") != "People":
+                continue
+            nk = _nk(e.get("name"))
+            if not nk:
+                continue
+            tier = e.get("seniority_tier") or ""
+            tier = tier if tier in TIER_RANK else ""
+            title = (e.get("role_title") or "").strip()
+            if not tier and not title:
+                continue
+            cur = best.get(nk)
+            # prefer the more senior tier; if equal/none, prefer a non-empty title
+            if cur is None or (tier and TIER_RANK.get(tier, 99) < TIER_RANK.get(cur[0], 99)):
+                best[nk] = (tier or (cur[0] if cur else ""), title or (cur[1] if cur else ""))
+            elif cur and not cur[1] and title:
+                best[nk] = (cur[0], title)
+    retitled = 0
+    for nk, (tier, title) in best.items():
+        if not tier and not title:
+            continue
+        r = s.run("MATCH (p:People {name_key:$k}) RETURN p.role_title AS role, p.seniority_tier AS t", k=nk).single()
+        if not r:
+            continue
+        if (title and title != r["role"]) or (tier and tier != r["t"]):
+            s.run("MATCH (p:People {name_key:$k}) SET p.role_title=coalesce($title,p.role_title), "
+                  "p.seniority_tier=coalesce($tier,p.seniority_tier)",
+                  k=nk, title=title or None, tier=tier or None)
+            if tier:
+                s.run("MATCH (p:People {name_key:$k}) MATCH (rt:RoleTier {tier:$t}) "
+                      "OPTIONAL MATCH (p)-[o:AT_TIER]->() DELETE o MERGE (p)-[:AT_TIER]->(rt)", k=nk, t=tier)
+            retitled += 1
+
+    # --- 2. merge single-token names into a unique full-name match ---
+    people = list(s.run("MATCH (p:People {layer:2}) RETURN p.name_key AS k, p.name AS name"))
+    from collections import defaultdict
+    full_by_first = defaultdict(list)
+    singles = []
+    for p in people:
+        toks = p["name"].split()
+        if len(toks) == 1:
+            singles.append((p["k"], toks[0].lower()))
+        else:
+            full_by_first[toks[0].lower()].append(p["k"])
+    merged = 0
+    for short_key, first in singles:
+        cands = full_by_first.get(first, [])
+        if len(cands) != 1 or cands[0] == short_key:
+            continue   # ambiguous or none -> skip (conservative)
+        full = cands[0]
+        # carry over the short node's title/tier if it is MORE senior
+        sr = s.run("MATCH (p:People {name_key:$k}) RETURN p.role_title AS role, p.seniority_tier AS t, p.name AS name", k=short_key).single()
+        fr = s.run("MATCH (p:People {name_key:$k}) RETURN p.seniority_tier AS t", k=full).single()
+        if sr and sr["t"] and TIER_RANK.get(sr["t"], 99) < TIER_RANK.get(fr["t"] or "OTHER", 99):
+            s.run("MATCH (p:People {name_key:$k}) SET p.role_title=$role, p.seniority_tier=$t "
+                  "WITH p MATCH (rt:RoleTier {tier:$t}) OPTIONAL MATCH (p)-[o:AT_TIER]->() DELETE o "
+                  "MERGE (p)-[:AT_TIER]->(rt)", k=full, role=sr["role"], t=sr["t"])
+        # move provenance + alias (incl. the short name)
+        s.run("MATCH (sh:People {name_key:$sk}),(fu:People {name_key:$fk}) "
+              "SET fu.sources = fu.sources + [x IN coalesce(sh.sources,[]) WHERE NOT x IN fu.sources], "
+              "    fu.aliases = fu.aliases + [x IN (coalesce(sh.aliases,[])+[sh.name]) WHERE NOT x IN fu.aliases]",
+              sk=short_key, fk=full)
+        # redirect edges (skip AT_TIER; full keeps its own)
+        for rec in s.run("MATCH (:People {name_key:$sk})-[r]->(o) WHERE type(r)<>'AT_TIER' "
+                         "RETURN type(r) AS t, o.name_key AS ok, [l IN labels(o)][0] AS ol", sk=short_key):
+            s.run(f"MATCH (fu:People {{name_key:$fk}}),(o:`{rec['ol']}` {{name_key:$ok}}) WHERE fu<>o "
+                  f"MERGE (fu)-[:`{rec['t']}`]->(o)", fk=full, ok=rec["ok"])
+        for rec in s.run("MATCH (o)-[r]->(:People {name_key:$sk}) WHERE type(r)<>'AT_TIER' "
+                         "RETURN type(r) AS t, o.name_key AS ok, [l IN labels(o)][0] AS ol", sk=short_key):
+            s.run(f"MATCH (o:`{rec['ol']}` {{name_key:$ok}}),(fu:People {{name_key:$fk}}) WHERE o<>fu "
+                  f"MERGE (o)-[:`{rec['t']}`]->(fu)", ok=rec["ok"], fk=full)
+        s.run("MATCH (sh:People {name_key:$sk}) DETACH DELETE sh", sk=short_key)
+        merged += 1
+    return retitled, merged
+
+
 # ---------------------------------------------------------------- entity search index
 def ensure_entity_index(s):
     """Full-text index over entity name+description for query retrieval.
