@@ -8,6 +8,12 @@ Commands:
   stats              print graph statistics
   verify             check schema invariants
   wipe               delete all graph data + constraints
+  graphrag-bench     build a GraphRAG-Bench subset with the generic pipeline ->
+                     predictions JSON (--subset novel|medical [--sample N --corpus-limit K])
+  graphrag-eval      run GraphRAG-Bench's generation_eval over the predictions
+                     (needs the bench repo + LLM_API_KEY for the gpt-4o-mini judge)
+  ref-docs-dataset   convert a folder of DOCX/PPTX brand docs into a
+                     GraphRAG-Bench-style custom subset
 
 The LLM engine (claude/codex) is chosen by BRANDKG_ENGINE and authenticates with
 the user's subscription — no API key.
@@ -100,6 +106,18 @@ def main(argv=None):
         from . import bench
         ids = [int(x) for x in rest if x.isdigit()] or None
         bench.run(ids=ids)
+    elif cmd == "graphrag-bench":
+        from .graphrag_bench import runner
+        return runner.main(rest)
+    elif cmd == "graphrag-eval":
+        from .graphrag_bench import evaluate
+        return evaluate.main(rest)
+    elif cmd == "graphrag-index-eval":
+        from .graphrag_bench import indexing
+        return indexing.main(rest)
+    elif cmd == "ref-docs-dataset":
+        from .graphrag_bench import ref_docs_dataset
+        return ref_docs_dataset.main(rest)
     else:
         print(__doc__); return 1
     return 0

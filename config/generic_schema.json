@@ -1,0 +1,11 @@
+{
+  "mode": "generic",
+  "brand_name": "GenericCorpus",
+  "brand_aliases": [],
+  "brand_attrs": { "description": "Generic corpus graph for GraphRAG-Bench." },
+  "buckets": [],
+  "brand_to_bucket_rel": {},
+  "membership_rel": "CONTAINS",
+  "seniority_tiers": [],
+  "allowed_cross_child_rels": []
+}

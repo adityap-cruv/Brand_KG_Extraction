@@ -23,8 +23,13 @@ if load_dotenv:
             break
 
 
-def schema() -> dict:
-    return json.loads((CONFIG_DIR / "brand_schema.json").read_text())
+def schema(file: str | None = None) -> dict:
+    """Load a schema JSON from CONFIG_DIR.
+
+    Precedence: explicit `file` arg > BRANDKG_SCHEMA env > brand_schema.json.
+    """
+    name = file or os.getenv("BRANDKG_SCHEMA", "brand_schema.json")
+    return json.loads((CONFIG_DIR / name).read_text())
 
 
 def env(key: str, default: str | None = None) -> str | None:
@@ -36,7 +41,5 @@ NEO4J_AUTH = (env("BRANDKG_NEO4J_USER", "neo4j"), env("BRANDKG_NEO4J_PASSWORD", 
 SOURCE_DIR = env("BRANDKG_SOURCE_DIR", "")
 ENGINE = env("BRANDKG_ENGINE", "claude")
 CONCURRENCY = int(env("BRANDKG_CONCURRENCY", "6"))
-# Query retrieval method:
-#   graphrag -> Claude generates Cypher from the schema (GraphRAG local search)
-#   keyword  -> deterministic keyword/bucket routing (query.py)
-QUERY_METHOD = env("BRANDKG_QUERY_METHOD", "graphrag")
+BENCH_REPO = env("BRANDKG_BENCH_REPO", "")
+BENCH_PYTHON = env("BRANDKG_BENCH_PYTHON", "")

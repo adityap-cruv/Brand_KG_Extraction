@@ -1,17 +1,53 @@
 """Engine interface + shared JSON-extraction helpers."""
 from __future__ import annotations
 import json
+import logging
+import os
 import re
+import time
 from abc import ABC, abstractmethod
+
+log = logging.getLogger("brandkg.engine")
+
+
+def _retries() -> int:
+    return int(os.getenv("BRANDKG_ENGINE_RETRIES", "3"))
+
+
+def _retry_base() -> float:
+    return float(os.getenv("BRANDKG_ENGINE_RETRY_BASE", "5"))
 
 
 class Engine(ABC):
     name: str = "base"
 
     @abstractmethod
-    def complete(self, prompt: str, *, timeout: int = 300) -> str:
-        """Run the agent CLI headlessly and return its text output."""
+    def _complete_once(self, prompt: str, *, timeout: int = 300) -> str:
+        """Run the agent CLI once and return its text output (or raise)."""
         raise NotImplementedError
+
+    def complete(self, prompt: str, *, timeout: int = 300) -> str:
+        """Run the agent CLI with retry + exponential backoff.
+
+        Transient CLI failures (non-zero exit, rate limits, timeouts) are common
+        under concurrency; we retry instead of dropping the call. Tune with
+        BRANDKG_ENGINE_RETRIES (default 3) and BRANDKG_ENGINE_RETRY_BASE (seconds, 5).
+        """
+        attempts = max(1, _retries() + 1)
+        last_exc = None
+        for i in range(attempts):
+            try:
+                return self._complete_once(prompt, timeout=timeout)
+            except Exception as e:  # noqa: BLE001 — retry any CLI failure
+                last_exc = e
+                log.warning("engine '%s' call failed (attempt %d/%d): %s",
+                            self.name, i + 1, attempts, str(e)[:400])
+                if i < attempts - 1:
+                    wait = min(_retry_base() * (3 ** i), 60.0)
+                    log.warning("retrying engine '%s' in %.0fs", self.name, wait)
+                    time.sleep(wait)
+        log.error("engine '%s' exhausted %d attempts; giving up", self.name, attempts)
+        raise last_exc
 
     def complete_json(self, prompt: str, *, timeout: int = 300) -> dict | list:
         """Run complete() and parse the first JSON object/array from the output.

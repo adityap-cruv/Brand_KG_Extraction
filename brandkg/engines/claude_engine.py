@@ -20,14 +20,17 @@ class ClaudeEngine(Engine):
         self.bin = shutil.which("claude") or "claude"
         self.model = os.getenv("BRANDKG_CLAUDE_MODEL")  # optional, e.g. claude-sonnet-4-6
 
-    def complete(self, prompt: str, *, timeout: int = 300) -> str:
+    def _complete_once(self, prompt: str, *, timeout: int = 300) -> str:
         cmd = [self.bin, "-p", prompt, "--output-format", "json"]
         if self.model:
             cmd += ["--model", self.model]
         proc = subprocess.run(cmd, capture_output=True, text=True,
                               timeout=timeout, stdin=subprocess.DEVNULL)
         if proc.returncode != 0:
-            raise RuntimeError(f"claude CLI failed (exit {proc.returncode}): {proc.stderr[:400]}")
+            # the CLI often reports the real reason (e.g. a rate/usage limit) on
+            # stdout as JSON, not stderr — surface both so failures are diagnosable.
+            raise RuntimeError(f"claude CLI failed (exit {proc.returncode}): "
+                               f"stderr={proc.stderr[:300]!r} stdout={proc.stdout[:400]!r}")
         out = proc.stdout.strip()
         # envelope: {"type":"result","result":"<text>",...}
         try:

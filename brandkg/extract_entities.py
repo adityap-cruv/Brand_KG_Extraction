@@ -9,12 +9,17 @@ Runs files concurrently (thread pool) up to BRANDKG_CONCURRENCY.
 from __future__ import annotations
 import hashlib
 import json
+import logging
+import os
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from . import config
 from .engines import get_engine
 from .skill import skill_body, skill_name
+
+log = logging.getLogger("brandkg.extract")
 
 EXTRACTED = config.EXTRACTED_DIR
 ENTITIES = config.ENTITIES_DIR
@@ -56,8 +61,50 @@ DOCUMENT TEXT:
 \"\"\"
 """
 
+GENERIC_PROMPT_TEMPLATE = """You are running the `{skill_name}` skill. Follow its guidance below as the
+authoritative method for extracting a knowledge graph from text.
+
+================= GRAPHITI SKILL (source of truth) =================
+{skill}
+===================================================================
+
+Apply that skill to ONE document. Extract ALL salient, specific entities (people,
+places, organizations, concepts, objects, events) and the relationships between
+them. Use open, descriptive types — there are no fixed categories.
+
+CAPTURE CONCRETE FACTS (important — downstream questions ask for specific details):
+- In each entity's description, record its concrete ATTRIBUTES exactly as stated in the text:
+  materials, measurements, numbers, dates, titles/roles, nicknames, locations, what it is made
+  of or used for, who did what to whom, and any other specific factual detail.
+- Create a relationship for every specific factual connection the text states (e.g. who commanded
+  what, what is made of what, who lived where, who wrote/published what, who reported to whom),
+  and put the precise fact in the relationship's description.
+- Do not lose a stated fact just because it is minor — single concrete details are exactly what
+  gets queried later.
+
+Pruning rules from the skill: prefer full canonical names; merge obvious aliases;
+drop pure boilerplate; every relationship's source and target MUST also appear in
+entities.
+
+Output ONLY valid JSON (no prose, no markdown fences) in EXACTLY this shape:
+{{"source_doc": "{doc}",
+  "entities": [{{"name": "...", "type": "<short word>", "aliases": [],
+                "description": "1-2 sentences with the concrete facts/attributes from the text"}}],
+  "relationships": [{{"source": "...", "target": "...", "type": "<verb phrase>",
+                      "description": "the specific fact stated in the text"}}]}}
+
+DOCUMENT TEXT:
+\"\"\"
+{text}
+\"\"\"
+"""
+
 
 def _build_prompt(schema: dict, doc: str, text: str) -> str:
+    if schema.get("mode") == "generic":
+        return GENERIC_PROMPT_TEMPLATE.format(
+            skill_name=skill_name(), skill=skill_body(),
+            doc=doc, text=text[:24000])
     return PROMPT_TEMPLATE.format(
         skill_name=skill_name(),
         skill=skill_body(),
@@ -65,8 +112,30 @@ def _build_prompt(schema: dict, doc: str, text: str) -> str:
         buckets="\n".join(f"  - {b}" for b in schema["buckets"]),
         tiers=", ".join(schema["seniority_tiers"]),
         rels=", ".join(schema["allowed_cross_child_rels"]),
-        doc=doc, text=text[:24000],   # cap to keep prompt size sane
+        doc=doc, text=text[:24000],
     )
+
+
+def extract_blob(engine, schema: dict, doc: str, text: str, timeout: int = 420) -> dict:
+    """Extract one text blob -> validated payload dict (no file IO).
+
+    The engine layer already retries hard CLI failures; here we additionally retry
+    the *degraded* case where the call succeeds (exit 0) but the model returns
+    something without an 'entities' key (seen intermittently under rate pressure).
+    Raises after exhausting retries.
+    """
+    attempts = max(1, int(os.getenv("BRANDKG_ENGINE_RETRIES", "3")) + 1)
+    prompt = _build_prompt(schema, doc, text)
+    for i in range(attempts):
+        payload = engine.complete_json(prompt, timeout=timeout)
+        if isinstance(payload, dict) and "entities" in payload:
+            payload.setdefault("source_doc", doc)
+            return payload
+        log.warning("extraction for %s returned unexpected shape (attempt %d/%d): %s",
+                    doc, i + 1, attempts, str(payload)[:200])
+        if i < attempts - 1:
+            time.sleep(min(float(os.getenv("BRANDKG_ENGINE_RETRY_BASE", "5")) * (3 ** i), 60.0))
+    raise ValueError("engine returned unexpected shape (no 'entities') after retries")
 
 
 def _extract_one(engine, schema, txt_path: Path, skill_sig: str, force: bool) -> tuple[str, int, int, str | None]:

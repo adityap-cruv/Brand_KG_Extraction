@@ -70,3 +70,48 @@ Re-running `build` is incremental: unchanged docs are skipped; new facts MERGE i
 ## Switching brands
 Edit `config/brand_schema.json` (`brand_name`), point `BRANDKG_SOURCE_DIR` at the
 new brand's documents, `python run.py wipe && python run.py build`.
+
+## Benchmark on GraphRAG-Bench
+
+Score this pipeline against the public [GraphRAG-Bench](https://github.com/GraphRAG-Bench/GraphRAG-Benchmark)
+leaderboard (LightRAG, HippoRAG2, etc.) on its fixed novel/medical corpus, using a
+generic (non-brand) schema so extraction fits arbitrary documents. Your KG build +
+agentic query loop are the system under test; the benchmark's own gpt-4o-mini judge
+scores your answers against its gold QA set.
+
+```bash
+# 1. clone the benchmark repo separately (it has heavy eval deps: torch, BGE, ragas)
+git clone https://github.com/GraphRAG-Bench/GraphRAG-Benchmark.git
+export BRANDKG_BENCH_REPO=/abs/path/to/GraphRAG-Benchmark
+
+# 2. build a small sample + emit predictions (uses your claude/codex engine; no API key)
+#    Answer-source modes:
+#      kg     = answer only from the KG using multi-hop graph tools
+#      llm    = answer only from retrieved GraphRAG-Bench source text passages
+#      hybrid = try KG first, then source text only if the KG abstains
+python run.py graphrag-bench --subset novel --corpus-limit 1 --sample 30 --answer-source kg
+python run.py graphrag-bench --subset novel --corpus-limit 1 --sample 30 --answer-source llm
+python run.py graphrag-bench --subset novel --corpus-limit 1 --sample 30 --answer-source hybrid
+
+# 3. score with the benchmark's own gpt-4o-mini judge (eval-only OpenAI key).
+#    Install the benchmark's requirements into ITS OWN venv first so torch/BGE stay
+#    out of this light product venv:
+#      python -m venv /path/bench-venv
+#      /path/bench-venv/bin/pip install -r $BRANDKG_BENCH_REPO/requirements.txt
+export BRANDKG_BENCH_PYTHON=/path/bench-venv/bin/python
+export LLM_API_KEY=sk-...      # OpenAI, benchmark judge ONLY
+python run.py graphrag-eval --subset novel --answer-source kg
+```
+
+Outputs: `bench/graphrag_bench/predictions_<subset>_kg.json`,
+`predictions_<subset>_llm.json`, or `predictions_<subset>.json` for hybrid, plus
+matching `results_...json` files from `graphrag-eval`. The generation evaluator
+reports the four GraphRAG-Bench question groups: Fact Retrieval, Complex Reasoning,
+Contextual Summarize, and Creative Generation. Each result file also includes
+`_summary.average` and `_summary.by_question_type_average` for leaderboard-style
+comparison across the benchmark factors.
+
+The benchmark uses `config/generic_schema.json` (open entity/relation extraction, no
+`Brand` root); the brand `build`/`query` commands are unaffected. Start small with
+`--corpus-limit`/`--sample` — each question drives the agentic query loop, which
+shells out to your engine CLI multiple times.

@@ -10,6 +10,7 @@ from __future__ import annotations
 import os
 import shutil
 import subprocess
+import tempfile
 from .base import Engine
 
 
@@ -20,16 +21,31 @@ class CodexEngine(Engine):
         self.bin = shutil.which("codex") or "codex"
         self.model = os.getenv("BRANDKG_CODEX_MODEL")  # optional
 
-    def complete(self, prompt: str, *, timeout: int = 300) -> str:
-        cmd = [self.bin, "exec", "--skip-git-repo-check"]
+    def _complete_once(self, prompt: str, *, timeout: int = 300) -> str:
+        out_path = None
+        cmd = [self.bin, "exec", "--skip-git-repo-check", "--ephemeral"]
         if self.model:
-            cmd += ["-c", f"model={self.model}"]
-        cmd += [prompt]
-        proc = subprocess.run(cmd, capture_output=True, text=True,
-                              timeout=timeout, stdin=subprocess.DEVNULL)
-        if proc.returncode != 0:
-            raise RuntimeError(f"codex CLI failed (exit {proc.returncode}): {proc.stderr[:400]}")
-        return _parse_codex_transcript(proc.stdout)
+            cmd += ["--model", self.model]
+        with tempfile.NamedTemporaryFile(prefix="brandkg-codex-", suffix=".txt", delete=False) as f:
+            out_path = f.name
+        cmd += ["--output-last-message", out_path, "-"]
+        try:
+            proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True,
+                                  timeout=timeout)
+            if proc.returncode != 0:
+                raise RuntimeError(f"codex CLI failed (exit {proc.returncode}): "
+                                   f"stderr={proc.stderr[-1200:]!r} stdout={proc.stdout[-800:]!r}")
+            try:
+                reply = open(out_path, encoding="utf-8").read().strip()
+            except OSError:
+                reply = ""
+            return reply or _parse_codex_transcript(proc.stdout)
+        finally:
+            if out_path:
+                try:
+                    os.unlink(out_path)
+                except OSError:
+                    pass
 
 
 def _parse_codex_transcript(out: str) -> str:
