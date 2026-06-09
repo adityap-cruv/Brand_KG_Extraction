@@ -1,0 +1,148 @@
+1.1  What Genuin Does
+Genuin is a short-form video platform that powers community-led video experiences on publisher destinations. Publishers integrate the Genuin SDK — a lightweight JavaScript snippet — to render a personalised vertical video feed within their existing page or app surface. Genuin's recommendation engine handles all content assembly and delivery; the publisher provides the destination.
+Advertising runs across this inventory in two modes. Direct-sold placements (Sponsored Takeover, Sponsored Post) are controlled by Genuin's ad engine server-side. Programmatic placements (in-feed and in-stream video) are served via connected SSPs/DSPs through standard oRTB/VAST/VMAP pipelines, with Genuin providing the inventory across the network and the ad slot.
+1.2  Genuin's Approach to Identity & Targeting
+A core principle of Genuin's ad stack is that Genuin does not perform audience targeting itself. Genuin's role is to surface identity signals in every ad opportunity and bid request — enabling buying partners to apply their own targeting logic. This applies across both ad delivery modes:
+This philosophy keeps Genuin's stack lean, avoids the commercial and privacy complexity of managing audience segment resolution internally, and ensures that buying partners retain full control over their targeting methodology.
+1.3  Why LiveRamp & Why This Document
+Across all active client proposals — retail media networks, commerce media networks, brand partners — LiveRamp has been specified as the preferred identity resolution infrastructure. These clients require identity matching to push audience segments into their buying systems and to receive Genuin exposure data back for closed-loop attribution.
+Genuin does not yet have a formal LiveRamp integration. This document captures Genuin's current working understanding of how that integration would operate, informed by LiveRamp's published documentation, and sets out the specific questions Genuin needs validated before any client onboarding begins.
+Genuin's preferred integration path is to participate in the client's existing LiveRamp data clean room as a publisher, rather than acquiring a separate LiveRamp seat of its own. In this model, Genuin contributes its user identifiers to the client's clean room environment; the client's infrastructure handles all identity resolution, segment matching, and audience definition. This section describes how Genuin understands that flow to work, and the key questions that need to be resolved.
+2.1  Three Design Principles for the Integration
+Genuin resolves its own users independently — Genuin does not participate in a brand's data clean room to generate identity signals. Genuin's identity resolution runs entirely on its own infrastructure — either as a batch mapping process or via a real-time client-side tag embedded in the Genuin player. The resulting RampID or identity envelope is Genuin's own first-party signal, generated without any dependency on the brand's environment.
+Identity in the request path — The integration must produce an identity signal — decipherable by the buying partner — that travels in the ad or bid request itself. This enables real-time targeting decisions without a separate audience-push workflow. An identity envelope in the request is the target state for both programmatic and direct paths.
+One implementation for both paths — Genuin strongly prefers a single identity mechanism that works for both programmatic and direct deal delivery. Separate implementations for each path would significantly increase integration complexity and maintenance overhead.
+2.2  Expected Integration Flow
+The end-to-end flow below describes how Genuin understands the integration would work, from publisher identity contribution through to closed-loop measurement. It assumes a path where Genuin participates in the client's clean room as a publisher collaborator.
+Based on LiveRamp's published documentation, Genuin has identified the mechanisms available for generating identity envelopes and surfacing them in the request path. This section covers both the programmatic and direct delivery paths, examines how each documented approach applies to each path, and identifies the key gaps that need to be filled before Genuin can commit to an implementation approach.
+3.1  The Envelope as a Unified Signal
+Genuin's target architecture uses a single identity signal format — the LiveRamp identity envelope — in both the programmatic bid request and the direct ad API request. This means the envelope generation mechanism is the same regardless of delivery path; what differs is how the envelope is decrypted and acted upon at the buying side.
+3.2  Generation Path A — Local Encoder (Batch, Offline)
+Local Encoder is the primary generation mechanism for Genuin. It runs as a Docker image within Genuin's own cloud environment, processes batch files of known user identifiers, and outputs identity envelopes without Genuin's consumer data ever leaving its infrastructure.
+Supported inputs (per LiveRamp docs) — Plaintext email, SHA-256 hashed email, phone number, mobile device IDs (IDFA and AAID). Note: LiveRamp's documentation states that mobile device IDs are supported for Activation use cases only, not for Addressability (envelope) output. This is a key open question for Genuin's device-ID user segment — see Section 4.
+Applies to — Both programmatic and direct paths. Local Encoder is the preferred generation mechanism precisely because it is path-agnostic: it produces an envelope that can be passed in either context.
+3.3  Generation Path B — ATS (Authenticated Traffic Solution, Real-Time)
+ATS generates a fresh identity envelope in real-time at the moment a user provides their email address in-session — through a sign-in, newsletter sign-up, or registration wall. The envelope is returned to the publisher's first-party storage and can be passed into the bid stream.
+Applies to programmatic — Yes, straightforwardly. The ATS-generated envelope travels through Prebid.js or equivalent header bidding setup into the bid stream, where the SSP's Sidecar decrypts it. This is ATS's primary documented use case.
+Applies to direct — Via ATS Direct, which is LiveRamp's documented mechanism for direct media buys without an SSP. In ATS Direct, the brand activates its segments to the publisher's Console account in LiveRamp Connect. When a matched user is identified via ATS envelope, the Deal ID for that user is returned to the publisher's browser and used by Google Publisher Tag (GPT) to communicate with Google Ad Manager (GAM). This means ATS Direct is tightly coupled to GAM as the ad server — it is not a generic ad API call model.
+Constraint for Genuin — ATS is designed for publisher-owned pages where users authenticate directly. The Genuin SDK is an embedded third-party snippet within a publisher page — Genuin does not own the authentication event. Additionally, ATS Direct's dependency on GAM does not match Genuin's direct ad serving architecture. ATS is therefore a secondary path for authenticated sessions where the publisher surfaces an email signal to the SDK, not Genuin's primary generation mechanism.
+3.4  Decryption in the Direct Path — The Open Question
+In the programmatic path, decryption is handled by the SSP running Sidecar — a well-documented, standard infrastructure component. In the direct path, there is no SSP. Genuin's preferred model is that the buying partner handles decryption on their own server, using LiveRamp's Envelope Decryption API, which is a documented endpoint in LiveRamp's developer documentation.
+3.5  Path Comparison
+Genuin holds three categories of identifiers for users, depending on sign-in status and device tracking consent. This section describes each category, what matching approach Genuin would apply, what LiveRamp's documentation indicates about support for that signal, and the questions Genuin needs answered to understand expected outcomes and match rates.
+4.1  Identifier Coverage Overview & Consent Processing
+4.2  Signal Category 1 — Hashed Email (Signed-In Users)
+For users who have authenticated on a publisher page, Genuin holds an email address that can be SHA-256 hashed before submission to LiveRamp. This is the highest-fidelity signal available and the anchor of Genuin's identity approach.
+4.3  Signal Category 2 — Mobile Device IDs (Tracking-Enabled Users)
+For mobile users who have not opted out of device tracking, Genuin's SDK can capture the platform advertising identifier: IDFA on iOS where ATT consent has been granted, or GAID on Android. These are deterministic signals where available, but coverage has declined significantly due to Apple's ATT framework.
+4.4  Signal Category 3 — Fingerprint Signals (Unauthenticated Users)
+For users who are not signed in and whose device ID is inaccessible, Genuin can observe a combination of browser and device signals via the SDK: IP address, user agent string, device model and make, and coarse location. These signals could support probabilistic (fingerprint-based) matching, but this approach does not appear in any LiveRamp documentation Genuin has reviewed.
+4.5  Combined Signal Strategy
+In practice, Genuin would submit all available signals simultaneously — HEM for registered users, device IDs for tracking-enabled users (subject to Addressability support being confirmed), and fingerprint signals if supported — to maximise total addressable reach. The overall match rate achievable depends directly on these open questions being resolved.
+The items below consolidate all questions from the preceding sections. Genuin is seeking LiveRamp's input to validate or correct the understanding described in this document before any formal integration scoping or client onboarding begins.
+1.  Partner-provisioned child account
+LiveRamp's documentation describes a parent-child account structure in which an existing LiveRamp customer (the parent) can provision child accounts for their clients or partners under their existing agreement, with billing flowing through the parent. Genuin has active partnerships with publishers and brands( e.g. iHeart), who are existing LiveRamp customers. Genuin's preferred path to accessing LiveRamp is to be provisioned as a child account under one of these partners, rather than entering a separate commercial LiveRamp agreement of its own. What Genuin needs confirmed:
+(1) Can an existing LiveRamp customer provision a publisher platform like Genuin as a child account under their agreement?
+(2) Does a child account provisioned this way have access to Local Encoder in Addressability mode — specifically, the ability to generate identity envelopes from hashed email inputs for use in bid requests and direct ad API calls?
+(3) Are there any product, contractual, or technical restrictions that would prevent a child account from operating the publisher-side identity workflow described in this document?
+2.  Local Encoder for Addressability — publisher engagement model
+Is Local Encoder in Addressability mode the correct product for Genuin to generate identity envelopes from SHA-256 hashed email inputs, store them against genuinIDs, and pass them in both bid requests and direct ad API requests? LiveRamp's documentation confirms Local Encoder requires LiveRamp-provisioned ECR access and LiveRamp-managed encryption keys, so a commercial relationship is required. What Genuin needs to understand is: what is the specific nature and cost of that relationship for a publisher-side Local Encoder deployment? Is there a lightweight publisher onboarding path distinct from a full Safe Haven or Connect seat? Alternatively, is there a model where Genuin submits identifiers to a brand's existing LiveRamp clean room and receives envelopes back — thereby operating entirely within the brand's existing agreement?
+3.  Device IDs in Addressability mode
+Can IDFA and GAID be used as inputs to Local Encoder in Addressability (envelope) output mode? If not, is there an alternative mechanism for generating request-path identity signals for device-ID-only users?
+4.  Direct path decryption — buyer-side API call
+Is the pattern of Genuin passing an envelope in a direct ad API request, with the buying partner calling LiveRamp's Envelope Decryption API on their own infrastructure to resolve it, a supported and contractually permissible flow? Does the buying partner need specific LiveRamp permissions to decrypt envelopes generated by a publisher?
+5.  ATS in embedded SDK context
+Can ATS be integrated into a third-party embedded JavaScript SDK where Genuin receives an email signal from the publisher as a parameter? Is there a generic direct ad API mechanism for ATS envelopes that does not depend on Google Ad Manager / ATS Direct?
+6.  Fingerprinting support
+Does LiveRamp support any matching approach using IP address, user agent, device model/make, and coarse location as inputs? If not, what is LiveRamp's recommended strategy for extending publisher addressability to unauthenticated users?
+7.  Expected match rates for publisher datasets
+What match rates should Genuin expect for HEM inputs from a publisher-side user pool? Are there benchmarks from comparable publisher integrations to calibrate client expectations?
+Genuin × LiveRamp
+Identity Integration Framework
+
+A working document outlining Genuin's understanding of the LiveRamp integration — covering clean room data flow, RampID fetching mechanics, and matching signal approaches — for validation with LiveRamp prior to any formal onboarding.
+
+May 2026  ·  Confidential
+Prepared by Genuin
+1.  Overview of Genuin & the Need for Formalisation
+Programmatic | DSP owns targeting end-to-end
+Genuin passes an identity envelope in the bid request. The SSP's Sidecar application decrypts the envelope and surfaces the resolved RampID to the DSP. The DSP applies its own segment matching and targeting logic. Genuin has no visibility into segment definitions and takes no targeting action.
+Direct (BYOA) | Buying partner owns targeting via API 
+Genuin sends an ad request to the buying partner via API, including the identity envelope as a signal. The buying partner's ad decision engine resolves the identity using their own LiveRamp access and applies their own targeting, creative selection, and optimisation. Genuin serves what the partner decides. This is the BYOA (Bring Your Own Algorithm) model for direct deals onsite and sponsored post and takeovers offsite across the network.
+Goal — We want LiveRamp to confirm, correct, or fill gaps in the understanding described in Sections 2, 3, and 4 so that no incorrect assumptions are carried into client proposals or integration scoping.
+2.  Expected Integration Flow into a Client's Data Clean Room Account
+Validation request — Does LiveRamp support a Genuin participating in a brand's data clean room without Genuin holding their own commercial LiveRamp seat? If yes, what is the nature of the account required, what are steps for a clean room customer to add Genuin, and what is the onboarding path?
+1 | Genuin resolves its user pool to RampIDs
+Genuin resolves its own users to RampIDs independently, using one or both of two mechanisms. The batch path uses Local Encoder: a Docker-based tool that processes Genuin's known user signals (SHA-256 hashed email, device IDs where supported) within Genuin's own cloud environment and outputs a genuinID → identity envelope mapping. This mapping is stored as a lookup table and refreshed as envelopes approach expiry. The real-time path uses a LiveRamp ATS JavaScript tag embedded in Genuin's player: when a known user is active in session (for example, because the publisher has surfaced an email signal), ATS generates an envelope client-side and stores it in first-party storage. The two paths are complementary — batch covers the registered user base; the JS tag extends coverage to in-session authenticated users.
+2 | Genuin includes the envelope in every ad and bid request
+For any user with a resolved envelope — whether generated via the batch mapping or the real-time JS tag — Genuin includes that envelope in the outbound request. For programmatic inventory this is the bid request; for direct inventory (BYOA) this is the ad API request to the buying partner's server. The envelope is the single identity signal passed in the request path, consistent across both delivery modes
+3 | Buying partner resolves the envelope and applies targeting
+For programmatic inventory, the SSP's Sidecar application decrypts the envelope and surfaces the RampID to the DSP, which applies its own segment logic. For direct inventory (BYOA), the buying partner's server receives the envelope in the ad API request and calls LiveRamp's Envelope Decryption API on their side to resolve the RampID and apply their targeting. In both cases, Genuin takes no targeting action.
+4 | Exposure and engagement data returns to the client's clean room
+Post-delivery, Genuin exports user-level exposure and engagement logs — tokenised at the genuinID level — back to the client. The client uses their LiveRamp environment to re-link these to RampIDs for attribution against their own downstream conversion events within the clean room.
+Key open question — For Step 5, the direct path assumes the buying partner calls LiveRamp's Envelope Decryption API on their own infrastructure using their own LiveRamp access. This keeps Genuin out of the decryption chain entirely. We need to confirm with LiveRamp whether this is a supported pattern — i.e., whether a brand/buyer can call the decryption API to resolve an envelope generated by a publisher — and what contractual or technical prerequisites apply.
+3.  RampID Fetching Approaches — Programmatic & Direct
+ | Programmatic path | Direct path (BYOA)
+Envelope generation | Local Encoder (batch) or ATS (real-time auth) | Local Encoder (batch) or ATS (real-time auth) — same as programmatic
+Envelope passed in | Bid request to SSP/DSP | Ad API request to buying partner's server
+Who decrypts? | SSP running Sidecar application | Buying partner's server, calling LiveRamp Envelope Decryption API
+Who applies targeting? | DSP (using its own segment logic) | Buying partner's algorithm (BYOA)
+Genuin's role | Passes envelope; serves creative returned by DSP | Passes envelope; serves creative returned by partner
+1 | Genuin uploads a batch file to its own VPC
+A column-based file containing known user identifiers — genuinID + SHA-256 hashed email, and potentially device IDs (subject to the validation in Section 4) — is uploaded to Genuin's input location.
+2 | Local Encoder resolves and generates envelopes
+The application normalises the data, resolves each identifier against LiveRamp's graph (via encrypted key management), and outputs one identity envelope per row. Each envelope is a Base64-encoded encrypted string, valid for 15 days.
+3 | Genuin stores genuinID → envelope mapping
+The output file maps each genuinID to its envelope and expiry timestamp. Genuin persists this mapping in its data store and refreshes envelopes approaching expiry via the ATS API Refresh Envelopes endpoint.
+4 | Envelope included in all outbound requests
+For any active user with a stored envelope, Genuin includes the envelope in the outbound bid request (programmatic) or ad API request (direct). The envelope travels identically in both paths — the downstream partner handles decryption.
+Validation request — Is Local Encoder in Addressability mode the correct and supported product for Genuin to generate envelopes from SHA-256 hashed email, store them against genuinIDs, and pass them in both bid requests and direct ad API requests? LiveRamp's documentation confirms that Local Encoder requires LiveRamp-provisioned ECR credentials and LiveRamp-managed encryption keys — so some form of LiveRamp agreement is required. What Genuin needs to understand is: what is the nature and cost of that engagement for a publisher? Is there a lightweight publisher onboarding path distinct from a full commercial platform seat? And separately: is there an alternative mechanism where Genuin submits identifiers to the brand's existing LiveRamp clean room and receives envelopes back, avoiding any separate Genuin-side agreement?
+Validation request — Can ATS be integrated into an embedded SDK context where Genuin receives an email signal from the publisher as a parameter, rather than capturing it from a user input event on a Genuin-owned page? Is ATS Direct (via GAM) the only documented direct-deal path, or is there a generic ad API mechanism for passing ATS envelopes in direct ad calls that does not require Google Ad Manager?
+1 | Genuin sends the ad request
+Genuin's ad engine sends an ad API request to the buying partner's server, including the identity envelope in the request payload.
+2 | Buying partner calls LiveRamp's Decryption API
+The buying partner's server calls LiveRamp's Envelope Decryption API using their own LiveRamp credentials. The API decrypts the envelope and returns the resolved RampID.
+3 | Buying partner applies targeting and returns creative
+The buying partner matches the RampID against their activated segments in their own system and selects the appropriate ad creative. The creative decision is returned to Genuin via the ad API response.
+4 | Genuin serves the creative
+Genuin serves the creative chosen by the buying partner, with no visibility into the segment logic used.
+Validation request — Is this model — where the buying partner calls LiveRamp's Envelope Decryption API on their own infrastructure to resolve an envelope generated by Genuin via Local Encoder — a supported and contractually permissible pattern? Does the buying partner need a specific LiveRamp product or permission to call the Decryption API for envelopes generated by a publisher? Are there any cases where Genuin would need to be the entity calling the decryption API, which would require Genuin to hold its own LiveRamp API credentials?
+Criterion | Local Encoder | ATS (Web) | ATS Direct
+Signal required | HEM (confirmed); device IDs (to be validated) | User authenticates in-session with email | User authenticates in-session with email
+Works for programmatic? | Yes — envelope in bid request, SSP Sidecar decrypts | Yes — envelope in bid stream via Prebid | Not applicable (direct-deal only)
+Works for direct (BYOA)? | Yes — envelope in ad API request, buyer calls decryption API (to be validated) | Unclear — requires Genuin to own authentication event | Only via GAM — does not match Genuin's direct architecture
+Requires Genuin LiveRamp seat? | Yes — requires LiveRamp-provisioned ECR credentials and LiveRamp-managed encryption keys. Nature and cost of publisher engagement to be confirmed. | Requires ATS account in Console | Requires ATS + Console account
+Coverage | All users Genuin holds HEM for (registered base) | Only in-session authenticated users | Only in-session authenticated users
+Genuin's preference | Primary path — batch, path-agnostic, no real-time auth dependency | Secondary — complementary for publishers who surface email signal | Not preferred — GAM dependency
+4.  Genuin's Identifiers, Matching Approaches & Questions for LiveRamp
+User segment | Signal available | Proposed approach | LiveRamp support (per docs)
+Signed-in / registered users | SHA-256 hashed email (HEM) | Local Encoder — deterministic HEM match → envelope | Confirmed for Addressability (envelope output)
+Tracking-enabled (iOS ATT opt-in / Android GAID available) | IDFA (iOS) or GAID (Android) | Local Encoder — device ID match → envelope | Documented for Activation only; Addressability unclear
+All other users (unauthenticated, no device ID) | IP address, user agent, device model/make, coarse location | Fingerprinting / probabilistic match | Not listed as a supported LiveRamp input signal
+Consent Type | Action
+Not opted out (US) | Generate envelope, pass in request, include TCF/GPP signal.
+Opted out of advertising / denied advertising consent | Do not generate an envelope. This user's slot runs contextual or house ads only.
+No signal at all (e.g., non-EU user, no CMP interaction) | Generate envelope, pass in request, include TCF/GPP signal.
+Signal | SHA-256 hashed email address
+Source | From publisher authentication where the publisher surfaces an email signal to the SDK
+LiveRamp support | Confirmed — HEM is a supported input for Local Encoder Addressability output (identity envelopes)
+Matching type | Deterministic — highest accuracy, lowest false-positive rate
+Envelope output | One envelope per record; valid 15 days; refreshable via ATS API refresh endpoint
+Questions for LiveRamp — What typical match rates does LiveRamp achieve for HEM inputs from publisher-side datasets (as opposed to brand/advertiser CRM data)? LiveRamp's documentation notes that plaintext email may achieve slightly higher match rates than SHA-256 hashed email — is this material enough to recommend plaintext over hashed for Genuin's batch submissions? What minimum data quality requirements (format validation, deduplication) should Genuin apply to its input files?
+Signal | IDFA (iOS with ATT opt-in) or GAID / AAID (Android)
+Source | Captured via Genuin SDK in app-based publisher environments where the app has ATT consent (iOS) or GAID access (Android)
+LiveRamp support (Activation) | Confirmed — IDFA and AAID are supported Local Encoder inputs for Activation use cases
+LiveRamp support (Addressability) | Not confirmed — LiveRamp's documentation explicitly states device IDs are not supported for Addressability (envelope) output
+iOS coverage constraint | IDFA availability has declined sharply since iOS 14.5 ATT; most iOS users do not opt in
+Android coverage | GAID remains more broadly available but subject to user opt-out and evolving state privacy regulations
+Questions for LiveRamp — Can IDFA and GAID be used as inputs to Local Encoder in Addressability mode to generate identity envelopes? If not, is there an alternative mechanism for generating an envelope or equivalent signal for device-ID-only users? If device IDs cannot produce envelopes, how should Genuin approach users in this segment — are they simply unaddressable in the request path, or is there a fallback within the clean room model?
+Signals available | IP address, user agent, device model/make, coarse location (not precise GPS)
+Source | Captured at SDK level for all users — no sign-in or device ID access required
+Proposed approach | Probabilistic / fingerprint-based matching — inferring a persistent user identifier from combined browser and device signals
+LiveRamp support (per docs) | Not listed as a supported input signal in Local Encoder or ATS documentation. Documented inputs are: email, phone, name + postal, IDFA, GAID
+Coverage | Highest raw coverage — applies to all users regardless of sign-in or ATT status
+Accuracy | Lower than deterministic signals; degrades in privacy-preserving browser modes (Safari ITP, Firefox ETP, Chrome Privacy Sandbox)
+Questions for LiveRamp — Does LiveRamp support any probabilistic or fingerprint-based matching using IP address, user agent, device model, and coarse location as inputs — either via Local Encoder or any other product? If not, what is LiveRamp's recommended strategy for publishers seeking to extend addressability beyond their signed-in user base to the unauthenticated majority?
+Request — Genuin would welcome LiveRamp's view on realistic total addressable match rates for a publisher with this signal composition, and benchmarks from comparable publisher integrations. This is important for setting accurate expectations in client proposals where match rate informs campaign audience sizing.
+5.  Consolidated Open Items
+Next step — Genuin is happy to schedule a working session with LiveRamp's solutions or partnerships team to walk through these items. Please let us know the right contact and we will coordinate.

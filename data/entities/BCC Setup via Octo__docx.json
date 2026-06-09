@@ -1,0 +1,363 @@
+{
+  "source_doc": "BCC Setup via Octo",
+  "entities": [
+    {
+      "name": "Octo",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "Octo Canvas"
+      ],
+      "description": "The platform context for the BCC configuration methodology described in the guide, used to build conversational form agents."
+    },
+    {
+      "name": "BCC Configuration",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "BCC Setup",
+        "Octo for BCC Configuration"
+      ],
+      "description": "A configuration workflow within Octo for setting up brand/content/campaign forms via a conversational agent."
+    },
+    {
+      "name": "Conversational Form Agent",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Form-Filling Agent",
+        "Form Agent"
+      ],
+      "description": "An AI agent that collects structured information through conversational interfaces, one question at a time."
+    },
+    {
+      "name": "State Injection Mechanism",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "State Injection Every Turn"
+      ],
+      "description": "The mechanism of injecting current step, total steps, and previously collected answers into the system prompt on every turn to prevent state amnesia."
+    },
+    {
+      "name": "Validation Layer",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Typed Validation Layer"
+      ],
+      "description": "An application-side typed validation layer that determines whether an answer is valid before advancing the step counter."
+    },
+    {
+      "name": "Anti-Drift Instructions",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Anti-Drift Prompt Instructions"
+      ],
+      "description": "Prompt-engineering instructions and few-shot examples that override the model's default helpfulness instinct to keep it on-task."
+    },
+    {
+      "name": "Tangent Detection",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Application-side Tangent Detection"
+      ],
+      "description": "A lightweight application-side pattern-matching layer that intercepts off-topic input before it reaches the model."
+    },
+    {
+      "name": "State Object",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [
+        "State Object Design"
+      ],
+      "description": "A flat, minimal, serialisable object holding currentStep, totalSteps, answers, redirectCount, conditionalSkips, and done flags, injected into every prompt."
+    },
+    {
+      "name": "Conditional Branching Logic",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "getNextStep",
+        "Conditional Branching"
+      ],
+      "description": "Application-layer logic (getNextStep function) that handles which steps appear based on prior answers, keeping branching out of the prompt."
+    },
+    {
+      "name": "Step Schema",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [
+        "Step Schema Template"
+      ],
+      "description": "A reusable schema defining each form step with id, question, hint, inputType, options, required, condition, validate, and quickReplies fields."
+    },
+    {
+      "name": "System Prompt Template",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [
+        "Base System Prompt"
+      ],
+      "description": "A reusable system prompt template with placeholders for current state, rules, tangent handling, and completion behavior."
+    },
+    {
+      "name": "Multi-Agent Architecture",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [
+        "Multi-Agent Form Architecture"
+      ],
+      "description": "An advanced architecture splitting responsibility across a Controller agent, Responder agent, and optional FAQ handler to make drift structurally impossible."
+    },
+    {
+      "name": "Controller Agent",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Owns the state machine, decides which step is active, validates answers, and handles branching; never exposed to the user directly."
+    },
+    {
+      "name": "Responder Agent",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Handles only the current step with a narrow context window and generates natural-sounding responses."
+    },
+    {
+      "name": "FAQ Handler Agent",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [
+        "FAQ Handler"
+      ],
+      "description": "Optional third agent that handles tangential questions and returns a flag to bring the user back to the form."
+    },
+    {
+      "name": "Topic Drift",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Failure mode where the agent answers unrelated questions mid-form and loses track of the current step."
+    },
+    {
+      "name": "State Amnesia",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Failure mode where the model forgets which question it was on without explicit state management."
+    },
+    {
+      "name": "Premature Completion",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Failure mode where the agent interprets a partial answer as sufficient and skips required fields."
+    },
+    {
+      "name": "Implementation Checklist",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [],
+      "description": "A checklist covering pre-coding planning, system prompt requirements, application-layer requirements, and UX requirements for building a form agent."
+    },
+    {
+      "name": "Progress Indicator UX",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Question N of Total Indicator"
+      ],
+      "description": "UX pattern showing [Question N of Total] on every agent turn so users see their position in the form."
+    },
+    {
+      "name": "Quick Replies",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Quick Reply Suggestions"
+      ],
+      "description": "Suggested response chips shown to the user where the answer space is bounded."
+    },
+    {
+      "name": "Live Form Preview",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Form Output Preview"
+      ],
+      "description": "UX pattern where form output is visually separate from the conversation as a live preview."
+    },
+    {
+      "name": "Redirect Count Metric",
+      "bucket": "Engineering",
+      "type": "Metric",
+      "aliases": [
+        "redirectCount"
+      ],
+      "description": "Counter tracked for analytics and for triggering escalation after N redirects when the user repeatedly goes off-topic."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "BCC Configuration",
+      "target": "Octo",
+      "type": "PART_OF",
+      "description": "BCC Configuration is a setup workflow that lives within the Octo platform."
+    },
+    {
+      "source": "Conversational Form Agent",
+      "target": "BCC Configuration",
+      "type": "POWERS",
+      "description": "The conversational form agent is the mechanism that drives the BCC configuration experience."
+    },
+    {
+      "source": "Conversational Form Agent",
+      "target": "State Injection Mechanism",
+      "type": "USES",
+      "description": "The form agent depends on state injection on every turn to maintain ground truth."
+    },
+    {
+      "source": "Conversational Form Agent",
+      "target": "Validation Layer",
+      "type": "USES",
+      "description": "The form agent relies on the typed validation layer to gate state transitions."
+    },
+    {
+      "source": "Conversational Form Agent",
+      "target": "Anti-Drift Instructions",
+      "type": "USES",
+      "description": "The form agent uses anti-drift prompt instructions to override default helpfulness."
+    },
+    {
+      "source": "Conversational Form Agent",
+      "target": "Tangent Detection",
+      "type": "USES",
+      "description": "The form agent uses application-side tangent detection to intercept off-topic input."
+    },
+    {
+      "source": "State Injection Mechanism",
+      "target": "State Object",
+      "type": "DEPENDS_ON",
+      "description": "State injection serialises and injects the state object into the prompt every turn."
+    },
+    {
+      "source": "System Prompt Template",
+      "target": "State Object",
+      "type": "INCLUDES",
+      "description": "The system prompt template embeds fields from the state object as runtime placeholders."
+    },
+    {
+      "source": "Validation Layer",
+      "target": "Step Schema",
+      "type": "DEPENDS_ON",
+      "description": "The validation layer uses the validate() function defined per step in the step schema."
+    },
+    {
+      "source": "Conditional Branching Logic",
+      "target": "State Object",
+      "type": "USES",
+      "description": "getNextStep reads from answers and conditionalSkips in the state object to decide the next step."
+    },
+    {
+      "source": "Step Schema",
+      "target": "Conditional Branching Logic",
+      "type": "INCLUDES",
+      "description": "Each step's condition function feeds into the branching logic that determines visibility."
+    },
+    {
+      "source": "Multi-Agent Architecture",
+      "target": "Controller Agent",
+      "type": "INCLUDES",
+      "description": "The multi-agent architecture includes the controller agent owning the state machine."
+    },
+    {
+      "source": "Multi-Agent Architecture",
+      "target": "Responder Agent",
+      "type": "INCLUDES",
+      "description": "The multi-agent architecture includes a responder agent scoped to the current step."
+    },
+    {
+      "source": "Multi-Agent Architecture",
+      "target": "FAQ Handler Agent",
+      "type": "INCLUDES",
+      "description": "The multi-agent architecture optionally includes an FAQ handler for tangential questions."
+    },
+    {
+      "source": "Controller Agent",
+      "target": "Validation Layer",
+      "type": "USES",
+      "description": "The controller agent invokes the validation layer to gate step transitions."
+    },
+    {
+      "source": "Controller Agent",
+      "target": "Conditional Branching Logic",
+      "type": "USES",
+      "description": "The controller agent applies conditional branching logic to decide the next active step."
+    },
+    {
+      "source": "Topic Drift",
+      "target": "Tangent Detection",
+      "type": "RESPONDS_TO",
+      "description": "Tangent detection is the mechanism designed to mitigate topic drift."
+    },
+    {
+      "source": "State Amnesia",
+      "target": "State Injection Mechanism",
+      "type": "RESPONDS_TO",
+      "description": "State injection on every turn is the mitigation for state amnesia."
+    },
+    {
+      "source": "Premature Completion",
+      "target": "Validation Layer",
+      "type": "RESPONDS_TO",
+      "description": "Typed validation prevents premature completion by rejecting partial answers."
+    },
+    {
+      "source": "Implementation Checklist",
+      "target": "System Prompt Template",
+      "type": "INCLUDES",
+      "description": "The implementation checklist includes verifying the system prompt requirements before shipping."
+    },
+    {
+      "source": "Implementation Checklist",
+      "target": "Step Schema",
+      "type": "INCLUDES",
+      "description": "The implementation checklist requires writing the step schema for each question before coding."
+    },
+    {
+      "source": "Implementation Checklist",
+      "target": "Tangent Detection",
+      "type": "INCLUDES",
+      "description": "The checklist requires defining a tangent pattern list for the domain."
+    },
+    {
+      "source": "Conversational Form Agent",
+      "target": "Progress Indicator UX",
+      "type": "FEATURES",
+      "description": "The agent surfaces a [Question N of Total] indicator on every turn."
+    },
+    {
+      "source": "Conversational Form Agent",
+      "target": "Quick Replies",
+      "type": "FEATURES",
+      "description": "The agent presents quick reply suggestions when the answer space is bounded."
+    },
+    {
+      "source": "BCC Configuration",
+      "target": "Live Form Preview",
+      "type": "FEATURES",
+      "description": "The BCC configuration UX shows a live form preview separated from the conversation."
+    },
+    {
+      "source": "State Object",
+      "target": "Redirect Count Metric",
+      "type": "INCLUDES",
+      "description": "The state object tracks redirectCount as a field for analytics and escalation."
+    }
+  ],
+  "_src_hash": "82b0c3368951d03b588428c446dfa7f0a42a5ae6728c1f73b5a104dcd10e0f37",
+  "_skill_sig": "4edd28021f3312b1"
+}

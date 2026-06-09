@@ -1,0 +1,221 @@
+Prepared by Genuin for Mastercard
+Publisher: iHeart
+Overview
+Part 1 — What
+Mastercard activates brand and merchant advertising across iHeart destinations powered by Genuin’s video infrastructure. Genuin supports multi-channel advertising — encompassing direct-sold sponsored video placements, programmatic in-feed and in-stream video, and LLM-native conversational ads delivered through Genuin’s AI-powered overlay. This document presents the full range of options available to Mastercard to determine the right activation path.
+Genuin serves selected video posts to targeted users on iHeart’s destination — drawing from the content available within Genuin’s video infrastructure and delivering it to the right audiences. For direct-sold placements (Sponsored Takeover and Sponsored Post), Mastercard’s brand video is uploaded and served by Genuin’s video infrastructure. For programmatic in-feed and in-stream placements, Mastercard’s DSP serves the required ad creatives in real time via Aniview — Genuin provides the inventory and the ad slot, while the DSP controls creative selection and bidding.
+Every ad impression is eligible for mapping to Mastercard’s identity graph via LiveRamp, enabling audience-level targeting and closed-loop measurement.
+Part 2 — How
+This document covers six technical components of the Mastercard sponsorship:
+1. SDK & Runtime Integration
+When a user lands on an iHeart destination where Genuin is active, the following sequence executes:
+2. In-Feed Ad Placements
+In-feed ads appear as discrete cards within the Genuin video carousel — interleaved with organic content at configured slot positions, or taking over the first N slots of the feed. Five in-feed ad formats are available to Mastercard, spanning direct-sold sponsored content served by Genuin and fully programmatic placements served by Mastercard’s DSP via Aniview.
+2.1  Format Overview
+2.2  Sponsored Takeover
+The Sponsored Takeover is the highest-impact in-feed placement on the Genuin platform. It converts the first N slots of the video feed into a continuous Mastercard-sponsored experience — all N positions show Mastercard’s video content served by Genuin’s video infrastructure. The Takeover overrides all other in-feed ad types for its occupied slots and is a direct-sold placement.
+2.3  Sponsored Post
+Sponsored Posts are individual in-feed cards containing Mastercard-branded video content served by Genuin’s video infrastructure. Unlike the Takeover, Sponsored Posts follow standard slot frequency logic — appearing at calculated ad-slot positions within the feed, interleaved with organic content. They are the primary direct-sold in-feed format for ongoing placements.
+2.4  Programmatic In-Feed Video
+Programmatic in-feed video ads are video creatives served by Mastercard’s DSP via Google’s IMA SDK and fulfilled by the Aniview ad server. They appear as video cards within the feed with a CTA bar replacing the standard engagement icons. The DSP controls audience targeting and creative selection in real time.
+2.5  Programmatic In-Feed Native
+Programmatic in-feed native ads are static card-format creatives served via GPT.js and fulfilled by Aniview. They use a native card layout — headline, image, brand name, description, and CTA — that blends with the feed’s card aesthetic. Targeting and creative selection handled by the DSP.
+2.6  Programmatic In-Feed Display
+Programmatic in-feed display ads serve standard banner creatives (image or HTML5) as feed cards using GPT.js and Aniview. The display banner occupies the full card slot, rendered as a static visual unit. Creative selection and targeting handled by the DSP.
+2.7  Aniview Integration Paths
+Programmatic in-feed ad formats (Sections 2.4–2.6) are fulfilled via the Aniview ad server. Mastercard can connect to Aniview through any of the following three integration paths — the choice depends on Mastercard’s existing ad operations infrastructure and commercial preference. PMP / Programmatic Guaranteed is the recommended starting point.
+3. In-Stream Ad Placements
+In-stream ads are linear video ads that play within the Genuin video carousel player — before, during, or after organic content videos. They run programmatically through the Aniview ad server via VAST or VMAP, with Mastercard’s DSP controlling creative selection and bidding.
+3.1  Supported Ad Positions
+3.2  Creative Specifications
+3.3  Aniview Integration Paths
+In-stream placements use the same three Aniview integration paths as in-feed programmatic formats. A single Aniview demand source configuration can serve both in-feed and in-stream placements. PMP / Programmatic Guaranteed is the recommended starting point.
+4. LLM Ads (via Koah)
+4.1  How the LLM Overlay Works
+Genuin embeds an AI-powered conversational interface (OctoGPT) on top of the video feed on iHeart destinations. The overlay is triggered by a configurable dwell period — after a user has been engaged with the feed for a set duration, an AI-generated prompt appears.
+The prompt is auto-generated from page context, the video being viewed, and user interaction history — making it contextually relevant to what the user is consuming. When the prompt fires, the conversation box expands to show the AI response, a branded Mastercard ad unit, and additional video content — all within the overlay interface. Users can dismiss the overlay at any time and can continue the conversation with the AI freely.
+Overlay flow
+4.2  Koah Ad Formats
+Koah provides four ad formats for placement within the LLM conversation overlay. Each format defines how the Mastercard creative is rendered within the Octo GPT interface. All formats are contextualised to the user’s current conversation in real time.
+4.3  Activation Workflow
+LLM ad delivery is managed jointly by Genuin and Koah. The activation workflow is as follows:
+5. Identity Matching & Targeting
+This section covers how identity matching enables audience-level targeting across both buying mechanisms, and how targeting works differently depending on the mechanism. For Sponsored Content (Mechanism 1), Genuin offers two targeting options — an out-of-the-box approach and a custom algorithm model (BYOA). For Programmatic channels (Mechanism 2), the DSP controls targeting end-to-end.
+5.1  Two Buying Mechanisms
+The table below summarises how targeting and identity operate across the two mechanisms:
+5.2  Identity Resolution via LiveRamp (Primary Path)
+LiveRamp is the recommended identity resolution path for the Mastercard integration. The mapping links Genuin’s pseudonymous user identifiers to Mastercard’s user graph, enabling Mastercard to push audience segments into Genuin for targeting and to receive engagement signals back for measurement.
+5.2  Alternative Identity Partners
+If LiveRamp is not the preferred integration path, Genuin also supports identity resolution via the following partners. The technical process is equivalent — the identity graph and resolution infrastructure differ by partner.
+5.3  Sponsored Content Targeting (Mechanism 1)
+For Sponsored Takeover and Sponsored Post placements, Mastercard has two targeting options. Both options use Mastercard’s uploaded video library as the creative source; what differs is who determines which video is served to which user.
+5.4  BYOA: Technical Detail
+Video ID Catalog Sync
+For BYOA to function, Mastercard’s algorithm must be able to return valid Genuin ‘video_id’ values in its response. This requires a shared reference between Mastercard’s content management system and Genuin’s video infrastructure.
+Catalog API — Endpoint & Response Schema:
+Flow
+User & Context Signals sent to Mastercard
+API Contract(Sample)
+6. Measurement & Attribution
+Genuin provides a baseline set of performance metrics out of the box for all ad formats. Additional conversion attribution capabilities are available by integrating the Genuin Pixel solution, which enables cross-site measurement and closed-loop reporting back to Mastercard’s measurement infrastructure.
+Part 1 — Genuin Out-of-the-Box Metrics
+The following metrics are available by default for all placements, accessible via the Genuin BCC (Brand Control Center) dashboard.
+Part 2 — Extended Attribution via Genuin Pixel
+Genuin Pixel is a lightweight JavaScript tag placed on Mastercard’s merchant pages and conversion destinations. It enables post-exposure attribution — linking Genuin ad impressions and clicks to downstream user actions on Mastercard’s properties.
+6.1  Pixel Implementation
+Tag Placement: Genuin provides the Pixel tag as a standard JavaScript snippet. The snippet is placed on all Mastercard merchant and conversion destination pages.
+Event Configuration: Conversion event triggers are configured in Genuin infrastructure — each event maps to a specific user action (e.g., a “Thank You” page load, a button click, a form submission).
+Go Live: Once live, the Pixel begins attributing Genuin ad exposures to conversion events within the configured attribution windows.
+Part 3 — Context Attribution
+Context Attribution tracks the video content a user consumed immediately before viewing a sponsored placement. It captures the relationship between the pre-exposure content journey and conversion behaviour — enabling Mastercard to understand which content contexts are most conducive to sponsored content conversion.
+Genuin × Mastercard 
+Sponsorship Guide
+Confidential · April 2026
+Section | What it covers
+1. SDK & Runtime Integration | How the Genuin SDK is embedded on iHeart and how the video feed is assembled, targeted, and delivered. Identity resolution is applied at the targeting stage.
+2. In-Feed Ad Placements | Five in-feed ad formats: Sponsored Takeover, Sponsored Post, Programmatic Video, Programmatic Native, and Programmatic Display. Creative specs and Aniview integration paths for programmatic formats.
+3. In-Stream Ad Placements | Pre-roll, mid-roll, and post-roll linear video ads within the Genuin video player. Creative specifications, VAST/VMAP requirements, and Aniview integration paths.
+4. LLM Ads (via Koah) | Native conversational ad placements within Genuin’s AI-powered video overlay. Four Koah ad formats, activation workflow, and joint management by Genuin and Koah.
+5. Identity Matching | Mastercard identity graph mapped to Genuin’s user graph via LiveRamp. Alternative identity partner options.
+6. Measurement & Attribution | Metrics available out of the box from Genuin, and additional attribution capabilities enabled by integrating the Genuin Pixel solution.
+The Genuin SDK is embedded on iHeart’s web destination. Once initialised, it requests the video feed from Genuin’s backend. Identity signals are resolved at the targeting stage to determine which users receive which placements
+1 | SDK Initialised — The Genuin SDK loads on the iHeart destination on page load.
+2 | Feed Requested — The SDK sends a feed request to the Genuin backend, including page context and user identity signals.
+3 | Identity & Targeting — User identity signals are resolved and matched against Mastercard’s audience segments. For Sponsored placements, Genuin applies out-of-the-box targeting or invokes the BYOA endpoint (see Section 5). For programmatic placements, targeting is handled by the DSP at bid time.
+4 | Feed Assembled — Genuin selects and assembles the targeted video posts. For Sponsored Takeover and Sponsored Post, video IDs are determined at this step — via Genuin targeting or BYOA response. Ad slot positions are resolved here.
+5 | Feed Returned — The assembled feed — video posts and ad placements — is returned to the SDK.
+6 | Viewport Renders — The Genuin SDK renders the video carousel on the iHeart page. In-feed ad slots appear at the configured positions.
+7 | Content & Ads Serve — For Sponsored Takeover and Sponsored Post placements, Genuin’s video infrastructure serves the brand content. For programmatic in-feed and in-stream placements, Mastercard’s DSP serves ad creatives via Aniview Ad Server in real time.
+Format | Type | Served By | Ad Server
+Sponsored Takeover | Direct — full feed or first-N cards | Genuin Video Infrastructure | Genuin Video Server
+Sponsored Post | Direct — frequency-based slots | Genuin Video Infrastructure | Genuin Video Server
+Programmatic In-Feed Video | Programmatic | Mastercard DSP | Aniview
+Programmatic In-Feed Native | Programmatic | Mastercard DSP | Aniview
+Programmatic In-Feed Display | Programmatic | Mastercard DSP | Aniview
+Specification | Value
+Slots Occupied | First N positions in the feed (configurable)
+Sold Via | Direct — content uploaded via Genuin BCC (Brand Control Center)
+Aspect Ratios | 9:16 (vertical)
+Video Formats | MP4, MOV, AVI, WMV, MKV
+Max Duration | 300 seconds
+Max File Size | 2 GB per video
+Interaction Icons | Available (like, comment, share)
+Disclosure | “Sponsored” label displayed on card
+Targeting Options | Genuin out-of-the-box (Option A) · Bring Your Own Algorithm / BYOA (Option B)
+Platform | Web (current) · iOS & Android (roadmap)
+Specification | Value
+Slots Occupied | Frequency-based — calculated ad slots (start slot + repeat frequency)
+Sold Via | Direct — content uploaded via Genuin BCC
+Aspect Ratios | 9:16 (vertical)
+Video Formats | MP4, MOV, AVI, WMV, MKV
+Max Duration | 300 seconds
+Max File Size | 2 GB per video
+Interaction Icons | Available (like, comment, share)
+Disclosure | “Sponsored” label displayed on card
+Targeting Options | Genuin out-of-the-box (Option A) · Bring Your Own Algorithm / BYOA (Option B)
+Platform | Web (current) · iOS & Android (roadmap)
+Specification | Value
+Rendering SDK | Google IMA SDK (Interactive Media Ads)
+Ad Server | Aniview
+Request Format | VMAP / VAST URL
+VAST Versions | 2.0, 3.0, 4.0 (VPAID JS optional)
+Aspect Ratios | 9:16 (vertical, recommended) · 1:1 (square) · 16:9 (landscape)
+Video Formats | MP4, HLS (application/x-mpegURL)
+Min Duration | 5 seconds
+Max Duration | 30 seconds
+Interaction Icons | None (CTA bar only)
+Click Tracking | Supported via VAST click-through and tracking URLs
+Platform | Web (current)
+Specification | Value
+Rendering SDK | GPT.js (Google Publisher Tag)
+Ad Server | Aniview
+Ad Format | Native — headline, image, brand name, description, CTA
+Card Format | Static card — same dimensions as organic content card
+Interaction Icons | None (standard programmatic UX)
+Click Tracking | Supported via native click URL
+Platform | Web (current)
+Specification | Value
+Rendering SDK | GPT.js (Google Publisher Tag)
+Ad Server | Aniview
+Ad Format | Standard display banner — image or HTML5
+Recommended Sizes | 300×250 or vertical mobile equivalent
+Interaction Icons | None
+Click Tracking | Supported via banner click URL
+Platform | Web (current)
+Path A
+VAST / Ad Tags | Mastercard provides a VAST tag or ad tag URL, which is configured directly as a demand source within Aniview. At ad break time, Aniview requests the tag and serves the returned creative. No DSP or deal setup is required.
+Best for: Simplest activation. Ideal when Mastercard has existing ad tags from their own ad server or creative platform.
+Path B
+PMP / Programmatic Guaranteed
+★ Recommended | Mastercard creates Private Marketplace (PMP) or Programmatic Guaranteed (PG) deals in their DSP. The resulting deal IDs are accepted on the Aniview ad server. Impressions are transacted at a negotiated CPM against a guaranteed or prioritised allocation of iHeart inventory.
+Best for: Preferred for guaranteed delivery and fixed pricing. Maintains Mastercard’s DSP workflow while securing premium inventory.
+Path C
+DSP oRTB Bidding | Mastercard’s DSP is plugged directly into Aniview via an oRTB (OpenRTB) endpoint. The DSP receives real-time bid requests for iHeart inventory and responds with bids. Winning bids are served by Aniview.
+Best for: Maximum flexibility and real-time optimisation. Suitable for programmatic-first teams that want dynamic bidding on iHeart inventory.
+Position | Behaviour
+Pre-roll | Ad plays before content video begins.
+Mid-roll | Ad interrupts content at the midpoint.
+Post-roll | Ad plays after content video completes.
+Specification | Value
+Ad Type | In-stream linear video
+VAST Versions | 2.0, 3.0, 4.0
+VPAID Support | Optional — VPAID JS creatives supported if required
+VMAP Support | Supported — one ad per VMAP break (pre/mid/post); ad podding not supported
+Aspect Ratios | 9:16 (1080×1920) · 1:1 (1080×1080) · 16:9 (1920×1080)
+Video Formats | MP4 or WebM
+Max File Size | 
+Max Duration | 30 seconds recommended; configurable per demand source
+Audio | Unmuted by default; can be muted if player is configured for autoplay-muted
+Skippable Ads | Supported — skipOffset read from VAST; users may also swipe to dismiss once skip timer elapses
+Click Tracking | Supported via VAST click-through and tracking URLs
+Path A
+VAST / Ad Tags | Mastercard provides a VAST tag URL configured as a demand source in Aniview. Aniview requests the tag at each break point and serves the returned linear video creative.
+Best for: Simplest path. No DSP or deal required. Works with any existing ad server producing VAST.
+Path B
+PMP / Programmatic Guaranteed
+★ Recommended | PMP or PG deal IDs created by Mastercard in their DSP are accepted on Aniview. Impressions transact at a negotiated CPM with priority access to iHeart in-stream inventory.
+Best for: Preferred for fixed pricing and guaranteed delivery against specific iHeart in-stream inventory.
+Path C
+DSP oRTB Bidding | Mastercard’s DSP connects to Aniview via oRTB. The DSP receives real-time bid requests for iHeart in-stream inventory and responds with bids in real time.
+Best for: Real-time optimisation and dynamic CPM. Suitable for programmatic-first buying teams.
+LLM ads are a distinctive, high-attention ad format unique to Genuin’s platform — native conversational placements served within an AI-powered chat overlay on top of the video player, activated through Genuin’s partnership with Koah.
+1 | Dwell Trigger — After a configurable dwell period on the Genuin feed, the Octo GPT overlay is triggered.
+2 | Auto-Prompt Generated — Koah generates a contextual prompt using page, video, and user context signals.
+3 | Prompt Box Expands — The overlay expands — the user sees the AI response, a Mastercard ad unit, and video recommendations within the conversation interface.
+4 | Ad Served — Koah selects and serves the appropriate Mastercard ad format within the conversation, contextualised to the user’s current interaction in real time.
+5 | User Engages or Dismisses — The user can interact with the ad, continue the conversation, or dismiss the overlay to return to the feed.
+Format | Description
+Action Card | A card-format ad unit with one or more action buttons. Mastercard configures the CTA label (e.g., “Apply Now”, “Get Offer”, “Learn More”) and destination URL. Designed to drive direct user action from within the conversation.
+Image Card | A visually-led card featuring a brand image, headline, and optional description. Best suited for brand awareness and visual storytelling within the conversational context.
+Poll | An interactive poll embedded within the LLM conversation. Users select from pre-defined options configured by Mastercard. Results can inform audience insight and engagement measurement.
+Expandable | A compact teaser unit that expands to reveal full ad content when the user taps or interacts. Allows richer creative without disrupting the conversation flow — the full ad is only shown on user intent.
+1 | Ad Creation — Mastercard (or Genuin/Koah on their behalf) creates ad creatives on Koah’s portal. Ad format, copy, CTA text, and destination URL are configured.
+2 | Targeting Configuration — The ad is targeted to the iHeart placement within Genuin’s network. Targeting parameters include content category, device type, and user context signals.
+3 | Identity Mapping (Optional) — For audience-targeted LLM placements, Mastercard’s identity segments (resolved via LiveRamp — see Section 5) are passed to Koah for targeting within the overlay.
+4 | Live Delivery — When the Octo GPT overlay triggers on an iHeart destination, Koah selects and serves the appropriate Mastercard ad unit in real time.
+5 | Reporting — Performance data (impressions, CTA interactions, engagement rate) is accessible via Koah’s reporting portal. Genuin provides impression-level data for cross-channel reconciliation.
+ | Mechanism 1: Sponsored Content | Mechanism 2: Programmatic Channels
+Formats | Sponsored Takeover, Sponsored Post | Programmatic In-Feed Video, Native, Display · In-Stream Pre/Mid/Post-roll
+Infrastructure | Genuin’s video infrastructure serves the content | Mastercard’s DSP serves ad creatives in real time via Aniview
+Targeting | Genuin out-of-the-box targeting (Option A) — or Mastercard’s own algorithm via BYOA (Option B) | DSP controls audience targeting and creative selection
+Creative control | Mastercard uploads videos to Genuin BCC. BYOA allows per-user creative selection at serve time. | DSP selects creative per impression in real time
+Identity | LiveRamp identity match used by Genuin targeting (Option A) or passed as context signals to BYOA endpoint (Option B) | LiveRamp identity match activated in Mastercard’s DSP for programmatic buying
+Step | Action
+1. Identifier Exchange | Genuin shares its pseudonymous user identifiers with LiveRamp via a secure data collaboration agreement.
+2. Identity Resolution | 
+3. Segment Activation | Mastercard pushes audience segments (e.g., merchant category, spend behaviour, geography) into Genuin via the resolved identity mapping. These segments are used to target ad placements across in-feed, in-stream, and LLM formats.
+4. Programmatic Activation | For programmatic formats, Mastercard’s DSP activates against matched segments using the deal IDs or oRTB path configured in Aniview (see Sections 2.7 and 3.3).
+5. Measurement & Attribution | Engagement data from Genuin is returned to Mastercard via LiveRamp, enabling closed-loop measurement and attribution. See Section 6 for full detail.
+Identity Partner | Notes
+ID5 | Open, privacy-first identity solution. Strong cookieless reach on web inventory.
+UID 2.0 (The Trade Desk) | Email-based pseudonymous ID. Widely adopted across programmatic supply chains.
+Lotame | Data collaboration platform with cross-device graph capabilities.
+Epsilon | First-party data network with strong retail and commerce media applications.
+Format | Metrics Available
+Sponsored Takeover / Post | Impressions, unique reach, click-through rate (CTR), video completion rates (25% / 50% / 75% / 100%), engagement actions (likes, comments, shares)
+Programmatic In-Feed (all formats) | Metrics available via the DSP
+Programmatic In-Stream | Metrics available via the DSP
+LLM Ads (Koah) | Metrics available on Koah
+Capability | Description
+Post-View Attribution | Attribute conversions on Mastercard merchant pages to a prior Genuin ad impression. Configurable attribution window (default: 7-day view-through).
+Custom Conversion Events | Define merchant-specific goals within the Pixel configuration — e.g., card application submitted, offer redeemed, purchase completed. Events fire on the corresponding page action.

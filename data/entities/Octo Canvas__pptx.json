@@ -1,0 +1,268 @@
+{
+  "source_doc": "Octo Canvas",
+  "entities": [
+    {
+      "name": "Octo Canvas",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Octo Canvas Prototype"
+      ],
+      "description": "A conversational AI agent and vibe design platform that builds brand-native generative destinations from brief to live deployment, with no code or post-launch maintenance required from the brand."
+    },
+    {
+      "name": "OctoGPT",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "A sibling Octo product that runs as a configuration on the same shared agent foundation as Octo Canvas and references the same persistent brand profile in BCC."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Product",
+      "type": "SDK",
+      "aliases": [
+        "Genuin SDK components"
+      ],
+      "description": "The standardised component SDK (video, chat, text, images, configurable via JSON) into which Octo Canvas auto-deploys its generated destinations, providing guardrails versus freeform code."
+    },
+    {
+      "name": "Generative Destination",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "brand-native generative destination",
+        "living destination"
+      ],
+      "description": "A brand-native, AI-built destination produced by Octo Canvas that draws on brand capabilities at runtime and is hosted and maintained on Genuin infrastructure."
+    },
+    {
+      "name": "Brand Knowledge",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [],
+      "description": "The source-of-truth layer for a brand's identity, persona and tonality, drawn from BCC knowledge, communities, social accounts and uploaded files."
+    },
+    {
+      "name": "Brand Capabilities",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "Octo Capabilities"
+      ],
+      "description": "A brand's connected functional surfaces \u2014 CMS connections, podcast feeds, contest APIs, event data \u2014 isolated per brand and used by Octo Canvas at design and runtime."
+    },
+    {
+      "name": "Capabilities Marketplace",
+      "bucket": "Product",
+      "type": "Marketplace",
+      "aliases": [
+        "9,900+ Capabilities Marketplace"
+      ],
+      "description": "A library of 9,900+ pre-built capabilities that brands can connect to instead of generating new ones from brand knowledge."
+    },
+    {
+      "name": "BCC",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [
+        "Brand Control Center",
+        "BCC Knowledge"
+      ],
+      "description": "The persistent brand identity and knowledge store where a brand's profile is stored once and referenced by all Octo products including OctoGPT and Octo Canvas."
+    },
+    {
+      "name": "Agent Orchestration",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "The component that routes generative destination intent to Octo Canvas and manages agent-to-agent coordination across the Octo product suite."
+    },
+    {
+      "name": "Growth Intelligence",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "The personalisation engine, community infrastructure and workflow orchestration layer that knows how to grow and engage a brand's audience."
+    },
+    {
+      "name": "UX Capabilities",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "The set of SDK components (video, chat, text, images) configurable via JSON that render every visual element of a generative destination."
+    },
+    {
+      "name": "Shared Infrastructure",
+      "bucket": "Engineering",
+      "type": "Infrastructure",
+      "aliases": [
+        "common agent foundation"
+      ],
+      "description": "The common agent foundation underlying all Octo products; both OctoGPT and Octo Canvas are configurations on this shared layer."
+    },
+    {
+      "name": "Genuin Buildtime Infrastructure",
+      "bucket": "Engineering",
+      "type": "Infrastructure",
+      "aliases": [],
+      "description": "The build-time stack that powers Octo Canvas using a brand's Octo Capabilities and Brand Knowledge, recommending and auto-generating capabilities to design a brand-resonant vibe."
+    },
+    {
+      "name": "Genuin Runtime Infrastructure",
+      "bucket": "Engineering",
+      "type": "Infrastructure",
+      "aliases": [
+        "Genuin Video & Community Infrastructure"
+      ],
+      "description": "The runtime stack implemented via Genuin SDKs that integrates directly with client CMS systems so destination content is live, fresh and personalised rather than a static snapshot."
+    },
+    {
+      "name": "Relume",
+      "bucket": "Business",
+      "type": "Competitor",
+      "aliases": [],
+      "description": "A competing site-building tool that Octo Canvas is positioned against; uses blank-canvas or generic-template starting points with partner-managed deployment."
+    },
+    {
+      "name": "Google Stitch",
+      "bucket": "Business",
+      "type": "Competitor",
+      "aliases": [
+        "Stitch"
+      ],
+      "description": "A Google design tool positioned alongside Relume as a competitor with free-form output and partner-managed deployment, contrasted with Octo Canvas's brand-first, Genuin-managed approach."
+    },
+    {
+      "name": "Marketers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "The primary user audience that Octo Canvas guides through its two-phase Design and Build process to create generative brand destinations."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Octo Canvas",
+      "target": "Generative Destination",
+      "type": "CREATED",
+      "description": "Octo Canvas builds brand-native generative destinations from brief to live deployment."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Genuin SDK",
+      "type": "USES",
+      "description": "The Build phase of Octo Canvas auto-deploys output as a Genuin SDK implementation."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Shared Infrastructure",
+      "type": "PART_OF",
+      "description": "Octo Canvas is a configuration running on the common Octo agent foundation."
+    },
+    {
+      "source": "OctoGPT",
+      "target": "Shared Infrastructure",
+      "type": "PART_OF",
+      "description": "OctoGPT is another configuration on the same shared agent foundation as Octo Canvas."
+    },
+    {
+      "source": "Shared Infrastructure",
+      "target": "Agent Orchestration",
+      "type": "INCLUDES",
+      "description": "Agent Orchestration is part of the shared intelligence and infrastructure layer."
+    },
+    {
+      "source": "Shared Infrastructure",
+      "target": "Growth Intelligence",
+      "type": "INCLUDES",
+      "description": "Growth Intelligence is part of the shared intelligence and infrastructure layer."
+    },
+    {
+      "source": "Shared Infrastructure",
+      "target": "UX Capabilities",
+      "type": "INCLUDES",
+      "description": "UX Capabilities (SDK components) are part of the shared intelligence and infrastructure layer."
+    },
+    {
+      "source": "Agent Orchestration",
+      "target": "Octo Canvas",
+      "type": "POWERS",
+      "description": "Agent Orchestration routes generative destination intent to Octo Canvas and coordinates agents."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Brand Knowledge",
+      "type": "DEPENDS_ON",
+      "description": "Octo Canvas surfaces and derives persona, tonality and identity from a brand's Brand Knowledge."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Brand Capabilities",
+      "type": "DEPENDS_ON",
+      "description": "Octo Canvas reasons over a brand's capabilities (CMS, podcast feeds, contest APIs, event data) at design and runtime."
+    },
+    {
+      "source": "Brand Knowledge",
+      "target": "BCC",
+      "type": "PART_OF",
+      "description": "Brand Knowledge is sourced from BCC content, connected sources, communities and uploaded files."
+    },
+    {
+      "source": "BCC",
+      "target": "OctoGPT",
+      "type": "POWERS",
+      "description": "BCC stores the persistent brand profile referenced by OctoGPT."
+    },
+    {
+      "source": "BCC",
+      "target": "Octo Canvas",
+      "type": "POWERS",
+      "description": "BCC stores the persistent brand profile referenced by Octo Canvas."
+    },
+    {
+      "source": "Brand Capabilities",
+      "target": "Capabilities Marketplace",
+      "type": "INCLUDES",
+      "description": "Brands can connect capabilities from the 9,900+ Capabilities Marketplace as one capability pathway."
+    },
+    {
+      "source": "Genuin Buildtime Infrastructure",
+      "target": "Octo Canvas",
+      "type": "POWERS",
+      "description": "The Genuin Buildtime Infrastructure powers Octo Canvas using brand capabilities and brand knowledge during the design phase."
+    },
+    {
+      "source": "Genuin Runtime Infrastructure",
+      "target": "Generative Destination",
+      "type": "POWERS",
+      "description": "The Genuin Runtime Infrastructure hosts and serves generative destinations with live, personalised content."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Genuin Runtime Infrastructure",
+      "type": "PART_OF",
+      "description": "Genuin's Video & Community Runtime Infrastructure is implemented using Genuin SDKs."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Marketers",
+      "type": "TARGETED_AT",
+      "description": "Octo Canvas guides marketers through its two-phase Design and Build process."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Relume",
+      "type": "COMPARED_TO",
+      "description": "Octo Canvas is explicitly positioned against Relume, contrasting brand-first design and Genuin-managed deployment with Relume's generic templates and partner-managed deployment."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Google Stitch",
+      "type": "COMPARED_TO",
+      "description": "Octo Canvas is explicitly positioned against Google Stitch, contrasting brand-first SDK output with free-form, deploy-anywhere output."
+    }
+  ],
+  "_src_hash": "e34f0e16f5247b5d91c2a40babcf08435731708dec454b2d7c65c13553cc358e",
+  "_skill_sig": "4edd28021f3312b1"
+}

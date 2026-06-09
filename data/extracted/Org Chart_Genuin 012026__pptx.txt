@@ -1,0 +1,154 @@
+--- Slide 1 ---
+Bhargav - CEO
+Rahul
+Finance
+Operations
+Customer integration
+See Page 2
+Matt - CMO
+Marketing
+Nayan - Head of Eng.
+Engineering
+Vishal D
+(Sanch in transition)
+AI
+Product
+See page 4
+See page 3
+Genuin - Leadership - Q1’26
+See page 3
+Peter
+Sales
+Ivan Kozhuharov
+Principal Eng.
+See page 5
+
+--- Slide 2 ---
+Rahul
+Finance
+HR / Legal / Ops
+Customer Integration
+Saloni (HR)
+VP of CSM
+(H2 hire)
+FP&A analyst
+(currently outsourced)
+Finance and Ops (CSM)
+OPEN ROLES - USA
+Jayanthi
+(Rev ops/Ad ops)
+Project Manager*
+(Q1 hire)
+Content
+Strategist
+(Q1 hire)
+Frontend/
+deployment engineer
+(Q1 Hire)
+*Project manager - to lead all external and  internal projects
+** this role is to deploy Genuin SDK in customer’s app/web - responsible to integrate the platform efficiently and effectively - one role for every 4 tier 3 customers
+***Pinkal - deploy platform (integration) for non-US or tier 2 -3 customers and also support onboarding new members and lead compliance/certification (socly)
+Note: 1) FP&A analyst - this person will be responsible for managing financial audit, accounting, budget and forecasting (including tracking business kpi/functional kpi etc.) 2) Jayanthi to move under VP of CSM once hired, 3) Account Executive to manage customer overall and do upsell/cross sale, need one AE for 4 tier 1 customers - Q2 hire
+OPEN ROLES - India
+Account Executive
+(Q2 hire)
+
+--- Slide 3 ---
+Matt CMO
+Brand awareness
+Events
+PR
+Product Marketing
+Marketing
+Charmie, content writer
+PR Agency (external)
+
+--- Slide 4 ---
+Vishal D
+(Sanch - in transition)
+Product
+Shrushti APM*
+Devanshu Product*
+Smit Product Manager
+Sanidhya & Team
+(AI)
+Moon Lead Product Designer
+Product Designer (Sanidhya’s team member)
+Ruchita Product Analyst
+Sandeep Technical Writer
+Shubhangi Product Designer
+*Devanshu and shrusti leading customer integration however will be transitioned to full time product manager role - full transition to product role in 1-2 months as we hire replacement in USA - see page 2
+OPEN ROLES - USA
+OPEN ROLES - India
+
+--- Slide 5 ---
+Ivan Kozhuharov
+Principal Engineer
+Sushant Singh
+Product Architect
+To be hired in NY
+TAM
+Pinkal Chauhan
+TAM
+
+--- Slide 6 ---
+NayanHead of Engineering
+Ankit Gabani PE (Mobile Tech)
+Vishal Nirmal PE (Google Tech)
+Krunal Shah Principal Engineer
+Nilesh VP of Eng.
+Suhanee IOS Developer
+Sujal QA
+Himanshu Frontend Developer
+Bhavesh QA II
+Dhruv P. Backend Developer
+Meet *Principal Engineer
+Ashish IOS Developer
+Shubh Android Developer
+Dhruv G. SDE
+Jimit Solution Architect
+Dhairya Full Stack Developer
+Dev Frontend Developer
+Kashish QA II
+Jalay Full Stack
+Neel DevOps
+Eng. Team
+Om SDE
+Arjav Head of Mobile
+Rohit Frontend Developer
+Jaydeep Frontend Developer
+Kaushal Full Stack Developer
+Riken DevOps Intern
+Dharmil Full Stack Intern
+Harshit DS
+Umang DS
+Vedant DS
+Kirtan DS
+OPEN ROLES - USA
+OPEN ROLES - India
+*Kaushal will lead ad exchanges integration, monetization related integrations  - transition from Meet
+Note - 1) resource planning for eng. Team is open - to be finalized by Feb 28th once product roadmap for 2026 final 2) 24 / 7 team - Sanidhya will assign a resource - in progress
+Dev Changela IOS Developer
+Jemish Khunt IOS Developer
+
+--- Slide 7 ---
+Bhargav - CEO
+Jim Spare
+Investment, customers
+Jared
+Connecting Pipes
+Keyur
+AI - technical
+Elizabeth
+Customer intro
+Advisors
+Rahul
+
+--- Slide 8 ---
+Genuin Inc.
+(Delaware C Corp)
+Parent company
+Legal Entities
+Genuin Codebase LLP
+(India entity)
+wholly-owned subsidiary of parent company

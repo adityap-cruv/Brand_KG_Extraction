@@ -1,0 +1,134 @@
+iHeartVIP Revival Initiative
+iHeartVIP Revival Initiative
+Enabling Genuin Platform for iHeartVIP Experience
+Owner : Devanshu Shah
+Requirement Initiated via : Bhargav Patel
+Version : v1
+Created at : 10th March 2026
+Last Updated : 10th March 2026
+Required Stakeholders : Nayan MevadaNilesh MakwanaKrunal ShahSmit ShahArjav DaveAnkit GabaniVishal Nirmal
+1. Background
+In 2019, iHeartRadio partnered with Concourse Media to launch iHeartVIP.com, a destination designed to distribute music and industry news using a content delivery format similar to editorial publishing platforms.
+The initiative saw positive engagement metrics, but iHeartMedia eventually decided not to continue the publishing initiative, and the domain was deprioritized.
+Today, with the evolution of short-form video, creator engagement, and community-driven experiences, there is an opportunity to revive iHeartVIP as a modern fan engagement hub powered by Genuin.
+2. Vision
+The goal is to revive the iHeartVIP.com domain, transforming it from its 2019 music/industry news roots into a high-engagement video and community platform. By leveraging Genuin’s infrastructure, we will enable 1,000+ event-based communities, integrated contests, and streamlined monetization. This revival will be achieved by white-labeling a Genuin-powered subdomain with the iheartvip.com domain.
+3. Strategic Opportunity
+iHeart runs 1000+ live events annually, including:
+Music festivals
+Artist tours
+Radio station activations
+Brand partner events
+Podcast tours
+Sponsored experiences
+Currently these activations are distributed across fragmented channels. Reviving iHeartVIP allows iHeart to create a centralized fan engagement platform where events, content, and communities converge.
+4. Proposed Experience
+iHeartVIP would become a destination where users can:
+• Discover upcoming events
+ • Join event-specific communities
+ • Watch event highlights and creator clips
+ • Participate in contests and giveaways
+ • Engage with artists and hosts
+ • Access partner experiences
+Core Platform Experience
+The experience will be powered by Genuin’s video + community infrastructure.
+Each event becomes a community, enabling:
+• Video clips
+ • Creator uploads
+ • Discussions
+ • Event content hubs
+ • Brand activations
+Example Structure
+iHeartVIP
+├── Event Communities (1000+)
+│     ├── iHeart Music Festival
+│     ├── Jingle Ball Tour
+│     ├── Podcast Awards
+│     ├── Summer Concert Series
+│
+├── Podcast Communities
+│
+├── Artist Communities
+│
+└── Contests & Fan Experiences
+5. What Does “Render Genuin Platform at iHeartVIP” Mean?
+The core idea is to white-label the revived iHeartVIP domain using our existing Genuin web platform infrastructure. Once the domain mapping is configured, the iHeartVIP domain will point to our web application (currently hosted under the iHeart brand on Genuin). This will allow the iHeartVIP experience to be delivered directly through the iheartvip.com domain, while being powered by our platform in the backend. As a result, iHeart can quickly activate communities, video experiences, and monetization opportunities on iHeartVIP without needing to build a new platform from scratch.
+Implementation concept
+Current situation:
+iheartmedia.begenuin.com
+Proposed outcome:
+iheartvip.com
+↓
+White-labelled Genuin platform
+This means:
+• iHeartVIP domain points to a Genuin-powered web experience
+ • Users interact with a fully branded iHeart experience
+ • The backend infrastructure runs on Genuin
+6. Approach 1
+Enable Subdomain on Existing iHeart Brand (BCC)
+What
+Reuse the existing iHeart production brand inside BCC and update its subdomain.
+Current:
+iheartmedia.begenuin.com
+Proposed:
+iheartvip.begenuin.com
+This would allow iHeartVIP to run on the same brand instance currently powering iHeart.
+Why
+• Avoid managing multiple brands in BCC
+ • Reduce content duplication
+ • Reuse existing content pipelines
+ • Faster operational setup
+This approach keeps everything under the same brand infrastructure.
+How (Technical Steps)
+Engineering tasks required:
+Risks
+Share URL Changes
+Existing URLs: iheart.com/podcast/...
+Potential new URLs: iheartvip.com/podcast/...
+Mitigation:
+• Implement URL redirects
+ • Support both URL structures
+Loss of Existing Subdomain
+Current subdomain:iheartmedia.begenuin.com
+If replaced, iHeart cannot white-label it separately later.
+Although iHeart previously indicated they do not need this, it still introduces future limitation risk.
+7. Approach 2
+Create Separate Brand for iHeartVIP
+What
+Create a new brand inside BCC dedicated to iHeartVIP.
+Example:
+Brand 1 → iHeartMedia (existing)
+Brand 2 → iHeartVIP
+New subdomain:
+iheartvip.begenuin.com
+This can then be white-labeled under iheartvip.com.
+Why
+This approach provides clean separation and avoids modifying production infrastructure.
+Benefits:
+• Minimal risk to existing iHeart production brand
+ • No changes required to existing share URLs
+ • Simpler implementation for engineering
+ • Cleaner architecture for future scaling
+Risks
+Operational Overhead
+iHeart/Genuin may need to manage two brands inside BCC.
+8. Comparison of Approaches
+9. Open Questions
+To finalize the implementation approach, the following points can provide more clarity.
+1. Content Pipeline
+Will iHeartVIP reuse the existing overlap content pipeline used for iHeart communities? OR creators will post content OR there will be content coming via different source?
+2. Mobile Apps
+Will iHeartVIP include dedicated mobile apps powered by Genuin?
+iHeartVIP iOS App
+iHeartVIP Android App
+Or will it remain web-first initially?
+3. Editorial Content
+Is iHeart planning to revive the news/article publishing model that existed previously? Will they add our placements?
+Or will the platform be video-first with communities?
+Factor | Approach 1 | Approach 2
+Implementation Complexity | Medium | Low
+Risk to Production | Medium | Low
+Architecture Cleanliness | Medium | High
+Future Scalability | Medium | High
+Dev Effort | Medium | Low
+Operational Overhead | Low | Medium

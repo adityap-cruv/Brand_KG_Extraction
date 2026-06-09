@@ -1,0 +1,249 @@
+--- Slide 1 ---
+SPONSORED VIDEO POST OPPORTUNITY
+GETTING STARTED IN-NETWORKfor Media and Marketing Teams
++300 more domains
+Organic Content
+Partner Content
+Social Content
+Organic Community
+Creators & Influencers
+
+--- Slide 2 ---
+For Retailers & Commerce >
+Embedded video experiences drive onsite engagement, product sales & media revenue.
+For Brands & Advertisers >
+Reach and distribution of your video assets with engaged audiences in our Network.
+For Consumers >
+Personalized feeds provide relevant content, offers & social interaction.
+Generative Engagement, Experience
+& Revenue Infrastructure
+
+--- Slide 3 ---
+Network: Video distribution to maximize reach
+= 237MM Reach
+= 4B impressions/month
+Genuin NetworkAudience
+Programmatic Scale: 1.2BB+ Reach
+ExtendedAudience
+Locked
+DATA
+Boost reach of your video assets with verified audiences, beyond walled gardens and across our Network.
+Repurpose your social assets
+Import from Socials
+Curate on Genuin
+Activate across Network
+
+--- Slide 4 ---
+Offsite Use Cases Across Genuin Network
+Repurposed Social
+IAB Standards
+|  CONTEXTUAL CONTINUITY
+|  300x600, 300x250
+SPECS:
+Video Format
+- Aspect Ratio: 9:16
+- Length: < 5min
+- File Type: MP4, MOV, AVI, WMV, MKV
+- File Size: Up to 2GB
+Brand Assets
+- Brand logo
+- File type: .jpg, .png, .jpeg
+- File size: upto 3MB
+- @brand-handle
+- Up to 25 Characters
+- Video description
+- Up to 2000 Characters
+- Multiple Linkout
+- Up to 4
+SPECS:
+Ad Units
+- 300x600
+- 300x250
+Ad Creatives
+- Video Post(s)
+- Ad Copy
+- CTA ( Click URL )
+- Hashtags
+Tracking
+- Pixel URL
+- GTM ID
+
+--- Slide 5 ---
+Your creators & influencers
+Your data
+Additional Community Network Destinations
+Initial Integrations
+Aggregate and distribute your content to drive relevance and reach
+Featured
+Products
+Product
+Education
+Limited Time Offers
+Vaccine app download
+Regionality
+Schedule and Push based on Demand & Supply
+Your content & ads
+
+--- Slide 6 ---
+Knowledge Seekers
+Listeners
+Diners
+Readers
+Example Partner: NFL  |   Network Destination: Across The Network
+Placements across exclusive domains in Network
+
+--- Slide 7 ---
+What It Is & Why It's Unique
+AI-orchestrated contextual signals match your video to the exact moment a consumer is receptive, on curated, brand-safe publisher destinations. No cookies. No surveillance. Just relevance at scale.
+Why It's the Future
+3rd-party cookies are gone. Walled gardens own the data. The open web needs a smarter signal, this is it. This is the reason we built Genuin: to return relevance to publishers, brands, and audiences without sacrificing trust.
+Why Marketers Choose This
+10x engagement vs. display. Brand-safe, MFA-free. 100% share of voice. Zero-party data ownership. Contextual targeting runs alongside (and amplifies) existing media strategies without cannibalizing them.
+PHASED APPROACH  //  Augmenting Contextual with 1:1 Addressable Audience
+PHASE 1  |  Launch
+Contextual Activation
+AI matches your video content to audience context across 300+ brand-safe network destinations. No data handshake required; Start scaling!
+→
+PHASE 2  |  Augment
+Add Brand & Agency 1P Data
+Layer in your 1st-party segments and agency data to sharpen targeting within the contextual framework, improving relevance w/o losing data ownership.
+→
+PHASE 3  |  Scale
+RMN + 1:1 Addressable Audiences
+Connect RMN/CMN data for closed-loop measurement. Activate 1:1 addressable targeting as a precision amplifier on top of contextual foundation.
+Contextual and 1:1 Addressable Universe Mapping
+Orchestrate full-funnel, contextually mapped content, activated across all sites in our network
+
+--- Slide 8 ---
+0% Tech Tax, 100% Working Media Fewer costs, more outcomes
+100% Share of Voice, Full Transparency Exclusive placements, bigger impact
+Brand SafeAuthentic, curated, people-powered destinations
+Get Zero-Party DataFull visibility into how audiences interact to your content
+Measurement Delivered Always-on, delivered to your analytics systems
+Why Join The Network: Free Forever for Global Brands
+
+--- Slide 9 ---
+Offsite In-Network
+Extending Relevance across Open Web
+2026. All information herein deemed confidential.
+
+--- Slide 10 ---
+2026. All information herein deemed confidential.
+Get Started with Offsite In-Network Sponsorship
+For Media and Marketing Teams
+Step 1: Aggregate & Upload Your Content
+Bring together organic and paid sources to fuel your placements
+Repurpose existing social content
+Optional: Activate creator content beyond social channels
+Align content with your full-funnel strategy, from awareness to advocacy
+Step 2: Map Your Context Universe
+Step 3: Identify Placements & Partners
+Step 4: Set Up Payout
+Select network partners and establish the commercial relationship
+Allocate budget to spend on partner site(s)
+Connect billing through Genuin or your existing commerce/retail media network.
+Include in-house budgets for direct-to-consumer strategies
+Reallocate budgets from RMN/CMN partners for measurable outcomes and zero-party data ownership
+
+--- Slide 11 ---
+|  Extend Contextual Continuity
+Offsite In-Network:Sponsored Post
+2026. All information herein deemed confidential.
+
+--- Slide 12 ---
+|  Configure Funnel and Relevance
+2026. All information herein deemed confidential.
+Offsite In-Network:Sponsored Takeover
+Sponsored Content Orchestration with Journey Takeover
+
+--- Slide 13 ---
+Your Partner (Ad)
+300x600
+Your Holding Co. (House Ad)
+Your Partner (Ad)
+Your Brand (House Ad)
+Your Partner (Ad)
+300x250
+Your Partner (Ad)
+Your Holding Co. (House Ad)
+Your Partner
+(Ad)
+Your Brand (House Ad)
+Your Partner (Ad)
+|  Full Funnel Activation
+2026. All information herein deemed confidential.
+Offsite In-Network:IAB Compatible Session Takeover
+|  Journey Orchestration
+
+--- Slide 14 ---
+|  Maximize Relevance With Every Media Impression
+2026. All information herein deemed confidential.
+Offsite In-Network:Extended O&O Sponsorship
+GSK
+
+--- Slide 15 ---
+Transactional Transparency: No Added Tech Tax
+3 Ways to activate media offsite in-network: Transparent pass-throughs to network partners
+1
+Pay Genuin Direct
+Marketer pays Genuin
+Marketer pays Genuin directly for all campaigns. Genuin generates the invoice and resolves payouts to all network publishers.
+Full visibility into where every dollar goes…  iHeart, Grubhub, Us Weekly, and every partner in the network.
+↓  Publishers (pass-through)
+or
+2
+Pay Publisher Direct
+Marketer pays the Publisher
+Marketer leverages their existing direct relationship and payment setup with the publisher.
+Cleanest path for teams with established partnerships. No new billing relationship required with Genuin.
+↓  Publishers (direct)
+or
+3
+Pay via RMN
+Marketer pays their RMN
+Marketer pays their Retail Media Network directly. The RMN pays Genuin via a Genuin-generated invoice.
+Advertiser is responsible for ensuring payment resolution. Genuin resolves all publisher payouts.
+↓  RMN → Genuin → Publishers
+HOW GENUIN EARNS REVENUE
+In ALL cases, the Publisher pays
+Genuin for Monetized Infrastructure.
+Advertisers pay ZERO infrastructure fees. Forever.
+All advertiser media payments are a direct, transparent pass-through to our network partners (iHeart, Grubhub, Us Weekly, and 300+ more). Genuin's revenue comes exclusively from publisher infrastructure agreements.
+
+--- Slide 16 ---
+Measurement & Data – In Your Control
+In-network offsite sponsorship gives you more of the raw data you need, directly in your infra
+Full Funnel Measurement & Optimization
+Out-of-Market to In-Market Conversion
+For the first time, measure which audiences you moved from unaware to actively considering; closed-loop attribution across every publisher placement.
+Reach, Frequency & Budget Optimization
+See activity on each publisher, by payment path. Know exactly what reach and frequency you're buying and reallocate budget in real time based on performance. Invite best performing programmatic publishers directly into your network.
+Zero-Party Data Ownership
+All engagement data (views, interactions, CTAs) is yours. Not the publisher's. Not Genuin's. Yours. Sent back to you in raw format, in whatever structure you need at your existing data infrastructure destinations..
+How We Get You the Data
+1
+Raw Data, Shipped Back to You
+We send all campaign data back in raw format, exactly how you want it. Publisher-level activity, spend, reach, frequency, engagement, and CTAs. No black box.
+2
+Map Against Your MMP & Data Stack
+Connect to your existing MMP, attribution partners, and analytics tools. We push directly to your data warehouse, closing the loop without adding new complexity.
+3
+Certified Data Destinations
+Send your data wherever it needs to go:
+Google GCP
+Amazon AWS
+Oracle OCI
+MixPanel
+Snowflake
+Your Warehouse
+Your data. Your warehouse. Your rules. Genuin acts as a Data Processor, not a Data Controller.
+
+--- Slide 17 ---
+Matt Wurst
+CMO
+matt@begenuin.com
+Thank You
+H2 2025. All information herein deemed confidential.
+Daniel Harrison
+Senior Strategic Advisor
+daniel@begenuin.com

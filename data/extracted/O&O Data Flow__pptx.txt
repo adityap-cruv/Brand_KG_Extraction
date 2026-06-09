@@ -1,0 +1,161 @@
+--- Slide 1 ---
+Content Data Flow
+Video Player SDK Owner
+Metadata Passed To Genuin
+
+--- Slide 2 ---
+Ad Request Payload Data Flow
+User Consent and Browser Agent Data in Ad Call
+Context Data in Ad Call and Response
+Consumer Consent on website
+Ad Creatives
+Targeting Logic
+Advertiser Data
+Campaign Data
+
+--- Slide 3 ---
+Step1:
+App → Genuin
+Request Content Video
+Step2: Genuin → App
+Send Content Video
+Step3: App → Triton
+Request Audio Ad
+Step4: Triton → App
+Send Audio Ad
+Step5:
+App → Advertiser
+Send Tracking Signals
+App → Genuin
+Send Signals for Placement
+Genuin Player Renders via SDK
+
+--- Slide 4 ---
+App/Client side architecture
+App | Genuin SDK | Google IMA SDK
+Android/iOS: A software program installed on or executed within a device's operating environment that a user interacts with directly to perform tasks
+
+Web: A document rendered by a web browser that is retrieved from a remote server via a URL and displayed using standardised web technologies (HTML, CSS, JavaScript) | Android/iOS: software development kit distributed as a compiled library that a third-party application developer integrates into their native mobile application at build time.
+
+Web: A JavaScript library loaded by a third-party publisher's web property at runtime, that executes within the user's web browser in the context of the publisher's domain | A software development kit developed and distributed by Google that enables third-party application developers and web publishers to request, render, and manage audio/video advertisements
+
+--- Slide 5 ---
+Step1, Video Request Payload: App(Genuin SDK) → Genuin
+Genuin SDK(integrated by the App) requests for video content(from Genuin servers)
+Identity Payload | Session Payload | Brand Context Payload
+"device_id": Genuin device/user identifier
+"placement_id": ID of the video placement slot
+"style_id": Visual style configuration ID for placement | "page_session": Unique session token for placement page
+"last_video_id": UUID of last video seen by user | "brand_context[].id": Station/entity ID (e.g., "1469")
+"brand_context[].type": Context type (e.g., "station")
+"url": URL from where the request was generated
+{"device_id":"027d8206c950257bc9a6e03c883575f0","placement_id":"6901f4c0bc8cdde8e253d1e5","style_id":"6901f4c0bc8cdde8e253d1e6","page_session":"plc_3DRDguKKeJU348mh6teDkg4Gfv2","last_video_id":"18cecd45-9fe8-473c-8478-23c8246cad7d","brand_context":[{"id":"1469","type":"station"}],"url":"https://www.iheart.com/live/z100-1469/highlights"}
+Sample
+
+--- Slide 6 ---
+Step2, Video Response Payload: Genuin → App(Genuin SDK)
+Genuin SDK(integrated by the app) receives video content(from Genuin servers)
+Video Identity | Video Content | Video Linkout
+“uuid”: unique id of the video
+slug: slug for the video e.g., “los-angeles-police-chief-jim-mcdonnell-lapd-tells”
+duration: “30 seconds”
+source: source of the video, e.g., “overlap” | title: Title of the video, e.g., “Elvis Duran and the Morning Show ON DEMAND”
+description: Description of the video, e.g., “Los Angeles Police Chief Jim McDonnell (LAPD) tells the city council there's no dedicated police funding for the 2028 Los Angeles Olympics and warns the department is losing officers while facing a multi-million dollar deficit."
+type: type of video, e.g. “podcast” | podcast_id: id of the podcast, e.g., 26935920 | station_id: id of the station, e.g., 1469 | text: linkout text on the video e.g., "Go to Episodes"  
+link: link for the linkout, e.g., “https://iheart.com/podcast/26935920”
+{"code":"200","message":"[XXXX]-got placement Feed","data":{"end_of_feed":false,"expiry":1778344145,"feeds":[{"owner":{"uuid":"728865a3-6d08-47b1-9a90-4f4ae50a8926","name":"iHeart","username":"iheart","bio":"See what you've been hearing all along","is_avatar":false,"profile_image":"https://media.begenuin.com/uploads/profile_images/brandProfileLogo_1756928901732.png","profile_image_s":"https://media.begenuin.com/uploads/profile_images/s/brandProfileLogo_1756928901732.png","profile_image_m":"https://media.begenuin.com/uploads/profile_images/m/brandProfileLogo_1756928901732.png","profile_image_l":"https://media.begenuin.com/uploads/profile_images/l/brandProfileLogo_1756928901732.png","is_brand_system_user":true,"brand":{"brand_id":1729,"brand_slug":"iheartmedia","brand_user_logo":2},"share_url":"https://iheart.begenuin.com/profile/iheart"},"community":{"brand":{"brand_id":1729,"name":"iHeart","brand_slug":"iheartmedia","brand_web_logo":"https://media.begenuin.com/uploads/brands/web_logo/brandWebLogo_1773644952182.png","brand_user_logo":2,"brand_handle":"iheart"},"uuid":"29c1fb13-baab-48e0-a579-1a97d9f21e24","handle":"elvisdurancooler1785","slug":"elvis-duran-and-the-morning-show","name":"Elvis Duran and the Morning Show","description":"From our First Caller of the Day to Danielle's last Entertainment Report","color_code":"#FEC62E","text_color_code":"#FD8D00","dp":"https://media.begenuin.com/uploads/profile_images/community/communityProfile_1756919214575.png","dp_s":"https://media.begenuin.com/uploads/profile_images/community/s/communityProfile_1756919214575.png","dp_m":"https://media.begenuin.com/uploads/profile_images/community/m/communityProfile_1756919214575.png","dp_l":"https://media.begenuin.com/uploads/profile_images/community/l/communityProfile_1756919214575.png","share_string":"208e106876800c50","brand_id":1729,"type":1,"share_url":"https://iheart.begenuin.com/community/elvis-duran-and-the-morning-show","no_of_views":97612,"no_of_members":4,"no_of_videos":607,"no_of_sparks":8258,"no_of_groups":1},"type":"loop","loop":{"group_id":"93d1aa04-131c-40c3-8eed-64fa880c87ba","group_name":"Latest Clips","group_description":"The best of Elvis Duran and the Morning Show","dp":"","dp_s":"","dp_m":"","dp_l":"","color_code":"#A4E6DA","text_color_code":"#49CDB5","uuid":"28b05b97-487d-417a-bd6a-dcabb1bc3e43","settings":{"discoverable":true},"slug":"latest-clips-9xbc","share_string":"208e10ccce801490","type":4,"share_url":"https://iheart.begenuin.com/loop/latest-clips-9xbc?community=208e106876800c50","is_loop_subscriber":false,"is_subscriber":false,"actions":[{"access_type_id":5,"action_id":3},{"access_type_id":10,"action_id":5}],"no_of_views":97612,"no_of_members":2,"no_of_videos":607,"no_of_sparks":8258},"uuid":"3207c6a0-a2bd-47f4-b6ff-9dd2bfd65f2a","video":{"duration":30,"attached_link":null,"attributes":{"description":"LAPD Chief Jim McDonnell Warns About 2028 Olympics Security","image_url":"https://i.iheart.com/v3/url/aHR0cHM6Ly93d3cub21ueWNvbnRlbnQuY29tL2QvcGxheWxpc3QvZTczYzk5OGUtNmU2MC00MzJmLTg2MTAtYWUyMTAxNDBjNWIxLzU3NWVjYzJjLWU0MjAtNGY3MS1iODhiLWFlMmIwMDM1MGZjMy9lOWZiMTU2OS05ZDhiLTRmMzgtOTlkNy1hZTJiMDAzNTBmZDEvaW1hZ2UuanBnP3Q9MTc1MDcwMjc1OCZzaXplPUxhcmdl","podcast_id":"26935920","slug":"1014-elvis-duran-and-the-morni-26935920","station_id":"1469","subtitle":"From our First Caller of the Day to Danielle's last Entertainment Report, listen to the entirety of each day's Elvis Duran and the Morning Show from start to finish without having to set your alarm!","title":"Elvis Duran and the Morning Show ON DEMAND","type":"podcast"},"clickable_url":null,"conversation_at":1777559554000,"description_data":"[\"Los Angeles Police Chief Jim McDonnell (LAPD) tells the city council there's no dedicated police funding for the 2028 Los Angeles Olympics and warns the department is losing officers while facing a multi-million dollar deficit.\"]","description_text":"Los Angeles Police Chief Jim McDonnell (LAPD) tells the city council there's no dedicated police funding for the 2028 Los Angeles Olympics and warns the department is losing officers while facing a multi-million dollar deficit.","is_pinned":false,"is_watched":false,"is_read":false,"is_sparked":false,"is_transcribed":false,"linkouts":[{"cta_link":"https://iheart.com/podcast/26935920","cta_text":"Go to Episodes","links":[{"image":"","link":"https://iheart.com/podcast/26935920","position":1,"title":"Go to Episodes"}],"style":1}],"linkouts_id":247050,"linkouts_inappbrowser":true,"media_url":"https://media.begenuin.com/temp_video/fb04ec68-18df-42ea-a99f-f8d1d059a455.mp4","media_url_m3u8":"https://vz-8bbc7bbf-a1e.b-cdn.net/2d270c34-84ba-45ec-9e31-3ff86c2fd15c/playlist.m3u8","meta_data":{"aspect_ratio":"9:16","contains_external_videos":false,"duration":"30","media_type":"video","resolution":"1080x1920","size":"46309963"},"no_of_comments":0,"no_of_shares":0,"no_of_sparks":1,"no_of_views":172,"owner":{"uuid":"728865a3-6d08-47b1-9a90-4f4ae50a8926","name":"iHeart","username":"iheart","bio":"See what you've been hearing all along","is_avatar":false,"profile_image":"https://media.begenuin.com/uploads/profile_images/brandProfileLogo_1756928901732.png","profile_image_s":"https://media.begenuin.com/uploads/profile_images/s/brandProfileLogo_1756928901732.png","profile_image_m":"https://media.begenuin.com/uploads/profile_images/m/brandProfileLogo_1756928901732.png","profile_image_l":"https://media.begenuin.com/uploads/profile_images/l/brandProfileLogo_1756928901732.png","is_brand_system_user":true,"brand":{"brand_id":1729,"brand_slug":"iheartmedia","brand_user_logo":2},"share_url":"https://iheart.begenuin.com/profile/iheart"},"share_url":"https://iheart.begenuin.com/video/los-angeles-police-chief-jim-mcdonnell-lapd-tells?community=208e106876800c50&loop=208e10ccce801490","slug":"los-angeles-police-chief-jim-mcdonnell-lapd-tells","sprite_image_url":"https://media.begenuin.com/uploads/sprite/fb04ec68-18df-42ea-a99f-f8d1d059a455.jpeg","thumbnail_url":"https://vz-8bbc7bbf-a1e.b-cdn.net/2d270c34-84ba-45ec-9e31-3ff86c2fd15c/thumbnail.jpg","thumbnail_url_l":"https://media.begenuin.com/uploads/thumbnails/l/fb04ec68-18df-42ea-a99f-f8d1d059a455.png","thumbnail_url_s":"https://media.begenuin.com/uploads/thumbnails/s/fb04ec68-18df-42ea-a99f-f8d1d059a455.png","uuid":"3207c6a0-a2bd-47f4-b6ff-9dd2bfd65f2a","video_summary":null,"card_layout_id":2,"video_layout_id":2,"placement_card_layout_id":2,"placement_video_layout_id":2,"placement_card_section_layout_id":2,"source":"overlap"}}],"has_section":false,"is_ds_feed":false,"page_session":"plc_3DRDguKKeJU348mh6teDkg4Gfv2"}}
+Sample
+
+--- Slide 7 ---
+Step3, Ad Request Payload: App(Genuin SDK(IMA SDK)) → Triton
+Genuin SDK(integrated by App requests for audio ad(from Triton servers) using IMA SDK(integrated by Genuin SDK)
+Ad Targeting Parameters | Content Parameters | Context Parameters
+"stid": Station/Placement ID used for ad targeting (e.g., 1443132)
+"type": Ad insertion type (midroll, preroll, postroll)
+"delivery-method": Ad delivery method (download, streaming) | "episode-url": Full URL of the podcast episode being played (e.g., “https://www.iheart.com/podcast/1170-the-joe-show-63164373/episode/ashleys-fights-with-listener-303886757”)
+"episode-title": Episode identifier / title ID (e.g., 303886757)
+"series-title": Podcast or series identifier (e.g., 63164373) | "ua": User-agent string of the requesting client [UA]
+"site-url": Base URL of the iHeart site (iheart.com)
+"ip": Client IP address for geo-targeting [IP]
+https://cmod-na.live.streamtheworld.com/ondemand/ars?ua=[UA]&site-url=https://iheart.com&Episode-url=https://www.iheart.com/podcast/1170-the-joe-show-63164373/episode/ashleys-fights-with-listener-303886757&series-title=63164373&stid=1443132&ip=[IP]&episode-title=303886757&type=midroll&delivery-method=download
+Sample
+Note: stid, episode-url, episode-title, series-title and site-url will not be send in the ad request payload
+
+--- Slide 8 ---
+Step4, Ad Response Payload: Triton → App(Genuin SDK(IMA SDK))
+IMA SDK(integrated by Genuin SDK) receives audio ad(from Triton servers)
+VAST Metadata | Linear Creative | Companion Resources
+"VAST version": IAB VAST standard version (4.3)
+"ad.id": Unique identifier for the ad unit
+"adtitle": Human-readable title of the ad creative
+"adsystem": Name of the ad serving system (ODSPY)
+"advertiser": Advertiser domain name (odspy.com)
+"category": IAB content categories (IAB11-4, IAB1-1)
+"expires": Ad validity window in seconds (1000)
+"impression": 4 impression tracking URLs fired on ad load | "duration": Total audio ad length (00:00:29.698)
+"mediafile.type": Audio MIME type (audio/mpeg)
+"mediafile.delivery": Delivery method (progressive)
+"mediafile.bitrate": Audio bitrate in kbps (128)
+"error": Error tracking URL with %5BERRORCODE%5D macro | "companion sizes": 160x600, 180x150, 300x50, 300x250, 300x600, 320x50, 728x90, 970x90, 970x100, 970x250
+"staticresource": PNG banner per companion size
+"htmlresource": Animated GIF banner with impression pixels
+"iframeresource": iFrame delivery option per size
+"trackingevents": creativeView fired on companion impression (4 URLs per size)
+"companionclickthrough": Click-through tracking URL per companion size
+<VAST version="4.3" xmlns="http://www.iab.com/VAST" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<Ad id="odspy-vast-ad">
+<InLine>
+Sample click here to view the complete VAST XML
+
+--- Slide 9 ---
+Step5, Video/Audio Ad Tracker Payload: App(Genuin SDK(IMA SDK)) → Advertiser
+Ad trackers executed using IMA SDK(integrated by Genuin SDK(integrated by App)) for advertiser/attribution platform/triton
+Playback Event Trackers | Control Event Trackers | Impression Trackers
+"start": Fired when ad audio playback begins
+"firstQuartile": Fired at 25% of ad playback completion
+"midpoint": Fired at 50% of ad playback completion
+"thirdQuartile": Fired at 75% of ad playback completion
+"complete": Fired when ad finishes playing (100%) | "pause": Fired when the user pauses ad playback
+"mute": Fired when the user mutes audio during ad | "impression/1–4": Four VAST impression tracking URLs fired on ad render
+"stid": Station ID parameter included in all tracker URLs
+"requestId": Unique request UUID for deduplication
+"cb": Cache-buster timestamp appended to all URLs
+<TrackingEvents><Tracking event="start"><![CDATA[https://od-spy.live.streamtheworld.com/track/quartile/start/1?stid=1443132&requestId=0ddb57ef-4e3c-46ed-91f8-5fa610bdaf49&cb=1774550664016]]></Tracking><Tracking event="firstQuartile"><![CDATA[https://od-spy.live.streamtheworld.com/track/quartile/firstQuartile/1?stid=1443132&requestId=0ddb57ef-4e3c-46ed-91f8-5fa610bdaf49&cb=1774550664016]]></Tracking><Tracking event="midpoint"><![CDATA[https://od-spy.live.streamtheworld.com/track/quartile/midpoint/1?stid=1443132&requestId=0ddb57ef-4e3c-46ed-91f8-5fa610bdaf49&cb=1774550664016]]></Tracking><Tracking event="thirdQuartile"><![CDATA[https://od-spy.live.streamtheworld.com/track/quartile/thirdQuartile/1?stid=1443132&requestId=0ddb57ef-4e3c-46ed-91f8-5fa610bdaf49&cb=1774550664016]]></Tracking><Tracking event="complete"><![CDATA[https://od-spy.live.streamtheworld.com/track/quartile/complete/1?stid=1443132&requestId=0ddb57ef-4e3c-46ed-91f8-5fa610bdaf49&cb=1774550664016]]></Tracking><Tracking event="pause"><![CDATA[https://od-spy.live.streamtheworld.com/track/quartile/pause/1?stid=1443132&requestId=0ddb57ef-4e3c-46ed-91f8-5fa610bdaf49&cb=1774550664016]]></Tracking><Tracking event="mute"><![CDATA[https://od-spy.live.streamtheworld.com/track/quartile/mute/1?stid=1443132&requestId=0ddb57ef-4e3c-46ed-91f8-5fa610bdaf49&cb=1774550664016]]></Tracking></TrackingEvents>
+Sample
+
+--- Slide 10 ---
+Analytics Events & Integration Overview
+Genuin SDK, iHeart Codebase, and Video Metadata working across Highlights and Article Pages integrations
+Genuin SDK Events | iHeart Codebase Events | Video Metadata Attributes
+"Placement Initialized": Widget loaded on page or screen
+"Placement Viewed": Widget entered user viewport
+"Video Inview": Video thumbnail became visible
+"Placement Maximized": User expanded widget to full-screen player
+"Video Started": Clip playback initiated
+"Video Impression": Confirmed impression at 0 seconds
+"Video Watched": Quality view confirmed at 3 seconds
+"Video First Quartile": 25% of clip consumed
+"Midpoint": 50% of clip consumed
+"Video Third Quartile": 75% of clip consumed
+"Video Complete": Full clip watched at 100%
+
+And so on…. | "Stream_Start": Highlights session opened when first clip began playing
+"Stream_End": Session closed when user exited the Highlights feed
+"Track_Start": Individual clip began playback within an active session
+"Track_End": Individual clip playback concluded by finish, skip, pause, or error
+"Play": User explicitly tapped the play button
+"Pause": User explicitly tapped the pause button
+"Share": User selected a sharing method such as Instagram Story or Facebook
+"Screen_View / Page_View": User navigated to the Highlights tab on a station or podcast profile | "video_id": Unique identifier for each clip in the Genuin system
+"video_description": User-added description provided at upload time
+"video_duration": Clip length in seconds; min 4s, max 300s
+"video_aspect_ratio": Format of the video; 9:16 is standard portrait mobile
+"video_resolution": Pixel resolution of the video
+"video_category_topic": Brand-configured content category and topic set in Genuin BCC
+"video_slug": URL-safe slug used in share and video URLs
+"video_created_at": Date the video was uploaded or created
+
+
+And so on….
+iHeartMedia x Genuin - Analytics Events, Tracking Architecture & Unified Event Streaming Proposal
+Click here to view the complete document

@@ -1,0 +1,219 @@
+--- Slide 1 ---
+2026. All information herein deemed confidential.
+VIDEO EXPERIENCE INFRASTRUCTURE
+Plug-and-play SDK to Engage & Monetize Onsite & Offsite in Network
+
+--- Slide 2 ---
+For O&O Experiences >
+Embedded experiences across O&O surfaces drive engagement, commerce & media revenue.
+For Brands & Advertisers >
+A network of trusted sites where your assets are distributed to engaged audiences at scale.
+For Consumers >
+Contextually relevant  feeds providing content, offers & social interaction.
+Engagement & Revenue Infrastructure
+2026. All information herein deemed confidential.
+
+--- Slide 3 ---
+ONSITE
+Personalized feeds drive discovery, engagement & new revenue across your properties.
+OFFSITE
+Reach and distribution of your video assets with audiences across the Genuin Network of partner destinations.
+2026. All information herein deemed confidential.
+Genuin Network Audience
+= 237MM Reach. 4B impressions/month
+Extended Audience
+Programmatic Scale. 1.2BB+ Reach
+Onsite + Network
+We Bring Demand
+
+--- Slide 4 ---
+Consumer Brands, Advertisers, Partners
+Demand Partners
+Brand Content
+Creators & UGC (optional)
+Powered by Brand, Social & Partner Content
+2026. All information herein deemed confidential.
+Onsite / Offsite In-Network
+
+--- Slide 5 ---
+Comprehensive infrastructure and SDK
+2026. All information herein deemed confidential.
+
+--- Slide 6 ---
+Live Example
+https://www.usmagazine.com/
+2026. All information herein deemed confidential.
+
+--- Slide 7 ---
+Onsite Placement
+Offsite In-Network
+Programmatic
+Extended Placements Programmatic In-Feed & In-Stream
+Audience Extension
+2026. All information herein deemed confidential.
+Monetize: Sponsored Access and Programmatic
+
+--- Slide 8 ---
+Sponsored Post
+Technical Requirements
+- MP4, MOV, AVI, WMV, MKV formats
+- Max File Size: Up to 2GB
+- Can sell 1 or more units to different advertisers and partners
+Video Carousel Format
+- 9:16 vertical ratio
+- Video Length: < 5min
+- Multiple Linkout overlays
+Onsite Specs
+Highlights
+Brought to you by Daily Faceoff
+Title
+Title
+Title
+Title
+CTA
+Your Brand
+Sponsored
+Sponsored Post
+Onsite Specs
+Advertiser ads or content inserted within O&O content carousels, feeds, grids
+Where it lives: app/web: home page, articles, tab, PDPs
+Buy direct or programmatically via DealID
+Sell as in-feed placements to advertisers and partners across one or multiple feeds
+Reported individually per customer / advertiser
+Cost: set by Publisher
+Cost Model: CPM
+MONETIZE
+2026. All information herein deemed confidential.
+
+--- Slide 9 ---
+Sponsored Takeover
+Technical Requirements
+- MP4, MOV, AVI, WMV, MKV formats
+- Max File Size: Up to 2GB
+- Can sell 1 or more units to different advertisers and partners
+Video Carousel Format
+- 9:16 vertical ratio
+- Video Length: < 5min
+- Multiple Linkout overlays
+Onsite Specs
+Onsite Specs
+100% SOV carousels, feeds, grids for advertising partners
+Where it lives: O&O app/web: home page, articles, tab, PDPs
+Buy/Sell Direct
+Sold by Publisher as a CPM for Advertiser’s experience loadCost: Set by Publisher
+Cost Model: CPM
+Morning Brief
+Brought to you by [Sponsored Brand]
+Title
+Your Brand
+Sponsored
+Sponsored Post
+Your Brand
+Sponsored
+Sponsored Post
+Your Brand
+Sponsored
+Sponsored Post
+Your Brand
+Sponsored
+Sponsored Post
+Your Brand
+Sponsored
+Sponsored Post
+MONETIZE
+2026. All information herein deemed confidential.
+
+--- Slide 10 ---
+Programmatic In-Stream
+Technical Requirements
+- MP4, MOV, AVI, WMV, MKV formats
+- Max File Size: Up to 2GB
+- Can sell 1 or more units to different advertisers and partners
+Video Carousel Format
+- 9:16 vertical ratio
+- Video Length: < 5min
+- Multiple Linkout overlays
+Onsite Specs
+Onsite Specs
+Preroll, midroll, endroll placements of partner advertising on publisher content
+Where it lives: O&O app/web: home page, articles, tab, PDPs
+Buy/Sell programmatically via DealID
+Cost: Floor set by Publisher.
+Cost Model: CPM
+CTA
+Your Brand
+Sponsored
+Your Brand
+Sponsored
+Your Brand
+Your Brand
+Your Brand
+MONETIZE
+2026. All information herein deemed confidential.
+Highlights
+Brought to you by Daily Faceoff
+
+--- Slide 11 ---
+Session Takeover
+Technical Requirements
+- MP4, MOV, AVI, WMV, MKV formats
+- Max File Size: Up to 2GB
+- Can sell 1 or more units to different advertisers and partners
+Video Carousel Format
+- 300 X 600
+- 300 X 250
+- Video Length: < 5min
+- iAB Standard Linkout
+Specs
+Specs
+100% session SOW via multiple placements of partner advertising across user session
+Where it lives: O&O app/web: home page, articles, tab, PDPs
+Bought programmatically via DealID
+Sold as programmatic impressions
+Cost: Floor set by Publisher.
+Cost Model: CPM
+MONETIZE
+2026. All information herein deemed confidential.
+
+--- Slide 12 ---
+|  Maximize Margin via Audience Extension
+|  Bundle and Extend Partnerships
+2026. All information herein deemed confidential.
+Extended O&O Sponsorships
+Earning: +$40
+Spend: -$20
+MONETIZE • Offsite In-Network
++$20
++$20
++$20
+Built for Actioncurated by Action Network
+
+--- Slide 13 ---
+|  Configure Funnel, Relevance, Discovery
+GROW • Offsite In-Network
+2026. All information herein deemed confidential.
+Extended Brand Experiences
+|  Support Timely Initiatives
+Zamboni Nationcurated by Daily Faceoff
+
+--- Slide 14 ---
+Delivered as raw data for ingest into your existing systems
+Reach
+Time spent
+Engagement
+Performance by content
+Link Actions
+Monetization
+more…
+2026. All information herein deemed confidential.
+Unified Data Delivered to Your Analytic Platform
+
+--- Slide 15 ---
+Peter Bavaro
+Partnership Sales
+peter@begenuin.com
+2026. All information herein deemed confidential.
+Thank You
+Matt Wurst
+CMO
+matt@begenuin.com

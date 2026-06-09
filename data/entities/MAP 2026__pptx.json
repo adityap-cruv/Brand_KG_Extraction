@@ -1,0 +1,913 @@
+{
+  "source_doc": "MAP 2026",
+  "entities": [
+    {
+      "name": "Matt Wurst",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Owner of Brand Marketing at Genuin, responsible for PR strategy, agency direction, securing and moderating tentpole stages, and hero-ifying customers through joint visibility.",
+      "seniority_tier": "VP",
+      "role_title": "Brand Marketing Lead",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Charmie",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Owner of Product Marketing at Genuin, driving day-to-day asset production, core decks, one-pagers, demos, POV docs, and use case narratives by vertical and buyer type.",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "Product Marketing Lead",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Daniel",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Dan"
+      ],
+      "description": "Sales leader at Genuin working priority deals and pilots; Brand Marketing supports him on deal acceleration and Product Marketing provides post-pitch collateral.",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "Sales Lead",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Peter",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Sales leader at Genuin working priority deals and pilots; supported by Brand and Product Marketing across the pipeline.",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "Sales Lead",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jane",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Genuin sales/pitch lead supported by Product Marketing with post-pitch collateral and packaged customer stories.",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "Sales Lead",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Marketing Activation Plan 2026",
+      "bucket": "Marketing",
+      "type": "Plan",
+      "aliases": [
+        "MAP 2026",
+        "2026 MAP"
+      ],
+      "description": "Genuin's H1 2026 marketing and sales plan spanning awareness, consideration, conversion, expansion, and retention across Brand Marketing, Product Marketing, and PR workstreams."
+    },
+    {
+      "name": "Community Media Network",
+      "bucket": "Marketing",
+      "type": "Category",
+      "aliases": [
+        "CMN"
+      ],
+      "description": "The new category Genuin is defining and seeking to lead \u2014 embedded, video-powered community media inside trusted brand-owned environments."
+    },
+    {
+      "name": "Brand Marketing",
+      "bucket": "Marketing",
+      "type": "Workstream",
+      "aliases": [],
+      "description": "Workstream owning growth, presence, and narrative; accelerates revenue now while building market gravity for Q2 tentpoles and anchors SXSW halo, Upfronts, and Cannes adjacency."
+    },
+    {
+      "name": "Product Marketing",
+      "bucket": "Marketing",
+      "type": "Workstream",
+      "aliases": [],
+      "description": "Workstream removing friction from consideration to commitment via product clarity, sales enablement, vertical use cases, and packaged customer proof."
+    },
+    {
+      "name": "Public Relations",
+      "bucket": "Marketing",
+      "type": "Workstream",
+      "aliases": [
+        "PR"
+      ],
+      "description": "Workstream creating credibility shortcuts and pull demand via earned media, customer-led storytelling, founder/executive narratives, and event-driven PR."
+    },
+    {
+      "name": "Demand Generation",
+      "bucket": "Marketing",
+      "type": "Strategy",
+      "aliases": [
+        "DG"
+      ],
+      "description": "Strategy spanning awareness, narrative, and consideration through industry press, op-eds, keynotes, benchmark reports, blog series, and partner PR."
+    },
+    {
+      "name": "Lead Generation",
+      "bucket": "Marketing",
+      "type": "Strategy",
+      "aliases": [
+        "LG"
+      ],
+      "description": "Strategy focused on pipeline, hand-raisers, and qualification via developer docs, case studies with metrics, playbooks with ROI logic, gated reports, and ROI calculators."
+    },
+    {
+      "name": "Demand Wave",
+      "bucket": "Marketing",
+      "type": "Initiative",
+      "aliases": [],
+      "description": "Execution wave securing advertisers and agencies first to create urgency for supply, with lighthouse advertisers, pilots with case narrative, and RMN/CMN budget unlocks."
+    },
+    {
+      "name": "Supply Wave",
+      "bucket": "Marketing",
+      "type": "Initiative",
+      "aliases": [],
+      "description": "Execution wave bringing premium publishers and communities onboard via standardized inventory, commerce-addressable supply, and packaged measurement."
+    },
+    {
+      "name": "Narrative Wave",
+      "bucket": "Marketing",
+      "type": "Initiative",
+      "aliases": [],
+      "description": "Execution wave making Community Media Network feel inevitable through thought leadership, proof assets, and PR amplification."
+    },
+    {
+      "name": "Employee-Led Activation",
+      "bucket": "Marketing",
+      "type": "Program",
+      "aliases": [],
+      "description": "Program scaling Genuin's narrative across employee voices using 3 shared truths, role-based narrative altitudes, and a narrative ownership model where Marketing owns the system."
+    },
+    {
+      "name": "Narrative Enablement Kit",
+      "bucket": "Marketing",
+      "type": "Asset",
+      "aliases": [],
+      "description": "Internal Notion-style enablement doc providing the 3 core narrative truths, what-we-believe vs reject, 10 example post prompts by role, forbidden phrases, and tone guidance."
+    },
+    {
+      "name": "Genuin Upfronts",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Genuin-hosted upfront moment planned for Q2 2026 targeting RMN, commerce, and publisher audiences."
+    },
+    {
+      "name": "Genuin Connections Podcast",
+      "bucket": "Marketing",
+      "type": "Podcast",
+      "aliases": [],
+      "description": "Genuin-owned podcast launched Q1 2026 used as an owned channel for product, RMN/commerce, and digital/content thought leadership."
+    },
+    {
+      "name": "Snarketing",
+      "bucket": "Marketing",
+      "type": "Podcast",
+      "aliases": [],
+      "description": "Podcast channel used in the content marketing mix for executive and brand-level amplification."
+    },
+    {
+      "name": "HubSpot",
+      "bucket": "Marketing",
+      "type": "Tool",
+      "aliases": [],
+      "description": "Marketing automation platform supporting sales velocity through source tagging QA, proof asset attachment at SQL stage, ABM nurture triggers, and post-close proof capture workflows."
+    },
+    {
+      "name": "SXSW",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Tentpole event used for digital/content/design presence and C-Suite Leadership Dinners; Brand Marketing anchors the SXSW halo."
+    },
+    {
+      "name": "Cannes",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Tentpole event used for Commerce Media Leadership Dinners and Cannes adjacency anchored by Brand Marketing."
+    },
+    {
+      "name": "CES",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Tentpole event used for C-Suite Leadership Dinners and hands-on demo environments (2027)."
+    },
+    {
+      "name": "NRF",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Tentpole event planned for 2027 hands-on demo environments targeting retail audiences."
+    },
+    {
+      "name": "ANA Tech",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Tentpole event planned for 2027 hands-on demo environments targeting advertiser tech audiences."
+    },
+    {
+      "name": "Shoptalk",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Specialized event for sponsored panels on open-web attention or AI-led commerce in Q2 2026."
+    },
+    {
+      "name": "GroceryShop",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Specialized event for sponsored panels targeting RMN and commerce audiences in Q2 2026."
+    },
+    {
+      "name": "Advertising Week",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Tentpole event used for Commerce Media Leadership Dinners in Q1 2026."
+    },
+    {
+      "name": "Possible",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Tentpole event used for Commerce Media Leadership Dinners in Q1 2026."
+    },
+    {
+      "name": "Digiday",
+      "bucket": "Marketing",
+      "type": "Publication",
+      "aliases": [],
+      "description": "High-value PR target for op-eds, quotes, and write-ups on RMN/commerce and digital/content topics."
+    },
+    {
+      "name": "AdExchanger",
+      "bucket": "Marketing",
+      "type": "Publication",
+      "aliases": [],
+      "description": "High-value PR target for RMN/commerce coverage."
+    },
+    {
+      "name": "Adweek",
+      "bucket": "Marketing",
+      "type": "Publication",
+      "aliases": [],
+      "description": "High-value PR target across RMN/commerce and digital/content coverage."
+    },
+    {
+      "name": "TechCrunch",
+      "bucket": "Marketing",
+      "type": "Publication",
+      "aliases": [],
+      "description": "High-value PR target for product launches and category narrative."
+    },
+    {
+      "name": "FastCompany",
+      "bucket": "Marketing",
+      "type": "Publication",
+      "aliases": [],
+      "description": "High-value PR target for product-centric placements in Q1 2026."
+    },
+    {
+      "name": "WSJ",
+      "bucket": "Marketing",
+      "type": "Publication",
+      "aliases": [],
+      "description": "High-value PR target for the CMO (phase 2) messaging on major funding, 200M+ network, and high-profile partners."
+    },
+    {
+      "name": "Forbes",
+      "bucket": "Marketing",
+      "type": "Publication",
+      "aliases": [],
+      "description": "High-value PR target for the CMO (phase 2) executive narrative push."
+    },
+    {
+      "name": "Online Retailers",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [],
+      "description": "Primary audience pressured to turn digital properties into revenue engines without negatively impacting customer experience."
+    },
+    {
+      "name": "Consumer Services Brands",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [
+        "Consumer Services Companies"
+      ],
+      "description": "Primary audience seeking to make owned digital properties as engaging as social platforms and to drive participation and revenue."
+    },
+    {
+      "name": "Publisher & Media Brands",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [],
+      "description": "Primary audience whose viewers spend more time with video on platforms they don't own; Genuin offers owned attention that works."
+    },
+    {
+      "name": "Advertisers",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [],
+      "description": "Primary audience needing engaging, brand-safe spaces that retain transparency and trust unlike traditional social platforms."
+    },
+    {
+      "name": "Creators",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [],
+      "description": "Secondary audience wanting to build real community and earn consistently without chasing algorithms or sacrificing audience attention."
+    },
+    {
+      "name": "GenAI Publishers",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [],
+      "description": "Secondary audience targeted to unlock contextual continuity across AI-powered search and discovery environments."
+    },
+    {
+      "name": "Agencies",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [
+        "DSPs",
+        "SSPs"
+      ],
+      "description": "Primary audience including agencies, DSPs, and SSPs leveraging network and contextual continuity as a new targeting lever."
+    },
+    {
+      "name": "Retail Media Networks",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [
+        "RMN",
+        "Commerce Media Networks",
+        "CMN budgets"
+      ],
+      "description": "Industry buyer audience whose budgets the Demand Wave aims to unlock; primary target for monetization and offsite in-network messaging."
+    },
+    {
+      "name": "Developers",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [
+        "Tech & Developer Teams"
+      ],
+      "description": "Audience reached via targeted PR, SDK and Octo messaging, developer conferences, technical workshops, and live-build sessions."
+    },
+    {
+      "name": "C-Suite Buyers",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [
+        "C-Suite",
+        "CMOs"
+      ],
+      "description": "Senior buyer audience reached via curated dinners, private vision presentations, and exclusive CMO roundtables."
+    },
+    {
+      "name": "Genuin AI",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Agentic solution OS positioned as the optimal infrastructure for community-led growth in the AI era."
+    },
+    {
+      "name": "Octo",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Genuin product launched with AI in Q1 2026 product press; part of onsite, SDK, Octo developer-facing messaging."
+    },
+    {
+      "name": "BCC",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Brand Control Center"
+      ],
+      "description": "Admin layer of the consumer experience stack referenced as Admin (BCC) alongside SDK and Infrastructure + Network."
+    },
+    {
+      "name": "Genuin Network",
+      "bucket": "Product",
+      "type": "Network",
+      "aliases": [],
+      "description": "Networked distribution of brand-owned environments providing trusted engagement infrastructure, contextual relevance, and revenue rather than a video player or ad format."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "SDK"
+      ],
+      "description": "Developer SDK enabling integrations, technical workshops, and live-build sessions at developer conferences; part of API & SDK launch moments with product press."
+    },
+    {
+      "name": "PenVine",
+      "bucket": "Partnerships",
+      "type": "Agency",
+      "aliases": [],
+      "description": "External PR agency partner that owns Public Relations execution for the 2026 Marketing Activation Plan."
+    },
+    {
+      "name": "TED",
+      "bucket": "Partnerships",
+      "type": "Client",
+      "aliases": [],
+      "description": "Client example featured in Partner Engineering Showcases in the product workstream."
+    },
+    {
+      "name": "iHeart",
+      "bucket": "Partnerships",
+      "type": "Client",
+      "aliases": [],
+      "description": "Client example featured in Partner Engineering Showcases and partner showcase content."
+    },
+    {
+      "name": "Grubhub",
+      "bucket": "Partnerships",
+      "type": "Client",
+      "aliases": [],
+      "description": "Client example featured in Partner Engineering Showcases and partner showcase content."
+    },
+    {
+      "name": "JWX",
+      "bucket": "Partnerships",
+      "type": "Competitor",
+      "aliases": [],
+      "description": "Tier 1 vertical video player competitor with strong SEO, legacy publisher relationships, and ad ecosystem integration but limited community/creator ecosystem layer."
+    },
+    {
+      "name": "Media.net Bytes",
+      "bucket": "Partnerships",
+      "type": "Competitor",
+      "aliases": [],
+      "description": "Tier 1 vertical video player competitor focused on video delivery and advertising formats with minimal first-party audience ownership narrative."
+    },
+    {
+      "name": "Storyly",
+      "bucket": "Partnerships",
+      "type": "Competitor",
+      "aliases": [],
+      "description": "Tier 1 vertical video player competitor focused on embedded vertical video feeds and monetization formats."
+    },
+    {
+      "name": "Firework",
+      "bucket": "Partnerships",
+      "type": "Competitor",
+      "aliases": [],
+      "description": "Tier 2 video commerce/retail competitor with shoppable video and live commerce capabilities but commerce-first vs community-first."
+    },
+    {
+      "name": "Bambuser",
+      "bucket": "Partnerships",
+      "type": "Competitor",
+      "aliases": [],
+      "description": "Tier 2 video commerce/retail competitor with shoppable video and live commerce capabilities and established brand relationships."
+    },
+    {
+      "name": "Brid.TV",
+      "bucket": "Partnerships",
+      "type": "Competitor",
+      "aliases": [
+        "TargetVideo"
+      ],
+      "description": "Tier 3 legacy video platform competitor focused on video hosting, streaming, and monetization tools with minimal community or engagement layer."
+    },
+    {
+      "name": "Brightcove",
+      "bucket": "Partnerships",
+      "type": "Competitor",
+      "aliases": [],
+      "description": "Tier 3 legacy video platform competitor with established enterprise customer base and primary focus on video player infrastructure."
+    },
+    {
+      "name": "Dacast",
+      "bucket": "Partnerships",
+      "type": "Competitor",
+      "aliases": [],
+      "description": "Tier 3 legacy video platform competitor focused on video hosting and streaming, not built for modern vertical discovery experiences."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Matt Wurst",
+      "target": "Brand Marketing",
+      "type": "LEADS",
+      "description": "Matt Wurst is the named owner of the Brand Marketing workstream."
+    },
+    {
+      "source": "Charmie",
+      "target": "Product Marketing",
+      "type": "LEADS",
+      "description": "Charmie is the named owner of the Product Marketing workstream."
+    },
+    {
+      "source": "PenVine",
+      "target": "Public Relations",
+      "type": "LEADS",
+      "description": "PenVine is the named PR partner owning the Public Relations workstream."
+    },
+    {
+      "source": "Matt Wurst",
+      "target": "Public Relations",
+      "type": "WORKS_ON",
+      "description": "Matt Wurst leads PR strategy and agency direction in partnership with PenVine."
+    },
+    {
+      "source": "Daniel",
+      "target": "Marketing Activation Plan 2026",
+      "type": "WORKS_ON",
+      "description": "Daniel owns priority deals and pilots that the plan's Brand Marketing supports."
+    },
+    {
+      "source": "Peter",
+      "target": "Marketing Activation Plan 2026",
+      "type": "WORKS_ON",
+      "description": "Peter owns priority deals and pilots that the plan's Brand Marketing supports."
+    },
+    {
+      "source": "Jane",
+      "target": "Marketing Activation Plan 2026",
+      "type": "WORKS_ON",
+      "description": "Jane is supported with post-pitch collateral and customer stories by Product Marketing."
+    },
+    {
+      "source": "Brand Marketing",
+      "target": "Marketing Activation Plan 2026",
+      "type": "PART_OF",
+      "description": "Brand Marketing is one of the three core workstreams in the 2026 MAP."
+    },
+    {
+      "source": "Product Marketing",
+      "target": "Marketing Activation Plan 2026",
+      "type": "PART_OF",
+      "description": "Product Marketing is one of the three core workstreams in the 2026 MAP."
+    },
+    {
+      "source": "Public Relations",
+      "target": "Marketing Activation Plan 2026",
+      "type": "PART_OF",
+      "description": "Public Relations is one of the three core workstreams in the 2026 MAP."
+    },
+    {
+      "source": "Demand Generation",
+      "target": "Marketing Activation Plan 2026",
+      "type": "PART_OF",
+      "description": "Demand Generation is one of the two strategic pillars of the plan."
+    },
+    {
+      "source": "Lead Generation",
+      "target": "Marketing Activation Plan 2026",
+      "type": "PART_OF",
+      "description": "Lead Generation is one of the two strategic pillars of the plan."
+    },
+    {
+      "source": "Demand Wave",
+      "target": "Marketing Activation Plan 2026",
+      "type": "PART_OF",
+      "description": "The Demand Wave is one of three strategic execution waves in the plan."
+    },
+    {
+      "source": "Supply Wave",
+      "target": "Marketing Activation Plan 2026",
+      "type": "PART_OF",
+      "description": "The Supply Wave is one of three strategic execution waves in the plan."
+    },
+    {
+      "source": "Narrative Wave",
+      "target": "Marketing Activation Plan 2026",
+      "type": "PART_OF",
+      "description": "The Narrative Wave is one of three strategic execution waves in the plan."
+    },
+    {
+      "source": "Employee-Led Activation",
+      "target": "Marketing Activation Plan 2026",
+      "type": "PART_OF",
+      "description": "Employee-Led Activation is the program scaling narrative through employee voices."
+    },
+    {
+      "source": "Narrative Enablement Kit",
+      "target": "Employee-Led Activation",
+      "type": "PART_OF",
+      "description": "The Narrative Enablement Kit is the tactical asset underpinning Employee-Led Activation."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Community Media Network",
+      "type": "PROMOTES",
+      "description": "The Narrative Wave aims to make Community Media Network feel inevitable as the new category."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Genuin AI",
+      "type": "PROMOTES",
+      "description": "The plan introduces Genuin AI as the optimal agentic OS for community-led growth via Q1 2026 product press."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Genuin Network",
+      "type": "PROMOTES",
+      "description": "The plan positions the Genuin Network as trusted engagement infrastructure across brand-owned environments."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Octo",
+      "type": "PROMOTES",
+      "description": "Octo is highlighted in Q1 2026 product press launches alongside AI."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Genuin SDK",
+      "type": "PROMOTES",
+      "description": "SDK launch moments are part of Q1 2026 product press messaging."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "BCC",
+      "type": "PROMOTES",
+      "description": "BCC and consumer experience are part of consideration-stage product messaging."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Online Retailers",
+      "type": "TARGETED_AT",
+      "description": "Online Retailers are a primary target audience to turn digital properties into revenue engines."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Consumer Services Brands",
+      "type": "TARGETED_AT",
+      "description": "Consumer Services Brands are a primary target audience for the plan."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Publisher & Media Brands",
+      "type": "TARGETED_AT",
+      "description": "Publisher & Media Brands are a primary target audience for owned attention messaging."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Advertisers",
+      "type": "TARGETED_AT",
+      "description": "Advertisers are a primary target audience needing brand-safe inventory."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Creators",
+      "type": "TARGETED_AT",
+      "description": "Creators are a secondary audience reached via creator program showcases and brand partnerships."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "GenAI Publishers",
+      "type": "TARGETED_AT",
+      "description": "GenAI Publishers are a secondary audience for contextual continuity messaging across AI-powered discovery environments."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Agencies",
+      "type": "TARGETED_AT",
+      "description": "Agencies, DSPs, and SSPs are a primary audience for the contextual continuity targeting lever."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Retail Media Networks",
+      "type": "TARGETED_AT",
+      "description": "RMN/CMN budget unlock is a Demand Wave priority and key audience for monetization messaging."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Developers",
+      "type": "TARGETED_AT",
+      "description": "Developers are reached via SDK and Octo messaging, developer conferences, and technical workshops."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "C-Suite Buyers",
+      "type": "TARGETED_AT",
+      "description": "C-Suite Buyers are reached via curated dinners, private vision presentations, and exclusive CMO roundtables."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "SXSW",
+      "type": "INCLUDES",
+      "description": "SXSW is a tentpole moment Brand Marketing anchors for halo and adjacency."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Cannes",
+      "type": "INCLUDES",
+      "description": "Cannes is a tentpole moment Brand Marketing anchors for commerce media leadership dinners and adjacency."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "CES",
+      "type": "INCLUDES",
+      "description": "CES is a tentpole for C-Suite Leadership Dinners and hands-on demo environments."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "NRF",
+      "type": "INCLUDES",
+      "description": "NRF is planned for 2027 hands-on demo environments."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "ANA Tech",
+      "type": "INCLUDES",
+      "description": "ANA Tech is planned for 2027 hands-on demo environments."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Shoptalk",
+      "type": "INCLUDES",
+      "description": "Shoptalk is a specialized event for sponsored panels in Q2 2026."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "GroceryShop",
+      "type": "INCLUDES",
+      "description": "GroceryShop is a specialized event for sponsored panels in Q2 2026."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Advertising Week",
+      "type": "INCLUDES",
+      "description": "Advertising Week is a Q1 2026 tentpole for commerce media leadership dinners."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Possible",
+      "type": "INCLUDES",
+      "description": "Possible is a Q1 2026 tentpole for commerce media leadership dinners."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "Genuin Upfronts",
+      "type": "INCLUDES",
+      "description": "Genuin Upfronts is a planned Q2 2026 Genuin-hosted event."
+    },
+    {
+      "source": "Genuin Connections Podcast",
+      "target": "Brand Marketing",
+      "type": "PART_OF",
+      "description": "Genuin Connections Podcast is owned media used by Brand Marketing for narrative amplification across audiences."
+    },
+    {
+      "source": "Snarketing",
+      "target": "Brand Marketing",
+      "type": "PART_OF",
+      "description": "Snarketing is a podcast channel in the content marketing mix used by Brand Marketing."
+    },
+    {
+      "source": "Public Relations",
+      "target": "Digiday",
+      "type": "USES",
+      "description": "Digiday is a high-value PR target for op-eds, quotes, and write-ups."
+    },
+    {
+      "source": "Public Relations",
+      "target": "AdExchanger",
+      "type": "USES",
+      "description": "AdExchanger is a high-value PR target for RMN and commerce coverage."
+    },
+    {
+      "source": "Public Relations",
+      "target": "Adweek",
+      "type": "USES",
+      "description": "Adweek is a high-value PR target across commerce and digital coverage."
+    },
+    {
+      "source": "Public Relations",
+      "target": "TechCrunch",
+      "type": "USES",
+      "description": "TechCrunch is a high-value PR target for product launches."
+    },
+    {
+      "source": "Public Relations",
+      "target": "FastCompany",
+      "type": "USES",
+      "description": "FastCompany is a high-value PR target for product-centric placements."
+    },
+    {
+      "source": "Public Relations",
+      "target": "WSJ",
+      "type": "USES",
+      "description": "WSJ is a high-value PR target for the CMO (phase 2) messaging."
+    },
+    {
+      "source": "Public Relations",
+      "target": "Forbes",
+      "type": "USES",
+      "description": "Forbes is a high-value PR target for the CMO (phase 2) messaging."
+    },
+    {
+      "source": "JWX",
+      "target": "Genuin Network",
+      "type": "COMPARED_TO",
+      "description": "JWX is a Tier 1 vertical video player benchmarked against Genuin Network in the competitive landscape."
+    },
+    {
+      "source": "Media.net Bytes",
+      "target": "Genuin Network",
+      "type": "COMPARED_TO",
+      "description": "Media.net Bytes is a Tier 1 vertical video player benchmarked against Genuin Network."
+    },
+    {
+      "source": "Storyly",
+      "target": "Genuin Network",
+      "type": "COMPARED_TO",
+      "description": "Storyly is a Tier 1 vertical video player benchmarked against Genuin Network."
+    },
+    {
+      "source": "Firework",
+      "target": "Genuin Network",
+      "type": "COMPARED_TO",
+      "description": "Firework is a Tier 2 video commerce competitor benchmarked against Genuin Network."
+    },
+    {
+      "source": "Bambuser",
+      "target": "Genuin Network",
+      "type": "COMPARED_TO",
+      "description": "Bambuser is a Tier 2 video commerce competitor benchmarked against Genuin Network."
+    },
+    {
+      "source": "Brid.TV",
+      "target": "Genuin Network",
+      "type": "COMPARED_TO",
+      "description": "Brid.TV is a Tier 3 legacy video platform benchmarked against Genuin Network."
+    },
+    {
+      "source": "Brightcove",
+      "target": "Genuin Network",
+      "type": "COMPARED_TO",
+      "description": "Brightcove is a Tier 3 legacy video platform benchmarked against Genuin Network."
+    },
+    {
+      "source": "Dacast",
+      "target": "Genuin Network",
+      "type": "COMPARED_TO",
+      "description": "Dacast is a Tier 3 legacy video platform benchmarked against Genuin Network."
+    },
+    {
+      "source": "TED",
+      "target": "Marketing Activation Plan 2026",
+      "type": "APPEARS_IN",
+      "description": "TED is named as a Partner Engineering Showcase client example in the product workstream tactics."
+    },
+    {
+      "source": "iHeart",
+      "target": "Marketing Activation Plan 2026",
+      "type": "APPEARS_IN",
+      "description": "iHeart is named as a Partner Engineering Showcase client example in the product workstream tactics."
+    },
+    {
+      "source": "Grubhub",
+      "target": "Marketing Activation Plan 2026",
+      "type": "APPEARS_IN",
+      "description": "Grubhub is named as a Partner Engineering Showcase client example in the product workstream tactics."
+    },
+    {
+      "source": "Genuin AI",
+      "target": "Octo",
+      "type": "INTEGRATES_WITH",
+      "description": "AI and Octo are launched together as Q1 2026 product press moments."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Genuin AI",
+      "type": "INTEGRATES_WITH",
+      "description": "SDK launch moments are paired with AI and Octo for Q1 2026 product press."
+    },
+    {
+      "source": "BCC",
+      "target": "Genuin Network",
+      "type": "PART_OF",
+      "description": "BCC is the admin layer of the consumer experience stack within the Genuin Network."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Genuin Network",
+      "type": "PART_OF",
+      "description": "The SDK is the integration layer connecting developers into the Genuin Network."
+    },
+    {
+      "source": "Marketing Activation Plan 2026",
+      "target": "HubSpot",
+      "type": "USES",
+      "description": "HubSpot supports plan execution through source tagging QA, proof asset attachment at SQL stage, ABM nurture triggers, and post-close proof capture."
+    }
+  ],
+  "_src_hash": "f88a9ca7d7d2ea07f7f4f789d572a0bc93c9e71a6086b99e96fbf6468417112c",
+  "_skill_sig": "4edd28021f3312b1"
+}

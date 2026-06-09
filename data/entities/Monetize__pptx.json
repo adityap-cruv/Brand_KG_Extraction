@@ -1,0 +1,650 @@
+{
+  "source_doc": "Genuin x iHeart - Monetize O&O, Audience Extension Framework",
+  "entities": [
+    {
+      "name": "Monetize",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Genuin Monetize"
+      ],
+      "description": "Genuin's unified revenue product enabling onsite and offsite monetization through sponsorships, subscriptions, and ads across owned and network properties."
+    },
+    {
+      "name": "Sponsored Placements Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Homepage Carousel Takeover",
+        "Premium Placement Takeover"
+      ],
+      "description": "Sponsored placement that takes over a homepage carousel with vertical video creative; supports MP4/MOV/AVI/WMV/MKV up to 2GB and can be sold to one or more advertisers."
+    },
+    {
+      "name": "Pinned First Position Placement",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Sponsored Community Podcast or Station First-In-Feed Takeover",
+        "Pinned Podcast Highlights"
+      ],
+      "description": "Sponsored first-in-feed pinned placement across communities, podcasts, or stations, live across 112+ stations and podcasts and configured via BCC."
+    },
+    {
+      "name": "In-Feed Vertical Video Ad",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "In-Feed Ad"
+      ],
+      "description": "Programmatic vertical video ad served in-feed across desktop and mobile placements, activated through standard ad servers."
+    },
+    {
+      "name": "Session Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Programmatic Session Takeover"
+      ],
+      "description": "Programmatic session takeover delivered via IAB-compatible tags (300x600, 300x250) on iHeart properties, opening new margin on existing programmatic deals."
+    },
+    {
+      "name": "In-Stream Ad",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Pre-Roll",
+        "Mid-Roll",
+        "End-Roll",
+        "In-Stream Pre Mid End Roll"
+      ],
+      "description": "Programmatic in-stream video ad supporting pre-roll, mid-roll, and end-roll placements with on-click full view."
+    },
+    {
+      "name": "Extended Placement In-Network",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Takeover sponsored placement extended onto Network partners' properties, allowing advertisers to control the audience-extension journey offsite."
+    },
+    {
+      "name": "Extended Sponsored Placement In-Network",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Extends sponsored video placements onto Network partners' properties using brand assets such as logo, handle, video, description, and linkout."
+    },
+    {
+      "name": "Programmatic Extended O&O",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Programmatic Extended O&O In-Feed In-Stream"
+      ],
+      "description": "Programmatic in-feed and in-stream ad placements extended onto Network partners' owned-and-operated properties via the brand's ad server."
+    },
+    {
+      "name": "Programmatic Audience Extension",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Programmatic PG/PMP Audience Extension"
+      ],
+      "description": "IAB-compatible programmatic placements for audience extension across trusted Network partners using PMP, DealIDs, and unified auction."
+    },
+    {
+      "name": "Subscription Plans",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Custom Paid Subscription Access Plans"
+      ],
+      "description": "Custom paid subscription access plans (e.g., $99/month) that grant partners contextual placement in Highlights and grow organic distribution; moderation managed by BCC."
+    },
+    {
+      "name": "Highlights",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Sponsored Content Highlights"
+      ],
+      "description": "Sponsored content surface where partner posts appear in contextually relevant placements across onsite and offsite activation."
+    },
+    {
+      "name": "Genuin Network",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "The Network"
+      ],
+      "description": "Genuin's distribution network of trusted partner properties that supercharges campaigns and drives performance for advertisers and creators beyond walled gardens."
+    },
+    {
+      "name": "Community Sponsorship Exclusive SOV",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Sponsored Category Exclusive Share of Voice",
+        "Category Access"
+      ],
+      "description": "Exclusive share-of-voice sponsorship granting category, context, and community access with brand watermark and intro card on sponsored content."
+    },
+    {
+      "name": "Earnings and Payouts",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Reporting and payout management surface within Monetize for tracking earnings and disbursing payouts."
+    },
+    {
+      "name": "Relevance Analytics",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Earnings and relevance analytics used to guide partnership decisions within Monetize."
+    },
+    {
+      "name": "Monetization Playbook",
+      "bucket": "Marketing",
+      "type": "Playbook",
+      "aliases": [
+        "Quick Start Guide",
+        "Getting Started Monetization Playbook"
+      ],
+      "description": "Quick-start guide and playbook explaining why and how partners scale revenue with Monetize while maintaining experience control."
+    },
+    {
+      "name": "Brand Watermark",
+      "bucket": "Marketing",
+      "type": "Asset",
+      "aliases": [
+        "Brand Watermark & Intro Card"
+      ],
+      "description": "Brand watermark and intro card applied to sponsored category content to attribute and frame the sponsorship."
+    },
+    {
+      "name": "BCC",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [
+        "Brand Content Console"
+      ],
+      "description": "Configuration and moderation console used to set up brand-direct demand, manage Genuin posts, and curate subscription content."
+    },
+    {
+      "name": "GAM",
+      "bucket": "Engineering",
+      "type": "Integration",
+      "aliases": [
+        "Google Ad Manager"
+      ],
+      "description": "Third-party ad server integration used to activate in-feed and in-stream programmatic placements."
+    },
+    {
+      "name": "Anniview",
+      "bucket": "Engineering",
+      "type": "Integration",
+      "aliases": [],
+      "description": "Third-party ad server integration supported for activating in-feed and in-stream placements."
+    },
+    {
+      "name": "InfyTV",
+      "bucket": "Engineering",
+      "type": "Integration",
+      "aliases": [],
+      "description": "Third-party ad server integration supported for activating in-feed and in-stream placements."
+    },
+    {
+      "name": "IAB Standard Tags",
+      "bucket": "Engineering",
+      "type": "Standard",
+      "aliases": [
+        "IAB Standard Placement",
+        "IAB Compatible Tags"
+      ],
+      "description": "Industry-standard IAB ad tag formats (300x600, 300x250) used for session takeovers and audience extension."
+    },
+    {
+      "name": "VAST",
+      "bucket": "Engineering",
+      "type": "Standard",
+      "aliases": [
+        "Programmatic VAST"
+      ],
+      "description": "Video Ad Serving Template standard used as the programmatic creative source for in-stream and session takeover placements."
+    },
+    {
+      "name": "Ad Server",
+      "bucket": "Engineering",
+      "type": "Infrastructure",
+      "aliases": [],
+      "description": "Generic ad-server layer through which brand-direct programmatic demand is configured for extended O&O placements."
+    },
+    {
+      "name": "Sponsorships",
+      "bucket": "Business",
+      "type": "Revenue Stream",
+      "aliases": [],
+      "description": "Native, ongoing sponsorship revenue model offered via Monetize, replacing fragmented campaign-based sponsorships."
+    },
+    {
+      "name": "Subscriptions",
+      "bucket": "Business",
+      "type": "Revenue Stream",
+      "aliases": [],
+      "description": "Paid subscription revenue stream that gives partners contextual access to placements within Monetize."
+    },
+    {
+      "name": "Ads",
+      "bucket": "Business",
+      "type": "Revenue Stream",
+      "aliases": [
+        "Advertising"
+      ],
+      "description": "Programmatic and direct advertising revenue stream consolidated within Monetize's monetization infrastructure."
+    },
+    {
+      "name": "PMP",
+      "bucket": "Business",
+      "type": "Deal Model",
+      "aliases": [
+        "Private Marketplace"
+      ],
+      "description": "Private marketplace deal model supported by programmatic audience extension for curated buyer access."
+    },
+    {
+      "name": "DealIDs",
+      "bucket": "Business",
+      "type": "Deal Model",
+      "aliases": [],
+      "description": "Deal-ID-based programmatic transaction mechanism used for audience-extension activations."
+    },
+    {
+      "name": "Publishers",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [],
+      "description": "Publishers who embed Genuin video community feeds to drive onsite engagement, sales, and media revenue."
+    },
+    {
+      "name": "Retailers",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [],
+      "description": "Retailers who use embedded Genuin video community feeds to drive onsite engagement and commerce."
+    },
+    {
+      "name": "Brands and Advertisers",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [
+        "Brands",
+        "Advertisers"
+      ],
+      "description": "Brand and advertiser audience that gains reach and distribution of video assets across engaged Network audiences."
+    },
+    {
+      "name": "Consumers",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [],
+      "description": "End consumers who get personalized feeds surfacing relevant content, offers, and social interaction."
+    },
+    {
+      "name": "iHeartMedia",
+      "bucket": "Partnerships",
+      "type": "Partner",
+      "aliases": [
+        "iHeart"
+      ],
+      "description": "Audio and media partner whose omnichannel properties host Monetize sponsored and programmatic placements such as homepage carousels, pinned first positions, and IAB tag takeovers."
+    },
+    {
+      "name": "Network Partners",
+      "bucket": "Partnerships",
+      "type": "Partner Program",
+      "aliases": [
+        "Genuin Network Partners"
+      ],
+      "description": "Trusted third-party properties in the Genuin Network where sponsored and programmatic Monetize placements extend offsite."
+    },
+    {
+      "name": "Extended Podcasters",
+      "bucket": "Partnerships",
+      "type": "Partner",
+      "aliases": [
+        "Extended Podcaster Partners"
+      ],
+      "description": "Podcaster partners outside the core network who can purchase subscription access to appear in Highlights placements."
+    },
+    {
+      "name": "Station Partners",
+      "bucket": "Partnerships",
+      "type": "Partner",
+      "aliases": [],
+      "description": "Radio/station partners who can purchase subscription access to appear in Highlights placements alongside extended podcasters."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sponsored Placements Takeover",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Homepage carousel takeover is part of the Monetize onsite sponsored placements suite."
+    },
+    {
+      "source": "Pinned First Position Placement",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Pinned first-in-feed placement is part of Monetize."
+    },
+    {
+      "source": "In-Feed Vertical Video Ad",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "In-feed vertical video ad is part of Monetize's programmatic onsite offering."
+    },
+    {
+      "source": "Session Takeover",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Programmatic session takeover is part of Monetize."
+    },
+    {
+      "source": "In-Stream Ad",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Programmatic in-stream pre/mid/end roll ads are part of Monetize."
+    },
+    {
+      "source": "Extended Placement In-Network",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Extended in-network sponsored placement is part of Monetize's offsite suite."
+    },
+    {
+      "source": "Extended Sponsored Placement In-Network",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Extended sponsored video placements are part of Monetize's offsite suite."
+    },
+    {
+      "source": "Programmatic Extended O&O",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Programmatic extended O&O placements are part of Monetize."
+    },
+    {
+      "source": "Programmatic Audience Extension",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Programmatic PG/PMP audience extension is part of Monetize's offsite suite."
+    },
+    {
+      "source": "Subscription Plans",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Custom paid subscription plans are part of Monetize."
+    },
+    {
+      "source": "Highlights",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Highlights sponsored-content surface is part of Monetize."
+    },
+    {
+      "source": "Community Sponsorship Exclusive SOV",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Exclusive share-of-voice category sponsorship is part of Monetize's onsite offerings."
+    },
+    {
+      "source": "Earnings and Payouts",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Earnings and payouts reporting is part of Monetize."
+    },
+    {
+      "source": "Relevance Analytics",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Relevance analytics is part of Monetize and guides partnership decisions."
+    },
+    {
+      "source": "Monetization Playbook",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "The monetization playbook accompanies Monetize as its getting-started guide."
+    },
+    {
+      "source": "Monetize",
+      "target": "Sponsorships",
+      "type": "INCLUDES",
+      "description": "Monetize includes sponsorships as a revenue stream."
+    },
+    {
+      "source": "Monetize",
+      "target": "Subscriptions",
+      "type": "INCLUDES",
+      "description": "Monetize includes subscriptions as a revenue stream."
+    },
+    {
+      "source": "Monetize",
+      "target": "Ads",
+      "type": "INCLUDES",
+      "description": "Monetize includes advertising as a revenue stream."
+    },
+    {
+      "source": "Sponsored Placements Takeover",
+      "target": "BCC",
+      "type": "USES",
+      "description": "Demand for the homepage carousel takeover is configured via BCC."
+    },
+    {
+      "source": "Pinned First Position Placement",
+      "target": "BCC",
+      "type": "USES",
+      "description": "Pinned first-position placement demand is configured via BCC."
+    },
+    {
+      "source": "Extended Placement In-Network",
+      "target": "BCC",
+      "type": "USES",
+      "description": "Extended in-network placement demand is configured via BCC."
+    },
+    {
+      "source": "Extended Sponsored Placement In-Network",
+      "target": "BCC",
+      "type": "USES",
+      "description": "Extended sponsored placement demand is configured via BCC."
+    },
+    {
+      "source": "Subscription Plans",
+      "target": "BCC",
+      "type": "USES",
+      "description": "Subscription plan moderation and curation is managed by BCC."
+    },
+    {
+      "source": "In-Feed Vertical Video Ad",
+      "target": "GAM",
+      "type": "INTEGRATES_WITH",
+      "description": "In-feed vertical video ad activation supports Google Ad Manager as a connected ad server."
+    },
+    {
+      "source": "In-Feed Vertical Video Ad",
+      "target": "Anniview",
+      "type": "INTEGRATES_WITH",
+      "description": "In-feed vertical video ad activation supports Anniview as a connected ad server."
+    },
+    {
+      "source": "In-Feed Vertical Video Ad",
+      "target": "InfyTV",
+      "type": "INTEGRATES_WITH",
+      "description": "In-feed vertical video ad activation supports InfyTV as a connected ad server."
+    },
+    {
+      "source": "In-Stream Ad",
+      "target": "GAM",
+      "type": "INTEGRATES_WITH",
+      "description": "In-stream ad activation supports Google Ad Manager."
+    },
+    {
+      "source": "In-Stream Ad",
+      "target": "Anniview",
+      "type": "INTEGRATES_WITH",
+      "description": "In-stream ad activation supports Anniview."
+    },
+    {
+      "source": "In-Stream Ad",
+      "target": "InfyTV",
+      "type": "INTEGRATES_WITH",
+      "description": "In-stream ad activation supports InfyTV."
+    },
+    {
+      "source": "Programmatic Extended O&O",
+      "target": "Ad Server",
+      "type": "USES",
+      "description": "Programmatic extended O&O placements are configured via the brand's ad server."
+    },
+    {
+      "source": "Session Takeover",
+      "target": "IAB Standard Tags",
+      "type": "USES",
+      "description": "Session takeover uses IAB-compatible 300x600 and 300x250 standard tags."
+    },
+    {
+      "source": "Programmatic Audience Extension",
+      "target": "IAB Standard Tags",
+      "type": "USES",
+      "description": "Audience extension uses IAB-compatible standard tags across partner properties."
+    },
+    {
+      "source": "Programmatic Audience Extension",
+      "target": "PMP",
+      "type": "USES",
+      "description": "Audience extension supports PMP deal models."
+    },
+    {
+      "source": "Programmatic Audience Extension",
+      "target": "DealIDs",
+      "type": "USES",
+      "description": "Audience extension supports DealID-based programmatic transactions."
+    },
+    {
+      "source": "In-Stream Ad",
+      "target": "VAST",
+      "type": "USES",
+      "description": "In-stream ad supports VAST as a programmatic creative source."
+    },
+    {
+      "source": "Session Takeover",
+      "target": "VAST",
+      "type": "USES",
+      "description": "Session takeover supports VAST programmatic creative."
+    },
+    {
+      "source": "Monetize",
+      "target": "iHeartMedia",
+      "type": "PARTNERS_WITH",
+      "description": "Monetize is being deployed in partnership with iHeartMedia across its omnichannel properties."
+    },
+    {
+      "source": "Sponsored Placements Takeover",
+      "target": "iHeartMedia",
+      "type": "OPERATES_IN",
+      "description": "The premium homepage carousel takeover runs across iHeartMedia's omnichannel surface."
+    },
+    {
+      "source": "Pinned First Position Placement",
+      "target": "iHeartMedia",
+      "type": "OPERATES_IN",
+      "description": "Pinned first-position placements are live across 112+ iHeart stations and podcasts."
+    },
+    {
+      "source": "Session Takeover",
+      "target": "iHeartMedia",
+      "type": "OPERATES_IN",
+      "description": "Session takeover is delivered via IAB-compatible tags on iHeart properties."
+    },
+    {
+      "source": "Extended Placement In-Network",
+      "target": "Network Partners",
+      "type": "OPERATES_IN",
+      "description": "Extended placements run on Network partner properties offsite."
+    },
+    {
+      "source": "Extended Sponsored Placement In-Network",
+      "target": "Network Partners",
+      "type": "OPERATES_IN",
+      "description": "Extended sponsored placements run on Network partner properties."
+    },
+    {
+      "source": "Programmatic Extended O&O",
+      "target": "Network Partners",
+      "type": "OPERATES_IN",
+      "description": "Programmatic extended O&O placements run on Network partner properties."
+    },
+    {
+      "source": "Programmatic Audience Extension",
+      "target": "Network Partners",
+      "type": "OPERATES_IN",
+      "description": "Audience extension runs across trusted Network partner properties."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Network Partners",
+      "type": "INCLUDES",
+      "description": "The Genuin Network is composed of partner properties used for offsite distribution."
+    },
+    {
+      "source": "Subscription Plans",
+      "target": "Extended Podcasters",
+      "type": "TARGETED_AT",
+      "description": "Subscription plans grant extended podcaster partners paid access to Highlights placements."
+    },
+    {
+      "source": "Subscription Plans",
+      "target": "Station Partners",
+      "type": "TARGETED_AT",
+      "description": "Subscription plans grant station partners paid access to Highlights placements."
+    },
+    {
+      "source": "Monetize",
+      "target": "Publishers",
+      "type": "TARGETED_AT",
+      "description": "Monetize is positioned for publishers who want to grow onsite engagement, sales, and media revenue."
+    },
+    {
+      "source": "Monetize",
+      "target": "Retailers",
+      "type": "TARGETED_AT",
+      "description": "Monetize is positioned for retailers using embedded video feeds onsite."
+    },
+    {
+      "source": "Monetize",
+      "target": "Brands and Advertisers",
+      "type": "TARGETED_AT",
+      "description": "Monetize is positioned for brands and advertisers seeking reach and distribution of video assets."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Consumers",
+      "type": "TARGETED_AT",
+      "description": "The Genuin Network surfaces personalized content, offers, and interactions to consumers."
+    },
+    {
+      "source": "Community Sponsorship Exclusive SOV",
+      "target": "Brand Watermark",
+      "type": "FEATURES",
+      "description": "Exclusive SOV sponsorship features a brand watermark and intro card on sponsored category content."
+    },
+    {
+      "source": "Highlights",
+      "target": "Pinned First Position Placement",
+      "type": "APPEARS_IN",
+      "description": "Pinned first-position takeovers surface Highlights-style sponsored content at the top of feeds."
+    }
+  ],
+  "_src_hash": "fb814905514b04a2bf5fc4c864ad452bcd6ba04dc45af3e038f47186f14d406a",
+  "_skill_sig": "4edd28021f3312b1"
+}

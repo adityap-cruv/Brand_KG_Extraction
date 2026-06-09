@@ -1,0 +1,1093 @@
+{
+  "source_doc": "Quarterly Company wide update",
+  "entities": [
+    {
+      "name": "Peter",
+      "bucket": "People",
+      "type": "Person",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "Sales Lead",
+      "affiliation": "Genuin",
+      "aliases": [],
+      "description": "Sales owner driving major deals across MCC, Grubhub, Universal Orlando, Minute Media, Essentially Sports, Conde-Nast, Tesco and UBER per the April 8, 2026 sales snapshot."
+    },
+    {
+      "name": "Charmie",
+      "bucket": "People",
+      "type": "Person",
+      "seniority_tier": "OTHER",
+      "role_title": "Marketing Team Member",
+      "affiliation": "Genuin",
+      "aliases": [],
+      "description": "New hire welcomed in the Q1 product marketing update covering website refresh and seller/CSM ATS scaling."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "SDK"
+      ],
+      "description": "Plug-and-play embeddable SDK delivered for iOS, Android, React Native and Flutter that powers Genuin's distributed engagement network."
+    },
+    {
+      "name": "Brand Control Center",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "BCC"
+      ],
+      "description": "Operator console used by brands to Build, Manage, Curate, Grow, Moderate, Monetize, Report and configure Settings across Genuin's 8 products."
+    },
+    {
+      "name": "Octo",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Strategic Q2 product launching with auto-prompting and Koah Labs integration, positioned as a revenue-impact initiative and category-creation PR moment."
+    },
+    {
+      "name": "OctoGPT",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Auto-prompting capability within Octo expected to lift user engagement."
+    },
+    {
+      "name": "Monetize",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Monetization product activated on TED and US Weekly with in-feed, programmatic video and in-stream video ads, targeting $10M ARR in 2026."
+    },
+    {
+      "name": "Curate",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Q1 release enabling content curation including RSS/MRSS, JSON and XML feed curation across customers like MCC and Minute Media."
+    },
+    {
+      "name": "Offsite",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Offsite distribution product powering IAB session takeovers such as Grubhub and the iHeart x Infolinks takeover."
+    },
+    {
+      "name": "Onsite",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Onsite engagement product with a new architecture and Expo support, activated across five MCC sites and TED."
+    },
+    {
+      "name": "Lightweight WebSDK",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "WebSDK"
+      ],
+      "description": "Approximately 500 KB web SDK shipped in Q1 to reduce footprint for embedded deployments."
+    },
+    {
+      "name": "Creator Studio",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Studio integration tied to MCC deal milestones and used as an upsell demo for Universal Orlando."
+    },
+    {
+      "name": "Scheduler",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Q1 feature release enabling scheduled content workflows."
+    },
+    {
+      "name": "Linkout Management",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Q1 release providing management of outbound links from Genuin feeds."
+    },
+    {
+      "name": "SDK v3",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "SDK V3 Modularization"
+      ],
+      "description": "Modularization, latency improvement and documentation work for the next major SDK version."
+    },
+    {
+      "name": "Sponsored Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Sponsored Posts & takeover"
+      ],
+      "description": "Ad format released in Q1 enabling full-placement sponsored experiences."
+    },
+    {
+      "name": "In Stream Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "In-stream ad format including house ad with in-stream support, activated on US Weekly."
+    },
+    {
+      "name": "In Feed Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "In-feed ad placements at the 2nd, 6th and 10th positions, including programmatic video and native variants."
+    },
+    {
+      "name": "RSS/MRSS Feed Curation",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "RSS Feed Curation"
+      ],
+      "description": "Feed curation supporting RSS, MRSS, JSON and XML, rolled out for MCC and Minute Media."
+    },
+    {
+      "name": "Ads Configuration with Presets",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Q1 release providing preset-driven ad configuration for operators."
+    },
+    {
+      "name": "Observability Dashboard",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Dashboard v1"
+      ],
+      "description": "Initial observability events implementation and v1 dashboard delivered in Q1."
+    },
+    {
+      "name": "N*N Grid Layout",
+      "bucket": "Engineering",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Grid layout support shipped in Q1 for flexible placement composition."
+    },
+    {
+      "name": "Dynamic Placement View",
+      "bucket": "Engineering",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Placement view feature completed on Android with iOS still pending."
+    },
+    {
+      "name": "iOS",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Apple mobile platform supported by Genuin SDK; received a SwiftUI rewrite for the iHeart app in Q1."
+    },
+    {
+      "name": "Android",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Mobile platform supported by Genuin SDK with Q1 player optimizations and ad serving improvements."
+    },
+    {
+      "name": "React Native",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Cross-platform framework supported by the Genuin SDK distribution targets."
+    },
+    {
+      "name": "Flutter",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Cross-platform framework supported by the Genuin SDK distribution targets."
+    },
+    {
+      "name": "SwiftUI",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Apple UI framework used to rewrite the iHeart iOS code in Q1."
+    },
+    {
+      "name": "Bunny CDN",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Content delivery network serving Genuin traffic, handling 7,360 TB in Q1 2026 versus 2,418.91 TB in Q4 2025."
+    },
+    {
+      "name": "2026 Financial Plan",
+      "bucket": "Business",
+      "type": "Document",
+      "aliases": [],
+      "description": "EOY 2026 plan targeting $10M ARR, $4.5M revenue, ($1.9M) EBITDA, 12M MEUs and 120M monthly video watch time."
+    },
+    {
+      "name": "Sales Pipeline April 2026",
+      "bucket": "Business",
+      "type": "Process",
+      "aliases": [
+        "Pipeline Phasing"
+      ],
+      "description": "Qualification, Consideration and Closing stages of the April 2026 pipeline including $18B+ targeted pipeline across 1B+ consumers."
+    },
+    {
+      "name": "20/80 Bets",
+      "bucket": "Business",
+      "type": "Process",
+      "aliases": [],
+      "description": "Strategic initiatives portfolio including iHeartVIP, industry trade community partnerships and InfoLink + iHeart programs."
+    },
+    {
+      "name": "Marketing and Sales Activation Plan 2026",
+      "bucket": "Marketing",
+      "type": "Process",
+      "aliases": [],
+      "description": "2026 plan mapping Awareness, Consideration, Conversion and Expansion workstreams across Monetization, RMN, Commerce, Tech, Media and C-suite teams."
+    },
+    {
+      "name": "Genuin Connections",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Monthly episode series and live recordings used as a brand marketing activation channel."
+    },
+    {
+      "name": "Monthly Newsletter",
+      "bucket": "Marketing",
+      "type": "Process",
+      "aliases": [],
+      "description": "Monthly newsletter reaching 4,000+ recipients with a 50% open rate."
+    },
+    {
+      "name": "CES",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Industry event used by Genuin in Q1 for speaking, presenting, pitching and networking."
+    },
+    {
+      "name": "FMI Tech",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Q1 industry event in Genuin's awareness calendar."
+    },
+    {
+      "name": "IAB ALM",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Q1 industry event used for thought leadership and networking."
+    },
+    {
+      "name": "Givsly Responsible Media Summit",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Q1 industry summit in Genuin's awareness calendar."
+    },
+    {
+      "name": "Marketecture Live",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Q1 industry event in Genuin's awareness calendar."
+    },
+    {
+      "name": "SxSW",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Major Q1 industry event used for speaking and networking."
+    },
+    {
+      "name": "Ad Economic Forum",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Q1 advertising industry forum in Genuin's awareness calendar."
+    },
+    {
+      "name": "Digiday Publishing Summit",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Q1 publishing industry summit in Genuin's awareness calendar."
+    },
+    {
+      "name": "Brand Innovators",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Series of seven Brand Innovators sessions in Q1."
+    },
+    {
+      "name": "POSSIBLE",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Q2 marquee event in Genuin's preview alongside Programmatic AI and Cannes Lions."
+    },
+    {
+      "name": "Programmatic AI",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Q2 industry event highlighted in Genuin's Octo and PR ramp-up."
+    },
+    {
+      "name": "Cannes Lions",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Q2 international advertising festival in Genuin's marketing calendar."
+    },
+    {
+      "name": "MarTech Cube",
+      "bucket": "Marketing",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Trade publication that requested Genuin's embargoed Monetize release and plans to cover the news."
+    },
+    {
+      "name": "TalkCMO",
+      "bucket": "Marketing",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Trade publication providing coverage to a 250k-reader audience."
+    },
+    {
+      "name": "Marketing Sherpa",
+      "bucket": "Marketing",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Outlet that secured a byline opportunity for Genuin in Q1."
+    },
+    {
+      "name": "AdExchanger",
+      "bucket": "Marketing",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Ad-tech publication that requested an intro call with Genuin."
+    },
+    {
+      "name": "AdAge",
+      "bucket": "Marketing",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Industry publication activating story engine coverage for Genuin."
+    },
+    {
+      "name": "ANA",
+      "bucket": "Marketing",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Association of National Advertisers; secured an interview opportunity with Genuin about media trends on 3/17."
+    },
+    {
+      "name": "CMSWire",
+      "bucket": "Marketing",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Publication offering a newsjacking and byline opportunity around personalization and contextual continuity in April."
+    },
+    {
+      "name": "Adweek",
+      "bucket": "Marketing",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Marketing trade publication running the Marketing's Shift to Sovereignty byline at end of March."
+    },
+    {
+      "name": "Retailers and Commerce Companies",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Retailers & Commerce"
+      ],
+      "description": "Target audience pitched embedded video community feeds to drive onsite engagement, sales and media revenue."
+    },
+    {
+      "name": "Brands and Advertisers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Brands & Advertisers"
+      ],
+      "description": "Target audience offered reach and distribution of video assets to engaged audiences in Genuin's network."
+    },
+    {
+      "name": "Consumers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "End users receiving personalized feeds, offers and social interactions; 1B+ targeted across 100+ customers."
+    },
+    {
+      "name": "Developers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Tech & Developer Teams"
+      ],
+      "description": "Technical audience reached via developer documentation, resource guides and targeted PR/media buying."
+    },
+    {
+      "name": "iHeart",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "iHeart Radio"
+      ],
+      "description": "Anchor live customer contributing ARR alongside McClatchy and the site of the SwiftUI iOS rewrite and InfoLink takeover work."
+    },
+    {
+      "name": "McClatchy",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "MCC"
+      ],
+      "description": "Anchor live customer with multi-property onsite activations and the second largest ARR contribution to the 2026 plan."
+    },
+    {
+      "name": "TED",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Customer running Monetize activation and the onsite new architecture with Expo support."
+    },
+    {
+      "name": "Grubhub",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Customer for Offsite In-Network sponsorships and partner in the IAB session takeover with iHeart."
+    },
+    {
+      "name": "Universal Orlando",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Onsite/Offsite prospect targeted for close with a Creator Studio demo add-on."
+    },
+    {
+      "name": "Minute Media",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Offsite/distribution prospect under SOW negotiation and an RSS feed curation user."
+    },
+    {
+      "name": "Essentially Sports",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Onsite/Offsite prospect under SOW negotiation in Q2."
+    },
+    {
+      "name": "Conde-Nast",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Enterprise prospect (Vanity Fair) in pre-sales pitching for Onsite/Offsite."
+    },
+    {
+      "name": "Vanity Fair",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Conde-Nast property being pitched for Onsite/Offsite engagement."
+    },
+    {
+      "name": "Tesco",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Pre-sales pitching prospect for Onsite/Offsite engagement."
+    },
+    {
+      "name": "UBER",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Pre-sales pitching prospect for Onsite/Offsite engagement."
+    },
+    {
+      "name": "Koah Labs",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Integration partner powering Octo with auto-prompting for revenue impact."
+    },
+    {
+      "name": "Infolinks",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "InfoLink"
+      ],
+      "description": "Ad partner powering the iHeart Offsite IAB session takeover at 300x250 and 300x600 sizes."
+    },
+    {
+      "name": "US Weekly",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "McClatchy-cluster site running Monetize activation with in-feed, programmatic video and in-stream house ads."
+    },
+    {
+      "name": "Life & Style",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "MCC site (lifeandstylemag.com) running Onsite activation in Q1."
+    },
+    {
+      "name": "Bargain Hunter",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "MCC site (bargainhunter.com) running Onsite activation in Q1."
+    },
+    {
+      "name": "Woman's World",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "MCC site (womansworld.com) running Onsite activation in Q1."
+    },
+    {
+      "name": "The Kansas City Star",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "MCC site (kansascity.com) running Onsite activation on 10% of traffic in Q1."
+    },
+    {
+      "name": "iHeartVIP",
+      "bucket": "Business",
+      "type": "Process",
+      "aliases": [],
+      "description": "Strategic 20/80 bet initiative tied to the iHeart relationship in 2026."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Peter",
+      "target": "McClatchy",
+      "type": "LEADS",
+      "description": "Peter owns the MCC sales workstream covering ad revenue, Creator Studio integration, news GTM collateral, affiliate strategy and sports property integration."
+    },
+    {
+      "source": "Peter",
+      "target": "Universal Orlando",
+      "type": "LEADS",
+      "description": "Peter owns the Universal Orlando onsite/offsite deal and Creator Studio demo close."
+    },
+    {
+      "source": "Peter",
+      "target": "Grubhub",
+      "type": "LEADS",
+      "description": "Peter owns the Grubhub Offsite In-Network sale."
+    },
+    {
+      "source": "Peter",
+      "target": "Minute Media",
+      "type": "LEADS",
+      "description": "Peter owns the Minute Media offsite/distribution SOW."
+    },
+    {
+      "source": "Peter",
+      "target": "Essentially Sports",
+      "type": "LEADS",
+      "description": "Peter owns the Essentially Sports onsite/offsite SOW."
+    },
+    {
+      "source": "Peter",
+      "target": "Conde-Nast",
+      "type": "LEADS",
+      "description": "Peter owns the pre-sales pitch to Conde-Nast (Vanity Fair)."
+    },
+    {
+      "source": "Peter",
+      "target": "Tesco",
+      "type": "LEADS",
+      "description": "Peter owns the pre-sales pitch to Tesco."
+    },
+    {
+      "source": "Peter",
+      "target": "UBER",
+      "type": "LEADS",
+      "description": "Peter owns the pre-sales pitch to UBER."
+    },
+    {
+      "source": "Vanity Fair",
+      "target": "Conde-Nast",
+      "type": "PART_OF",
+      "description": "Vanity Fair is a Conde-Nast property targeted by Genuin in pre-sales."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "iOS",
+      "type": "INTEGRATES_WITH",
+      "description": "Genuin SDK ships an iOS distribution target."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Android",
+      "type": "INTEGRATES_WITH",
+      "description": "Genuin SDK ships an Android distribution target."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "React Native",
+      "type": "INTEGRATES_WITH",
+      "description": "Genuin SDK ships a React Native distribution target."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Flutter",
+      "type": "INTEGRATES_WITH",
+      "description": "Genuin SDK ships a Flutter distribution target."
+    },
+    {
+      "source": "iHeart",
+      "target": "SwiftUI",
+      "type": "USES",
+      "description": "The iHeart iOS app was rewritten in SwiftUI in Q1."
+    },
+    {
+      "source": "Octo",
+      "target": "OctoGPT",
+      "type": "INCLUDES",
+      "description": "Octo includes auto-prompting capabilities branded as OctoGPT."
+    },
+    {
+      "source": "Octo",
+      "target": "Koah Labs",
+      "type": "INTEGRATES_WITH",
+      "description": "Octo integrates Koah Labs to drive revenue impact."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Monetize",
+      "type": "INCLUDES",
+      "description": "BCC provides operator workflows that include the Monetize function for brands."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Curate",
+      "type": "INCLUDES",
+      "description": "BCC provides curate workflows as part of its operator console."
+    },
+    {
+      "source": "Monetize",
+      "target": "TED",
+      "type": "POWERS",
+      "description": "Monetize is activated as a product on TED."
+    },
+    {
+      "source": "Monetize",
+      "target": "US Weekly",
+      "type": "POWERS",
+      "description": "Monetize activation on US Weekly with in-feed, programmatic video and in-stream house ads."
+    },
+    {
+      "source": "Onsite",
+      "target": "US Weekly",
+      "type": "POWERS",
+      "description": "Onsite is activated on US Weekly as one of the five MCC sites."
+    },
+    {
+      "source": "Onsite",
+      "target": "Life & Style",
+      "type": "POWERS",
+      "description": "Onsite is activated on Life & Style as one of the five MCC sites."
+    },
+    {
+      "source": "Onsite",
+      "target": "Bargain Hunter",
+      "type": "POWERS",
+      "description": "Onsite is activated on Bargain Hunter as one of the five MCC sites."
+    },
+    {
+      "source": "Onsite",
+      "target": "Woman's World",
+      "type": "POWERS",
+      "description": "Onsite is activated on Woman's World as one of the five MCC sites."
+    },
+    {
+      "source": "Onsite",
+      "target": "The Kansas City Star",
+      "type": "POWERS",
+      "description": "Onsite is activated on 10% of The Kansas City Star traffic in Q1."
+    },
+    {
+      "source": "Onsite",
+      "target": "TED",
+      "type": "POWERS",
+      "description": "Onsite ships a new architecture and Expo support tailored for TED."
+    },
+    {
+      "source": "US Weekly",
+      "target": "McClatchy",
+      "type": "PART_OF",
+      "description": "US Weekly is grouped under the MCC cluster of onsite activations."
+    },
+    {
+      "source": "Life & Style",
+      "target": "McClatchy",
+      "type": "PART_OF",
+      "description": "Life & Style is grouped under the MCC cluster of onsite activations."
+    },
+    {
+      "source": "Bargain Hunter",
+      "target": "McClatchy",
+      "type": "PART_OF",
+      "description": "Bargain Hunter is grouped under the MCC cluster of onsite activations."
+    },
+    {
+      "source": "Woman's World",
+      "target": "McClatchy",
+      "type": "PART_OF",
+      "description": "Woman's World is grouped under the MCC cluster of onsite activations."
+    },
+    {
+      "source": "The Kansas City Star",
+      "target": "McClatchy",
+      "type": "PART_OF",
+      "description": "The Kansas City Star is grouped under the MCC cluster of onsite activations."
+    },
+    {
+      "source": "Curate",
+      "target": "RSS/MRSS Feed Curation",
+      "type": "INCLUDES",
+      "description": "Curate ships RSS/MRSS, JSON and XML feed curation capability rolled out to MCC and Minute Media."
+    },
+    {
+      "source": "RSS/MRSS Feed Curation",
+      "target": "McClatchy",
+      "type": "POWERS",
+      "description": "RSS feed curation rolled out to MCC."
+    },
+    {
+      "source": "RSS/MRSS Feed Curation",
+      "target": "Minute Media",
+      "type": "POWERS",
+      "description": "RSS feed curation rolled out to Minute Media."
+    },
+    {
+      "source": "Offsite",
+      "target": "Grubhub",
+      "type": "POWERS",
+      "description": "Offsite powers the IAB Session Takeover for Grubhub."
+    },
+    {
+      "source": "Offsite",
+      "target": "iHeart",
+      "type": "POWERS",
+      "description": "Offsite powers the IAB Session Takeover for iHeart with Infolinks creatives."
+    },
+    {
+      "source": "iHeart",
+      "target": "Infolinks",
+      "type": "PARTNERS_WITH",
+      "description": "iHeart and Infolinks run the Offsite IAB session takeover at 300x250 and 300x600 sizes."
+    },
+    {
+      "source": "Bunny CDN",
+      "target": "Genuin SDK",
+      "type": "SUPPLIES",
+      "description": "Bunny CDN delivers SDK traffic, handling 7,360 TB in Q1 2026 versus 2,418.91 TB in Q4 2025."
+    },
+    {
+      "source": "Observability Dashboard",
+      "target": "Genuin SDK",
+      "type": "DEPENDS_ON",
+      "description": "Observability events implementation and v1 dashboard instrument the SDK in Q1."
+    },
+    {
+      "source": "Dynamic Placement View",
+      "target": "Android",
+      "type": "INTEGRATES_WITH",
+      "description": "Dynamic Placement View is complete on Android with iOS still pending."
+    },
+    {
+      "source": "Dynamic Placement View",
+      "target": "iOS",
+      "type": "INTEGRATES_WITH",
+      "description": "Dynamic Placement View remains pending on iOS."
+    },
+    {
+      "source": "SDK v3",
+      "target": "Genuin SDK",
+      "type": "PART_OF",
+      "description": "SDK v3 modularizes the existing Genuin SDK, improving latency and documentation."
+    },
+    {
+      "source": "Lightweight WebSDK",
+      "target": "Genuin SDK",
+      "type": "PART_OF",
+      "description": "Lightweight WebSDK (~500 KB) is part of Genuin's SDK family."
+    },
+    {
+      "source": "In Feed Ads",
+      "target": "US Weekly",
+      "type": "APPEARS_IN",
+      "description": "In-feed ads are activated at positions 2, 6 and 10 on US Weekly."
+    },
+    {
+      "source": "In Stream Ads",
+      "target": "US Weekly",
+      "type": "APPEARS_IN",
+      "description": "In-stream video ads run on US Weekly's house ad."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "iHeart",
+      "type": "DEPENDS_ON",
+      "description": "iHeartVIP is a 20/80 strategic bet tied to the iHeart relationship."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "20/80 Bets",
+      "type": "PART_OF",
+      "description": "iHeartVIP is part of the 20/80 Bets strategic initiative portfolio."
+    },
+    {
+      "source": "20/80 Bets",
+      "target": "Infolinks",
+      "type": "INCLUDES",
+      "description": "The 20/80 Bets portfolio includes InfoLink + iHeart programs."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "Genuin Connections",
+      "type": "INCLUDES",
+      "description": "Genuin Connections is part of the awareness pillar of the 2026 activation plan."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "Monthly Newsletter",
+      "type": "INCLUDES",
+      "description": "The monthly newsletter is a recurring asset in the awareness pillar of the 2026 activation plan."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "CES",
+      "type": "INCLUDES",
+      "description": "CES appears in the Q1 event calendar of the 2026 activation plan."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "SxSW",
+      "type": "INCLUDES",
+      "description": "SxSW appears in the Q1 event calendar of the 2026 activation plan."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "Cannes Lions",
+      "type": "INCLUDES",
+      "description": "Cannes Lions is a Q2 anchor event in the 2026 activation plan."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "POSSIBLE",
+      "type": "INCLUDES",
+      "description": "POSSIBLE is a Q2 anchor event in the 2026 activation plan."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "Programmatic AI",
+      "type": "INCLUDES",
+      "description": "Programmatic AI is featured in the Q2 marketing calendar."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "FMI Tech",
+      "type": "INCLUDES",
+      "description": "FMI Tech appears in the Q1 awareness calendar."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "IAB ALM",
+      "type": "INCLUDES",
+      "description": "IAB ALM appears in the Q1 awareness calendar."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "Givsly Responsible Media Summit",
+      "type": "INCLUDES",
+      "description": "Givsly Responsible Media Summit appears in the Q1 awareness calendar."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "Marketecture Live",
+      "type": "INCLUDES",
+      "description": "Marketecture Live appears in the Q1 awareness calendar."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "Ad Economic Forum",
+      "type": "INCLUDES",
+      "description": "Ad Economic Forum appears in the Q1 awareness calendar."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "Digiday Publishing Summit",
+      "type": "INCLUDES",
+      "description": "Digiday Publishing Summit appears in the Q1 awareness calendar."
+    },
+    {
+      "source": "Marketing and Sales Activation Plan 2026",
+      "target": "Brand Innovators",
+      "type": "INCLUDES",
+      "description": "Brand Innovators (x7) is part of the Q1 awareness calendar."
+    },
+    {
+      "source": "MarTech Cube",
+      "target": "Monetize",
+      "type": "REVIEWS",
+      "description": "MarTech Cube requested the embargoed Monetize release and plans to cover the news."
+    },
+    {
+      "source": "TalkCMO",
+      "target": "Monetize",
+      "type": "REVIEWS",
+      "description": "TalkCMO is covering the Monetize launch to a 250k-reader audience."
+    },
+    {
+      "source": "Marketing Sherpa",
+      "target": "Monetize",
+      "type": "PROMOTES",
+      "description": "Marketing Sherpa secured a byline opportunity for Genuin's Monetize."
+    },
+    {
+      "source": "AdExchanger",
+      "target": "Monetize",
+      "type": "MENTIONS",
+      "description": "AdExchanger requested an intro call about Genuin's Monetize launch."
+    },
+    {
+      "source": "AdAge",
+      "target": "Monetize",
+      "type": "PROMOTES",
+      "description": "AdAge is activating story engine coverage for the Monetize launch."
+    },
+    {
+      "source": "ANA",
+      "target": "Peter",
+      "type": "MENTIONS",
+      "description": "ANA secured an interview about media trends and changes on 3/17 as part of the Genuin thought leadership push."
+    },
+    {
+      "source": "CMSWire",
+      "target": "Monetize",
+      "type": "MENTIONS",
+      "description": "CMSWire offered a newsjacking and April byline opportunity around personalization and contextual continuity."
+    },
+    {
+      "source": "Adweek",
+      "target": "Monetize",
+      "type": "PROMOTES",
+      "description": "Adweek is running the Marketing's Shift to Sovereignty byline at end of March."
+    },
+    {
+      "source": "Monetize",
+      "target": "Retailers and Commerce Companies",
+      "type": "TARGETED_AT",
+      "description": "Monetize is pitched to retailers and commerce companies as embedded video community feeds that drive onsite engagement, sales and media revenue."
+    },
+    {
+      "source": "Offsite",
+      "target": "Brands and Advertisers",
+      "type": "TARGETED_AT",
+      "description": "Offsite is pitched to brands and advertisers as reach and distribution of video assets across the Genuin network."
+    },
+    {
+      "source": "Onsite",
+      "target": "Consumers",
+      "type": "TARGETED_AT",
+      "description": "Onsite personalized feeds surface relevant content, offers and social interactions to consumers."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Developers",
+      "type": "TARGETED_AT",
+      "description": "Genuin SDK and developer documentation are aimed at tech and developer teams via targeted PR and media buying."
+    },
+    {
+      "source": "2026 Financial Plan",
+      "target": "iHeart",
+      "type": "DEPENDS_ON",
+      "description": "iHeart contributes the bulk of the 83% ARR baked into the EOY $13.7M plan."
+    },
+    {
+      "source": "2026 Financial Plan",
+      "target": "McClatchy",
+      "type": "DEPENDS_ON",
+      "description": "McClatchy is the second anchor ARR contributor to the EOY 2026 plan."
+    },
+    {
+      "source": "Sales Pipeline April 2026",
+      "target": "Universal Orlando",
+      "type": "INCLUDES",
+      "description": "Universal Orlando appears in the April 2026 advance-stage sales pipeline."
+    },
+    {
+      "source": "Sales Pipeline April 2026",
+      "target": "Grubhub",
+      "type": "INCLUDES",
+      "description": "Grubhub appears in the April 2026 advance-stage sales pipeline for Offsite In-Network."
+    },
+    {
+      "source": "Sales Pipeline April 2026",
+      "target": "Minute Media",
+      "type": "INCLUDES",
+      "description": "Minute Media appears in the April 2026 advance-stage sales pipeline for Offsite/Distribution SOW."
+    },
+    {
+      "source": "Sales Pipeline April 2026",
+      "target": "Essentially Sports",
+      "type": "INCLUDES",
+      "description": "Essentially Sports appears in the April 2026 pipeline at SOW stage."
+    },
+    {
+      "source": "Sales Pipeline April 2026",
+      "target": "Conde-Nast",
+      "type": "INCLUDES",
+      "description": "Conde-Nast (Vanity Fair) appears in the April 2026 pre-sales pitching pipeline."
+    },
+    {
+      "source": "Sales Pipeline April 2026",
+      "target": "Tesco",
+      "type": "INCLUDES",
+      "description": "Tesco appears in the April 2026 pre-sales pitching pipeline."
+    },
+    {
+      "source": "Sales Pipeline April 2026",
+      "target": "UBER",
+      "type": "INCLUDES",
+      "description": "UBER appears in the April 2026 pre-sales pitching pipeline."
+    },
+    {
+      "source": "Charmie",
+      "target": "Marketing and Sales Activation Plan 2026",
+      "type": "WORKS_ON",
+      "description": "Charmie was welcomed in the Q1 marketing update covering website refresh, sales enablement and ATS expansion."
+    }
+  ],
+  "_src_hash": "3f8057a9af4941ebcd3f4f492ff765f58d40d89f693393ec8c0658cab46a0043",
+  "_skill_sig": "4edd28021f3312b1"
+}

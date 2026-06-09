@@ -1,0 +1,555 @@
+{
+  "source_doc": "What Are the Different User Experiences in Genuin",
+  "entities": [
+    {
+      "name": "Community Media Network",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "CMN"
+      ],
+      "description": "A brand-owned network spanning strategy, content, technology, governance, and monetization that Genuin enables teams to launch, operate, and scale."
+    },
+    {
+      "name": "Brand Control Center",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "BCC"
+      ],
+      "description": "The operating system within Genuin for network setup, management, and performance, used to configure communities, curate content, moderate, and activate monetization."
+    },
+    {
+      "name": "Retail Media Network",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "Retail & Commerce Media Network"
+      ],
+      "description": "A commerce-driven Community Media Network experience for retailers hosting multiple brands and advertisers across product and category pages."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "SDKs"
+      ],
+      "description": "Software development kits for Web, iOS, Android, React, and Flutter that enable embedding Genuin community and video experiences into existing platforms."
+    },
+    {
+      "name": "Genuin API",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "APIs"
+      ],
+      "description": "API surface that powers personalization, targeting, and data pipelines to analytics and storage systems."
+    },
+    {
+      "name": "Clip It",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "A short-form video creation tool used by creators to publish content within brand-owned communities."
+    },
+    {
+      "name": "Curate",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Curate Activity and Task Timeline"
+      ],
+      "description": "A moderation workflow with Activity and Task Timeline views for reviewing content by lifecycle state, approving, rejecting, or moving content."
+    },
+    {
+      "name": "Community Video Feeds",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Community-powered video feeds"
+      ],
+      "description": "Scrollable, immersive, contextual video feeds embedded across product listing, detail, category, and discovery pages."
+    },
+    {
+      "name": "Product Listing Page Placement",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "PLP"
+      ],
+      "description": "Placement of community-powered video feeds on retailer Product Listing Pages to influence discovery."
+    },
+    {
+      "name": "Product Detail Page Placement",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "PDP"
+      ],
+      "description": "Placement of community-powered video feeds on Product Detail Pages to drive purchase consideration."
+    },
+    {
+      "name": "AI Content Curation",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "AI-assisted classification and moderation"
+      ],
+      "description": "AI capability with human-in-the-loop approval used to curate, classify, and moderate content at scale."
+    },
+    {
+      "name": "White-labeled Embeds",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Configurable embeds"
+      ],
+      "description": "White-labeled, configurable embeds that let teams place Genuin experiences across web and app environments."
+    },
+    {
+      "name": "Publishers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "Publishers operating brand-owned Community Media Networks who own distribution, audience relationships, and monetization."
+    },
+    {
+      "name": "Brands and Enterprises",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Brands"
+      ],
+      "description": "Brands and enterprises building owned communities and operating their own presence on Genuin."
+    },
+    {
+      "name": "Retailers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Commerce Platforms"
+      ],
+      "description": "Retailers and commerce platforms operating media networks that host multiple brands and advertisers."
+    },
+    {
+      "name": "Creators and Influencers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Creators"
+      ],
+      "description": "Content creators and influencers contributing content inside trusted brand ecosystems with clear attribution."
+    },
+    {
+      "name": "Moderation Teams",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Trust and Safety Teams",
+        "Community Managers"
+      ],
+      "description": "Teams responsible for content quality, compliance, and enforcing platform, brand, and community guidelines."
+    },
+    {
+      "name": "Consumers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "End Users"
+      ],
+      "description": "Visitors to publisher or brand websites and apps who engage with scrollable video feeds without leaving the brand ecosystem."
+    },
+    {
+      "name": "Product Managers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "Product managers responsible for embedding Genuin into existing web and app environments."
+    },
+    {
+      "name": "Engineering Teams",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Frontend Engineers",
+        "Backend Engineers",
+        "Platform Teams",
+        "Integration Teams"
+      ],
+      "description": "Engineering and integration teams that implement Genuin SDKs and APIs across platforms."
+    },
+    {
+      "name": "Growth Marketing Teams",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Growth Teams",
+        "Marketing Teams",
+        "Revenue Teams",
+        "Operations Teams"
+      ],
+      "description": "Cross-functional teams within publishers and brands responsible for community growth, marketing, revenue, and operations."
+    },
+    {
+      "name": "Sponsorships",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Brand sponsorship activations enabled through the Brand Control Center as part of monetization."
+    },
+    {
+      "name": "Commerce Activation",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [
+        "Shoppable Calls to Action"
+      ],
+      "description": "Commerce-driven engagement including shoppable and actionable calls to action that convert engagement into measurable outcomes."
+    },
+    {
+      "name": "Advertising Activation",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [
+        "First-Party Media Revenue"
+      ],
+      "description": "Brand-safe, first-party media revenue activations within owned properties and across retail networks."
+    },
+    {
+      "name": "Brand Safety and Governance",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [
+        "Editorial Standards",
+        "Governance"
+      ],
+      "description": "Standards and controls that maintain brand safety, editorial quality, and content governance across the network."
+    },
+    {
+      "name": "Customer Lifetime Value",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [
+        "CLV"
+      ],
+      "description": "Business outcome metric improved by retail and commerce media experiences."
+    },
+    {
+      "name": "Customer Acquisition Cost",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [
+        "CAC"
+      ],
+      "description": "Business outcome metric reduced through community-driven engagement on retailer properties."
+    },
+    {
+      "name": "Engagement Metrics",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [
+        "Time-on-Site",
+        "Session Depth",
+        "Conversion Lift"
+      ],
+      "description": "Metrics tracked across the network including time-on-site, session depth, and conversion lift driven by community trust."
+    },
+    {
+      "name": "Closed-Loop System",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Genuin's connected loop where brands build, creators contribute, AI curates, product embeds, consumers engage, and data feeds intelligence."
+    },
+    {
+      "name": "Content Ingestion Workflow",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Content Curation",
+        "Content Moderation Workflow"
+      ],
+      "description": "Workflows for ingesting, curating, and moderating content across the platform."
+    },
+    {
+      "name": "Analytics and Reporting",
+      "bucket": "Engineering",
+      "type": "Feature",
+      "aliases": [
+        "Analytics",
+        "Reporting"
+      ],
+      "description": "Analytics, reporting, and monetization systems that track engagement, growth, and performance."
+    },
+    {
+      "name": "Genuin Resource Center",
+      "bucket": "Marketing",
+      "type": "Document",
+      "aliases": [],
+      "description": "Documentation hub where each Genuin experience is explored in depth for different roles."
+    },
+    {
+      "name": "Social Account Syncing",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Uploads"
+      ],
+      "description": "Feature allowing creators to sync social accounts and upload content into Genuin communities."
+    },
+    {
+      "name": "Communities and Groups",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Communities",
+        "Groups"
+      ],
+      "description": "Brand-owned communities and groups where content aggregation, engagement, and discovery happen."
+    },
+    {
+      "name": "Personalization Engine",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Context-aware Personalization",
+        "API-driven Personalization"
+      ],
+      "description": "API-driven personalization and targeting that enables context-aware experiences across placements."
+    },
+    {
+      "name": "Data Pipelines",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Data pipelines connecting Genuin to analytics and storage systems."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Brand Control Center",
+      "target": "Community Media Network",
+      "type": "POWERS",
+      "description": "Brand Control Center is the operating system used to set up, manage, and govern a Community Media Network."
+    },
+    {
+      "source": "Retail Media Network",
+      "target": "Community Media Network",
+      "type": "PART_OF",
+      "description": "Retail Media Network is a commerce-driven variant of the Community Media Network experience."
+    },
+    {
+      "source": "Community Video Feeds",
+      "target": "Product Listing Page Placement",
+      "type": "INCLUDES",
+      "description": "Community-powered video feeds are embedded across Product Listing Pages."
+    },
+    {
+      "source": "Community Video Feeds",
+      "target": "Product Detail Page Placement",
+      "type": "INCLUDES",
+      "description": "Community-powered video feeds are embedded across Product Detail Pages."
+    },
+    {
+      "source": "Retail Media Network",
+      "target": "Community Video Feeds",
+      "type": "USES",
+      "description": "Retail Media Network experience surfaces community-powered video feeds across commerce environments."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Communities and Groups",
+      "type": "INCLUDES",
+      "description": "Brand Control Center is used to create and manage communities and groups."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "AI Content Curation",
+      "type": "USES",
+      "description": "Brand Control Center uses AI curation with human-in-the-loop approval to curate content."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Sponsorships",
+      "type": "INCLUDES",
+      "description": "Brand Control Center activates sponsorships as part of monetization."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Commerce Activation",
+      "type": "INCLUDES",
+      "description": "Brand Control Center activates commerce experiences and shoppable calls to action."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Advertising Activation",
+      "type": "INCLUDES",
+      "description": "Brand Control Center activates advertising and first-party media revenue."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Brand Safety and Governance",
+      "type": "INCLUDES",
+      "description": "Brand Control Center enforces brand safety, editorial standards, and governance."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Analytics and Reporting",
+      "type": "INCLUDES",
+      "description": "Brand Control Center surfaces analytics, reporting, and monetization performance tracking."
+    },
+    {
+      "source": "Publishers",
+      "target": "Community Media Network",
+      "type": "OWNED_BY",
+      "description": "Publishers operate and own brand-owned Community Media Networks."
+    },
+    {
+      "source": "Brands and Enterprises",
+      "target": "Communities and Groups",
+      "type": "OWNED_BY",
+      "description": "Brands and enterprises build and own communities and groups."
+    },
+    {
+      "source": "Retailers",
+      "target": "Retail Media Network",
+      "type": "RUN_BY",
+      "description": "Retailers and commerce platforms operate Retail Media Networks that host multiple brands."
+    },
+    {
+      "source": "Creators and Influencers",
+      "target": "Clip It",
+      "type": "USES",
+      "description": "Creators use Clip It for short-form video creation within brand-owned communities."
+    },
+    {
+      "source": "Creators and Influencers",
+      "target": "Social Account Syncing",
+      "type": "USES",
+      "description": "Creators sync social accounts and upload content into Genuin."
+    },
+    {
+      "source": "Creators and Influencers",
+      "target": "Communities and Groups",
+      "type": "APPEARS_IN",
+      "description": "Creators participate in curated communities and campaigns."
+    },
+    {
+      "source": "Moderation Teams",
+      "target": "Curate",
+      "type": "USES",
+      "description": "Moderation and community teams work within Curate Activity and Task Timeline views."
+    },
+    {
+      "source": "Moderation Teams",
+      "target": "AI Content Curation",
+      "type": "USES",
+      "description": "Moderation teams leverage AI-assisted classification and moderation."
+    },
+    {
+      "source": "Engineering Teams",
+      "target": "Genuin SDK",
+      "type": "USES",
+      "description": "Engineering teams use Genuin SDKs to embed experiences into web and app environments."
+    },
+    {
+      "source": "Engineering Teams",
+      "target": "Genuin API",
+      "type": "USES",
+      "description": "Engineering teams use Genuin APIs for personalization, targeting, and data integration."
+    },
+    {
+      "source": "Product Managers",
+      "target": "Genuin SDK",
+      "type": "USES",
+      "description": "Product managers oversee SDK-based integrations across platforms."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "White-labeled Embeds",
+      "type": "INCLUDES",
+      "description": "Genuin SDKs deliver white-labeled, configurable embeds for placement and feed configuration."
+    },
+    {
+      "source": "Genuin API",
+      "target": "Personalization Engine",
+      "type": "POWERS",
+      "description": "Genuin APIs drive context-aware personalization and targeting."
+    },
+    {
+      "source": "Genuin API",
+      "target": "Data Pipelines",
+      "type": "INCLUDES",
+      "description": "Genuin APIs expose data pipelines to analytics and storage systems."
+    },
+    {
+      "source": "Consumers",
+      "target": "Community Video Feeds",
+      "type": "USES",
+      "description": "Consumers engage with scrollable, immersive community-powered video feeds."
+    },
+    {
+      "source": "Consumers",
+      "target": "Commerce Activation",
+      "type": "RESPONDS_TO",
+      "description": "Consumers respond to shoppable and actionable calls to action embedded in feeds."
+    },
+    {
+      "source": "Closed-Loop System",
+      "target": "Brand Control Center",
+      "type": "INCLUDES",
+      "description": "The closed-loop system spans brand build via Brand Control Center through to consumer engagement."
+    },
+    {
+      "source": "Closed-Loop System",
+      "target": "AI Content Curation",
+      "type": "INCLUDES",
+      "description": "The closed loop relies on AI curation between creator contribution and product embedding."
+    },
+    {
+      "source": "Closed-Loop System",
+      "target": "Community Video Feeds",
+      "type": "INCLUDES",
+      "description": "Embedded community video feeds are the consumer-facing step of the closed loop."
+    },
+    {
+      "source": "Retail Media Network",
+      "target": "Customer Lifetime Value",
+      "type": "RELATES_TO",
+      "description": "Retail Media Network experiences aim to improve Customer Lifetime Value."
+    },
+    {
+      "source": "Retail Media Network",
+      "target": "Customer Acquisition Cost",
+      "type": "RELATES_TO",
+      "description": "Retail Media Network experiences aim to reduce Customer Acquisition Cost."
+    },
+    {
+      "source": "Community Media Network",
+      "target": "Engagement Metrics",
+      "type": "RELATES_TO",
+      "description": "Community Media Networks are evaluated through engagement metrics like time-on-site, session depth, and conversion lift."
+    },
+    {
+      "source": "Content Ingestion Workflow",
+      "target": "AI Content Curation",
+      "type": "USES",
+      "description": "Content ingestion, curation, and moderation workflows leverage AI curation."
+    },
+    {
+      "source": "Growth Marketing Teams",
+      "target": "Brand Control Center",
+      "type": "USES",
+      "description": "Growth, marketing, revenue, and operations teams operate within the Brand Control Center."
+    },
+    {
+      "source": "Genuin Resource Center",
+      "target": "Community Media Network",
+      "type": "MENTIONS",
+      "description": "The Genuin Resource Center documents each Community Media Network experience in depth."
+    }
+  ],
+  "_src_hash": "943359d82b5bb4a9a5d942f904bda6f5a9988b83bdbb38b1a57a9d67cab7a063",
+  "_skill_sig": "4edd28021f3312b1"
+}

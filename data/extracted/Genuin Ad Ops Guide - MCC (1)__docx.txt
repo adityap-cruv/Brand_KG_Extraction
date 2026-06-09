@@ -1,0 +1,375 @@
+1. Introduction to Genuin Monetize
+Genuin is a short-form video experience platform that enables brands — consumer brands, retailer brands, and media brands — to embed rich video carousels and feeds directly on their websites and apps. These experiences are powered by the Genuin SDK and video infrastructure, providing a native, high-engagement environment for both organic content and advertising.
+This guide is the definitive reference for activating, configuring, and managing all ad formats available on the Genuin platform. It covers both in-stream ads (which play inside the video player) and in-feed ads (which appear as cards within the scrollable feed), along with the step-by-step workflows for Genuin's Brand Control Center (BCC), the Aniview ad server, and direct sponsored content creation.
+1.1 Genuin's Monetize Framework
+Genuin offers a layered Monetize product. The table below summarises all ad types available on the platform.
+1.3 The In-Feed Waterfall Model
+When a feed slot is identified as an ad slot, Genuin resolves which ad to show using a sequential waterfall. Higher-priority types are attempted first; the next type is tried only if the higher-priority demand returns no fill.
+2. In-Feed Ads: Overview & Architecture
+In-feed ads appear as discrete cards within the Genuin video feed — indistinguishable in position from regular content cards, but serving commercial purposes. Unlike in-stream ads (which interrupt an actively playing video), in-feed ads occupy defined slot positions in the scrollable feed.
+Genuin's in-feed system supports both direct-sold sponsored content (served via the Genuin Video Server) and programmatic demand (served via the Aniview ad server using IMA SDK or GPT.js). When a feed slot is resolved as an ad slot, the waterfall described in Section 1.3 determines which ad type is served.
+2.1 How In-Feed Slots Are Identified
+The in-feed ad slot engine calculates which positions in the video feed should be occupied by ads, based on two configuration parameters:
+The slot engine checks the repeat frequency threshold before showing the next ad in the sequence.
+2.2 View Context: Card View vs Full-Screen View
+In-feed ads can be configured to appear in one or both viewing contexts:
+Card View — Ads appear as thumbnail cards in the scrollable carousel/grid layout.
+Full-Screen View — Ads appear when a user expands a video to full-screen. The ad occupies the full viewport.
+Both — The default configuration shows ads in both contexts.
+3. In-Feed Ad Types
+This section provides full specifications for each of the five in-feed ad types available on the Genuin platform.
+3.1 Sponsored Takeover
+Description: A Sponsored Takeover converts the first ‘n’ slots of the video feed into a continuous, brand-sponsored experience. All ‘n’ slots show the sponsor's video content rather than organic feed posts. This is the highest-impact in-feed placement available on Genuin.
+The Sponsored Takeover overrides all other in-feed ad types for its occupied slots. It is a direct-sold placement — there is no programmatic path for takeovers. Content is uploaded by the partner brand and served via the Genuin video server.
+3.1.1 Specifications
+Figure 5 — Sponsored Takeover: brand-sponsored feed experience (Woman's World example).
+3.2 Sponsored Posts
+Description: Sponsored Posts are individual in-feed cards containing brand-sponsored video content. Unlike the Takeover (which can claim the whole feed), Sponsored Posts follow the standard slot frequency logic — they appear at the calculated ad slot positions within the feed, interleaved with organic content.
+Sponsored Posts are the primary direct-sold in-feed format. The content partner uploads the sponsored video, which is then distributed by Genuin's Video server into the appropriate feed slots.
+3.2.1 Specifications
+Figure 6 — Sponsored Post in first ad slot position within a news publisher feed (Kansas City Star example).
+3.3 Programmatic In-Feed Video Ads
+Description: Programmatic in-feed video ads are video creatives served via Google's IMA SDK (Interactive Media Ads SDK) and fulfilled by the Aniview ad server. They appear as video cards within the feed. The creative renders using standard IMA SDK video playback — there are no engagement icons (like/comment/share), and a blue CTA bar replaces the interaction layer.
+3.3.1 Specifications
+In-Feed Ad
+Figure 7 — Programmatic in-feed video ad card in feed (US Weekly example).
+3.4 Programmatic In-Feed Native Ads
+Description: Programmatic in-feed native ads are static card-format creatives served via Google Publisher Tag (GPT.js) and fulfilled by the Aniview ad server. Unlike video ads, native ads use a static layout — a headline, image, brand logo, and description — that blends with the card-based feed aesthetic.
+3.4.1 Specifications
+3.5 Programmatic In-Feed Display Ads
+Description: Programmatic in-feed display ads serve standard banner creatives (image or HTML5) as cards within the feed using GPT.js and Aniview. The display banner occupies the full card slot, rendered as a static visual unit.
+3.5.1 Specifications
+4. In-Stream Video Ads
+The Genuin video carousel player supports in-stream linear video ads that play within the content viewer. These ads run programmatically through the Aniview ad server and are delivered via VAST/VMAP.
+4.1 Supported Ad Positions
+4.2 Technical Specifications
+Figure 4 — In-stream pre-roll ad rendering within the Genuin video player (US Weekly example).
+4.3 How In-Stream Ad Serving Works
+4.3.1 Prefetch Model
+The player uses a non-blocking prefetch model. Ads are requested in advance of the break point, so content continues to play while the ad loads. The ad fires as soon as it is ready.
+Pre-roll: ad request sent at content start
+Mid-roll: ad request sent ~10–12 seconds before midpoint
+Post-roll: ad request sent ~10 seconds before content ends
+4.3.2 Server-Side Timeout
+Each demand source has a configurable maximum response time (default 2,000 ms). This value is tunable per demand source in BCC. Experiments are recommended to find the ideal timeout — a lower timeout reduces latency but may increase unfilled breaks.
+4.3.3 Skippability
+The player respects the skipOffset defined in the VAST creative. After the skip offset elapses, users can either tap the skip control or swipe past the ad. Ads beyond 15 seconds must be skippable per IAB guidelines. Shorter ads may be non-skippable.
+4.3.4 Dynamic Cue Points
+Break positions are determined dynamically based on content video length — there are no fixed timestamps. This ensures appropriate ad placement across short-form content of varying durations.
+4.4 In-Stream Ad Ops Recommendations
+Use 15–30 second creatives for best performance in short-form environments.
+Target ad response within 2–6 seconds for programmatic demand to reduce timeouts.
+Limit VAST wrapper depth to 1–2 layers to minimise latency.
+Configure server-side timeout per demand source — test at 2,000 ms and adjust based on fill rate and latency.
+One ad per request — podding is not supported.
+Vertical creatives (9:16) are strongly recommended for mobile-first placements.
+5. Step-by-Step: Activating Monetize on Genuin
+This section is the operational guide for activating each ad type on your Genuin-powered placements. Follow the two-step process: Step 1 — Configure your Monetize Preset (set the strategic parameters for which ad types to run and how often), then Step 2 — Activate each ad type following the specific workflow for Direct Sponsored Ads, In-Feed Programmatic, and In-Stream Programmatic.
+5.1 Step 1 — Configure Your Monetize Preset
+A Monetize Preset is the strategic control layer for all ad settings. It determines which ad types are active, their priority in the waterfall, and the frequency and behaviour parameters. Configuring your preset is the first step because it defines the envelope within which all ad types operate.
+5.1.1 System Default Presets
+Genuin provides five read-only system presets as starting points. Choose the one that best matches your initial monetisation strategy, then copy and customise as needed.
+5.1.2 Creating or Customising a Preset
+Each placement can only be assigned to one active preset at a time. If you attempt to assign a placement already assigned to another preset, BCC will display a conflict warning and ask whether you want to reassign.
+5.1.3 In-Feed Configuration Settings
+Inside the preset editor, configure the In-Feed section settings for any placement that runs in-feed ads.
+5.1.4 In-Stream Configuration Settings
+Configure the In-Stream section settings for any placement that runs in-stream ads inside the video player.
+5.1.5 RACI Framework — Preset & BCC Configuration
+The table below defines accountability for configuring Monetize Presets and BCC settings.
+RACI: R = Responsible   A = Accountable   C = Consulted   I = Informed
+5.2 Step 2 — Activate Ads
+With your preset configured, follow the specific activation workflows below for each ad category you want to run. Each workflow is independent — you can activate any combination of Direct Sponsored Ads, In-Feed Programmatic, and In-Stream Programmatic based on your commercial model.
+5.2.1 Activate In-Feed Sponsored Ads (Takeovers & Sponsored Posts)
+Sponsored Takeovers and Sponsored Posts are direct-sold placements — they bypass the programmatic waterfall and are served directly by the Genuin backend. Both formats are managed end-to-end through the Sponsorship tab in BCC.
+Creating a Sponsored Post
+Creating a Sponsored Takeover
+RACI — In-Feed Sponsored Ads
+RACI: R = Responsible   A = Accountable   C = Consulted   I = Informed
+5.2.2 Activate In-Feed Programmatic Ads
+Programmatic in-feed video, native, and display ads are fulfilled via the Aniview ad server. This workflow walks through setting up Aniview channels, configuring ad tag URLs, linking them to your Genuin placements.
+Aniview Publisher & Channel Setup
+Configuring Fallback Content
+When no programmatic demand fills an in-feed slot — because all demand sources return empty (no bid, timeout, or floor not met) — the House / Fallback layer activates automatically. Fallback content is always-on and cannot be disabled. Understanding how to configure it ensures that unfilled slots never show blank cards.
+RACI — In-Feed Programmatic Ads
+RACI: R = Responsible   A = Accountable   C = Consulted   I = Informed
+5.2.3 Activate In-Stream Programmatic Ads
+In-stream ads play inside the Genuin video player at pre-roll, mid-roll, and/or post-roll positions. They are fulfilled programmatically via the IMA SDK and the Aniview ad server using VAST/VMAP. Activation involves enabling in-stream in your preset (already covered in Step 1) and connecting an Aniview in-stream channel.
+Aniview Channel Setup for In-Stream
+RACI — In-Stream Programmatic Ads
+RACI: R = Responsible   A = Accountable   C = Consulted   I = Informed
+6. Measurement & Reporting
+6.1 Impression Counting
+An ad impression is counted when the ad is successfully loaded and displayed — it is based on ad load, not on duration watched or user interaction. This aligns with standard IAB impression measurement definitions.
+6.2 Reporting Availability
+Ad impression reports are available via:
+Aniview Dashboard: Granular programmatic reporting — impressions, fill rate, CPM, revenue, broken down by Channel (placement).
+Genuin BCC Analytics: Aggregate ad activity for direct-sold (Sponsored Posts, Takeovers). Impression totals, engagement rates, and revenue summaries.
+6.3 Ad Quality & Brand Safety
+Programmatic demand is subject to Aniview's brand safety filters. Configure keyword blocklists and category exclusions in your Aniview account settings.
+Vertical-only creatives (9:16) can be enforced at the Aniview channel level to maintain feed aesthetics — this is strongly recommended.
+Skippable-only demand can be enforced at the request level through Aniview configuration.
+Creatives can be reviewed in the Aniview creative library. Report brand safety violations to your Aniview account manager.
+7. Ad Ops Recommendations
+7.1 Frequency & Density Guidelines
+7.2 Creative Specifications Summary
+7.3 Technical Best Practices
+Limit VAST/VMAP wrapper depth to 1–2 layers to reduce latency and timeout rates.
+Configure demand source timeouts at 2,000 ms initially and optimise based on fill rate data.
+Use 9:16 vertical creatives for all feed placements — this provides the best UX on mobile.
+Test frequency settings (start slot + repeat) before going to full traffic — start conservative and ramp up.
+For direct sponsored content, always include #ad or #sponsored in the description for compliance.
+Monitor back-to-back ad warnings in BCC — when two consecutive ad slots appear, the feed visualiser displays an amber warning indicator.
+Ensure GPT.js is loaded before the Genuin SDK initialises on pages serving native/display in-feed ads.
+Appendix A: Glossary
+This document is confidential and intended for Genuin partner brands only. For questions, contact your Genuin account manager or support@begenuin.com.
+Monetize — MCC Edition
+
+Comprehensive Guide for Partner Brands
+McClatchy Edition  |  March 2026  |  Confidential
+PART 1 — PLATFORM OVERVIEW
+Ad Format | Placement | Sold By | Rendering | Ad Server
+In-Feed Sponsored Takeover | Full Feed Takeover | Direct (Partner) | Genuin SDK & Video Player | Genuin Video Server
+In-Feed Sponsored Post | Feed card slot | Direct (Partner) | Genuin SDK & Video Player | Genuin Video Server
+In-Feed Programmatic Video | Feed card slot | Programmatic | IMA SDK | Aniview
+In-Feed Programmatic Native | Feed card slot | Programmatic | GPT.js | Aniview
+In-Feed Programmatic Display | Feed card slot | Programmatic | GPT.js | Aniview
+In-Stream Pre/Mid/Post-roll | Inside video player | Programmatic | IMA SDK | Aniview
+Priority | Ad Type | Notes
+1 | Sponsored Takeover | Special type — if enabled, overrides the first n cards entirely. All other ad types are subordinate while takeover is active.
+2 | Sponsored Post | Direct-sold video content placed into a specific feed slot. Served via Genuin video server.
+3 | Programmatic Video | IMA SDK requests to Aniview. Video ad card appears in the feed slot.
+4 | Programmatic Native | GPT.js request to Aniview. Native static card appears in the feed slot.
+5 | Programmatic Display | GPT.js request to Aniview. Display banner card appears in the feed slot.
+6 | House / Fallback | Mandatory. Genuin-served content fills empty slots if all demand sources return no fill.
+📝  The priority order within your BCC configuration is drag-and-drop reorderable (except House, which is always last). You can also disable individual ad types to remove them from the waterfall entirely.
+PART 2 — IN-FEED ADS
+ℹ  Phase 1 (current): In-feed ads are supported on Web only. iOS and Android SDK support is on the roadmap.
+Start Slot | The feed position at which the first ad card appears. Configurable from slot 1–8. Default: slot 2 (first ad appears as the 2nd card in the feed).
+Repeat Frequency | After the first ad, subsequent ad slots appear every N positions (configurable from every 1–8 slots). Example: start=2, repeat=4 → ads at positions 2, 6, 10, 14 …
+Repeat Frequency | Minimum number of swipes between in-feed ads (e.g., 3 = show an ad after every 3 swipes)
+📝  Impressions are currently reported in aggregate across card view and full-screen view. Granular breakdown by view context is not available in the current version.
+Direct Sold  |  Genuin Video Server  |  Full Feed Takeover OR first ‘n’ Cards Takeover
+Slots Occupied | First ‘n’ positions in the feed
+Ad Sold Via | Direct — partner brand uploads content through BCC
+Rendering | Genuin SDK & Genuin Video Player
+Ad Server | Genuin video server
+Video Formats | MP4, MOV, AVI, WMV, MKV formats
+Aspect Ratios | 9:16 (vertical)
+Max Duration | Up to 300 seconds
+Max Size | Up to 2 GB
+Interaction Icons | Available (like, comment, share) — standard video UX applies
+Skippability | N/A — sponsored video content is not interrupted by a skip timer
+Disclosure | "Sponsored" label displayed on card
+Platform Support | Web (current); iOS & Android (roadmap)
+Availability | Configuration via BCC UI in development.
+ℹ  Sponsored Takeover is a premium, high-impact placement. When active, it completely replaces the first ‘n’ organic feed slots for the duration of the campaign.
+Direct Sold  |  Genuin Backend  |  Frequency-Based Slot Logic
+Slots Occupied | Frequency-based — appears at calculated ad slots (start + repeat pattern)
+Ad Sold Via | Direct — partner brand uploads content through BCC (feature in development)
+Rendering | Genuin SDK & Genuin Video Player
+Ad Server | Genuin video server
+Video Formats | MP4, MOV, AVI, WMV, MKV formats
+Aspect Ratios | 9:16 (vertical)
+Max Duration | Up to 300 seconds
+Max Size | Up to 2 GB
+Interaction Icons | Available — like, comment, share; standard video UX
+Disclosure | "Sponsored" label displayed on card
+Platform Support | Web (current); iOS & Android (roadmap)
+Availability | Configuration via BCC UI in development.
+📝  For the initial MCC launch: Sponsored Posts will use a simple description-level hashtag (#ad or #sponsored) as disclosure.
+Programmatic  |  IMA SDK  |  Aniview Ad Server
+Rendering SDK | Google IMA SDK (Interactive Media Ads)
+Ad Server | Aniview
+Request Format | VMAP/VAST URL
+VAST Versions | 2.0, 3.0, 4.0 (VPAID JS optional)
+Aspect Ratios | 9:16 (vertical, recommended), 1:1 (square), 16:9 (landscape)
+Video Formats | MP4, HLS (application/x-mpegURL)
+Min Duration | 5 seconds
+Max Duration | 30 seconds
+Mute Behaviour | Configurable — muted autoplay or unmuted. Sets video playback method in the bid request.
+Skip Support | In-feed videos do not have skip buttons. Users can scroll/interact to move to content cards
+Interaction Icons | None — standard programmatic video UX (CTA bar only)
+Impression Trigger | Supported via tracking URLs
+Click Tracking | Supported via VAST click-through and tracking URLs
+Platform | Web only (current)
+Programmatic  |  GPT.js  |  Aniview Ad Server
+Rendering SDK | GPT.js (Google Publisher Tag)
+Ad Server | Aniview
+Ad Format | Native — headline, image, brand name, description, CTA
+Card Format | Static card in feed — same dimensions as content card
+Interaction Icons | None — standard programmatic UX
+Impression Trigger | Supported via impression URL
+Click Tracking | Supported via native click URL
+Platform | Web only (current)
+📝  Native ads require a separate GPT ad unit configuration. The GPT slot is rendered inside the feed card container and must match the card dimensions of your placement.
+Programmatic  |  GPT.js  |  Aniview Ad Server
+Rendering SDK | GPT.js (Google Publisher Tag)
+Ad Server | Aniview
+Ad Format | Standard display banner — image or HTML5
+Recommended Sizes | Matches player card dimensions. Typically 300×250 or vertical equivalent for mobile.
+Interaction Icons | None
+Impression Trigger | Supported via Impression URL
+Click Tracking | Supported via banner click URL
+Platform | Web only (current)
+PART 3 — IN-STREAM ADS
+Position | Behaviour
+Pre-roll | Ad plays before content begins
+Mid-roll | Ad interrupts content at midpoint
+Post-roll | Ad plays after content completes
+Ad Type | In-stream video (linear)
+VAST Versions | 2.0, 3.0, 4.0
+VPAID Support | Optional. Standard linear VAST is fully supported. VPAID JS creatives supported if required.
+VMAP Support | Supported. One ad request per VMAP break (pre/mid/post). Ad podding is not currently supported.
+Aspect Ratios | 9:16 (vertical / 1080×1920), 1:1 (square / 1080×1080), 16:9 (landscape / 1920×1080)
+Video Formats | MP4 or WebM via direct ad server
+Max File Size | ≤5 MB recommended (configurable per demand source)
+Max Duration | Up to 30 seconds recommended; configurable per demand source
+Audio | Unmuted required by default; can be muted if player is configured for autoplay-muted
+Click Tracking | Supported via VAST click-through and tracking URLs
+Skippable Ads | Supported. Skip offset is read from VAST creative. Users may also swipe to dismiss once skip timer elapses.
+PART 4 — ACTIVATION GUIDE
+ℹ  Presets are the control layer — they define what can show and when. The activation workflows below then connect each ad type to the content or demand sources that fill those slots.
+Preset | In-Feed | In-Stream | In-Feed Start/Repeat | Best For
+Premium | Sponsored only; no programmatic | Disabled |  | Allows for premium sponsored content either via sponsored takeover or via sponsored posts
+Aggressive | Enabled | Enabled | Start: 2 / Repeat: 2 | Maximum revenue. Higher ad density across feed and player. Monitor for user experience impact.
+Balanced (Default) | Enabled | Enabled (Mid-roll only) | Start: 2 / Repeat: 4 | Recommended starting point for MCC. Avoids back-to-back ads. In-stream limited to mid-roll for less interruption.
+Conservative — In-Stream Only | Disabled | Enabled | — | In-stream only. No in-feed ads. Ads only appear when user expands to full-screen player view.
+Conservative — In-Feed Only | Enabled | Disabled | Start: 3 / Repeat: 5 | In-feed only. Content videos play uninterrupted — no in-stream interruptions.
+ℹ  System default presets are read-only. Click 'Copy Preset' to create an editable copy. MCC recommended starting point: Balanced.
+1 | Navigate to Settings > Ad Configuration > Presets in BCC
+Log in to your BCC dashboard. In the left navigation panel, select Settings. You will see the Ad Configuration screen.
+2 | Create or copy a preset
+Click '+ New Preset' to create from scratch, or click the copy icon on a system preset to start from a proven baseline. Give the preset a meaningful name (e.g., 'Homepage — Balanced' or 'Sports Section — Aggressive').
+3 | Configure the Ad Types & Priority waterfall
+In the preset editor, locate the 'Ad Types & Priority' section. Enable or disable ad types and drag to set their priority order. The type at the top of the list is attempted first for every ad slot.
+📝  MCC recommended waterfall: Sponsored Takeover (disabled unless running a campaign) → Sponsored Post → Programmatic Video → Programmatic Native → Programmatic Display → House/Fallback (always on).
+4 | Save and assign to placements
+Click 'Save Preset'. Then use the 'Active Placements' dropdown on the preset card to assign it to one or more placements. A placement can only be assigned to one preset at a time.
+Master In-Feed Toggle | Toggle ON to activate in-feed ads for this preset. If OFF, all in-feed types (including sponsored posts and programmatic) are disabled regardless of individual ad type settings.
+Start Slot | The feed position at which the first ad card appears. Recommended: 2 (gives users one organic video before the first ad). MCC default: 2.
+Repeat Frequency | How many slots appear between subsequent ad cards. MCC default: 4 (ads at positions 2, 6, 10, 14…). Aggressive: 2. Conservative: 5+.
+Mute on Start | Toggle ON to serve muted autoplay ads (recommended for web autoplay policies). Maps to video.playbackmethod in bid request.
+Show Duration | Toggle ON to display remaining ad duration on the card. Recommended: ON for transparency.
+Card View | Toggle ON to show in-feed ads in the scrollable card/carousel view.
+Full-Screen View | Toggle ON to show in-feed ads when the user expands to full-screen. Both can be enabled simultaneously.
+Master In-Stream Toggle | Toggle ON to activate in-stream ads for this preset.
+Pre-roll | Enable ads to play before the first content video in a session.
+Mid-roll | Enable ads to interrupt content at the midpoint. Recommended as the first in-stream position to activate (lowest disruption).
+Post-roll | Enable ads to play after content completes. Lowest-impact position.
+Mute on Start | Toggle ON to serve muted autoplay ads (recommended for web autoplay policies). Maps to video.playbackmethod in bid request.
+Show Duration | Toggle ON to display remaining ad duration on the card. Recommended: ON for transparency.
+Card View | Toggle ON to show in-feed ads in the scrollable card/carousel view.
+Full-Screen View | Toggle ON to show in-feed ads when the user expands to full-screen. Both can be enabled simultaneously.
+Step / Activity | Genuin | Partner | Genuin Impl | Genuin Ad Ops
+Choose starting preset (Aggressive / Balanced / Conservative) | R | A | C | C
+Create / copy and name a custom preset | R | A | C | I
+Configure ad type waterfall priorities & toggles | R | A | C | C
+Configure in-feed frequency (start slot, repeat) | R | A | C | C
+Configure in-feed playback controls (mute, dismiss, duration) | R | A | C | I
+Configure in-feed view context (card / full-screen) | R | A | C | I
+Configure in-stream positions (pre/mid/post-roll) | R | A | C | C
+Assign preset to placements | R | A | C | I
+Resolve placement assignment conflicts | R | A | C | I
+ℹ  Aniview configuration is managed by the Genuin AdOps team in coordination with your Adops team. Reach out to your Genuin account manager for any changes.
+1 | Log into the Aniview Dashboard
+Navigate to gov.aniview.com and log in with your publisher credentials.
+2 | Confirm your Publisher ID
+Your Publisher ID (AV_PUBLISHERID) is displayed in the account settings. Note this value — it is required in every VMAP/VAST URL.
+3 | Create a Channel for each in-feed placement
+In the Aniview dashboard, create a new Channel for each Genuin placement that will serve in-feed programmatic ads. Configure each Channel with the following parameters:
+Placement Type | In-Feed (video.placement=4, video.plcmt=2)
+Ad Format | Video (for IMA SDK) or Display/Native (for GPT.js)
+Min/Max Duration | 5s minimum, 30s maximum (adjustable)
+Skippability | Skippable only (recommended)
+MIME Types | video/mp4, application/x-mpegURL
+Aspect Ratio | 9:16 for mobile-first placements
+Timeout | 2,000 ms default; tune based on fill rate
+Floor Price | Set CPM floor per commercial agreement
+4 | Retrieve the VMAP URL for each Channel
+After creating the Channel, Aniview generates a VMAP URL. Copy the full URL:
+https://gov.aniview.com/api/adserver/vmap/srv?
+  AV_PUBLISHERID={YOUR_PUBLISHER_ID}
+  &AV_CHANNELID={CHANNEL_ID}
+  &AV_WIDTH={PLAYER_WIDTH}
+  &AV_HEIGHT={PLAYER_HEIGHT}
+  &AV_PAGEURL={PAGE_URL_MACRO}
+  &AV_DOMAIN={DOMAIN_MACRO}
+5 | Set up GPT Ad Units (for Native and Display)
+In Aniview, navigate to Ad Units and create units of type Native (for native ads) or Display (for banner ads). Match dimensions to the Genuin feed card size. Confirm GPT.js (securepubads.g.doubleclick.net/tag/js/gpt.js) is loaded on all pages where Genuin is embedded.
+6 | Provide ad tag URLs to Genuin Technical AdOps
+Once your VMAP URLs and GPT unit codes are ready, provide them to your Genuin technical contact. Genuin will populate the correct Ad URLs for your brand
+What is Fallback Content? | Organic short-form video content served by the Genuin backend when all programmatic demand returns no fill. It looks identical to regular content cards in the feed.
+Source | Genuin's content pipeline curates organic posts from your brand's connected content sources (e.g., your Genuin content library, curated collections, or partner content).
+Configuration in BCC | Navigate to Post > Post Details in BCC. Tick the check box against the “House Ad” field to enable the specific post as a house ad
+ℹ  A high fallback rate is a signal, not a problem in itself — fallback ensures user experience is never degraded by an empty slot. Use it as an indicator to optimise programmatic demand configuration.
+Step / Activity | Genuin | Partner
+Create / confirm publisher account in Aniview | R & A | I & C
+Create Aniview channels per Genuin placement | -R & A | I & C
+Configure channel settings (format, duration, floors) | -R & A | I & C
+Retrieve VMAP URL for each channel | -R & A | I & C
+Create GPT ad units (native/display) | -R & A | I & C
+Provide ad tag URLs to Genuin implementation team | -R & A | I & C
+Genuin populates ads_config.json with tag URLs | R & A | I & C
+Configure and maintain fallback content library | R & A | I & C
+End-to-end ad delivery & fallback validation | R & A | I & C
+1 | Create an In-Stream Channel in Aniview
+In the Aniview dashboard, create a new Channel for in-stream demand. Configure it with in-stream specific parameters:
+Placement Type | In-Stream (video.placement=1, video.startdelay=0 for pre-roll; video.startdelay=-1 for mid-roll)
+Linearity | Linear (video.linearity=1)
+Min/Max Duration | 5s minimum, 30s maximum (recommended for short-form)
+Skippability | Skippable only for ads >15 seconds (IAB requirement). Configure skipoffset in VAST creative or enforce at Aniview channel level.
+MIME Types | video/mp4, application/x-mpegURL
+Aspect Ratio | 9:16 (vertical) strongly recommended for mobile-first placements; 16:9 supported
+Timeout | 2,000 ms default; tune based on fill rate and content start latency
+Floor Price | Set CPM floor per commercial agreement
+2 | Retrieve the VMAP URL
+After creating the in-stream Channel, copy the VMAP URL from the Aniview Channel settings. This URL handles the multi-break structure (pre/mid/post-roll) within a single request.
+3 | Provide the In-Stream VMAP URL to Genuin
+Share the VMAP URL for each in-stream placement with your Genuin Technical AdOps. Technical AdOps will link it to the relevant placement configuration.
+⚠  Use a separate Aniview channel for in-stream and each in-feed programmatic type. Mixing in-stream and in-feed demand in the same channel leads to incorrect bid request signals and lower fill rates.
+4 | Verify in-stream ad delivery
+After configuration, load a page with the Genuin embed and play through a content video. Confirm that a pre-roll ad fires before the content begins (or mid-roll at the content midpoint). Check Aniview channel reporting to verify impressions are being recorded.
+Step / Activity | Genuin | Partner
+Create / confirm publisher account in Aniview | R & A | I & C
+Create Aniview channels per Genuin placement | -R & A | I & C
+Configure channel settings (format, duration, floors) | -R & A | I & C
+Retrieve VMAP URL for each channel | -R & A | I & C
+Create GPT ad units (native/display) | -R & A | I & C
+Provide ad tag URLs to Genuin implementation team | -R & A | I & C
+Genuin populates ads_config.json with tag URLs | R & A | I & C
+Configure and maintain fallback content library | R & A | I & C
+End-to-end ad delivery & fallback validation | R & A | I & C
+In-Stream | Impression counted at ad start (VAST impression tracker fires)
+In-Feed Video | Impression counted on ad load (IMA SDK fires impression event)
+In-Feed Native / Display | Impression counted on ad render (GPT.js viewability-based, standard IAB)
+Direct (Sponsored Posts / Takeover) | Impression counted on card display (Genuin backend tracker)
+📝  Impressions are currently reported in aggregate across carousel, in-stream, and in-feed views. Separate reporting by ad placement type (in-stream vs in-feed) or by view context (card view vs full-screen) is not yet available in the current reporting version.
+Scenario | Recommended Start Slot | Recommended Repeat | Notes
+General news/editorial | 2 | 4 | Balanced model — good revenue without ad fatigue
+Sports / high-engagement content | 2 | 3 | Slightly more aggressive; engagement holds up well
+E-commerce / retail | 3 | 5 | Conservative — shopper experience is priority; keep feed mostly organic
+Premium content / long-session | 4 | 6 | Minimal interruption for highly loyal, paying audiences
+Sponsored takeover campaign | N/A (takeover) | N/A | 
+Ad Type | Format | Aspect Ratio | Max Duration | Max File Size
+Sponsored Post (Direct) | MP4, MOV, AVI, WMV, MKV formats | 9:16 recommended | 30s recommended; up to 300s supported | ≤2 GB upload
+Sponsored Takeover (Direct) | MP4, MOV, AVI, WMV, MKV formats | 9:16 recommended | 30s recommended per slot; up to 300s supported | ≤2 GB per video
+In-Stream Video | MP4 / WebM via VAST | 9:16 recommended, 1:1, 16:9 | 30s recommended | ≤5 MB
+In-Feed Video (Prog.) | MP4 / HLS via IMA | 9:16 recommended, 1:1, 16:9 | 30s recommended | Configurable
+In-Feed Native (Prog.) | Static image + metadata | Card dimensions | N/A | ≤1 MB image
+In-Feed Display (Prog.) | Image / HTML5 banner | Card dimensions | N/A | ≤150 KB
+APPENDIX — TECHNICAL REFERENCE
+Term | Definition
+BCC | Brand Control Center — Genuin's admin interface for partner brands to configure ad settings, manage content, and view analytics.
+Aniview | Genuin's programmatic ad server (gov.aniview.com). Manages SSP connections, bid requests, and ad delivery for programmatic in-feed and in-stream ads.
+IMA SDK | Google Interactive Media Ads SDK. Used by Genuin to render programmatic in-feed video ads.
+GPT.js | Google Publisher Tag JavaScript library. Used by Genuin to render programmatic in-feed native and display ads.
+VAST | Video Ad Serving Template. Industry standard XML format for video ad delivery. Versions 2.0, 3.0, and 4.0 are supported.
+VMAP | Video Multiple Ad Playlist. XML format that enables multiple ad breaks (pre/mid/post-roll) in a single request.
+Waterfall | The sequential resolution order for in-feed ad slots — higher-priority demand types are tried first; lower-priority types fill when higher ones return no demand.
+Sponsored Takeover | A premium direct-sold in-feed format that replaces the first 5 feed slots with brand-sponsored video content.
+Sponsored Post | A direct-sold in-feed format placing individual brand-sponsored video cards at calculated ad slot positions.
+House Ad / Fallback | Genuin-served content that fills any ad slot for which all demand sources (direct and programmatic) returned no fill. Always on.
+OpenRTB | Open Real-Time Bidding protocol (IAB Tech Lab). Standard format for programmatic ad auction bid requests and responses.
+CPM | Cost Per Mille — ad pricing model charged per 1,000 impressions.
+Fill Rate | The percentage of ad requests that result in a served ad. Low fill rate indicates insufficient demand or configuration issues.

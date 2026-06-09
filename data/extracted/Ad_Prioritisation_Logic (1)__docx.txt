@@ -1,0 +1,135 @@
+Ad Prioritisation Logic for Video Feed Placements
+Monetize Product  |  Last updated: April 2026
+1. Overview
+Video feeds on a placement are served in paginated calls of 10 videos each. Two managed ad types can be configured on a placement: Sponsored Takeovers and Sponsored Posts. Each ad is configurable with a CPM, a duration, and a number of creative videos. The system determines what appears in each page of 10 videos based on the priority rules below.
+This document also defines how the placement-level configuration “Allow content to play with sponsored takeover” changes takeover behaviour. When this setting is disabled for a sponsor, a takeover is composed entirely of the sponsor’s creative videos with no organic content interleaved — the takeover videos cycle to fill all 10 slots per page.
+Section 10 discusses a planned follow-up: user-level frequency caps, which will diversify the user experience when a sponsored post’s videos would otherwise repeat on the same page for the same user.
+2. Placement Configuration
+The following configurations are set on a placement and directly influence the prioritisation logic:
+CPM — the bid value of the takeover or sponsored post. Used to order competing ads.
+Duration — the flight window within which the ad is eligible to serve.
+Number of creative videos — the set of videos the sponsor has supplied for the ad.
+In-feed ad slots per page — how many of the 10 slots in a paginated view are reserved for in-feed ads (applies to sponsored posts only).
+Allow content to play with sponsored takeover (new) — a sponsor-level flag on each takeover. Controls whether organic content can fill the slots not occupied by takeover creative videos on a takeover page.
+“Allow content to play with sponsored takeover” — behaviour
+Enabled (default): the takeover fills as many slots as it has creative videos; any remaining slots on that page are filled with organic content.
+Disabled:  the takeover fills as many of the 10 slots as it has creative videos; any remaining slots are empty. Takeovers demand a minimum of 5 videos. This means that with this setting, the backend can send anywhere between 5-10 videos of a takeover to frontend
+This setting applies only to Sponsored Takeovers. It has no effect on Sponsored Posts or Programmatic ads.
+3. Ad Types
+3.1 Sponsored Takeover
+A takeover occupies the entire paginated view. When active, it is the exclusive ad type for that page — no sponsored posts, programmatic ads, or other takeovers can appear alongside it. How the 10 slots on a takeover page are filled depends on the “Allow content to play with sponsored takeover” setting:
+Enabled: the takeover fills as many of the 10 slots as it has creative videos; any remaining slots are filled with organic content.
+Disabled: the takeover fills as many of the 10 slots as it has creative videos; any remaining slots are empty. Takeovers demand a minimum of 5 videos. This means that with this setting, the backend can send anywhere between 5-10 videos of a takeover to frontend. The front end SDKs are expected to dynamically adjust viewports depending on the number of videos sent for the takeover(5-10) per pagination
+3.2 Sponsored Post
+A sponsored post occupies only the designated in-feed ad slots within the paginated view (a placement-level configuration — e.g. 5 in-feed slots out of 10). It does not occupy the full view. Any in-feed slots not filled by a sponsored post fall back to programmatic ads. Sponsored posts are suppressed entirely when a takeover is active on that placement.
+4. Priority Order
+Sponsored Takeovers — by CPM, highest first.
+Sponsored Posts — by CPM, highest first, within available in-feed slots.
+Programmatic ads — fallback for unfilled in-feed slots.
+5. Takeover Prioritisation Rules
+The highest CPM takeover runs exclusively until its budget or duration is exhausted.
+Only one takeover can appear in a single paginated view — no mixing, no co-existence.
+While any takeover is active, all sponsored posts are suppressed for that placement.
+Once the highest CPM takeover is exhausted, the next highest CPM takeover activates.
+5.1 Video cycling for takeovers — “Allow content” ENABLED (default)
+If the takeover has N > 10 videos: a sliding window of 10 is applied to the video set. Page 1 shows videos 1–10. Page 2 starts where page 1 left off, wrapping around cyclically. The window advances by 10 positions each page through the circular buffer of N videos.
+5.2 Video cycling for takeovers — “Allow content” DISABLED
+No organic content is interleaved. All slots on the page are takeover creative videos.
+Takeovers demand a minimum of 5 videos. This means that with this setting, the backend can send anywhere between 5-10 videos of a takeover to frontend. The front end SDKs are expected to dynamically adjust viewports depending on the number of videos sent for the takeover(5-10) per pagination
+6. Sponsored Post Prioritisation Rules
+Sponsored posts compete by CPM. The highest CPM sponsored post is activated first and runs exclusively among sponsored posts until its budget (or duration) is exhausted.
+The active sponsored post’s creative videos cycle to fill all available in-feed slots on every page — even if the post has fewer videos than the number of in-feed slots.
+Only once the active post’s budget is exhausted does the next highest CPM sponsored post activate, and it in turn cycles to fill all in-feed slots.
+If all sponsored posts on the placement have exhausted their budgets, the remaining in-feed slots fall back to programmatic.
+Sponsored posts are blocked entirely when a takeover is active.
+6.1 Video cycling for sponsored posts
+The active sponsored post’s videos fill every in-feed slot on every page via a circular buffer.
+If N > in-feed slots: a sliding window of (in-feed slots) advances cyclically through the video set each page.
+6.2 Note on user experience — repeatability
+Because the active sponsored post’s videos cycle to fill all available in-feed slots, a user can see the same sponsored post’s videos multiple times within a single page and across consecutive pages. This is intentional under the current rules and maximises delivery of the highest CPM sponsored post first. The repetition experienced by any one user will be improved when user-level frequency caps are introduced — see Section 10.
+7. Visual Legend
+The following colour key is used in the visualisations of each case below. Each cell represents one slot of a 10-slot paginated page.
+8. Behaviour by Case
+Case 1 — One Sponsored Takeover, 5 videos
+8.1 “Allow content” ENABLED
+Every paginated view shows 5 takeover videos and 5 organic content videos. This repeats every page until the budget or duration is exhausted.
+8.2 “Allow content” DISABLED
+No organic content is interleaved. The 5 takeover videos are the only ones shown in the view.
+Case 2 — One Sponsored Takeover, 11 videos
+The takeover has more videos than fit in one page, so a rotating window applies. Because the takeover already fills all 10 slots every page, the “Allow content to play with sponsored takeover” setting has no functional effect in this case — the behaviour is the same whether the setting is enabled or disabled.
+Page 1 shows videos 1–10. Page 2 shows video 11 then cycles back to videos 1–9. Page 3 shows videos 10–11 then videos 1–8. The window continues rotating cyclically with each subsequent page.
+Case 3 — Two Sponsored Takeovers (8 videos / $40 CPM and 5 videos / $30 CPM)
+Phases are determined by CPM: the $40 takeover runs first to exhaustion, then the $30 takeover.
+8.3 “Allow content” ENABLED on both takeovers
+Phase 1: $40 CPM takeover — 8 takeover videos and 2 organic videos per page. No other ad type appears. This continues until the $40 CPM budget is exhausted.
+Phase 2: $30 CPM takeover — 5 takeover videos and 5 organic videos per page. Same exclusivity applies until its budget is exhausted.
+8.4 “Allow content” DISABLED on both takeovers
+Phase 1: $40 CPM takeover — all 10 slots filled by the takeover’s 8 videos, cycling. Page 1 shows T1–T8. Page 2 shows T1-T8 again and this continues until the budget is exhausted.
+Phase 2: $30 CPM takeover — first 5 slots filled by the 5 takeover videos, rest of the feed is empty
+8.5 Mixed — setting differs across takeovers
+The setting is per-takeover. For example, if the $40 CPM takeover has “Allow content” enabled but the $30 CPM takeover has it disabled, Phase 1 follows the enabled pattern (8 takeover + 2 organic) and Phase 2 follows the disabled pattern (T1–T5 cycled twice). Each phase is evaluated independently against the setting of the active takeover.
+Case 4 — One Sponsored Post, 2 videos, 5 in-feed ad slots
+The “Allow content to play with sponsored takeover” setting does not apply here because no takeover is active. The sponsored post’s 2 videos cycle to fill all 5 in-feed slots on every page — V1, V2, V1, V2, V1. The remaining 5 non-ad slots show organic content. This repeats every page until the budget or duration is exhausted. Once the budget is exhausted, the 5 in-feed slots fall back to programmatic.
+Note: the exact interleaving of in-feed ad slots vs. organic slots within the page is controlled by the placement’s slot pattern. The illustration above assumes alternating slots; the key constraint is that 5 in-feed slots exist and are filled as described. See Section 10 for how user-level frequency caps will reduce the repetition experienced by any one user.
+Case 5 — One Sponsored Post, 6 videos, 5 in-feed ad slots
+The sponsored post has more videos than in-feed slots, so the rotating window applies to the 5 slots. Page 1: videos 1–5. Page 2: video 6, then videos 1–4. Page 3: videos 5–6, then videos 1–3. The pattern continues cyclically. Remaining 5 slots on each page are organic content.
+Case 6 — Three Sponsored Posts (2 videos/$20 CPM, 3 videos/$10 CPM, 5 videos/$15 CPM), 5 in-feed slots
+Priority order: $20 (A) > $15 (B) > $10 (C). The highest CPM sponsored post cycles to fill ALL 5 in-feed slots until its budget is exhausted, before any lower CPM post shows.
+Phase 1 ($20 A active): A’s 2 videos cycle to fill all 5 in-feed slots on every page — A1, A2, A1, A2, A1. The $15 and $10 posts receive no slots. Repeats each page until A’s budget is exhausted.
+Phase 2 (A’s budget exhausted, $15 B active): B’s 5 videos fill the 5 in-feed slots on every page. The $10 post remains inactive.
+Phase 3 (B’s budget exhausted, $10 C active): C’s 3 videos cycle to fill all 5 in-feed slots on every page — C1, C2, C3, C1, C2. (Window advances by 5 mod 3 = 2 across pages.)
+Phase 4 (all sponsored posts exhausted): The 5 in-feed slots fall back to programmatic.
+Case 7 — Two Sponsored Takeovers (8 videos/$40 CPM, 5 videos/$30 CPM) + Two Sponsored Posts (6 videos/$20 CPM, 2 videos/$15 CPM), 5 in-feed slots
+8.6 Phase 1 — $40 Takeover active
+Enabled: 8 takeover + 2 organic per page. Sponsored posts suppressed.
+Disabled: T1-T8 are shown in the feed. Rest of the 2 slots are empty. Every further pagination continues to show T1-T8 till budgets aren’t exhausted
+8.7 Phase 2 — $30 Takeover active
+Enabled: 5 takeover + 5 organic per page. Sponsored posts remain suppressed.
+Disabled: first 5 slots filled by the 5 takeover videos, rest of the feed is empty
+8.8 Phase 3 — $20 Sponsored Post active, no takeovers
+The $20 sponsored post has 6 videos against 5 in-feed slots, so the rotating window applies — it fills all 5 slots each page, cycling through its 6 videos. The $15 post (2 videos) receives no slots since the $20 post claims all 5. Organic content fills the remaining 5 non-ad positions.
+8.9 Phase 4 — $20 budget exhausted, $15 Sponsored Post active
+The $15 post’s 2 videos cycle to fill all 5 in-feed slots on every page — B1, B2, B1, B2, B1. Programmatic only becomes a fallback after B’s budget is also exhausted.
+8.10 Phase 5 — All sponsored posts exhausted
+The 5 in-feed slots fall back to programmatic until new sponsored posts are added or the flight completes.
+9. Summary of the “Allow content with sponsored takeover”
+“Allow content to play with sponsored takeover” is a per-takeover configuration that controls whether organic content is allowed in slots not occupied by takeover creative videos on a takeover page. When enabled (the default and historical behaviour), any slots beyond the takeover’s creative count are filled with organic content. When disabled, the takeover’s creative videos are the only videos that appear in the placement.
+The setting has no effect on priority order, takeover-vs-post exclusivity, or the sponsored post slot allocation logic. It also has no visible effect when the takeover already has 10 or more creative videos, because the takeover fills every slot in either configuration.
+10. Future Improvement — User-Level Frequency Caps
+Under the current logic, because the active sponsored post (or a takeover with “Allow content” disabled) cycles its creative videos to fill every available in-feed slot, a single user can see the same creative video multiple times within one page and across consecutive pages. This maximises delivery for the highest CPM buyer but can be fatiguing at the user level.
+This will be addressed by introducing user-level frequency caps in a future release. A frequency cap will be a per-user-per-day (or per-user-per-session) ceiling on the number of times a specific sponsored post’s creative videos can be shown to the same user. Once the cap is reached for that user, the ad falls out of eligibility for that user’s feed for the remainder of the capping window, and the next-highest CPM eligible ad (or programmatic) takes its slot.
+10.1 Illustrative example — Case 6 with a frequency cap of 2 on the $20 post
+Placement configuration: frequency cap = 2 per user per day on sponsored post A (A1, A2).
+Without frequency caps, Phase 1 Page 1 for a user is: A1, C, A2, C, A1, C, A2, C, A1, C — five impressions of A’s creatives on a single page for that user.
+With a frequency cap of 2, A1 and A2 can each be served to the user up to 2 times per day. After the user has seen A1 twice and A2 twice within the day, A is no longer eligible for that user. The next highest CPM sponsored post (B) takes the remaining in-feed slots. Page 1 for that user becomes:
+The 5th in-feed slot, which would otherwise have been A1 again, is passed to B (the next eligible sponsored post) because A’s cap for that user is exhausted. From the placement’s perspective, A’s budget is still being consumed (against other users who have not yet hit their cap), but this specific user now sees a mix. Frequency caps therefore decouple placement-level delivery ordering (still CPM-driven) from user-level experience (diversified by caps).
+Frequency caps can also be applied to Sponsored Takeovers in the future, for example to prevent repeated exposure to the same takeover across multiple pages for the same user, but this is out of scope for the current release.
+Sponsored Takeover (T#) | Sponsored Post (P#) | Organic Content (C)
+Programmatic Ad (PG) | Takeover (cycled, no organic) | Sponsored Post (lower CPM)
+Page 1 | T1 | T2 | T3 | T4 | T5 | C | C | C | C | C
+Page 2 | T1 | T2 | T3 | T4 | T5 | C | C | C | C | C
+Page 1 | T1 | T2 | T3 | T4 | T5 | Empty | Empty | Empty | Empty | Empty
+Page 1 | T1 | T2 | T3 | T4 | T5 | T6 | T7 | T8 | T9 | T10
+Page 2 | T11 | T1 | T2 | T3 | T4 | T5 | T6 | T7 | T8 | T9
+Page 3 | T10 | T11 | T1 | T2 | T3 | T4 | T5 | T6 | T7 | T8
+Phase 1 | T1 | T2 | T3 | T4 | T5 | T6 | T7 | T8 | C | C
+Phase 2 | T1 | T2 | T3 | T4 | T5 | C | C | C | C | C
+P1 Pg1 | T1 | T2 | T3 | T4 | T5 | T6 | T7 | T8 | N/A | N/A
+Phase 2 | T1 | T2 | T3 | T4 | T5 | Empty | Empty | Empty | Empty | Empty
+Page 1 | P1 | C | P2 | C | P1 | C | P2 | C | P1 | C
+Page 1 | P1 | C | P2 | C | P3 | C | P4 | C | P5 | C
+Page 2 | P6 | C | P1 | C | P2 | C | P3 | C | P4 | C
+Page 3 | P5 | C | P6 | C | P1 | C | P2 | C | P3 | C
+Phase 1 | A1 | C | A2 | C | A1 | C | A2 | C | A1 | C
+Phase 2 | B1 | C | B2 | C | B3 | C | B4 | C | B5 | C
+P3 Pg1 | C1 | C | C2 | C | C3 | C | C1 | C | C2 | C
+Phase 4 | PG | C | PG | C | PG | C | PG | C | PG | C
+Enabled | T1 | T2 | T3 | T4 | T5 | T6 | T7 | T8 | C | C
+Disabled | T1 | T2 | T3 | T4 | T5 | T6 | T7 | T8 | Empty | Empty
+Enabled | T1 | T2 | T3 | T4 | T5 | C | C | C | C | C
+Disabled | T1 | T2 | T3 | T4 | T5 | Empty | Empty | Empty | Empty | Empty
+P3 Pg1 | A1 | C | A2 | C | A3 | C | A4 | C | A5 | C
+P3 Pg2 | A6 | C | A1 | C | A2 | C | A3 | C | A4 | C
+Phase 4 | B1 | C | B2 | C | B1 | C | B2 | C | B1 | C
+Phase 5 | PG | C | PG | C | PG | C | PG | C | PG | C
+With cap | A1 | C | A2 | C | A1 | C | A2 | C | B1 | C

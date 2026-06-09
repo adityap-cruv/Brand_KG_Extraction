@@ -1,0 +1,262 @@
+--- Slide 1 ---
+Genuin Product Alignment
+Product understanding & process improvement
+
+--- Slide 2 ---
+Hardware
+Software
+Touchable Matter ( Physical Things )
+Untouchable Matter ( Digital Things )
+Human / Consulting
+Platform/ Solution
+Product
+Service
+Product Around Us
+
+--- Slide 3 ---
+Product is What People Consume:
+Cool vs. Not so Cool
+
+--- Slide 4 ---
+What Makes a Great Product
+
+--- Slide 5 ---
+Product
+Platform
+How We/Customers Make Money
+Delivery to Consumers, Increased Engagement & Repeated Visitation
+Product at Genuin
+From my prospective
+
+--- Slide 6 ---
+Products at Genuin
+
+--- Slide 7 ---
+If customer says I want to put video gallery on item pages, product requirement becomes “ Introducing Placement” and allowing customers to integrate Placement
+If customer says I want to aggregate social videos and all my content in one place, the product we built is “Curate” where customers are allowed to curate and publish all their content including integration of 3rd party content platform.
+Customer Requirement is NOT Equal to Product Requirement
+
+--- Slide 8 ---
+What's missing in it?
+Questions to ask for each product story.
+What generative and regenerative features are we adding as part of this user story?
+How the company the destination and subscribers are generating revenue with this user story ?
+How consumers are getting an improved experience with this users story ?
+Are we adding a net new product or adding a feature in existing product?
+What is today’s product in PRD?
+
+--- Slide 9 ---
+PRD Components
+
+--- Slide 10 ---
+As a {destination brand}, I {want to} {automatically add or get suggested} {brand sponsors to sponsor my video powered experiences across web/mobile/app/desktop} so that {I start activating my existing sponsors and generate new revenue while giving consumers timely/non intrusive content to engage.}
+Product Story ( Epic )
+User persona based stories
+Destination Brand (Retailer / App Owner) As a retail app, I want to automatically add suggested brand sponsors to my shoppable videos, so that I generate incremental revenue while offering my users personalized, engaging product content.
+Partner Brand (Sponsor) As a CPG brand, I want to sponsor video experiences on retail destinations, so that my content is seamlessly embedded where consumers are already shopping and I drive measurable sales lift.
+Creator / UGC As a creator, I want to have my branded video content distributed across multiple retail/commerce apps, so that I reach more audiences and increase monetization opportunities.
+Consumer / User As a shopper, I want to see relevant video experiences with brand sponsorships that feel timely and useful, so that my shopping journey feels personalized, not intrusive.
+PRD Story Framework
+
+--- Slide 11 ---
+Customer
+Decision Makers
+Consumers / Users
+Destination Brand ( Media, Retail & Consumer Brands with existing traffic to become a destination ) Distributor Brands ( Brand Marketers looking to distribute content and communities and increase reach and distribution of their brand )Celebrity Creators ( Brands having access to BCC and their team having access to studio app to distribute content and incentivized to build and grow communities across multiple destinations for destination and distributor brands that wants to increase reach, distribution and monetization)
+RMN/Yield/CRO Leader looking to increase revenue from their digital media ecosystem, build data moat and improve media margin onsite+offsite. Product owner and Tech team that are looking to plug and play platform to drive engagement by aggregating and organizing curated video experiences across consumer and customer journeys.CMO/Marketers that are looking to increase engagement and reclaim their brand destination to increase brand engagement and get max out of their content and community strategies.
+Ops team for Media, Ads, Programmatic, that are looking for one stop shop solution to connect their multiple platform stack. Cross platform developers that are looking to quickly get up to speed and reduce launch time for video experiences across their digital ecosystem. Social Media, Content Management and brand managers that are looking to centralize their content, creators and communities.
+Stakeholder Mapping & User Persona
+
+--- Slide 12 ---
+SAMPLE KEY METRICS TO TRACK
+For Great Product
+DAU/NPS
+Score
+ARR per Customer
+Average
+Minute Spent on Platform
+Per User Per Month
+
+--- Slide 13 ---
+SAMPLE KEY METRICS TO TRACK
+For Great Implementation
+Customer Adoption Rate
+Average
+Consumer Engagement
+Increase per Customer
+Customer Referral Rate
+
+--- Slide 14 ---
+Tiktok
+IG
+FB
+YT
+Netflix
+Reddit
+Substack ChatGPT
+Gemini
+Shopify
+Google GAM
+Braze
+Klaviyo
+Sprout Social
+Opusclip
+Caption
+YT Studio for Creator
+FB/IG Ads manager Wordpress
+JWplayer
+Tolstoy
+Firework
+Stripe
+Mux
+Storyly
+Product Reference & Inspiration
+Consumer Experience
+Brand Control Center
+SDKs
+
+--- Slide 15 ---
+P0: Must Have
+Everything across the platform that supposed to work but its not working.
+Failure to load or any critical issues must be solved in under 24 hours by 24/7 team to maintain SLAs.
+SLA Timeline : within 24 hours
+Priority Assessment Framework
+P1: Need to have (Data driven)
+Product and Business Metrics that are below % of benchmark threshold such as latency, flow completion latency, happy flow completion time, revenue and fill rate metrics, etc.
+SLA Timeline : within 1 week
+P2: Want to have (Customer Demand)
+Multiple customers are asking for the same feature or product that is part of the roadmap.
+SLA Timeline : within 2 weeks
+P3: Want to have (Blockers to move forward)
+Key customer integration bottlenecks to go live.
+Need to productize one of requirement into product that applies for all future use cases.
+SLA Timeline : within 1 month
+P4: Need to have (Market requirement to make robust product and business)
+Robust product roadmap for Consumer Experience, Admin ( BCC ), SDKs, Octo/Maya and its integration with external tools, models and companies to make the offering compelling and integrated for brand <> consumer engagement automation.
+SLA Timeline : within one quarter
+Disclaimer: SLA timelines are considered as best case scenarios. But it subjects to resource availability, resource bandwidth, other ongoing priorities.
+
+--- Slide 16 ---
+Priority Framework Real Example
+Tasks | Priority Defined | Status
+Bugs found in ‘Curate’ | P0 (Must Have) | Done within 24 Hours
+Observability missing events | P1 (Need to have) | Taken in ongoing sprint (in remaining ~25% bandwidth)
+Higher latency to load the videos in SDK observed through observability dashboard | P1 (Need to have) | Taken in ongoing sprint (in remaining ~25% bandwidth)
+Scheduler in ‘Curate’Raised by: IE, TED, McClatchy | P2 (Want to have) | Planned in next sprint
+iHeart code re-write in swift UI | P3 (Want to have) | Planned in next sprint
+Sponsored Videos flow in BCC | P3 (Want to have) | Planned in next sprint
+Ad Configurations | P4 (Need to have) | In Product Roadmap
+Banner Ads | P4 (Need to have) | In Product Roadmap
+
+--- Slide 17 ---
+Design
+Concept: Raw idea or problem identified
+Concepting Doc: Problem, solution, scope, and assumptions documented
+In Design: UI/UX designs
+In Review: Design feedback and iterations
+Design Done: Finalized designs approved
+Prototype: Interactive or functional prototype
+PRD: Product Requirements Document finalized
+Done: Ready for engineering execution
+Develop
+To Do: Groomed and ready for development
+In Progress: Active development
+Development Done: Code complete
+In QA: Quality assurance testing
+QA Signoff: QA approval received
+Product Signoff: PM validation and acceptance
+Deployed to Production: Live release
+Done: Closed and monitored
+Market
+Asset Creation - creation of resources required for product marketing
+Asset Review - review cycle of assets created
+Posted - assets published
+Product Development Flow - Jira Boards
+
+--- Slide 18 ---
+Product Dashboard
+
+--- Slide 19 ---
+P0 Process
+Delivery Team Check Post Production Release
+Design/UX Copy / Flow  : Moon to check the UX copy, flows and failure scenarios and create P0 design task for Shubhangi to work on. Front End Error Handling & Latency Check: Arjav, Krunal & Jimit check front end latency and data flows end to end and generate P0 task if any thing is failing to meet latency threshold.
+Backend Scale Test : Nilesh and Nayan to Scale test system based on projected 6 month’s traffic numbers, check latency and add P0 items. DevOps & Observability: Kaushal, Nayan and Meet to make sure data tracking, events and analytics are reaching end to end and scale test with projected traffic and generate P0 tasks in increased latency scenarios.
+Task Generation for 24/7 Team
+Issues should be reported on the 24/7 Slack channel with clear reproduction steps, including device, user, and brand/site details. Screenshots or screen recordings should be attached for better context, and the priority (P0/P1/P2) must be clearly mentioned. P0 issues are expected to be acknowledged and acted upon within a few minutes.
+If the person assigned for 24/7 support does not acknowledge the issue within 15 minutes, the issue can be escalated by reaching out to them via WhatsApp or by calling them directly, for P0 cases. The expectation is to resolve the issue within a few hours where feasible; otherwise, the assigned person should clearly communicate the expected timeline for resolution. If the issue is not related to the assigned support person, the relevant team member can be contacted directly to unblock progress.
+If QA is available at the time the issue is reported, they should reproduce the issue and document the steps in the same thread. If QA is not available, they should review the issue on the next working day, assist developers in reproducing it if needed, or update the test cases if the issue has already been resolved.
+External Factor impacting production environment
+
+--- Slide 20 ---
+P1 Process
+
+--- Slide 21 ---
+P3 Process
+
+--- Slide 22 ---
+P4 Process
+
+--- Slide 23 ---
+Product Ideation to Launch Lifecycle
+
+--- Slide 24 ---
+Figma Design Flow
+
+--- Slide 25 ---
+Figma Color Coding
+Brainstorming: Gray 150Ideate on any new feature or product
+Not considering: WhiteValidate with the market need
+Concept Flow: Black 5%Create happy flows based on user stories
+PRD Done: Primary 100Document with PRD components
+Tech Feasibility: Yellow 100Check the tech feasibility or run the POC
+Design Fixed: Red 100Hand off end-to-end flows for development
+In Development: Green 100Start development, no changes allowed
+
+--- Slide 26 ---
+Figma Communication Flow - Accountability
+BrainstormingMoon, Bhargav, Sanidhya, Nayan, Sanch
+Not consideringMoon, Bhargav, Matt
+Concept FlowMoon, Shubhangi, Vishal, Bhargav, Nayan, Krunal, Nilesh, Meet
+PRD DoneVishal, Smit, Shrushti, Sanch, Devanshu, Ruchita
+Tech FeasibilityNayan, Meet, Smit, Nilesh, Arjav, Krunal
+Design Sign OffSmit, Nayan, Meet, Nilesh, Arjav, Vishal, Moon, Krunal
+In DevelopmentSmit, Krunal, Nayan, Nilesh, Kashish
+
+--- Slide 27 ---
+Figma <> Jira Link Update Process
+
+--- Slide 28 ---
+Product Adoption
+
+--- Slide 29 ---
+Product Adoption contd.
+
+--- Slide 30 ---
+Product Adoption Managers KPIs
+Key Result 2: Help to Adopt the BG product portfolio across all customers (currently all 8 are NOT ready)
+Key Result 1: Add additional placement every quarter (preff different styles)
+Key Result 3: MoM increase the frequency of video uploads/imports (influence content strategy)
+Key Result 4: Creation of x AI generated videos per month to be supplied to the customer (experimentation)
+
+--- Slide 31 ---
+From Implementation to Adoption phases for all Genuin Products
+Growth Product
+Growth Product
+Growth Product
+Growth Product
+Engagement  Product
+Engagement  Product
+Engagement  Product
+Engagement  Product
+
+--- Slide 32 ---
+Customer Product Journey @Genuin
+Brand enters the BG ecosystem
+CSM to implement the following product
+Ensure placements go live across all properties: Web, App, Mob Web
+Enable Programmatic monetisation
+CSM to introduce the following BG Products
+CSM to work with sales team during this phase to reach max potential
+CSM to push for sponsored curated placements across networks
+CSM to introduce Creator UGC unlocking revenue stream
+CSM to introduce Octo and AI capabilities marketplace

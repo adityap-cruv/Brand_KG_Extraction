@@ -1,0 +1,410 @@
+--- Slide 1 ---
+Q1 Company Update
+Workstream to KPI measurability
+
+--- Slide 2 ---
+Executive Updates
+Vision, Mission alignment and update with company strategy
+
+--- Slide 3 ---
+Partners like iHeart, McClatchy, TED & Grubhub are already doing it:
+Beloved brands with deep emotional resonance don't just survive the AI era… They become the anchors user gravitate toward when the feed can no longer be trusted.
+We Keep Modern Brands Protected From Centralized AI… With Genuin Infrastructure.
+The brands people already love are perfectly positioned to become trusted destinations.
+Genuin provides plug-and-play embeddable infrastructure that accelerates the commerce media network goals of retailers, consumer services, media, and entertainment companies… without rebuilding from scratch.
+LIVE URL >
+TOTAL USERS
+1M+
+2 Min+
+MINUTE WATCH TIME
+LIVE URL >
+TOTAL USERS
+2M+
+3Min +
+MINUTE WATCH TIME
+LIVE URL >
+TOTAL USERS
+1M+
+5Min +
+MINUTE WATCH TIME
+
+--- Slide 4 ---
+Aspirational revenue milestone from live customers operating at scale.
+PROOF AT SCALE: $400M+
+OPPORTUNITY:
+A Massive and Measurable Market
+The infrastructure layer for trusted brand engagement sits at the intersection of three of the fastest-growing categories in digital advertising: retail, commerce, & brand media. The opportunity scales from global TAM to live pipeline to proof.
+PIPELINE: $18B+
+TAM: $40B+
+1B+ consumers across 100+ customers in active pipeline, targeted for acquisition over the next 24 months.
+2.5 billion consumers reachable across the top 100 US customers and 1,000+ global customers.
+Near-term proof point that the infrastructure works before the network fully compounds.
+Live. Deployed. Already producing.
+Extending 30 minutes per month across 1 billion consumers at network scale reveals the full revenue potential of the engagement layer.
+Across consumer services, online retail, media, and entertainment.
+The market is not a niche. It's the entire trusted brand internet.
+
+--- Slide 5 ---
+Video-first experience
+Revenue drivers
+Cost center
+Non-video experience
+Social platforms, video tools, and distribution networks play isolated roles. Genuin is the only distributed network creating win-win value exchange across brands, consumers & partners.
+WE’RE NOT COMPETING FOR ATTENTION.
+We're Building the Infrastructure That Owns It Across Decentralized Network.
+GENUIN NETWORK
+GENUIN POSITIONING
+
+--- Slide 6 ---
+1B+ consumers | 100+ brands
++30 mins/month per user
+$100B+ monetization opportunity at scale
+PURPOSE-BUILT FOR EVERY STAGE OF THE ENGAGEMENT JOURNEY:
+The Product Foundation Is Set. The Roadmap Accelerates From Here.
+GENUIN 8 PRODUCTS
+GENUIN SDK
+BRAND CONTROL CENTER
+BILLIONS OF CONSUMERS
+Build, Manage, Curate, Grow Moderate, Monetize, Report, Settings
+iOS, Android, React Native, Flutter
+
+--- Slide 7 ---
+Focus Market: USA =$60b (50% of global market)
+DEALS IN ADVANCE STAGE  OF SALES PROCESS
+(expect to sign in next 12 months)
+Enterprise-Focused GTM With a Partner-Amplified Pipeline
+US-first. Direct to revenue teams. Accelerated by partner network with existing relationships.
+HIGH CPM GEOGRAPHY FOCUS
+NETWORK EFFECT FROM PIPELINE
+TRUST AMPLIFY BY COMMUNITY
+Network of supporters where integrated and showcasing community supports
+
+--- Slide 8 ---
+Sales & Marketing
+Pipeline, demand generation, lead generation and revenue update
+
+--- Slide 9 ---
+Sales Snapshot April 8, 2026
+Category | Topic | Owner | KPI Effect | Task | Due | Dependencies
+Sales | MCC | Peter | Ad revenue | Increased match rates | ASAP | Monetization Team
+Sales | MCC | Peter | Creator Studio | Integration | 4/10 | Customer Success (BCC)
+Sales | MCC | Peter | Ad revenue | News GTM Collateral / BCC money flow | 4/13 | Customer Success (BCC)
+Sales | MCC | Peter | Affiliate Prgram | Strategy | 4/17 | Customer Success (BCC)
+Sales | MCC | Peter | Sports Property | Integration / subaccount / money flow | 4/17 | Customer Success (BCC)
+Sales | Universal Orlando | Peter | Onsite/Offsite | Close/add Creator Studio demo | 4/17 | Monetization Team (product)
+Sales | Grubhub | Peter | Offsite | Offsite In-Network | 4/17 | Product
+Sales | Minute Media | Peter | Offsite/Distribution | SOW | 4/17 | Product
+Sales | Essentially Sports | Peter | Onsite/Offsite | SOW | 4/17 | Product
+Sales / Pre-Sales | Conde-Nast (Vaity Fair) | Peter | Onsite/Offsite | Pitching | 4/17 | Pre-Sales
+Sales / Pre-Sales | Tesco | Peter | Onsite/Offsite | Pitching | 4/17 | Pre-Sales
+Sales / Pre-Sales | UBER | Peter | Onsite/Offsite | Pitching | 4/17 | Pre-Sales
+Sales includes Upsell: Post-Sale Actions (customer support, onboarding, and fostering adoption and loyalty)
+
+--- Slide 10 ---
+Pipeline Phasing: April 2026
+Qualification
+Consideration
+Closing Stage
+
+--- Slide 11 ---
+Workstream | Who | Where | Why and How
+Awareness | Monetization, RMN, and Commerce Teams | Curated Events, Thought Leadership, PR | Product Use-cases:Monetize, Offsite + Genuin Network
+ | Tech & Developer Teams | Targeted PR and Media Buying | Onsite, SDK, Octo
+Consideration | Media & Marketing Teams | Product and Content Marketing | Engagement, Network, BCC/ Consumer Experience
+ | Content & Social Teams
+Digital Product Team | Website, Product and Dev Resources | 
+Conversion | C-suite, Corp Dev & Partnership steam | Internal team advocacy + Curated Dinners, Stages | Value and Growth
+Herofication
+Expansion | Primary Day-to-Day Revenue and Content Leads | Implementation and Engagement Mtgs;Daily and Weekly Mtgs | Playbooks + Reports;QBR + Case Studies
+Marketing and Sales Activation Plan: 2026
+
+--- Slide 12 ---
+1. Awareness: Brand Marketing Activation
+CES
+FMI Tech
+IAB ALM
+Givsly Responsible Media Summit
+Marketecture Live
+SxSW
+Ad Economic Forum
+Digiday Publishing Summit
+Brand Innovators x7
+Q1 Events: Speaking, Presenting, Pitching, Networking
+Content and Lifecycle Marketing: Message clarity, outreach, education
+Social Content: 3x/week
+Monthly Newsletter: 4000+ recipients; 50% open rate
+Job Openings: 10+ open roles: shows growth
+Genuin Connections: Monthly episodes and live recordings
+
+--- Slide 13 ---
+1. PR Ramp-up: Category Creation / Ownership Announcement
+MarTech Cube – requested the embargoed release and plans to cover the news
+TalkCMO - coverage to 250k readership
+Marketing Sherpa – Secured byline opportunity
+AdExchanger – Requested an intro call to Genuin
+AdAge - activating story engine
+MarTech Cube – requested the embargoed release and plans to cover the news
+Product Introduction via Press Release and Trade Pub Pitching: MONETIZE
+Thought Leadership: Bylines / OpEds, Quotes and Newsjacking
+ANA - Secured an interview opportunity about media trends and changes - 3/17
+CMSWire - Newsjacking opportunity Personalization and contextual continuity > byline in April
+Adweek - Marketing’s Shift to Sovereignty: The End of Rented Reach - end of March
+Up next: Introducing Octo!
+
+--- Slide 14 ---
+2. Consideration: Focusing the Pitch for ALL
+For Retailers & Commerce >
+Embedded video community feeds drive more onsite engagement, sales & media revenue.
+For Brands & Advertisers >
+Reach and distribution of your video assets with engaged audiences in our Network.
+For Consumers >
+Personalized feeds surface relevant content, offers & social interaction.
+Generative Engagement, Experience
+& Revenue Infrastructure
+
+--- Slide 15 ---
+2. Product Marketing, Documentation & Confidence-Building
+Developer Documentation and Resource Guide
+100+ articles for website
+Use Cases for Monetize and Offsite
+Product / Feature Sprint Release
+Monthly update for customers
+Social content
+Product education and “how to’s”
+Sales Enablement and Process Development
+Pitch Deck templates
+For RMN/CMN/publishers
+For advertisers and agencies
+Use Cases for Monetize and Offsite specialized for clients
+Early Q2: Update Website
+Welcome, Charmie!
+ATS: FTE sellers and CSM
+
+--- Slide 16 ---
+3. Conversion: Product Confidence, Case Studies & Network
+Proof Points
+Getting Started, Use Case & Implementation
+
+--- Slide 17 ---
+Q2 Preview: Octo, Press, Possible, Cannes
+POSSIBLE
+Programmatic AI
+Cannes Lions
+Q1 Events: Speaking, Presenting, Pitching, Networking
+Content and Lifecycle Marketing: Message clarity, outreach, education
+Social Content: Product & Employee Spotlights
+Podcast: RMN, Media, Creator Leads
+Customer Case Studies
+POSSIBLE
+Programmatic AI
+Cannes Lions
+PR: Octo Release + Bylines
+Product Marketing:
+Updated Website
+Product Use Cases x8
+Getting Started
+
+--- Slide 18 ---
+Finance & Operations
+2026 Financial Plan
+
+--- Slide 19 ---
+2026 Financial Plan (EOY’26)
+MONETIZATION
+$10M ARR
+($1.9M) EBITDA
+$4.5M REVENUE
+ENGAGEMENT
+12M
+MONTHLY ENGAGED USERS (MEUS)
+10 mins
+Watch time per month / per MEU
+120m Monthly
+Video Watch Time
+
+--- Slide 20 ---
+Top Line
+Note - ARR of $11.4 (or 83%) included from only iHeart Radio and McClatchy in EOY $13.7m ARR (before discount), ARR from other customers other than iHeart and McClatchy contribute minimum to financial model.
+
+--- Slide 21 ---
+Income Statement
+
+--- Slide 22 ---
+Products & Technology
+Updates from
+Product Managers,
+Technical Customer Success Managers & Engineering Leaders
+
+--- Slide 23 ---
+Q1 Overview & Status
+01     Curate
+02    Export Video Meta Details in CSV
+03    Linkout Management
+04    Scheduler
+05    Lightweight webSDK
+06    Observability events implementation & Dashboard v1
+07    iHeart rewrite in SwiftUI
+08   Player Optimizations in Android
+09   SDK V3 Modularization
+10    Ads Configuration with Presets
+11     Sponsorship campaign flow
+12    RSS/MRSS, JSON, XML Feed Curation
+January
+Sprint 37 - 38
+February
+Sprint 39-40
+MarchSprint 41-42-43
+
+--- Slide 24 ---
+Curate
+Live URL >>
+
+--- Slide 25 ---
+Export Video Meta Details in CSV
+Live URL >>
+
+--- Slide 26 ---
+Linkout Management
+Live URL >>
+
+--- Slide 27 ---
+Scheduler
+Live URL >>
+
+--- Slide 28 ---
+Lightweight WebSDK
+(~ 500 kb)
+
+--- Slide 29 ---
+Observability events implementation & Dashboard v1
+
+--- Slide 30 ---
+iHeart code rewrite in SwiftUI in IOS
+
+--- Slide 31 ---
+Player related optimizations & Ad serving Improvements in Android
+
+--- Slide 32 ---
+N*N Grid Layout Support
+
+--- Slide 33 ---
+Dynamic Placement View
+Android - Done
+IOS - Pending
+
+--- Slide 34 ---
+SDK v3 (Modularization, Improve Latency, Documentation)
+
+--- Slide 35 ---
+Ads Configuration with Presets
+
+--- Slide 36 ---
+In Feed Ads
+Sponsored
+Video
+Display
+Native
+House Ad with In stream
+
+--- Slide 37 ---
+Sponsored Takeover
+
+--- Slide 38 ---
+In Stream Ads
+
+--- Slide 39 ---
+Sponsored Posts & takeover
+
+--- Slide 40 ---
+RSS/MRSS, JSON, XML Feed Curation
+
+--- Slide 41 ---
+Onsite - New Architecture + Expo support for TED
+
+--- Slide 42 ---
+Strategic Initiatives
+
+--- Slide 43 ---
+Octo with Auto prompting & Koah Labs Integration
+Impact: Revenue
+
+--- Slide 44 ---
+Octo with Auto prompting
+Impact:
+High chance to Increase user engagement with OctoGPT
+
+--- Slide 45 ---
+Offsite IAB
+Session Takeover - Grubhub <>
+iHeart
+Impact: Revenue
+
+--- Slide 46 ---
+Offsite IAB Session Takeover
+iHeart <> Infolinks
+300 X 250
+300 X 600
+
+--- Slide 47 ---
+Tech Improvements
+
+--- Slide 48 ---
+Latency KPIs (~ 2s) maintained even with 285% increase in storage & 300% increase in RPS
+7360 TB
+Bandwidth Usage in Q1 2026
+2418.91 TB in Q4 2025
+Bunny CDN
+2500
+in Q1 2026
+776  in Q4 2025
+Requests per Seconds
+Goal: 1,00,000 per seconds
+
+--- Slide 49 ---
+System Uptime improved by 70 bps
+99.92%
+in Q1 2026
+99.18% in Q4 2025
+System Uptime
+Goal: 99.99%
+
+--- Slide 50 ---
+Product Adoption
+
+--- Slide 51 ---
+Monetize
+Product Activation on TED
+
+--- Slide 52 ---
+Onsite
+Activation in 5 websites in MCC
+US Weekly (https://www.usmagazine.com/)
+2. Life & Style (https://www.lifeandstylemag.com/)
+3. Bargain Hunter (https://www.bargainhunter.com/)
+4. Woman’s World (https://www.womansworld.com/)
+5. The Kansas City Star (https://www.kansascity.com/), (live only on 10% of traffic)
+
+--- Slide 53 ---
+Monetize
+Product Activation on US Weekly
+Ads Activation
+In - Feed Ads (2nd, 6th, 10th)
+Programmatic Video Ads
+In Stream Video Ads on House Ad
+
+--- Slide 54 ---
+Control
+RSS Feed Curation in MCC, MinuteMedia
+
+--- Slide 55 ---
+Strategic Initiatives
+10X Revenue, Outcome and Experience initiatives
+
+--- Slide 56 ---
+20/80 Bets
+iHeartVIP
+Industry / Trade Community Partnerships
+InfoLink + iHeart
+
+--- Slide 57 ---
+Pipeline and Funnel: April 2026

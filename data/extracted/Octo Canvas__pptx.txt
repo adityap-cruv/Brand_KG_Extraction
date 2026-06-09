@@ -1,0 +1,102 @@
+--- Slide 1 ---
+OCTO CANVAS  ·  PRODUCT CONCEPT
+Generative
+Destination
+A conversational AI agent that builds brand-native generative destinations — from brief to live; vibe design your brand destination
+01
+Zero engineering & maintenance
+Brief to deployed destination — no code, no maintenance
+02
+Brand-native design
+Brand Identity, persona, and data fully embedded
+03
+Build for the AI Age
+Protection from LLM scraping & Discovery in conversational interfaces
+Prototype: Octo Canvas
+
+--- Slide 2 ---
+OCTO CANVAS  ·  VISION & POSITIONING
+Vibe Design for Generative Destinations
+A vibe design platform for generative brand destinations. Octo Canvas guides marketers through a two-phase process: a Design phase — iterative dialogue producing sitemap, wireframe, and visual design on a live canvas — followed by a Build phase that auto-deploys Genuin SDK implementation. The output is a living destination that draws from brand capabilities at runtime, maintained entirely by Genuin post-launch.
+How We Differ
+vs. Relume / Google Stitch
+Octo Canvas
+Design starting point
+Blank canvas / generic template
+Brand identity & persona first
+Output
+Free-form, deploy anywhere
+Genuin SDK with minimal free-form
+Deployment
+Partner-managed
+Auto-deployed by Genuin
+Post-launch
+Partner's engineering team
+Genuin manages all infrastructure
+Core Product Values
+No infrastructure management by the brand
+Everything deploys on Genuin infrastructure with enterprise grade security compliance
+Minimal post-launch maintenance
+Generated destinations use standardised Genuin SDK components with guardrails — not freeform code.
+Brand-first design, always
+Visual identity — colours, typography, tone — is derived from the brand's actual identity
+Built to scale across your network of brands
+Standardised SDK output on Genuin infrastructure means easy maintainability & scalability
+
+--- Slide 3 ---
+OCTO CANVAS  ·  ARCHITECTURE
+Two Layers, One Experience
+Genuin's Intelligence & Infrastructure Layer
+Agent Orchestration
+Routes generative destination intent to Octo Canvas. Manages all agent-to-agent coordination across Octo products.
+Growth Intelligence
+Personalisation engine, community infrastructure, workflow orchestration. Knows how to grow and engage a brand.
+UX Capabilities
+SDK components configurable via JSON — video, chat, text, images. Every visual element the destination renders.
+Shared Infrastructure
+Common agent foundation for all Octo products. OctoGPT and Octo Canvas are configurations on this shared layer.
+Brand's Identity & Knowledge Layer on Genuin
+Brand Knowledge
+Source of identity, persona, and tonality for the destination.
+BCC Knowledge, communities, social accounts, uploaded files.
+Brand Capabilities
+CMS connections, podcast feeds, contest APIs, event data. Isolated per brand — never co-mingled with other brands.
+Persistent Brand Identity
+Stored once in BCC, shared across all Octo products. OctoGPT and Octo Canvas reference the same profile.
+Capability Pathways
+Generate capabilities from brand knowledge, or connect from the 9,900+ Capabilities Marketplace.
+At design time, Octo reasons about what the destination needs & makes those decisions brand-specific. At runtime, personalisation & live data comes together to grow and engage the audience.
+
+--- Slide 4 ---
+OCTO CANVAS  ·  INFRASTRUCTURE & WORKFLOW
+How Octo Canvas Works
+INFRASTRUCTURE
+①
+Genuin Buildtime Infrastructure
+Genuin Octo Canvas, powered by the brand's Octo Capabilities and Brand Knowledge. Capabilities are recommended and auto-generated to design a vibe that resonates with the brand
+②
+Genuin Runtime
+Infrastructure
+Genuin’s Video & Community Infrastructure implemented using SDKs. Direct integrations into client CMS systems — destination content is live, fresh, and personalised at runtime, never a static snapshot.
+WORKFLOW
+01
+Define the Objective
+Brand describes goal in natural language. Agent confirms destination purpose.
+02
+Establish Brand Identity
+Agent surfaces Brand Knowledge from BCC — connected sources, content, and generated capabilities.
+03
+Define Persona & Tonality
+Persona and tone emerge from Brand Knowledge. Agent presents and refines conversationally.
+05
+Create the Sitemap
+Agent proposes full page architecture. Brand reviews and refines through conversation.
+06
+Create the Wireframe
+Agent proposes structural layout per page. Brand shapes structure and content placement.
+08
+Generate Implementation
+Approved design translated into full Genuin SDK implementation. Code view available for review.
+09
+QA Review → Deploy
+Live on QA subdomain for approval. One confirmation deploys to production on Genuin infrastructure.

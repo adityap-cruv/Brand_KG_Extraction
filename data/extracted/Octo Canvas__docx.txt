@@ -1,0 +1,221 @@
+GENUIN  ·  PRODUCT CONCEPT
+Octo Canvas
+Generative Destination — Product Concept Document
+Status: Draft v1.0    |  Audience: Internal — Leadership, Product, Engineering    |  Classification: Confidential
+1. Executive Summary
+Octo Canvas is a generative destination builder within the Octo product. It enables marketers and designers at partner brands to create and deploy branded web destinations through a conversational, vibe-driven interface — with no code to write, no infrastructure to manage, and no maintenance burden after launch.
+The experience is powered by a two-layer architecture. Maya is Genuin's layer — the knowledge of how to grow, engage, and monetize a brand digitally, together with the platform infrastructure to act on that knowledge. Octo is the brand's layer — identity, persona, tonality, and brand-specific data. The Octo Canvas Agent orchestrates a guided nine-step journey — from blank intent to live deployed subdomain — drawing on Maya's intelligence and Octo's brand context to design and deploy a destination that is both brand-native and built to perform.
+The Phase 1 objective is a demoable proof of concept using iHeart as the first brand. The success criterion is clear: a non-technical user should be able to vibe-design a destination through the Octo Canvas Agent, and the output should land visually close to a pre-defined target Figma design. This will be demonstrated to iHeart as a Loom recording and a live agent session.
+2. Product Vision & Positioning
+2.1  What Octo Canvas Is
+Octo Canvas is a vibe design platform for generative brand destinations. A brand marketer enters a conversation with the Octo Canvas Agent describing their objective, and the Agent partners with them through a guided, iterative dialogue — presenting options, responding to feedback, and navigating toward the best outcome at each stage. The process moves through two distinct phases: a design phase, in which the Agent and brand collaboratively produce a sitemap, wireframe, and visual design shown on a live design canvas; and a build phase, in which the approved design is translated into a Genuin SDK implementation and deployed automatically on Genuin infrastructure.
+The output is not a website in the traditional sense. It is a generative destination: a living page that draws data from brand capabilities at runtime, powered by Genuin's personalisation and community infrastructure, and maintained entirely by Genuin post-launch.
+2.2  Reference Points and How We Differ
+Octo Canvas occupies a design space adjacent to tools like Relume.io and Google Stitch — AI-assisted platforms that accelerate the journey from intent to deployable output. The comparison is useful but limited. The critical differences are what define the product:
+2.3  Core Product Values
+No infrastructure management for the brand partner. Everything deploys on Genuin infrastructure. The brand never provisions a server, configures a CDN, or writes a deployment script.
+Minimal maintenance. Generated pages use standardised Genuin SDK components — not freeform code. There is nothing custom to maintain, debug, or update on the brand side.
+Brand-first design. Visual design is derived from the brand's actual identity — colors, typography, tone — before any layout decisions are made. The destination is always brand-native, never generic.
+Transparent to the brand's technical team. A code view is available at the implementation stage so engineering stakeholders can review what is being deployed. This is a transparency feature, not a required step in the workflow.
+Built to scale across brands without custom engineering. Because the output is standardised SDK code on Genuin infrastructure, each new destination does not require custom subdomain management or bespoke deployments by the Genuin team.
+3. The Two-Layer Architecture: Maya + Octo
+Every Generative Destination is composed from two distinct layers. Understanding the boundary between them is essential to understanding the product's architecture, its scalability, and its maintenance model.
+3.1  Maya — Genuin's Layer
+Maya is everything that Genuin owns, builds, and maintains. It is not simply a component library or a set of APIs. Maya's core value is the knowledge of how to grow, engage, and monetize a brand digitally — and the infrastructure to act on that knowledge at scale. Maya understands the mechanics of modern brand-audience relationships: how digital destinations drive retention, how communities generate engagement, how personalised experiences convert. And it knows how to use Genuin's platform to deliver those outcomes for any brand that connects to it. This is what allows the Octo Canvas Agent to make design and implementation decisions autonomously, without requiring Genuin engineering involvement per brand. Maya has four components: platform intelligence, agent orchestration, Genuin growth infrastructure, and UX capabilities.
+Maya Platform Intelligence
+This is the foundational layer of Maya, and where its core value lives. Maya's intelligence operates at two levels. At the strategic level, Maya understands how to grow, engage, and monetize a brand digitally — the patterns, capability combinations, and destination structures that make a brand experience effective, not just visually presentable. At the operational level, Maya has deep knowledge of the Genuin platform: how to create and configure placements, how to invoke and parameterise SDK components, how to wire capabilities, and how to take a design from concept to live deployment on Genuin infrastructure.
+These two levels work in concert. The Agent does not just ask "what should this page look like?" — it asks "what will help this brand grow and engage their audience, and how does Genuin build that?" Maya's intelligence answers both questions, which is what allows a non-technical marketer to produce a destination that is both brand-right and platform-correct without any engineering involvement.
+Maya UX Capabilities
+These are the visual rendering components that form the building blocks of every destination page. They are implemented via the Genuin Web SDK and are fully parameterised — each component accepts a JSON configuration that controls its shape, size, padding, color, animation, and layout properties. A brand never modifies these components directly; instead, the Octo Canvas Agent configures them via JSON based on the brand's identity and design decisions.
+Current UX capabilities in scope include video (via Web SDK), GenAI chat interface (via Web SDK), text blocks, and image blocks. This library is designed to grow. When a brand requires a rendering style that does not yet exist — for example, a cinematic scrolling text animation or a 3D video reveal — a new UX capability gets built and added to Maya, making it available to all future destinations.
+Maya Agent Orchestration
+Maya acts as the orchestration layer for all agents within the Genuin platform. When a BCC user prompts Octo to build a destination, it is Maya that receives the intent and routes it to the appropriate agent — in this case, the Octo Canvas Agent. Maya also orchestrates the connections between data and UX at runtime: it does not merely stitch components together, it actively manages the flow of brand data through the right capability channels into the right rendering contexts. This orchestration layer is what allows multiple Octo products — Octo Canvas, OctoGPT, and future products — to share a common, configurable agent infrastructure rather than each requiring bespoke integration.
+Maya Growth Infrastructure
+These are Genuin's platform-level capabilities for growing, engaging, and monetizing a brand's audience: the personalisation engine, community infrastructure, workflow orchestration, auto-prompting, and the broader set of Genuin-provided services that make a destination perform. Brands benefit from these automatically — they do not configure them explicitly, and they are always available as a foundation for any destination built on Genuin.
+3.2  Octo — The Brand's Layer
+Octo is everything brand-specific. It has three components: brand identity, brand persona and tonality, and brand anchor capabilities.
+3.3  How Maya and Octo Compose
+At design time, the Octo Canvas Agent uses Maya's intelligence to make decisions about what the destination needs to do — which engagement patterns to use, how to structure the experience to drive the brand's objective, and how to wire it together on Genuin infrastructure. It draws on Octo to make those decisions brand-specific: applying the right identity tokens, persona, and data sources. At runtime, the destination draws live data from Octo brand anchor capabilities, rendered through Maya's SDK components and amplified by Maya's personalisation and community infrastructure to grow and engage the brand's audience.
+The key design principle: brands bring their identity and data. Genuin brings the knowledge and infrastructure to grow, engage, and monetize the brand digitally. A brand never creates a UX component or reasons about the Genuin platform. Genuin's intelligence never depends on brand-specific information. This clean separation is what allows the destination to be zero-maintenance for the brand and zero-custom-engineering for Genuin.
+3.4  Octo Brand Profile — Brand Knowledge
+In BCC, the brand's knowledge foundation is referred to as Brand Knowledge. This is the system of record for everything Octo knows about a brand — and it is the source from which brand capabilities are generated. The Octo Canvas concept document uses "Octo Brand Profile" to describe this same layer; the two terms are interchangeable.
+Brand Knowledge is not a static identity record. It is a living, source-fed knowledge base that powers capability generation. The richer the knowledge, the more capable the brand's Octo configuration becomes. Brand identity, persona, and tonality are all derived from this knowledge — they are outputs of the system, not standalone inputs to be collected in isolation.
+Contribution Factors
+Brand Knowledge is built through a set of Contribution Factors — the structured inputs that define the sources from which Octo learns about a brand. These are defined in the BCC Octo Knowledge Base Onboarding design:
+Add Brand Persona (Required): Gather assets from the brand's own domain (www.brand.com), with or without a crawler. This is the minimum required input — without it, no capabilities can be generated.
+Whitelist Crawlers (Essential): Allow crawlers to gather the brand's news, thought leadership, and content from the open web. Expands the breadth and depth of brand context.
+Add O&O Communities On & Off Genuin (Essential): Gather real-time insights from the brand's owned and operated community interactions, both on the Genuin platform and offsite. Grounds the knowledge in how the brand actually communicates with its audience.
+Connect Social, Ad, and CRM/CDP Accounts (Optional): Connect data warehouses and platform integrations to bring structured performance data into the knowledge base.
+Upload Additional Files (Optional): Upload documents, recordings, spreadsheets, or any other files that contain brand-relevant information. Useful for brand guidelines PDFs, internal strategy documents, and product catalogs.
+Once knowledge sources have been provided, the brand triggers capability generation. The system processes all available sources and produces a set of named capabilities mapped to the brand's knowledge. These capabilities are what the Octo Canvas Agent references when building destinations.
+Two Pathways to Capabilities
+The BCC Capabilities design shows two distinct pathways through which a brand can build their capability set:
+Add Your Own Brand Knowledge: The brand goes through the Contribution Factors flow above and generates capabilities from their own knowledge. These capabilities are owned by the brand and specific to their data and context.
+Connect Other Capabilities: The brand browses the Capabilities Marketplace — a catalogue of 9,900+ capabilities created by other brands and partners, browsable by goal (Engagement, Monetization, Distribution, Reach) and by task type. Brands can connect and use capabilities from other brands without building their own. This is the mechanism for borrowing or licensing capabilities.
+The "Improve Knowledge" panel is always available in BCC as a persistent enrichment drawer — offering quick access to connect additional apps, upload more documents, or explore further enrichment options. Brand Knowledge is never finished; it grows as the brand adds more sources over time.
+Capability creation is a BCC-side process. The Contribution Factors flow and the capability generation step happen in BCC, not within the Octo Canvas Agent conversation. The Agent operates on capabilities that already exist in the brand's profile. For the iHeart demo, pre-built capabilities are used — the capability creation process itself is a manual, in-development workflow and is not part of the Phase 1 scope.
+Persistence across Octo products. Brand Knowledge, once established, is shared across all Octo products. Octo Canvas and OctoGPT both reference the same profile. This means identity, persona, tonality, and capabilities established through one Octo product are immediately available to the others.
+3.5  Shared Agent Infrastructure
+Octo Canvas is not built on a standalone agent stack. It shares a common, configurable agent infrastructure with all other Octo products — including OctoGPT, the conversational agent on video.
+This shared infrastructure has three layers:
+Maya Orchestration Layer: Maya receives all BCC user intents and routes them to the appropriate product agent. This is the same orchestration layer regardless of which Octo product the brand is using. Maya also manages the runtime connections between capabilities and UX across all products.
+Octo Brand Knowledge Layer: The Octo Brand Profile — brand identity, persona, tonality, capabilities — is a shared resource. Any product agent operating within Octo accesses the same brand knowledge. Changes made in one session are immediately visible to all other agents operating on behalf of that brand.
+Tool and Capability Definitions: The definitions of what tools, MCPs, and API-as-MCP capabilities are available to agents are centralised. A capability registered for a brand in BCC is immediately referenceable by any product agent that needs it.
+Product agents are configurations, not separate systems. The Octo Canvas Agent and the OctoGPT Agent are product-specific configurations on top of this shared foundation — each with their own system prompt, tool selection, and interaction model, but sharing the same underlying infrastructure for orchestration, brand knowledge, and capability access. New Octo products are brought online by creating a new agent configuration, not by building a new infrastructure stack.
+4. Page Anatomy
+All destinations built with Octo Canvas share a common structural model. Understanding this model is necessary for the engineering implementation and for the Agent's design generation logic.
+4.1  Structural Hierarchy
+4.2  Design Lifecycle
+All destinations pass through four stages. Each stage produces an artefact that is displayed on the live canvas and can be iterated on through conversation with the Agent. Manual canvas editing is a Phase 2 capability.
+5. Separation of Data and UX
+The architectural principle that makes zero-maintenance deployment possible is a strict separation between data and UX — held together by Maya's intelligence, which knows both how to grow a brand digitally and how to wire that vision into a working Genuin deployment. This section defines how that separation works in practice.
+5.1  The Intelligence Layer: Maya
+Before data and UX can be separated cleanly, something needs to understand how to connect them — and more importantly, why. Maya's intelligence operates at two levels. Strategically, it knows how to grow, engage, and monetize a brand digitally: which destination patterns drive retention, which capability combinations generate engagement, how to structure an experience that moves a brand's audience from awareness to action. Operationally, it knows the Genuin platform in full: the API surface, placement lifecycle, SDK component schemas, capability wiring, and deployment pipeline. The Octo Canvas Agent draws on both to make decisions that are simultaneously brand-effective and platform-correct.
+This is what distinguishes Octo Canvas from a general-purpose AI design tool. A general AI can produce something that looks like a destination. The Octo Canvas Agent produces a destination that is designed to grow, engage, and monetize the brand — and implements it correctly on Genuin infrastructure. The difference is Maya.
+5.2  Data Layer: Capabilities
+All data that appears in a destination flows through capabilities. A capability is a discrete, named data or logic service — expressed as a tool, an MCP, or an API-as-MCP — that the Agent can reference when wiring up a Layer. Every backend data source is expressed as a capability before it can be used in a destination.
+Capabilities fall into two categories:
+Maya Capabilities: Genuin's growth infrastructure, available to all brands by default. Personalisation engine, community feeds, workflow orchestration, auto-prompting. Maya orchestrates the connections between these capabilities and the destination's UX at runtime.
+Octo Brand Anchor Capabilities: Brand-specific data endpoints. CMS highlights, podcast feeds, contest APIs, article libraries, event schedules. Built per-brand and deployed on isolated virtual infrastructure. Data never leaves the brand's isolated environment.
+5.3  UX Layer: Maya SDK Components
+All visual rendering is handled by Genuin SDK components. The UX layer never contains business logic or brand-specific data. It only knows how to render what it receives. Each component is configured via a JSON schema — this is how brand colors, typography, sizing, and animation parameters are applied.
+UX capabilities in the current scope:
+The UX component library grows over time. When a brand requests a rendering style that does not yet exist, a new Maya UX component is built. Once in Maya, it becomes available to all future destinations — not just the requesting brand.
+6. The Octo Canvas Agent Workflow
+The Octo Canvas Agent works in partnership with the brand marketer through a nine-step journey from initial intent to deployed destination. The Agent is not an autonomous generator — it is a collaborative partner. At each step it presents options, offers informed recommendations, and iterates in response to the brand's feedback. The brand shapes the outcome; the Agent brings the expertise, the platform knowledge, and the execution.
+Two phases. Steps 1–7 are the design phase: all work happens on a design-only canvas that shows what the destination will look like without executing a live build. Step 8 is the build phase: once the design is approved, the Agent translates it into a working Genuin SDK implementation and moves to deployment. This separation keeps the design iteration fast and focused without the overhead of live rendering.
+The workflow is a single unified flow. Steps that depend on infrastructure still in development are marked Coming Soon — they appear in the flow with a placeholder, so the full product vision is visible from day one.
+7. Phase 1 — The Demo Build
+Phase 1 is a demoable implementation of the full Octo Canvas workflow. Its purpose is to validate the core product concept with a real brand partner and establish the interaction model for the Agent-driven design experience. It is not a production launch.
+7.1  iHeart as the First Use Case
+iHeart is the first brand for which a destination will be built using Octo Canvas. iHeart has a well-documented brand identity — established color palette, typography system, and clear visual language — which makes them a strong first use case for demonstrating brand identity extraction and application.
+The iHeartVIP destination is the target output. The destination showcases iHeart's VIP fan programme through an Aria-powered conversational interface, personalised content recommendations, an exclusive content carousel, and contextual call-to-action flows.
+7.2  Demo Capabilities
+In Phase 1, Genuin pre-builds the capabilities required to run the demo. These are not connected to iHeart's production systems — they use mock data designed to approximate realistic content. The purpose is to demonstrate the full end-to-end flow from vibe session to deployed destination.
+Demo CMS Capability: A mock CMS endpoint returning sample iHeart content — highlights, articles, and featured moments.
+Demo Podcast Extraction Capability: A mock podcast feed returning sample audio content with metadata — artist names, episode titles, play counts, and cover art.
+Demo Contest Capability: A mock contest feed returning sample active contests — ticket giveaways, meet-and-greet draws, and exclusive experience prizes tied to iHeart artists and events. Includes contest status, entry mechanics, and deadline data.
+Demo Live Events Capability: A mock events feed returning sample upcoming live events — concerts, iHeartRadio festival appearances, and artist-specific shows. Includes event name, artist, venue, date, and ticket link data to support the destination's events and ticketing surfaces.
+Maya Growth Infrastructure: Personalisation engine, community infrastructure, and workflow orchestration are live Maya capabilities available to all brands by default.
+7.3  Success Criterion
+7.4  Phase 1 Scope Boundaries
+8. Capability Generation — The Path to Phase 2
+In the full product, brands need not be constrained to pre-existing capabilities. When a brand identifies a data source at step 4 of the workflow that does not yet exist as a capability, the Capability Builder Agent — a separate product track currently in development — handles the end-to-end creation of that capability.
+8.1  How Capability Building Works (Phase 2 Vision)
+The Capability Builder Agent takes the brand through a guided setup:
+Identify the data source: The brand describes what they need — "connect our CMS," "ingest our podcast feed," "expose our contest API."
+Determine the connection method: The Agent researches the optimal integration approach. For a CMS, this might be an OAuth-authenticated REST API. For a podcast, an RSS-to-MCP bridge.
+Build and deploy the capability: The Agent creates the API connection, wraps it as an MCP, and deploys it on isolated virtual infrastructure reserved for that brand.
+Make it available in Octo: The new capability appears as an Octo brand anchor capability, immediately available for use in any future Octo Canvas session for that brand.
+All brand capabilities are deployed on isolated virtual infrastructure. This ensures that brand data is never co-mingled with other brands' data and gives Genuin a clear per-brand billing surface for infrastructure consumption.
+9. Deployment Architecture
+Octo Canvas's deployment model is designed to be entirely Genuin-managed. The brand partner never provisions infrastructure, configures domains, or manages deployment pipelines. The following describes the deployment path from approved design to live destination.
+9.1  Deployment Path
+9.2  Post-Launch Ownership
+Once a destination is live, Genuin manages all infrastructure. The brand's only ongoing responsibilities are:
+Maintaining their data capabilities (ensuring their CMS endpoints, APIs, and feeds remain available and returning current data).
+Updating brand identity or persona if their brand evolves. This is handled through a new Octo Canvas session, not through code.
+All Genuin SDK components, hosting infrastructure, personalisation engine, and platform services are Genuin's operational responsibility.
+Because all destination code is built exclusively from standardised Genuin SDK components, there are no custom subdomains requiring individual engineering attention. The same infrastructure stack supports every brand destination.
+9.3  Infrastructure Architecture
+Octo Canvas runs on Genuin's multi-layer cloud infrastructure. Each layer is independently scaled and operates within clearly defined boundaries.
+9.4  Billing & Wallet
+Building a destination with Octo Canvas is a token-intensive activity. Each step in the nine-step workflow involves one or more LLM calls — reasoning about the brand's objective, proposing sitemaps and wireframes, applying design tokens, generating SDK configuration, and iterating on feedback. Across a full session, the total token consumption is significant and must be accounted for.
+The BCC Wallet is the billing mechanism. Every brand operating on BCC maintains a wallet — a pre-loaded credit balance used to pay for token consumption and platform services. Octo Canvas deducts from this wallet as the session progresses. This model keeps billing clean, transparent, and in the brand's control: brands load credits into their wallet and spend them on the activities they choose.
+How Billing Works During a Session
+Pre-session estimate: Before starting a session, the Agent displays an estimated token cost range for the build. The estimate is based on session scope — a fresh brand with no existing knowledge will consume more tokens than one with an established profile. The brand can see their current wallet balance alongside the estimate before proceeding.
+Step-level consumption: Token consumption is metered at the agent infrastructure layer. Each workflow step that involves LLM reasoning — objective confirmation, knowledge surfacing, sitemap generation, wireframing, design application, implementation generation — deducts from the wallet as it completes. The brand can see a running cost alongside the session.
+Wallet balance check: If the wallet balance falls below the estimated cost to complete the remaining steps, the Agent surfaces a warning before proceeding to the next step. The brand can top up their wallet or choose to stop the session and resume when the balance is restored. A session in progress is always saveable at any completed step.
+Iteration cost transparency: Each conversational iteration within a step — requesting a change to the sitemap, asking the Agent to adjust a wireframe, refining the design — also consumes tokens. The Agent surfaces an approximate cost for significant iteration loops so the brand can make informed decisions about how deeply to iterate before confirming.
+Billing Scope
+Octo Canvas — Generative Destination  ·  Product Concept Document  ·  Draft v1.0
+Genuin  ·  Confidential — For Internal Use Only
+Dimension | Summary
+Product | Octo Canvas — a feature within the Octo product
+Target User | Marketer or designer at a partner brand. No technical background assumed.
+Core Promise | Go from brand intent to deployed destination without writing code or managing infrastructure.
+Phase 1 Scope | Demoable build using pre-built demo capabilities. iHeart as first use case.
+Success Criterion | Vibe session produces a destination visually close to the target Figma. Loom + live demo to iHeart.
+Architecture | Maya (Genuin's growth, engagement and monetization intelligence + platform infrastructure) + Octo (brand identity, persona, brand-specific data)
+Dimension | Relume / Stitch | Octo Canvas | Why It Matters
+Design starting point | Blank canvas / generic templates | Brand identity & persona first | Brand voice and visual identity are derived before a single component is placed
+Output code | Free-form, deployable anywhere | Genuin SDK components only | Standardised components enable zero-maintenance and Genuin-managed hosting
+Deployment | Partner-managed | Auto-deployed by Genuin | Brand never touches hosting infrastructure
+Post-launch maintenance | Partner's engineering team | Genuin manages all infrastructure | Brand's only ongoing role is managing their data capabilities
+Page content at runtime | Static or CMS-managed | Live capabilities at runtime (APIs, MCPs) | The destination is generative — it draws live data, not static snapshots
+ | The simplest way to understand the division: brands bring their identity and data. Genuin brings the knowledge and infrastructure to grow, engage, and monetize that brand digitally. Maya is where Genuin's side of that equation lives — the strategic intelligence and the platform capability to act on it.
+ | From the brand's perspective, Maya is completely opaque. The brand does not interact with Maya directly. They see a curated set of available capabilities and design options — the origin of those capabilities (Maya or Octo) is never surfaced.
+Octo Component | What It Contains | How It Is Built
+Brand Identity | Colors, typography, logo usage, iconography system
+Brand Identity | Colors, typography, logo, iconography, visual language | Extracted from brand guidelines on BCC, brand website, or uploaded documents. Surfaced for human review and correction.
+Brand Persona & Tonality | Voice, tone, communication style used by any AI agent running under the brand's Octo | Derived from brand guidelines, published articles, and blog content. Reviewed and edited by the brand.
+Brand Anchor Capabilities | Brand-specific data sources: CMS endpoints, podcast feeds, contest data, highlight reels, articles — anything unique to the brand's content | Built by the brand with Genuin's Capability Builder (Phase 2). In Phase 1, Genuin pre-builds demo capabilities. Deployed on isolated brand infra for data privacy.
+ | Example (iHeart): The iHeart brand anchor capability exposes a podcast highlights feed. The Agent selects a Maya video carousel component and configures it with iHeart's red palette, Proxima Nova typography, and the podcast highlights endpoint. The rendered carousel is always iHeart-branded but pulls live content at runtime.
+ | This architecture means brand investment in knowledge compounds across products. A brand that establishes strong Brand Knowledge for OctoGPT walks into Octo Canvas with their identity, persona, and capabilities already in place — the Agent surfaces them on the first step, not the last.
+Level | Definition | Examples
+Container | Top-level structural section of a page. Defines the full-width page zones. | Header, Hero, Content Feed, Featured Section, Footer
+Block | A discrete content unit within a Container. Each Block has a defined purpose and data source. | Video carousel block, persona chat block, article spotlight block, rewards block
+Layer | An individual Maya UX component within a Block. The lowest renderable unit. Each Layer maps to exactly one capability. | A single video player Layer, a text overlay Layer, a CTA button Layer, an image Layer
+Stage | Artefact | What Is Defined | Phase 1 Editing Method
+1. Sitemap | Page map | Pages, navigation hierarchy, page purposes | Conversation with Agent
+2. Wireframe | Layout skeleton | Containers, Blocks, and their sequence per page. No visual design yet. | Conversation with Agent
+3. Design | Visual design | Brand identity applied to all Layers. Maya UX components configured with brand JSON tokens. | Conversation with Agent
+4. Integration | SDK implementation | Maya components wired to Octo capabilities. Deployable code generated. Optional code view available. | Conversation with Agent + optional code review
+ | Phase 2 adds a Relume-style visual canvas editor, enabling direct drag-and-drop manipulation of Containers, Blocks, and Layers in addition to conversation-based editing. This is not in scope for Phase 1.
+UX Capability | Delivery Mechanism | Notes
+Video | Genuin Web SDK | Grids, carousels, single-player. JSON-configurable layout and brand theming.
+GenAI Chat Interface | Genuin Web SDK | Aria-style agent interface. Persona driven by Octo brand tonality.
+Text | Standalone component | Typography, sizing, color, and padding configured via JSON. New animation styles (e.g. cinematic scroll) get built into Maya as new text sub-types.
+Image | Standalone component | Aspect ratio, border radius, overlay styles configurable via JSON.
+1 | Define the Objective  
+The Agent opens with a single question: what do you want to build? The brand describes their goal in natural language — a destination for their VIP fan programme, a hub for a product launch, a community platform for their audience. The Agent confirms the objective and the destination's primary purpose before proceeding.
+2 | Establish Brand Identity  
+The Agent checks whether Brand Knowledge already exists in the brand's BCC profile. If it does, it surfaces the current state of the brand's Contribution Factors — showing what sources are connected, what knowledge has been ingested, and what capabilities have been generated — and invites the brand to review and confirm. The brand can accept the existing knowledge as-is or choose to enrich it further before proceeding.If Brand Knowledge has not yet been added, the Agent begins with the required input: the brand's own domain (Add Brand Persona). It crawls the domain to extract visual identity — color palettes, typography, logo usage, and broader design language — and presents what it finds for the brand to review and correct. The Agent also surfaces all available enrichment mechanisms from the Octo Knowledge Base Onboarding design, so the brand can choose how deeply to invest in knowledge quality at this stage: Whitelist Crawlers to expand open-web coverage; Upload Additional Files to add documents, guidelines, or recordings; Connect with other apps to pull in existing integrations. These are not mandatory steps — the brand can proceed with only the domain crawl and return to enrich later. All extracted and confirmed identity information is stored in the BCC Brand Knowledge profile and persists across all Octo products.
+ | iHeart example: iHeart publishes a detailed brand guidelines site (brand.iheart.com) covering logo usage, their core red palette, and Proxima Nova typography. The Agent can extract these reliably from the domain crawl, giving iHeart an almost-complete visual identity on first pass. Brands with less structured online presence will need more manual correction at this step, which is expected and supported.
+3 | Define Brand Persona & Tonality  
+Brand persona and tonality are not extracted in isolation — they emerge from the same Brand Knowledge system. The Agent surfaces what has been learned about the brand's voice from all the knowledge sources connected in Step 2: the tone used across the brand's domain content, the way the brand communicates in its communities, any guidelines documents that describe communication principles.If Brand Knowledge is rich enough for a persona to be derived, the Agent presents it — describing the brand's voice characteristics, preferred tone, and communication style — and works with the brand to refine it conversationally. If knowledge is thin, the Agent explains what is missing and suggests which enrichment mechanisms (adding communities, connecting social accounts, uploading content files) would most improve persona quality. The confirmed persona and tonality govern how all AI agents operating under this brand's Octo — including the destination's conversational interface — communicate on the brand's behalf.
+4 | Select Brand Anchor Capabilities   Capability creation: In development 
+The Agent presents the brand's available capabilities — those generated from the brand's own knowledge base and those connected from the Capabilities Marketplace — and recommends which are most relevant to the destination's objective. Capabilities fall into two categories at this stage: brand-owned capabilities generated from the brand's Contribution Factors (specific to the brand's own data — their CMS, podcast feed, event schedule, article library), and marketplace-connected capabilities borrowed from other brands or partners.The brand reviews the Agent's recommendations, adds or removes capabilities from the selection, and can request to connect additional marketplace capabilities through conversation. The Agent surfaces the Improve Knowledge options throughout — reminding the brand that enriching their knowledge base will expand their capability set over time. The confirmed capability set becomes the data foundation that all subsequent design decisions are built around.
+ | In the full product, brands generate their own capabilities by going through the Octo Knowledge Base Onboarding flow in BCC — adding Contribution Factors and triggering capability generation. They can also connect capabilities from other brands via the Capabilities Marketplace. Both of these are BCC-side processes, not in-Agent workflow steps. For the iHeart demo, pre-built capabilities are used — this process is still in development and not available in Phase 1.
+5 | Create and Validate the Sitemap  
+Based on the agreed objective and selected capabilities, the Agent proposes a sitemap — the full page architecture of the destination, including navigation hierarchy. This is a collaborative step: the Agent presents its recommended structure with reasoning, and the brand marketer reviews, challenges, and refines it through conversation. The Agent iterates on feedback — adding pages, removing sections, or restructuring hierarchy — until the brand is satisfied. Once confirmed, the sitemap is locked and the two move to wireframing together.
+6 | Create and Validate the Wireframe  
+For each page in the approved sitemap, the Agent proposes a wireframe — a structural layout of Containers and Blocks with placeholder content, showing how information is organised within the page. The Agent explains its structural choices and the brand marketer responds with adjustments: repositioning blocks, changing the content hierarchy, or adding new sections. The Agent updates the wireframe in real time and continues iterating until each page's structure is signed off. No visual design is applied at this stage — only structure and content placement are defined.
+7 | Create and Validate the Visual Design  
+The Agent takes the confirmed wireframe and proposes a visual design — mapping the brand's colors, typography, and visual language to every Layer using Maya SDK JSON configuration. Rather than presenting a single finalised output, the Agent walks the brand through its design decisions, explaining why specific treatments were chosen. The brand marketer can push back on any element — adjusting color application, refining typography scale, or changing visual emphasis — and the Agent updates the design incrementally. The result is a fully designed, interactive preview on the canvas that the brand has shaped through active collaboration.
+8 | Generate Implementation  
+The Agent translates the approved design into a live Genuin implementation — drawing on Maya's platform knowledge to wire each section to the right capability, configure the right SDK components, and produce a complete, deployable build. The full Genuin SDK implementation is generated automatically. A code view is optionally available for the brand's technical stakeholders to review what will be deployed. No action is required from the brand's technical team — this is a transparency feature only.
+9 | Review on QA and Deploy to Production  
+The implementation is first deployed to a QA subdomain on Genuin infrastructure. The brand uses the QA deployment to test the live experience, share it internally for approvals, and provide final feedback. Once the brand approves, a single confirmation triggers deployment to the production subdomain. The whitelabelled destination goes live on Genuin infrastructure with no action required from the brand's engineering team.
+ | A non-technical user (marketer or designer) should be able to conduct a single Octo Canvas vibe session — starting from the objective question and ending at a QA deployment — and the visual output should land close to the pre-defined target Figma design for the iHeartVIP destination. This session will be recorded as a Loom video and demonstrated live to iHeart.
+In Scope for Phase 1 | Not in Phase 1 (Phase 2 or separate track)
+Full 9-step Agent workflow
+Brand identity extraction and Octo profile storage
+Live canvas with conversation-driven updates
+Pre-built demo capabilities (CMS, podcast, contests, live events)
+QA and production deployment on Genuin infra
+Optional code view for technical review | Capability Builder Agent (dynamic capability creation)
+Manual canvas editing (drag-and-drop)
+AI-generated capability recommendations
+Production CMS connections with real brand data
+Capability billing and infra cost attribution
+Multi-brand rollout
+ | The Capability Builder is being developed as a separate concept document and product track. It is referenced in the Octo Canvas workflow (step 4) as a Coming Soon feature. Both tracks — Octo Canvas and the Capability Builder — are designed to interoperate seamlessly in the full product.
+Stage | Environment | Purpose | Who Acts
+1 | QA Subdomain | Test the live experience. Share internally for stakeholder review and approvals. Collect final feedback. | Brand reviews and iterates via Agent
+2 | Brand Approval | Brand confirms the QA build is ready for production. Single confirmation in the Agent interface. | Brand gives go-live approval
+3 | Production Subdomain | Whitelabelled destination goes live on Genuin infrastructure. Accessible at the brand's assigned subdomain. | Genuin auto-deploys. No brand engineering action required.
+Layer | What Runs Here | Notes
+Agent Infrastructure | Maya orchestration layer, Octo Canvas Agent, OctoGPT Agent, and all future product agents. Common, shared infrastructure across all Octo products. | Genuin-managed. LLM API calls routed through this layer. Token consumption metered here.
+Brand Knowledge Layer | Octo Brand Profile — identity, persona, tonality, capability metadata — for all brands on the platform. | Genuin-managed. Shared read/write by all product agents authorised for that brand.
+Brand Capability Infrastructure | Per-brand isolated virtual environments hosting each brand's Octo anchor capabilities — CMS connectors, podcast feeds, contest APIs, event endpoints, and any other registered brand data services. | Brand data is fully isolated. No cross-brand data sharing. Per-brand infra cost is attributable.
+Maya Platform Infrastructure | Shared Genuin growth infrastructure: personalisation engine, community infrastructure, workflow orchestration, auto-prompting. | Genuin-managed. Shared across all brands. Not provisioned per-brand.
+Destination Hosting | QA and production subdomain hosting for every deployed Genuin SDK destination. CDN, SSL, and runtime serving. | Genuin-managed. Brand receives subdomain. No brand engineering involvement.
+Activity | Billed? | Notes
+Objective definition & brand knowledge surfacing | Yes | Lower cost if brand knowledge already exists.
+Sitemap, wireframe, and design generation | Yes | Scales with number of pages and number of iteration turns.
+SDK implementation generation | Yes | Highest single-step cost. Scales with destination complexity.
+QA deployment | Infrastructure only | No LLM tokens. Hosting cost attributed per subdomain.
+Production deployment & ongoing hosting | Infrastructure only | Ongoing hosting and runtime personalisation engine costs apply post-launch.
+iHeart demo session (Phase 1) | Genuin-covered | Demo session costs are absorbed by Genuin. Wallet billing is not active for Phase 1.
+ | The pricing model — credit cost per token tier, per-page complexity multipliers, and infrastructure rate cards — will be defined in the commercial design phase. The architecture described here establishes the metering and wallet deduction mechanism; pricing is a separate workstream.

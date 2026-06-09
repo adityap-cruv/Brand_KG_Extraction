@@ -1,0 +1,681 @@
+{
+  "source_doc": "Genuin for Brands and Advertisers - Publicis Health Media - GSK",
+  "entities": [
+    {
+      "name": "Matt Wurst",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Chief Marketing Officer at Genuin, listed as a contact on the deck (matt@begenuin.com).",
+      "seniority_tier": "C_SUITE",
+      "role_title": "CMO",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Daniel Harrison",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Senior Strategic Advisor at Genuin, listed as a contact on the deck (daniel@begenuin.com).",
+      "seniority_tier": "ADVISOR",
+      "role_title": "Senior Strategic Advisor",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Offsite In-Network",
+      "bucket": "Product",
+      "type": "Program",
+      "aliases": [
+        "Offsite In-Network Sponsorship"
+      ],
+      "description": "Genuin's sponsorship program that extends contextual relevance and video distribution across the open web via partner publishers in the Genuin Network."
+    },
+    {
+      "name": "Sponsored Post",
+      "bucket": "Product",
+      "type": "AdProduct",
+      "aliases": [
+        "Offsite In-Network Sponsored Post",
+        "Sponsored Video Post"
+      ],
+      "description": "Sponsored video post placement that extends contextual continuity across publisher destinations using IAB-standard 300x600 and 300x250 units."
+    },
+    {
+      "name": "Sponsored Takeover",
+      "bucket": "Product",
+      "type": "AdProduct",
+      "aliases": [
+        "Offsite In-Network Sponsored Takeover"
+      ],
+      "description": "Sponsored content orchestration with journey takeover that configures funnel and relevance across a user session."
+    },
+    {
+      "name": "IAB Compatible Session Takeover",
+      "bucket": "Product",
+      "type": "AdProduct",
+      "aliases": [
+        "Offsite In-Network IAB Compatible Session Takeover"
+      ],
+      "description": "Full-funnel activation format that orchestrates partner ads and house ads in IAB-standard slots across a publisher session."
+    },
+    {
+      "name": "Extended O&O Sponsorship",
+      "bucket": "Product",
+      "type": "AdProduct",
+      "aliases": [
+        "Offsite In-Network Extended O&O Sponsorship"
+      ],
+      "description": "Sponsorship format that maximizes relevance on every media impression by extending owned-and-operated sponsorship reach offsite."
+    },
+    {
+      "name": "Genuin Network",
+      "bucket": "Product",
+      "type": "Network",
+      "aliases": [
+        "Network"
+      ],
+      "description": "Genuin's distribution network of 300+ partner publisher destinations delivering 237MM reach and 4B impressions/month, extendable to 1.2BB+ programmatic reach."
+    },
+    {
+      "name": "Contextual Activation",
+      "bucket": "Product",
+      "type": "Capability",
+      "aliases": [
+        "Phase 1 Contextual Activation"
+      ],
+      "description": "Phase 1 activation in which AI matches video content to audience context across 300+ brand-safe network destinations without a data handshake."
+    },
+    {
+      "name": "1:1 Addressable Audiences",
+      "bucket": "Product",
+      "type": "Capability",
+      "aliases": [
+        "Phase 3 RMN + 1:1 Addressable Audiences"
+      ],
+      "description": "Phase 3 capability that activates precision 1:1 addressable targeting on top of the contextual foundation, with closed-loop measurement via RMN/CMN data."
+    },
+    {
+      "name": "Brand & Agency 1P Data Augmentation",
+      "bucket": "Product",
+      "type": "Capability",
+      "aliases": [
+        "Phase 2 Augment"
+      ],
+      "description": "Phase 2 capability that layers brand and agency first-party segments into the contextual framework to sharpen targeting while preserving data ownership."
+    },
+    {
+      "name": "Repurposed Social",
+      "bucket": "Product",
+      "type": "Workflow",
+      "aliases": [
+        "Import from Socials"
+      ],
+      "description": "Workflow that imports existing social video assets, curates them on Genuin, and activates them across the Network."
+    },
+    {
+      "name": "IAB Standards",
+      "bucket": "Engineering",
+      "type": "Standard",
+      "aliases": [
+        "IAB"
+      ],
+      "description": "Industry ad-unit standards (300x600, 300x250) supported by Offsite In-Network sponsored placements."
+    },
+    {
+      "name": "Pixel URL",
+      "bucket": "Engineering",
+      "type": "TrackingTech",
+      "aliases": [],
+      "description": "Pixel tracking URL supported by Offsite In-Network ad units for campaign measurement."
+    },
+    {
+      "name": "GTM ID",
+      "bucket": "Engineering",
+      "type": "TrackingTech",
+      "aliases": [
+        "Google Tag Manager ID"
+      ],
+      "description": "Google Tag Manager identifier supported as a tracking input on Offsite In-Network ad units."
+    },
+    {
+      "name": "Google GCP",
+      "bucket": "Engineering",
+      "type": "DataPlatform",
+      "aliases": [
+        "GCP",
+        "Google Cloud Platform"
+      ],
+      "description": "Certified data destination for raw campaign data shipped back to advertisers."
+    },
+    {
+      "name": "Amazon AWS",
+      "bucket": "Engineering",
+      "type": "DataPlatform",
+      "aliases": [
+        "AWS"
+      ],
+      "description": "Certified data destination for raw campaign data shipped back to advertisers."
+    },
+    {
+      "name": "Oracle OCI",
+      "bucket": "Engineering",
+      "type": "DataPlatform",
+      "aliases": [
+        "OCI",
+        "Oracle Cloud Infrastructure"
+      ],
+      "description": "Certified data destination for raw campaign data shipped back to advertisers."
+    },
+    {
+      "name": "MixPanel",
+      "bucket": "Engineering",
+      "type": "Analytics",
+      "aliases": [
+        "Mixpanel"
+      ],
+      "description": "Certified analytics destination supported for shipping raw campaign data."
+    },
+    {
+      "name": "Snowflake",
+      "bucket": "Engineering",
+      "type": "DataWarehouse",
+      "aliases": [],
+      "description": "Certified data warehouse destination for raw campaign data shipped back to advertisers."
+    },
+    {
+      "name": "MMP Integration",
+      "bucket": "Engineering",
+      "type": "Integration",
+      "aliases": [
+        "Mobile Measurement Partner Integration"
+      ],
+      "description": "Integration that maps Offsite In-Network raw data against advertiser MMP, attribution partners, and analytics tools."
+    },
+    {
+      "name": "Pay Genuin Direct",
+      "bucket": "Business",
+      "type": "PaymentPath",
+      "aliases": [],
+      "description": "Activation path where the marketer pays Genuin directly and Genuin invoices and resolves payouts to all network publishers."
+    },
+    {
+      "name": "Pay Publisher Direct",
+      "bucket": "Business",
+      "type": "PaymentPath",
+      "aliases": [],
+      "description": "Activation path where the marketer leverages an existing direct relationship and payment setup with the publisher."
+    },
+    {
+      "name": "Pay via RMN",
+      "bucket": "Business",
+      "type": "PaymentPath",
+      "aliases": [],
+      "description": "Activation path where the marketer pays their Retail Media Network and the RMN pays Genuin via a Genuin-generated invoice."
+    },
+    {
+      "name": "Publisher Infrastructure Agreement",
+      "bucket": "Business",
+      "type": "RevenueModel",
+      "aliases": [
+        "Monetized Infrastructure agreement"
+      ],
+      "description": "Revenue model in which publishers pay Genuin for monetized infrastructure while advertisers pay zero infrastructure fees."
+    },
+    {
+      "name": "Zero-Party Data Ownership",
+      "bucket": "Business",
+      "type": "DataPolicy",
+      "aliases": [
+        "Zero-Party Data"
+      ],
+      "description": "Policy giving advertisers full ownership of engagement data (views, interactions, CTAs) shipped to their own infrastructure; Genuin acts as Data Processor, not Data Controller."
+    },
+    {
+      "name": "0% Tech Tax",
+      "bucket": "Business",
+      "type": "PricingModel",
+      "aliases": [
+        "Zero Tech Tax",
+        "Free Forever for Global Brands"
+      ],
+      "description": "Commercial promise of zero infrastructure fees for advertisers, with 100% working media and transparent pass-throughs to network partners."
+    },
+    {
+      "name": "Contextual Continuity",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Marketing concept of extending consistent contextual relevance for a brand's video across publisher destinations via Sponsored Post placements."
+    },
+    {
+      "name": "Journey Orchestration",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Marketing concept of orchestrating partner and house ads across a user session for full-funnel activation."
+    },
+    {
+      "name": "Full Funnel Activation",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [
+        "Full-Funnel Activation"
+      ],
+      "description": "Activation strategy spanning awareness to advocacy via contextually mapped content across the Genuin Network."
+    },
+    {
+      "name": "Out-of-Market to In-Market Conversion",
+      "bucket": "Marketing",
+      "type": "Measurement",
+      "aliases": [],
+      "description": "Measurement capability tracking which audiences move from unaware to actively considering, with closed-loop attribution across publisher placements."
+    },
+    {
+      "name": "Knowledge Seekers",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [],
+      "description": "Audience segment reached through exclusive network destinations."
+    },
+    {
+      "name": "Listeners",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [],
+      "description": "Audio-oriented audience segment reached through exclusive network destinations."
+    },
+    {
+      "name": "Diners",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [],
+      "description": "Food and dining audience segment reached through exclusive network destinations."
+    },
+    {
+      "name": "Readers",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [],
+      "description": "Editorial/reading audience segment reached through exclusive network destinations."
+    },
+    {
+      "name": "Brands and Advertisers",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [
+        "Brands & Advertisers"
+      ],
+      "description": "Customer segment targeted with reach and distribution of video assets to engaged audiences in the Network."
+    },
+    {
+      "name": "Retailers and Commerce",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [
+        "Retailers & Commerce"
+      ],
+      "description": "Customer segment targeted with embedded video experiences that drive onsite engagement, product sales, and media revenue."
+    },
+    {
+      "name": "Consumers",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [],
+      "description": "End-user segment served personalized feeds with relevant content, offers, and social interaction."
+    },
+    {
+      "name": "iHeart",
+      "bucket": "Partnerships",
+      "type": "Publisher",
+      "aliases": [
+        "iHeartMedia"
+      ],
+      "description": "Network partner publisher cited as a pass-through destination for advertiser media payments."
+    },
+    {
+      "name": "Grubhub",
+      "bucket": "Partnerships",
+      "type": "Publisher",
+      "aliases": [],
+      "description": "Network partner publisher cited as a pass-through destination for advertiser media payments."
+    },
+    {
+      "name": "Us Weekly",
+      "bucket": "Partnerships",
+      "type": "Publisher",
+      "aliases": [],
+      "description": "Network partner publisher cited as a pass-through destination for advertiser media payments."
+    },
+    {
+      "name": "NFL",
+      "bucket": "Partnerships",
+      "type": "Publisher",
+      "aliases": [
+        "National Football League"
+      ],
+      "description": "Example partner shown with placements across the network's exclusive domains."
+    },
+    {
+      "name": "Publicis Health Media",
+      "bucket": "Partnerships",
+      "type": "Agency",
+      "aliases": [
+        "PHM"
+      ],
+      "description": "Health-focused media agency named in the deck title as the agency partner for the GSK pitch."
+    },
+    {
+      "name": "GSK",
+      "bucket": "Partnerships",
+      "type": "Advertiser",
+      "aliases": [
+        "GlaxoSmithKline"
+      ],
+      "description": "Pharmaceutical advertiser featured as the brand in the Extended O&O Sponsorship example on slide 14."
+    },
+    {
+      "name": "Retail Media Network",
+      "bucket": "Partnerships",
+      "type": "Channel",
+      "aliases": [
+        "RMN"
+      ],
+      "description": "Retail Media Network channel through which marketers can pay and reallocate budgets for measurable outcomes."
+    },
+    {
+      "name": "Commerce Media Network",
+      "bucket": "Partnerships",
+      "type": "Channel",
+      "aliases": [
+        "CMN"
+      ],
+      "description": "Commerce Media Network channel connected for closed-loop measurement in Phase 3."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Offsite In-Network",
+      "target": "Sponsored Post",
+      "type": "INCLUDES",
+      "description": "Sponsored Post is an Offsite In-Network format extending contextual continuity."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Sponsored Takeover",
+      "type": "INCLUDES",
+      "description": "Sponsored Takeover is an Offsite In-Network format configuring funnel and relevance."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "IAB Compatible Session Takeover",
+      "type": "INCLUDES",
+      "description": "IAB Compatible Session Takeover is an Offsite In-Network full-funnel activation format."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Extended O&O Sponsorship",
+      "type": "INCLUDES",
+      "description": "Extended O&O Sponsorship is an Offsite In-Network format that maximizes relevance per impression."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Genuin Network",
+      "type": "DISTRIBUTES",
+      "description": "Offsite In-Network distributes sponsored content across the Genuin Network of partner publishers."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Repurposed Social",
+      "type": "USES",
+      "description": "Offsite In-Network leverages the Repurposed Social workflow to import and activate social video assets."
+    },
+    {
+      "source": "Contextual Activation",
+      "target": "Offsite In-Network",
+      "type": "PART_OF",
+      "description": "Contextual Activation is the Phase 1 component of the Offsite In-Network phased approach."
+    },
+    {
+      "source": "Brand & Agency 1P Data Augmentation",
+      "target": "Offsite In-Network",
+      "type": "PART_OF",
+      "description": "Brand & Agency 1P Data Augmentation is the Phase 2 component of the Offsite In-Network phased approach."
+    },
+    {
+      "source": "1:1 Addressable Audiences",
+      "target": "Offsite In-Network",
+      "type": "PART_OF",
+      "description": "1:1 Addressable Audiences is the Phase 3 component of the Offsite In-Network phased approach."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "IAB Standards",
+      "type": "USES",
+      "description": "Sponsored Post uses IAB-standard 300x600 and 300x250 ad units."
+    },
+    {
+      "source": "IAB Compatible Session Takeover",
+      "target": "IAB Standards",
+      "type": "USES",
+      "description": "Session Takeover orchestrates IAB-standard 300x600 and 300x250 units across a session."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Pixel URL",
+      "type": "USES",
+      "description": "Sponsored Post ad units support Pixel URL tracking."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "GTM ID",
+      "type": "USES",
+      "description": "Sponsored Post ad units support GTM ID tracking."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "iHeart",
+      "type": "INCLUDES",
+      "description": "iHeart is a network partner publisher within the Genuin Network."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Grubhub",
+      "type": "INCLUDES",
+      "description": "Grubhub is a network partner publisher within the Genuin Network."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Us Weekly",
+      "type": "INCLUDES",
+      "description": "Us Weekly is a network partner publisher within the Genuin Network."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "NFL",
+      "type": "INCLUDES",
+      "description": "NFL is shown as an example partner with placements across network destinations."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Brands and Advertisers",
+      "type": "TARGETED_AT",
+      "description": "Offsite In-Network targets brands and advertisers seeking reach and distribution."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Retailers and Commerce",
+      "type": "TARGETED_AT",
+      "description": "Offsite In-Network targets retailers and commerce partners with onsite engagement and media revenue."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Consumers",
+      "type": "TARGETED_AT",
+      "description": "The Genuin Network delivers personalized feeds and offers to consumers."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Knowledge Seekers",
+      "type": "TARGETED_AT",
+      "description": "The Genuin Network reaches the Knowledge Seekers audience segment."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Listeners",
+      "type": "TARGETED_AT",
+      "description": "The Genuin Network reaches the Listeners audience segment."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Diners",
+      "type": "TARGETED_AT",
+      "description": "The Genuin Network reaches the Diners audience segment."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Readers",
+      "type": "TARGETED_AT",
+      "description": "The Genuin Network reaches the Readers audience segment."
+    },
+    {
+      "source": "Pay Genuin Direct",
+      "target": "Offsite In-Network",
+      "type": "PART_OF",
+      "description": "Pay Genuin Direct is one of three payment paths to activate Offsite In-Network media."
+    },
+    {
+      "source": "Pay Publisher Direct",
+      "target": "Offsite In-Network",
+      "type": "PART_OF",
+      "description": "Pay Publisher Direct is one of three payment paths to activate Offsite In-Network media."
+    },
+    {
+      "source": "Pay via RMN",
+      "target": "Offsite In-Network",
+      "type": "PART_OF",
+      "description": "Pay via RMN is one of three payment paths to activate Offsite In-Network media."
+    },
+    {
+      "source": "Pay via RMN",
+      "target": "Retail Media Network",
+      "type": "USES",
+      "description": "The Pay via RMN path routes marketer payments through their Retail Media Network."
+    },
+    {
+      "source": "1:1 Addressable Audiences",
+      "target": "Retail Media Network",
+      "type": "DEPENDS_ON",
+      "description": "Phase 3 closed-loop measurement connects RMN data to enable 1:1 addressable activation."
+    },
+    {
+      "source": "1:1 Addressable Audiences",
+      "target": "Commerce Media Network",
+      "type": "DEPENDS_ON",
+      "description": "Phase 3 closed-loop measurement connects CMN data to enable 1:1 addressable activation."
+    },
+    {
+      "source": "Publisher Infrastructure Agreement",
+      "target": "0% Tech Tax",
+      "type": "POWERS",
+      "description": "Publisher infrastructure agreements fund Genuin's revenue, allowing advertisers to pay zero infrastructure fees."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Zero-Party Data Ownership",
+      "type": "FEATURES",
+      "description": "Offsite In-Network delivers full zero-party engagement data ownership to advertisers."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "0% Tech Tax",
+      "type": "FEATURES",
+      "description": "Offsite In-Network is positioned as 0% Tech Tax, with 100% working media and transparent pass-throughs."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Contextual Continuity",
+      "type": "FEATURES",
+      "description": "Sponsored Post extends contextual continuity for the brand across publisher destinations."
+    },
+    {
+      "source": "IAB Compatible Session Takeover",
+      "target": "Journey Orchestration",
+      "type": "FEATURES",
+      "description": "Session Takeover delivers journey orchestration across partner and house ads in a session."
+    },
+    {
+      "source": "IAB Compatible Session Takeover",
+      "target": "Full Funnel Activation",
+      "type": "FEATURES",
+      "description": "Session Takeover provides full-funnel activation across IAB-standard slots."
+    },
+    {
+      "source": "Extended O&O Sponsorship",
+      "target": "GSK",
+      "type": "FEATURES",
+      "description": "Slide 14 features GSK as the advertiser example for Extended O&O Sponsorship."
+    },
+    {
+      "source": "GSK",
+      "target": "Publicis Health Media",
+      "type": "REPRESENTED_BY",
+      "description": "The deck is framed as a pitch to GSK via their agency Publicis Health Media."
+    },
+    {
+      "source": "MMP Integration",
+      "target": "Zero-Party Data Ownership",
+      "type": "POWERS",
+      "description": "MMP integration maps Offsite In-Network raw data into the advertiser's stack, enabling zero-party data ownership."
+    },
+    {
+      "source": "MMP Integration",
+      "target": "Google GCP",
+      "type": "INTEGRATES_WITH",
+      "description": "Raw campaign data can be shipped to Google GCP as a certified destination."
+    },
+    {
+      "source": "MMP Integration",
+      "target": "Amazon AWS",
+      "type": "INTEGRATES_WITH",
+      "description": "Raw campaign data can be shipped to Amazon AWS as a certified destination."
+    },
+    {
+      "source": "MMP Integration",
+      "target": "Oracle OCI",
+      "type": "INTEGRATES_WITH",
+      "description": "Raw campaign data can be shipped to Oracle OCI as a certified destination."
+    },
+    {
+      "source": "MMP Integration",
+      "target": "MixPanel",
+      "type": "INTEGRATES_WITH",
+      "description": "Raw campaign data can be shipped to MixPanel as a certified analytics destination."
+    },
+    {
+      "source": "MMP Integration",
+      "target": "Snowflake",
+      "type": "INTEGRATES_WITH",
+      "description": "Raw campaign data can be shipped to Snowflake as a certified data warehouse destination."
+    },
+    {
+      "source": "Out-of-Market to In-Market Conversion",
+      "target": "Offsite In-Network",
+      "type": "PART_OF",
+      "description": "Out-of-Market to In-Market Conversion is a measurement capability delivered through Offsite In-Network."
+    },
+    {
+      "source": "Matt Wurst",
+      "target": "Offsite In-Network",
+      "type": "LEADS",
+      "description": "As Genuin's CMO and named contact, Matt Wurst leads marketing for the Offsite In-Network program."
+    },
+    {
+      "source": "Daniel Harrison",
+      "target": "Offsite In-Network",
+      "type": "WORKS_ON",
+      "description": "Daniel Harrison is the Senior Strategic Advisor contact for the Offsite In-Network program."
+    }
+  ],
+  "_src_hash": "156ad2d4ea0a38b30670e532464053b51369cd0c52933dcf530b63998bd02cda",
+  "_skill_sig": "4edd28021f3312b1"
+}

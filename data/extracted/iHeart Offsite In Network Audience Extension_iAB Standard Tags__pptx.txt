@@ -1,0 +1,152 @@
+--- Slide 1 ---
+Offsite In-Network
+Q1 2026 Getting Started for Commerce Media Teams
+2026. All information herein deemed confidential.
+
+--- Slide 2 ---
+Extend Audio, Programmatic, Social Budgets
+iAB Standards
+|  PLACEMENT STYLES
+|  Demo 300x600, 300x250
+2026. All information herein deemed confidential.
+USE CASES • Offsite Session Takeover by iHeart
+Your Partner (Ad)
+Your Holding Co. (Wonder)
+Your Partner
+(Ad)
+Your Brand (House Ad)
+Your Partner (Ad)
+Audio Ad
+Audio Ad Server
+Video Ad
+Video Ad Server
+Sponsored Highlights
+Sponsored Post
+Onsite Or Offsite Session Takeover
+
+--- Slide 3 ---
+Your Partner (Ad)
+300x600
+Your Holding Co. (House Ad)
+Your Partner (Ad)
+Your Brand (House Ad)
+Your Partner (Ad)
+300x250
+Your Partner (Ad)
+Your Holding Co. (House Ad)
+Your Partner
+(Ad)
+Your Brand (House Ad)
+Your Partner (Ad)
+|  Full Funnel Activation
+2026. All information herein deemed confidential.
+iAB Compatible Session Takeover
+|  Journey Orchestration
+GROW • In-Network Sponsorship
+
+--- Slide 4 ---
+Transactional Transparency: No Added Tech Tax
+3 Ways to activate media offsite in-network: Transparent pass-throughs to network partners
+1
+Pay Genuin Direct
+Marketer pays Genuin
+Marketer pays Genuin directly for all campaigns. Genuin generates the invoice and resolves payouts to all network publishers.
+Full visibility into where every dollar goes…  iHeart, Grubhub, Us Weekly, and every partner in the network.
+↓  Publishers (pass-through)
+or
+2
+Pay Publisher Direct
+Marketer pays the Publisher
+Marketer leverages their existing direct relationship and payment setup with the publisher.
+Cleanest path for teams with established partnerships. No new billing relationship required with Genuin.
+↓  Publishers (direct)
+or
+3
+Pay via RMN
+Marketer pays their RMN
+Marketer pays their Retail Media Network directly. The RMN pays Genuin via a Genuin-generated invoice.
+Advertiser is responsible for ensuring payment resolution. Genuin resolves all publisher payouts.
+↓  RMN → Genuin → Publishers
+HOW GENUIN EARNS REVENUE
+In ALL cases, the Publisher pays
+Genuin for Monetized Infrastructure.
+Advertisers pay ZERO infrastructure fees. Forever.
+All advertiser media payments are a direct, transparent pass-through to our network partners (iHeart, Grubhub, Us Weekly, and 300+ more). Genuin's revenue comes exclusively from publisher infrastructure agreements.
+
+--- Slide 5 ---
+Measurement & Data – In Your Control
+In-network offsite sponsorship gives you more of the raw data you need, directly in your infra
+Full Funnel Measurement & Optimization
+Out-of-Market to In-Market Conversion
+For the first time, measure which audiences you moved from unaware to actively considering; closed-loop attribution across every publisher placement.
+Reach, Frequency & Budget Optimization
+See activity on each publisher, by payment path. Know exactly what reach and frequency you're buying and reallocate budget in real time based on performance. Invite best performing programmatic publishers directly into your network.
+Zero-Party Data Ownership
+All engagement data (views, interactions, CTAs) is yours. Not the publisher's. Not Genuin's. Yours. Sent back to you in raw format, in whatever structure you need at your existing data infrastructure destinations..
+How We Get You the Data
+1
+Raw Data, Shipped Back to You
+We send all campaign data back in raw format, exactly how you want it. Publisher-level activity, spend, reach, frequency, engagement, and CTAs. No black box.
+2
+Map Against Your MMP & Data Stack
+Connect to your existing MMP, attribution partners, and analytics tools. We push directly to your data warehouse, closing the loop without adding new complexity.
+3
+Certified Data Destinations
+Send your data wherever it needs to go:
+Google GCP
+Amazon AWS
+Oracle OCI
+MixPanel
+Snowflake
+Your Warehouse
+Your data. Your warehouse. Your rules. Genuin acts as a Data Processor, not a Data Controller.
+
+--- Slide 6 ---
+Join the Network
+$500k
+$50k
+$5M
+T1
+T2
+T3
+Test
+Launch
+Scale
+SOV
+SOV
+SOV
+
+--- Slide 7 ---
+Peter Bavaro
+US Partnership Sales
+peter@begenuin.com
+2026. All information herein deemed confidential.
+Thank You
+
+--- Slide 8 ---
+2026. All information herein deemed confidential.
+Step 1: Connect Your Demand
+Getting Started: Offsite In-Network Sponsorship
+Step 2: Cookie Sync for Audience Extension
+Step 3: Activate Buy Across The Network
+Step 4: Deliver measurement in your advertiser’s existing tracking platform
+Genuin creates offsite tag for iHeart with 5 ad slots for iHeart to route their demand into
+Heart Ad Demand from multiple sources connected at Beeswax Ad Server
+iHeart routes campaigns to Genuin with dealID provided by infolinks
+
+--- Slide 9 ---
+2026. All information herein deemed confidential.
+Next Steps: Offsite In-Network Sponsorship
+Heart Ad Demand from multiple sources connected at Beeswax Ad Server
+iHeart routes campaigns to Genuin with dealID provided by infolinks
+Genuin creates offsite tag for iHeart with 5 ad slots for iHeart to route their demand into
+Infolink will traffic the offsite tag from their 30K+ network of publishers with audio on
+Genuin optimizes to play multiple ad videos in player to maximize margin for trade media solution subsidiary
+iHeart will give ID sync to Infolink and traffic all campaigns via Beeswax Ad Server by 2 options
+Option 1: Beeswax is doing ID sync with exchanges and only buying and trafficking with ads when ID mapping is established.
+Option 2: iHeart will create video VAST and audio VAST tag from Beeswax ad server and there will be fallback logic for infolink after 200 ms to fallback to other demand from infolink’s existing set up if no ads being rendered from iHeart ad server.
+iHeart will run all audience extension budget of audio ads and also video ads at $1.7CPM in Genuin network of Infolink onsite properties with audio on in iAB compatible session takeover unit.
+iHeart will give infolink $1.70 CPM IO for all offsite campaigns and cost of session takeover on infolink will be $1 - $0.80 CPM for 300*600 and 300*250 ad units with audio on.
+Genuin subsidiary will earn $0.10 - $2 arbitrage margin by maximizing optimization on consumer experience curation that will be billed to Infolink as trade media solution and feed algorithm billing by Genuin subsidiary.
+Genuin Subsidiary will have a contract with JR LLC for Year 1 30%, Year 2 20% and Year 3 10% on all revenue being generated by the subsidiary.
+JR LLC will bring other publishers and activate the audience extension for below $1CPM to increase margin for subsidiaries.

@@ -1,0 +1,447 @@
+{
+  "source_doc": "Genuin_BetterCollective_M1_APRIL 2026",
+  "entities": [
+    {
+      "name": "Video Experience Infrastructure",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Engagement & Revenue Infrastructure"
+      ],
+      "description": "Plug-and-play SDK to engage and monetize onsite and offsite in-network, delivering embedded video experiences across O&O surfaces."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Plug-and-play SDK"
+      ],
+      "description": "The comprehensive SDK that powers onsite personalized feeds and offsite distribution of video assets across partner destinations."
+    },
+    {
+      "name": "Onsite Placement",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Onsite"
+      ],
+      "description": "Personalized feeds that drive discovery, engagement, and new revenue across publisher O&O properties."
+    },
+    {
+      "name": "Offsite In-Network",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Offsite"
+      ],
+      "description": "Reach and distribution of video assets across the Genuin Network of partner destinations with extended programmatic placements."
+    },
+    {
+      "name": "Sponsored Post",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Advertiser ads or content inserted within O&O content carousels, feeds, and grids, sold direct or programmatically via DealID on a CPM basis."
+    },
+    {
+      "name": "Sponsored Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "100% SOV carousels, feeds, and grids for advertising partners across O&O app/web surfaces, sold direct by Publisher as CPM."
+    },
+    {
+      "name": "Programmatic In-Stream",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Preroll, midroll, and endroll placements of partner advertising on publisher content, bought and sold programmatically via DealID on a CPM basis."
+    },
+    {
+      "name": "Session Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "100% session SOV via multiple placements of partner advertising across the user session, bought programmatically via DealID."
+    },
+    {
+      "name": "Audience Extension",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Extended Placements"
+      ],
+      "description": "Programmatic in-feed and in-stream extended placements that maximize margin via audience extension and bundle partnerships."
+    },
+    {
+      "name": "Video Carousel Format",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "9:16 vertical video format under 5 minutes with multiple linkout overlays used across sponsored placements."
+    },
+    {
+      "name": "DealID",
+      "bucket": "Product",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Programmatic deal identifier mechanism used to buy and sell Genuin sponsored placements and in-stream inventory."
+    },
+    {
+      "name": "Unified Data Delivery",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Raw data delivery covering reach, time spent, engagement, performance by content, link actions, and monetization for ingest into publisher analytic platforms."
+    },
+    {
+      "name": "Extended O&O Sponsorships",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Offsite in-network sponsorship product that maximizes margin via audience extension and bundles partnerships across the network."
+    },
+    {
+      "name": "Extended Brand Experiences",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Growth offering for offsite in-network that configures funnel, relevance, and discovery and supports timely brand initiatives."
+    },
+    {
+      "name": "Genuin Network",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "Genuin Network of partner destinations"
+      ],
+      "description": "Network of trusted partner sites with 237MM reach and 4B impressions per month where brand assets are distributed to engaged audiences."
+    },
+    {
+      "name": "Extended Audience",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "Programmatic scale audience pool of 1.2BB+ reach extending the Genuin Network's onsite distribution."
+    },
+    {
+      "name": "Consumers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "End users receiving contextually relevant feeds providing content, offers, and social interaction across publisher surfaces."
+    },
+    {
+      "name": "Brands and Advertisers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Consumer Brands, Advertisers, Partners",
+        "Demand Partners"
+      ],
+      "description": "Buyers whose assets are distributed across the Genuin Network of trusted sites to reach engaged audiences at scale."
+    },
+    {
+      "name": "Publishers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Publisher"
+      ],
+      "description": "O&O property owners who set CPM costs and floors, sell direct and programmatic inventory, and host Genuin video experiences across home pages, articles, tabs, and PDPs."
+    },
+    {
+      "name": "Us Magazine",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "usmagazine.com"
+      ],
+      "description": "Publisher destination referenced as a live example of Genuin video experience deployment."
+    },
+    {
+      "name": "Daily Faceoff",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Partner content brand featured in 'Brought to you by Daily Faceoff' Highlights and the Zamboni Nation curated extended brand experience."
+    },
+    {
+      "name": "Action Network",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Partner curating the 'Built for Action' extended O&O sponsorship example used to illustrate audience extension margin."
+    },
+    {
+      "name": "Better Collective",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "BetterCollective"
+      ],
+      "description": "Partner organization addressed by this April 2026 M1 proposal deck outlining Genuin's onsite and offsite monetization offering."
+    },
+    {
+      "name": "Brand Content",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Brand-supplied video assets used to power onsite and offsite placements alongside social and partner content."
+    },
+    {
+      "name": "Creator UGC",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [
+        "Creators & UGC"
+      ],
+      "description": "Optional creator and user-generated content used to power feed experiences across O&O and in-network destinations."
+    },
+    {
+      "name": "CPM Pricing Model",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [
+        "Cost Model: CPM"
+      ],
+      "description": "Cost-per-mille pricing model applied across Sponsored Post, Sponsored Takeover, Programmatic In-Stream, and Session Takeover, with publishers setting prices or floors."
+    },
+    {
+      "name": "Partnership Sales",
+      "bucket": "Business",
+      "type": "Function",
+      "aliases": [],
+      "description": "Genuin's partnership sales function responsible for closing publisher and advertiser deals, represented by Peter Bavaro on this proposal."
+    },
+    {
+      "name": "Peter Bavaro",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Genuin Partnership Sales contact (peter@begenuin.com) representing the company on the Better Collective M1 April 2026 proposal."
+    },
+    {
+      "name": "Matt Wurst",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Chief Marketing Officer at Genuin (matt@begenuin.com), co-signing the Better Collective M1 April 2026 proposal."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Video Experience Infrastructure",
+      "target": "Genuin SDK",
+      "type": "INCLUDES",
+      "description": "The Video Experience Infrastructure is delivered as a comprehensive plug-and-play SDK."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Onsite Placement",
+      "type": "POWERS",
+      "description": "The SDK powers personalized onsite feeds across publisher O&O properties."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Offsite In-Network",
+      "type": "POWERS",
+      "description": "The SDK powers offsite in-network distribution of video assets across partner destinations."
+    },
+    {
+      "source": "Onsite Placement",
+      "target": "Sponsored Post",
+      "type": "INCLUDES",
+      "description": "Sponsored Post is an onsite monetization placement within content carousels, feeds, and grids."
+    },
+    {
+      "source": "Onsite Placement",
+      "target": "Sponsored Takeover",
+      "type": "INCLUDES",
+      "description": "Sponsored Takeover is an onsite 100% SOV placement for advertising partners across O&O surfaces."
+    },
+    {
+      "source": "Onsite Placement",
+      "target": "Programmatic In-Stream",
+      "type": "INCLUDES",
+      "description": "Programmatic In-Stream preroll, midroll, and endroll placements are part of the onsite monetization mix."
+    },
+    {
+      "source": "Onsite Placement",
+      "target": "Session Takeover",
+      "type": "INCLUDES",
+      "description": "Session Takeover delivers 100% session SOV via multiple placements throughout a user session onsite."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Audience Extension",
+      "type": "INCLUDES",
+      "description": "Audience Extension provides extended programmatic in-feed and in-stream placements offsite."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Extended O&O Sponsorships",
+      "type": "INCLUDES",
+      "description": "Extended O&O Sponsorships are an offsite in-network monetization product."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Extended Brand Experiences",
+      "type": "INCLUDES",
+      "description": "Extended Brand Experiences are an offsite in-network growth product supporting brand initiatives."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Video Carousel Format",
+      "type": "USES",
+      "description": "Sponsored Post placements use the 9:16 vertical video carousel format with linkout overlays."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Video Carousel Format",
+      "type": "USES",
+      "description": "Sponsored Takeover placements use the 9:16 vertical video carousel format."
+    },
+    {
+      "source": "Programmatic In-Stream",
+      "target": "Video Carousel Format",
+      "type": "USES",
+      "description": "Programmatic In-Stream placements use the 9:16 vertical video carousel format with linkout overlays."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "DealID",
+      "type": "USES",
+      "description": "Sponsored Post inventory can be bought programmatically via DealID."
+    },
+    {
+      "source": "Programmatic In-Stream",
+      "target": "DealID",
+      "type": "USES",
+      "description": "Programmatic In-Stream inventory is bought and sold programmatically via DealID."
+    },
+    {
+      "source": "Session Takeover",
+      "target": "DealID",
+      "type": "USES",
+      "description": "Session Takeover inventory is bought programmatically via DealID."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "CPM Pricing Model",
+      "type": "USES",
+      "description": "Sponsored Post is priced on a CPM basis set by the Publisher."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "CPM Pricing Model",
+      "type": "USES",
+      "description": "Sponsored Takeover is sold by Publisher as CPM for the advertiser's experience load."
+    },
+    {
+      "source": "Programmatic In-Stream",
+      "target": "CPM Pricing Model",
+      "type": "USES",
+      "description": "Programmatic In-Stream uses a CPM model with floor set by Publisher."
+    },
+    {
+      "source": "Session Takeover",
+      "target": "CPM Pricing Model",
+      "type": "USES",
+      "description": "Session Takeover is sold as programmatic CPM impressions with floor set by Publisher."
+    },
+    {
+      "source": "Offsite In-Network",
+      "target": "Genuin Network",
+      "type": "DEPENDS_ON",
+      "description": "Offsite in-network distribution operates across the Genuin Network of partner destinations."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Extended Audience",
+      "type": "INCLUDES",
+      "description": "The Genuin Network's reach is extended via programmatic scale to 1.2BB+ Extended Audience reach."
+    },
+    {
+      "source": "Brands and Advertisers",
+      "target": "Genuin Network",
+      "type": "USES",
+      "description": "Brands and advertisers distribute their assets across the Genuin Network of trusted partner sites."
+    },
+    {
+      "source": "Publishers",
+      "target": "Onsite Placement",
+      "type": "USES",
+      "description": "Publishers deploy onsite placements across home pages, articles, tabs, and PDPs on their O&O app/web surfaces."
+    },
+    {
+      "source": "Onsite Placement",
+      "target": "Consumers",
+      "type": "TARGETED_AT",
+      "description": "Onsite personalized feeds deliver contextually relevant content, offers, and social interaction to consumers."
+    },
+    {
+      "source": "Brand Content",
+      "target": "Onsite Placement",
+      "type": "POWERS",
+      "description": "Brand, social, and partner content power onsite and offsite in-network feed experiences."
+    },
+    {
+      "source": "Creator UGC",
+      "target": "Onsite Placement",
+      "type": "POWERS",
+      "description": "Optional creator and user-generated content power onsite and offsite in-network feed experiences."
+    },
+    {
+      "source": "Us Magazine",
+      "target": "Genuin SDK",
+      "type": "USES",
+      "description": "Us Magazine is shown as a live example of a publisher running the Genuin video experience SDK."
+    },
+    {
+      "source": "Extended Brand Experiences",
+      "target": "Daily Faceoff",
+      "type": "FEATURES",
+      "description": "The Zamboni Nation extended brand experience is curated by Daily Faceoff."
+    },
+    {
+      "source": "Extended O&O Sponsorships",
+      "target": "Action Network",
+      "type": "FEATURES",
+      "description": "The 'Built for Action' extended O&O sponsorship example is curated by Action Network."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Daily Faceoff",
+      "type": "FEATURES",
+      "description": "Sponsored Post Highlights creative is shown 'Brought to you by Daily Faceoff' as an onsite example."
+    },
+    {
+      "source": "Peter Bavaro",
+      "target": "Partnership Sales",
+      "type": "WORKS_ON",
+      "description": "Peter Bavaro leads the Partnership Sales contact on the Better Collective M1 April 2026 proposal."
+    },
+    {
+      "source": "Matt Wurst",
+      "target": "Partnership Sales",
+      "type": "WORKS_ON",
+      "description": "Matt Wurst, CMO, co-signs the partnership sales proposal to Better Collective."
+    },
+    {
+      "source": "Partnership Sales",
+      "target": "Better Collective",
+      "type": "HAS_AGREEMENT_WITH",
+      "description": "Genuin's Partnership Sales function is pitching the M1 April 2026 proposal to Better Collective."
+    },
+    {
+      "source": "Unified Data Delivery",
+      "target": "Publishers",
+      "type": "TARGETED_AT",
+      "description": "Unified raw data on reach, engagement, and monetization is delivered to publishers' analytic platforms."
+    }
+  ],
+  "_src_hash": "4a78238e1ab78438628f50befe30d9a25d6e1b50a5e6975b7c9400c69b614248",
+  "_skill_sig": "4edd28021f3312b1"
+}

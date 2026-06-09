@@ -1,0 +1,575 @@
+--- Slide 1 ---
+Marketing Activation Plan
+2026 MAP:
+H1 2026. All information herein deemed confidential.
+FOR INTERNAL USE ONLY
+
+--- Slide 2 ---
+Marketing and Sales Objectives: By Workstream
+1. Awareness:
+Create Market Gravity: Own the narrative around trusted engagement infrastructure in the AI era.
+2. Consideration:
+Create Clarity: Remove friction, from evaluation to commitment. Make Genuin easy to understand, circulate internally, and justify.
+3. Convert / Land:
+Create Inevitability:  Turn interest into commitment and accelerate revenue.
+4. Expand:
+Create Revenue: Grow adoption, use cases, and monetization within each account.
+5. Retain:
+Create Loyalty: Transform customers into proof, amplification, and expansion engines.
+
+--- Slide 3 ---
+Marketing Objectives: Macro level
+ACCELERATE:
+shorten that path of demand generation
+> create experiences that drive engagement
+AMPLIFY:
+Reach more of the right audience segments:
+> right message in the right places
+
+--- Slide 4 ---
+BRAND
+Define a New Category AND Become Its Leader
+Motivate Brands to Reclaim Ownership
+Build Foundation to Scale from "1  to 10”
+Dominate Key Terms (“Brand-Safe Ecosystem,” “Zero-Party Data”)
+Demonstrate Genuin’s Value to C-Suite, Brand Teams, and Developers
+Grow Business Across Horizontals and Verticals
+Authority > Credibility > Momentum = Network
+MESSAGING
+Introduce Genuin AI as the optimal (agentic) solution OS for community-led growth.
+Establish Genuin as an authoritative voices on community, AI, media, and commerce.
+Define and educate the market about the category and its potential.
+Secure high-value earned media placements that influence buying decisions.
+“Heroify” customer stories, integrations, and monetization wins.
+Drive credibility with product, revenue, commercial, and marketing leaders in key industry categories and verticals, including RMN/CMNs, Consumer Services Brands, Media & Entertainment Publishers, Creators, and Advertisers
+Marketing Objectives: Micro level
+
+--- Slide 5 ---
+Landscape and
+Target Audiences
+
+--- Slide 6 ---
+Tier 1: Vertical Video Players
+- ex: JWX, Media.net Bytes, Storyly
+Strengths:
+Strong SEO and legacy publisher relationships
+Vertical video feeds and monetization formats
+Large-scale ad ecosystem integration
+Limitations:
+Focus on video delivery and advertising formats
+Limited community or creator ecosystem layer
+Minimal first-party audience ownership narrative
+The market is converging around embedded vertical video experiences, but most solutions focus on playback, advertising formats, or commerce features rather than owned audience relationships and community infrastructure.
+Genuin sits at the intersection of: Embedded vertical video + Owned audience communities + Monetization + Trust infrastructure + AI-driven orchestration
+Tier 2: Video Commerce/Retail
+- ex: Firework, Bambuser
+Strengths:
+Shoppable video and live commerce capabilities
+Strong retail marketing positioning
+Established brand relationships
+Limitations:
+Commerce-first vs community-first
+Less emphasis on owned media ecosystems
+Limited open web network effects
+Tier 3: Legacy Video Platforms
+- ex: Brid.TV / TargetVideo, Brightcove, Dacast
+Strengths:
+Video hosting, streaming, and monetization tools
+Established enterprise customer base
+Technical reliability and scale
+Limitations:
+Primarily video player infrastructure
+Minimal community, creator, or engagement layer
+Not built for modern vertical discovery experiences
+Competitive Landscape
+
+--- Slide 7 ---
+How We Stack Up:
+
+--- Slide 8 ---
+Video-first experience
+Revenue drivers
+Cost center
+Non-video experience
+Consumer Experience
+Admin(BCC)
+SDK
+Infrastructure + Network
+
+--- Slide 9 ---
+Network infrastructure for generative engagement + the Genuin Network = more than video delivery.Genuin is not a video player, creator tool, or ad format.
+It is infrastructure that enables trusted engagement, contextual relevance,
+and revenue across a network of brand-owned environments.
+Key Distinctions
+Brand-owned engagement infrastructure (vs rented audiences on social platforms)
+Generative engagement and experience infrastructure (vs static video players or isolated content tools)
+Networked distribution across trusted brand ecosystems (vs closed platforms or fragmented solutions)
+First-party relationship ownership and trust infrastructure (vs opaque platform data models)
+AI-protected contextual environments (vs algorithmically exploited attention)
+The market is shifting from video players and ad formats to trusted network infrastructure that drives relevance, engagement, and revenue. Genuin is built for that transition.
+Differentiation:
+
+--- Slide 10 ---
+Online Retailers
+Consumer Services Companies
+Publisher &
+Media Brands
+Agencies/DSP/SSPs
+Network + contextual continuity as a new lever for targeting
+Creators
+Work with brands to earn $ while increasing reach and distribution of content
+GenAI Publishers
+Unlock contextual continuity across AI-powered search / discovery environments.
+Primary
+Secondary
+Everyone sells more stuff!
+Create social, video-powered experiences inside homepages, apps, articles, PDPs.Expand monetizable video inventory from owned channels… and beyond.
+Audiences: By Target
+
+--- Slide 11 ---
+Across industries, leaders are under pressure to drive engagement and growth on platforms they don’t own or control.
+Retailers & Consumer Services Brands
+“We want to turn our digital properties into revenue engines, but more ads can negatively impact the customer experience.”
+Publisher &
+Media Brands
+”Our audience is spending more time with video, but their attention is on platforms we don’t own.”
+Advertisers
+“We need engaging, brand-safe spaces to reach customers, but lose transparency and trust on traditional social platforms.”
+Creators
+“I want to build a real community and earn consistently, but I don’t want to chase algorithms or sacrifice audience attention.”
+Audiences: Messaging
+
+--- Slide 12 ---
+Opportunities
+
+--- Slide 13 ---
+Win the mental model war in a market that
+doesn’t yet have the right category language.
+Old Mental Model
+Engagement = “Big Social”
+Owned Properties = Static Utilities
+Monetization = Ads or RMNs
+Community = Forums or Membership Tools
+New Mental Model
+Engagement is infrastructure, not a channel
+Owned digital environments should be as engaging as social platforms
+Attention is a first-party asset
+AI orchestrates outcomes, not content
+OPPORTUNITY:
+
+--- Slide 14 ---
+Use "tentpole" and “tadpole"
+moments to prove the case
+Market Moments
+Platform algorithm change
+Regulatory pressures and privacy shifts
+Publisher revenue decline
+Retail media fragmentation
+AI saturation and content fatigue
+Challenge Status Quo
+Rented attention is unstable
+Engagement without ownership doesn’t compound
+Community must live inside trusted environments
+AI should orchestrate outcomes, not chase scale
+Proof Points
+Embedded inside owned environments
+Proven engagement lift
+Real partner traction
+Monetization tied to context and intent
+OPPORTUNITY:
+
+--- Slide 15 ---
+Position our strong narrative system
+anchored in flexible stories for audiences
+Brand Positioning  (What are we?)
+Narrative  (Why it matters?)
+Stories  (How it flexes)
+Video Experience and Engagement Infrastructure for the AI era
+Generative video network infrastructure that enables trusted engagement, experiences, and revenue across brand-owned environments. Video that boosts participation and interaction, powered by AI-orchestrated distribution, curation, and monetization.
+Adaptable for Use Cases
+Retail/Commerce Media -> from page views to participation
+Publishers/Media Brands -> owned attention that works
+Ad Teams & Execs -> brand-safe attention with real signal
+Video First Content Creators -> sustainable reach beyond algorithms
+Ownership is the Competitive Advantage
+Engagement has moved beyond social, into an AI-mediated era. Create trust and relevance through ownership and the Network.
+OPPORTUNITY:
+
+--- Slide 16 ---
+Strategies
+and Tactics
+
+--- Slide 17 ---
+Workstream | Who | Where | Why and How
+Awareness | Monetization, RMN, and Commerce Teams | Curated Events, Thought Leadership, PR | Monetize, Offsite in-network, Network
+ | Tech & Developer Teams | Targeted PR and Media Buying | Onsite, SDK, Octo
+Consideration | Media & Marketing teams | Product Use Cases and Content Marketing; | Engagement, Network, BCC/ Consumer Experience
+ | Content & Social teams
+Digital Product Team | Website, Product and Dev Doc Resources | 
+Conversion | C-suite, Corp Dev & Partnership steam | Internal team advocacy + Curated Dinners, Stages | Value and Growth
+Herofication
+Expansion | Primary Day-to-Day Revenue and Content Leads | Implementation and Engagement Mtgs;Daily and Weekly Mtgs | Playbooks + Reports;QBR + Case Studies
+Marketing Activation Plan: 2026
+
+--- Slide 18 ---
+Strategic Overview: Demand Gen + Lead Gen
+Demand Gen (DG) = Awareness, Narrative, Consideration | Lead Gen (LG) = Pipeline, hand-raisers, qualification
+Industry press + op-eds
+
+Category POV content
+
+Keynotes + summits
+
+Benchmark reports
+
+Product vision announcements
+
+Partner PR
+
+Explainer videos
+
+Blog series
+
+Roundtables & dinners
+
+Early-stage webinars
+
+Network updates
+
+Social campaigns
+
+Events that inspire, not pitch | Developer docs
+
+Use cases
+
+Newsletter
+
+Technical workshops
+
+Explainer + Product demos
+
+Case studies with metrics
+
+Playbooks with ROI logic
+
+Gated reports
+
+Webinars with hands-on guidance
+
+Product bootcamps
+
+Office hours
+
+Deep integration examples
+
+ROI calculators / cost projections for prospects
+
+--- Slide 19 ---
+Strategic Execution: Three waves
+DEMAND WAVE
+Secure advertisers/agencies first → creates urgency for supply.
+Lighthouse advertisers
+Pilots with case narrative
+RMN/CMN budgets unlocked
+SUPPLY WAVE
+Bring premium publishers/ communities onboard.
+Standardized inventory
+Commerce-addressable supply
+Packaged measurement
+NARRATIVE WAVE
+Make Community Media Network feel inevitable.
+Thought leadership
+Proof assets
+PR amplification
+Narrative reduces sales friction and accelerates both waves.
+
+--- Slide 20 ---
+Strategic GTM: How We Build Category Leadership in 2026
+Network Effects + Product Proof + Earned Attention
+Network Multipliers
+(Brand Mktg)
+Events and intimate
+executive experiences
+Partner and creator amplification
+ABM + precision paid to reinforce wins
+Outcome: Own the category narrative around embedded, video-powered community media
+Product Proof
+(Product Mktg)
+Product-led content (demos, explainers, dev docs)
+Early proof points and pilot stories
+Product resources and education
+Earned Attention
+(PR)
+High-impact PR & thought leadership
+Executive platforming (speaking, bylines, podcasts)
+Narrative ownership of category shift
+
+--- Slide 21 ---
+Tactics: Tasks and Timeline
+Audience | Brand Marketing | Product Marketing | PR / Thought Leadership
+Product | Partner Engineering Showcases - client examples: TED, iHeart, Grubhub Examples (DG)   - 2H’26
+
+Invite-Only Product Roundtables: with Other Builders (LG)
+
+Developer Conferences: Technical Workshops / SDK Integrations Live-Build Sessions (LG) - 2027
+Tentpoles: Hands-On Demo Environments at Conferences at CES, NRF, ANA Tech (LG) - 2027 | Website: Product info, Developer Docs
+Use Cases, Explainer videos (DG) - Q1’26
+
+Monthly (or sprint-centric) Product Innovation Briefings - product-focused (Newsletter (DG) - Q1’26
+
+Product Office Hours: Virtual Fridays, etc. (LG)  -- Q2’26
+
+Blog posts: Deep-Dive Posts on AI Moderation, Content Aggregation, or Data Layers (DG)  - Q1’26 | High value PR : FastCompany, TechCrunch, TechBrew, Specialized by vertical and product-centric outlets - Q1’26
+
+Owned:  Genuin Connections Podcast - Q1’26
+
+Messaging: AI + Octo, API & SDK Launch Moments With Product Press (ProductHunt),  Customer Launches - Q1’26
+RMN / Commerce 
+
+(+ Publisher) | Commerce Media Leadership Dinners at Tentpoles: (SxSW, Cannes, Possible, Advertising Week) - Q1’26
+
+Client showcase - heroification on panels - Q2’26
+
+“Genuin Upfronts” - Q2’26
+
+Specialized: Sponsored Panels on Open-Web Attention or AI-Led Commerce;   Shoptalk, GroceryShop  - Q2’26 | Website:  Relevant Use Cases and Explainer videos  (monetize, onsite, offsite, network) - Q1’26
+
+Case Studies & Blog Posts, Newsletter (LG) - Q1’26
+
+Short Explainer Videos: “How Genuin Creates New Media Value” - Q1’26
+
+Monthly Network Performance Summaries (DG) - Q1’26 | High value PR: Digiday, AdExchanger, Adweek, Retail Brew
+(op-eds, quotes, write-ups) - Q1’26
+
+Owned: Genuin Connections Podcast (DG) - Q1’26
+
+Messaging:  Joint PR With RMN Leaders on Monetization Wins,  AI-Safe Environment Manifestos; RMN Industry Reports - - Q2’26
+Digital / Content / Design | Tentpoles: SxSW, Cannes - Q1’26
+Specialized: Social Media Week
+
+Client showcase - heroification on panels - Q2’26
+
+Creator Program Showcases: “From Upload → Community → Revenue” (DG) - Q3’26 | Website: Relevant Product info, Use Cases, Explainer videos  (onsite, studio, etc)  - Q1’26
+
+Case Studies & Blog Posts, Newsletter - Q1’26
+
+Video Playbooks for PDPs, Category Pages, Homes (LG) - Q2’26 | High value PR: Digiday, AdAge, Adweek, Social Media Today, Marketing Brew, Modern Retail  (op-eds, quotes, write-ups) - Q1’26
+
+Owned: Blog Posts + Genuin Connections Podcast - Q1’26
+
+Messaging: Community Over Audience, Vertical Video Performance Benchmarks, Creator Case Studies - Q1’26
+CMO (phase 2) | C-Suite Leadership Dinners at Tentpoles: CES, SXSW, Cannes (DG → LG)
+
+Private Vision Presentations: “Future of Owned Media & Attention” (LG)
+
+Sponsored presence at Invite-Only Summits on AI, Creative, and Consumer Relationships (DG) | Case Studies -  Q2’26
+
+Narrative Decks: Category POV, Market Shifts, and AI’s Role (DG) -  Q2’26
+
+High-Level Business Outcome Stories (Engagement, Conversion, Loyalty, Revenue) (LG) -  Q3’26 | High value PR: WSJ, Tech Crunch, Forbes, VentureBeat, The Information
+
+Exclusive CMO Roundtables Featured in Industry Press (LG)
+Keynote-Level Talks (CES, ANA, Cannes) on Community as the Future of Media (DG)
+Messaging: Major Funding, 200M+ Network, and High-Profile Partners (DG)
+
+--- Slide 22 ---
+ | Brand Marketing | Product Marketing | PR
+Owner | Matt Wurst | Charmie | PR Partner (PenVine)
+Outcomes | Growth, Presence, Narrative | Product Marketing Engine | Credibility, Leverage, Pull
+Primary Objective | Accelerate revenue now while building market gravity for Q2 tentpoles. | Remove friction from consideration to commitment through clear, shareable materials. | Create credibility shortcuts and pull demand through targeted presence.
+Core Focus Areas | Close lower-funnel opportunities with sales-style urgency
+Support Daniel and Peter on priority deals and pilots
+Own external narrative and category positioning
+Be the connective tissue between product, partners, press, and events | All product marketing materials and assets for website, resource center, use cases, social
+Product clarity and narrative consistency
+Sales enablement and post-pitch momentum
+Customer proof packaged for internal circulation | Earned credibility, not awareness volume
+Customer and partner-led storytelling
+Strategic visibility in priority moments
+R&R | Lead PR strategy and agency direction
+Build partner-driven approach to reporters, stages, and bookings
+Secure and moderate stages, panels, dinners, podcasts, and salons
+Orchestrate curated executive and product-leader conversations
+Hero-ify customers through storytelling and joint visibility
+Anchor tentpole moments (SXSW halo, Upfronts, Cannes adjacency) | Own day-to-day asset production
+Partner with Product on product and brand marketing materials
+Create and maintain core decks, one-pagers, demos, POV docs
+Support Jane, Peter, and Dan with post-pitch collateral needs
+Develop clear use case narratives by vertical and buyer type
+Package customer stories for easy internal sharing
+Make “send this to your team” frictionless | Position Genuin alongside trusted customers and partners
+Secure earned media, stages, and speaking opportunities
+Support customer-on-stage and joint storytelling moments
+Prep and place founder and executive narratives
+Coordinate event-driven PR around SXSW, Upfronts, Cannes
+Prime reporters and influencers ahead of launches and announcements
+Success Metrics | Deal acceleration and shortened sales cycles
+Quality of executive and product leader access
+Stage presence and credibility in priority rooms
+Warm inbound tied to visibility and earned media | Reduced follow-up friction after meetings
+Faster internal circulation within prospect organizations
+Clear product understanding without live walkthroughs | Quality of media placements and stages
+Credibility lift in sales conversations
+Increased inbound warmth and recognition
+Partner and customer amplification
+
+--- Slide 23 ---
+Roles and Responsibilities:
+RACI workstreams
+
+--- Slide 24 ---
+WIP RACI Slides
+https://docs.google.com/presentation/d/14WbxH6E6-2u4Sn2ASmDY9wzsXw9Bqv7QI9GxQHbY-xY/edit?usp=sharing
+
+--- Slide 25 ---
+Marketing Breakdown
+
+--- Slide 26 ---
+Overall: Marketing Summary
+Category Ownership (Primary / weekly)
+Repeatable artifacts:
+2–3 CMN narrative social posts
+1 POV/article/blog per week
+PR touchpoint every 2 weeks
+Speak/panel/podcast/webinar monthly
+Goal: CMN becomes default mental model.
+Proof Points (Critical)
+Repeatable artifacts:
+1 case-style proof artifact - monthly
+1 anonymized performance card - quarterly
+1 pilot playbook or insight doc -monthly
+Product documentation - ongoing
+Sources:
+Pilot metrics
+Customer quotes
+Integration wins
+Goal: Sales always has fresh credibility ammo.
+Sales Support (ABM / biweekly)
+Top pipeline only:
+Air cover campaigns for top 20 demand accounts
+Same for top 20 supply partners
+Custom POV drop or insight email
+Bottom funnel:
+Market stat or POV drop
+Partner announcement amplification
+LinkedIn targeting to buying committee
+Goal: Decision makers see you everywhere + Remove hesitation..
+HubSpot + Pipeline Support
+Marketing automation supports sales velocity::
+Source tagging QA weekly
+Proof assets attached at SQL stage
+ABM nurture triggered automatically
+Proof capture workflow post-close
+Goal: Marketing becomes embedded in pipeline.
+Cadence (ABM / biweekly)
+Every Week
+Publish CMN narrative content
+Support top deals with proof
+Every Month
+Produce one proof artifact
+One webinar/podcast
+Every Quarter
+Publish market-defining artifact
+Push PR hard
+Always
+Air cover big deals
+Capture proof immediately
+Sales works pipeline.
+Marketing feeds the pipeline, builds demand, generates leads, created inevitability. Inevitability closes deals.
+
+--- Slide 27 ---
+Full-Funnel: Content Marketing & Brand Asset Creation
+Objective | Spread the word on big stages + curated smaller executive environments.
+Channels | LinkedIn (executive + brand)
+Podcasts (Snarketing, Genuin Connections)
+Email newsletters
+Blog and long-form thought leadership
+Case studies and partner spotlights
+Event recap content
+Short-form social amplification
+Video clips from stages, dinners, and showcases
+Content Themes | Category POV
+Trust infrastructure
+AI-protected environments
+Partner showcases (TED, iHeart, Grubhub)
+Creator program narratives
+Client heroification
+Key Outcomes | Narrative consistency
+Audience building
+Deal reinforcement through social proof
+Compounding visibility between tentpoles
+
+--- Slide 28 ---
+PR: Themes, Bylines, Pitch Angles
+Byline Ideas:
+1. Engagement Infrastructure for Connection over reachWhy brands are shifting from rented audiences to owned engagement environments and how brands build trusted video engagement infrastructure across the open web.
+2. Trust Infrastructure: The New Performance StrategyIn the AI era, trust isn’t branding. It’s the foundation of performance.
+3. Relevance Is the New TargetingContextual intelligence and trusted environments are replacing behavioral targeting.
+4. Attention Drives IntentionWhy engagement quality now matters more than reach metrics.
+5. AI as Engagement OrchestratorHow AI will curate, distribute, and optimize engagement across brand ecosystems.
+6. The Trusted Network Model for the Open WebHow retailers, publishers, and brands are building networked engagement environments.
+7. Contextual Video as the Interface for the AI InternetVideo becomes the most natural interface for participation, discovery, and commerce.
+8. Ownership Is the New Competitive AdvantageWhy brands must control engagement infrastructure in the AI era
+Pitch Angles:
+The Infrastructure Layer for Engagement in the AI Era: How Genuin is building trusted engagement infrastructure across major brands and media partners.
+Why Brands Are Building Engagement Infrastructure Instead of Renting Audiences: The shift away from platform dependency toward network-driven engagement.
+From Attention to Intention: The Next Media Metric: How brands are measuring engagement quality instead of raw reach.
+The Rise of Trusted Brand Networks on the Open Web: How retailers, publishers, and services are creating networked engagement ecosystems.
+The New Brand Safety Standard in the Age of AI: Why trusted environments matter more as generative AI floods the internet with content.
+The Video Layer of the AI Internet: Why vertical video is becoming the universal interface for engagement and discovery.
+The New Retail Media Opportunity: Engagement Infrastructure: How retailers are evolving from ad networks to participation environments.
+The Creator Distribution Shift Beyond Platforms: How creators are gaining new distribution through brand-owned ecosystems.
+BRAND X Builds Trusted Engagement Infrastructure: How a retailer/publisher/service brand is turning its owned channels into participatory video environments.
+How BRAND X Turned Its App Into an Engagement Network: From static content to interactive video experiences and monetization.
+How BRAND X Increased Session Time and Monetization With Video Experiences: Focus on engagement metrics and revenue outcomes.
+
+--- Slide 29 ---
+Employee-Led Activation: Narrative at Scale
+One narrative. Many voices.
+Genuin should feel like a company with:
+A clear worldview
+Strong opinions
+Deep operators
+Builders who explain tradeoffs
+Leaders who show receipts
+The goal is not volume.  The goal is credibility density.If someone scrolls LinkedIn for five minutes and sees 3 different Genuin employees, it should feel cohesive without feeling coordinated.
+3 shared truths:
+Attention is earned through context, not interruption
+Owned environments beat rented platforms
+Community is infrastructure, not a campaign
+Role-Based Narrative Altitudes:
+C Level / Founders- Industry POVs- Category creation- Cultural and economic implications- “What most people are missing”
+Product & Engineering- Tradeoffs- Build vs buy vs why- What broke and how it got fixed
+Sales & Partnerships- Patterns across buyers- Objections that keep repeating- Why deals stall or accelerate- What customers actually mean
+Account / Project Managers- Post-launch reality- What customers struggle with after contracts- Change management lessons- Adoption truths
+Narrative Ownership Model:
+Marketing does not own the content.Marketing owns the system.
+Think of Marketing as:- Editors- Coaches- Pattern recognizers- Guardrails, not gatekeepers
+Employees own:- Voice- POV- Experience
+
+--- Slide 30 ---
+Employee-Led Activation: Tactical Execution
+Narrative Enablement Kit – Every employee gets a simple internal doc or Notion page:
+Includes:
+The 3 core narrative truths
+“What we believe vs what we reject”
+10 example post prompts by role
+3 things we don’t say (buzzwords, clichés, forbidden phrases)
+Tone guidance: human > polished
+No templates.  Only prompts.
+Example prompt: “What’s something customers assume is easy that absolutely isn’t?”
+Monthly Narrative Themes – Give people a shared moment, not an assignment.
+Examples:
+January: “What actually drives engagement”
+March: “What breaks at scale”
+June: “What customers don’t say out loud”
+September: “What we changed our minds about”
+People opt in. The coherence shows up organically.
+Internal Signal Mining Loop
+Create a lightweight process where:
+Sales drops voice notes after interesting calls
+PMs flag Slack debates worth sharing
+Engineers tag “this was harder than expected” moments
+CS flags repeat questions
+Marketing curates signals, not posts.
+Raw material → pattern → narrative fuel

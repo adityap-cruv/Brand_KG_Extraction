@@ -1,0 +1,541 @@
+{
+  "source_doc": "Grubhub Genuin Sponsorships",
+  "entities": [
+    {
+      "name": "Grubhub",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "GH"
+      ],
+      "description": "Online food ordering and delivery platform partnering with Genuin to power offsite video sponsored posts and takeovers for its restaurant network on brand partner destinations."
+    },
+    {
+      "name": "iHeart",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "iHeartMedia"
+      ],
+      "description": "Brand partner destination where the Genuin SDK runs to serve short-form restaurant sponsored posts; first launch destination for the Grubhub integration."
+    },
+    {
+      "name": "McDonald's",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Cited as an example of an enterprise merchant served via National / Brand Sponsorships in the Grubhub \u00d7 Genuin integration."
+    },
+    {
+      "name": "YouTube",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "External video source supported by the BCC Admin Portal for URL-based video imports into Genuin's content store."
+    },
+    {
+      "name": "Vimeo",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "External video source supported by the BCC Admin Portal for URL-based video imports into Genuin's content store."
+    },
+    {
+      "name": "ID5",
+      "bucket": "Partnerships",
+      "type": "IdentityProvider",
+      "aliases": [],
+      "description": "Third-party deterministic identity provider, email-based and strong in logged-in environments, available as an option for resolving identity in SMB campaigns."
+    },
+    {
+      "name": "UID 2.0",
+      "bucket": "Partnerships",
+      "type": "IdentityStandard",
+      "aliases": [
+        "Unified ID 2.0"
+      ],
+      "description": "Open-source deterministic identity standard from the IAB Tech Lab, available as a third-party resolution option for the Grubhub \u00d7 Genuin identity matching layer."
+    },
+    {
+      "name": "LiveRamp ATS",
+      "bucket": "Partnerships",
+      "type": "IdentityProvider",
+      "aliases": [
+        "LiveRamp"
+      ],
+      "description": "Cross-device identity graph offering both deterministic and probabilistic matching with broad publisher reach, used as a third-party resolution option."
+    },
+    {
+      "name": "Lotame Panorama",
+      "bucket": "Partnerships",
+      "type": "IdentityProvider",
+      "aliases": [
+        "Lotame"
+      ],
+      "description": "Cookie-free probabilistic identity provider relying on contextual and behavioural signals, available as a third-party resolution option."
+    },
+    {
+      "name": "Epsilon CORE ID",
+      "bucket": "Partnerships",
+      "type": "IdentityProvider",
+      "aliases": [
+        "Epsilon"
+      ],
+      "description": "Deterministic identity provider that is PII-based at source but produces a privacy-compliant output ID, available as a third-party resolution option."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Engineering",
+      "type": "SDK",
+      "aliases": [],
+      "description": "Client SDK that initializes within the brand partner's destination, requests a personalised video feed, collects non-PII signals, and renders sponsored videos when the placement enters viewport."
+    },
+    {
+      "name": "Genuin Backend",
+      "bucket": "Engineering",
+      "type": "System",
+      "aliases": [],
+      "description": "Server-side platform that receives feed requests from the SDK, prepares the identity payload, routes calls to Grubhub's recommendation endpoint, and assembles the final video feed."
+    },
+    {
+      "name": "Grubhub Backend",
+      "bucket": "Engineering",
+      "type": "System",
+      "aliases": [
+        "Grubhub Recommendation Engine"
+      ],
+      "description": "Grubhub's server-side recommendation and identity-resolution system that receives non-PII signals from Genuin and returns the most relevant restaurant name."
+    },
+    {
+      "name": "BCC Admin Portal",
+      "bucket": "Engineering",
+      "type": "Tool",
+      "aliases": [
+        "Genuin Admin Portal",
+        "BCC"
+      ],
+      "description": "Genuin's admin portal supporting manual drag-and-drop video uploads up to 2GB and URL-based imports; also where the is_active flag per Community is managed."
+    },
+    {
+      "name": "RSS / MRSS Feed",
+      "bucket": "Engineering",
+      "type": "IngestionPath",
+      "aliases": [
+        "RSS feed",
+        "MRSS feed"
+      ],
+      "description": "Standard feed-based programmatic ingestion path pulled from a partner URL on a configurable schedule; the primary programmatic ingestion path for Phase 1."
+    },
+    {
+      "name": "JSON Endpoint",
+      "bucket": "Engineering",
+      "type": "IngestionPath",
+      "aliases": [],
+      "description": "Partner-provided JSON endpoint that Genuin polls on a configurable schedule, returning a videos array; field name mapping is supported and the path is scoped for Phase 2."
+    },
+    {
+      "name": "Genuin Content Store",
+      "bucket": "Engineering",
+      "type": "DataStore",
+      "aliases": [],
+      "description": "Central content repository where the three video ingestion paths converge and from which video metadata is later retrieved."
+    },
+    {
+      "name": "Runtime Flow",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Seven-Step Flow"
+      ],
+      "description": "Seven-step server-to-server request/response cycle from SDK initialization on the partner destination through viewport-triggered video render, with Step 4 as the key Grubhub recommendation junction."
+    },
+    {
+      "name": "Video Metadata Retrieval",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Metadata Sync"
+      ],
+      "description": "Nightly batch process by which Grubhub pulls Genuin's paginated video catalogue via REST API and refreshes its local mapping table using cursor-based pagination."
+    },
+    {
+      "name": "Identity Matching",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Identity Resolution"
+      ],
+      "description": "Process of resolving the viewing user from non-PII signals (IP, user agent, device, OS, browser/bundle ID) via either Grubhub native match or a third-party identity graph; required for SMB sponsorships."
+    },
+    {
+      "name": "Genuin Pixel",
+      "bucket": "Engineering",
+      "type": "MeasurementTechnology",
+      "aliases": [],
+      "description": "Optional Genuin tracking pixel deployed on landing pages and purchase events to extend measurement into full-funnel landing-page visits and actual sales."
+    },
+    {
+      "name": "REST API",
+      "bucket": "Engineering",
+      "type": "API",
+      "aliases": [
+        "GET /goservices/third_party/grubhub/videos"
+      ],
+      "description": "Paginated Genuin REST endpoint accepting page, page_size, and community_id parameters and returning a video array plus next_page_token for cursor-based pagination."
+    },
+    {
+      "name": "Webhook",
+      "bucket": "Engineering",
+      "type": "API",
+      "aliases": [
+        "video_updated webhook"
+      ],
+      "description": "Planned Phase 2 real-time webhook that allows Genuin to push video_updated events to Grubhub on publish or removal, replacing reliance on the nightly batch."
+    },
+    {
+      "name": "Phase 1",
+      "bucket": "Engineering",
+      "type": "RolloutPhase",
+      "aliases": [],
+      "description": "Initial launch phase: one restaurant equals one Community with exactly one Group containing one is_active video; serving uses restaurant-name lookup with no video identifier."
+    },
+    {
+      "name": "Phase 2",
+      "bucket": "Engineering",
+      "type": "RolloutPhase",
+      "aliases": [],
+      "description": "Follow-on phase lifting the one-video constraint, supporting multiple Groups and videos per Community, plus webhook ingestion, JSON endpoint, and a partner video selection signal."
+    },
+    {
+      "name": "Community",
+      "bucket": "Product",
+      "type": "ContentContainer",
+      "aliases": [],
+      "description": "Top-level container in Genuin's content hierarchy corresponding directly to one restaurant; identified by a Genuin UUID and mapped to a Grubhub restaurant name."
+    },
+    {
+      "name": "Group",
+      "bucket": "Product",
+      "type": "ContentContainer",
+      "aliases": [],
+      "description": "Mid-level container within a Community holding a thematic collection of related videos (e.g., Spring Menu, Limited Offers); in Phase 1 each Community has exactly one Group."
+    },
+    {
+      "name": "Sponsored Video",
+      "bucket": "Product",
+      "type": "ContentUnit",
+      "aliases": [
+        "Video",
+        "Restaurant Video"
+      ],
+      "description": "Individual short-form restaurant video clip within a Group; in Phase 1 exactly one video per Group carries the is_active flag and is served by the integration."
+    },
+    {
+      "name": "Offsite Video Sponsored Post",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "Offsite Sponsored Post"
+      ],
+      "description": "Core Genuin ad product that serves short-form sponsored restaurant videos within brand partner destinations such as iHeart, off the Grubhub app."
+    },
+    {
+      "name": "Takeover",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "Takeovers"
+      ],
+      "description": "Higher-prominence sponsored placement format offered alongside offsite sponsored posts in the Grubhub \u00d7 Genuin partnership."
+    },
+    {
+      "name": "National / Brand Sponsorships",
+      "bucket": "Product",
+      "type": "AdProduct",
+      "aliases": [
+        "National Sponsorships",
+        "Brand Sponsorships"
+      ],
+      "description": "Sponsorship product targeted at broad US audiences using brand creative and enterprise merchants (e.g., McDonald's, March Madness offers); identity matching is not required."
+    },
+    {
+      "name": "SMB / Local Sponsorships",
+      "bucket": "Product",
+      "type": "AdProduct",
+      "aliases": [
+        "SMB Sponsorships",
+        "Local Sponsorships"
+      ],
+      "description": "Sponsorship product for independent restaurants with localised delivery coverage, served to users in matching ZIP codes or neighbourhoods and requiring identity resolution."
+    },
+    {
+      "name": "March Madness",
+      "bucket": "Marketing",
+      "type": "CampaignExample",
+      "aliases": [],
+      "description": "Cited example of a national brand offer/creative that would run via Grubhub's National / Brand Sponsorships on Genuin's offsite placements."
+    },
+    {
+      "name": "Measurement & Attribution",
+      "bucket": "Marketing",
+      "type": "MeasurementFramework",
+      "aliases": [],
+      "description": "Out-of-the-box Genuin metrics (placement views, video views, 25/50/75/100% completion rates, clicks, CTR) plus optional full-funnel measurement via Genuin pixels on landing-page and purchase events."
+    },
+    {
+      "name": "Broad US Audience",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [],
+      "description": "National audience targeted by National / Brand Sponsorships, served without precise location matching or identity resolution."
+    },
+    {
+      "name": "ZIP-Targeted Local Audience",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [
+        "Local Audience",
+        "ZIP / Neighbourhood Audience"
+      ],
+      "description": "Hyperlocal audience resolved by ZIP code or neighbourhood for SMB campaigns; requires Grubhub identity signals to match users to nearby restaurants."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Grubhub",
+      "target": "iHeart",
+      "type": "PARTNERS_WITH",
+      "description": "Grubhub partners with iHeart, the first brand partner destination where the Genuin SDK serves Grubhub's restaurant sponsored videos."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "iHeart",
+      "type": "INTEGRATES_WITH",
+      "description": "The Genuin SDK runs within the iHeart destination rather than inside the Grubhub app."
+    },
+    {
+      "source": "Genuin Backend",
+      "target": "Grubhub Backend",
+      "type": "INTEGRATES_WITH",
+      "description": "Genuin's backend prepares the identity payload and routes feed requests to Grubhub's recommendation endpoint over a server-to-server call."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Genuin Backend",
+      "type": "DEPENDS_ON",
+      "description": "The Genuin SDK sends its feed request \u2014 including non-PII user signals \u2014 to the Genuin Backend, which orchestrates the downstream Grubhub call."
+    },
+    {
+      "source": "Runtime Flow",
+      "target": "Identity Matching",
+      "type": "INCLUDES",
+      "description": "Step 4 of the Runtime Flow performs identity matching and recommendation lookup inside Grubhub's backend before the restaurant name is returned."
+    },
+    {
+      "source": "Runtime Flow",
+      "target": "Grubhub Backend",
+      "type": "DEPENDS_ON",
+      "description": "The Runtime Flow's key Step 4 junction calls into Grubhub's recommendation engine to resolve the user's identity and the most relevant restaurant."
+    },
+    {
+      "source": "BCC Admin Portal",
+      "target": "Genuin Content Store",
+      "type": "SUPPLIES",
+      "description": "Path 1 ingestion: manual drag-and-drop uploads and URL imports from the BCC Admin Portal land in Genuin's content store."
+    },
+    {
+      "source": "RSS / MRSS Feed",
+      "target": "Genuin Content Store",
+      "type": "SUPPLIES",
+      "description": "Path 2 ingestion: Genuin pulls videos from a standard RSS or MRSS feed on a configurable schedule into the content store."
+    },
+    {
+      "source": "JSON Endpoint",
+      "target": "Genuin Content Store",
+      "type": "SUPPLIES",
+      "description": "Path 3 ingestion: Genuin polls a partner-provided JSON endpoint and writes videos into the content store; scoped for Phase 2."
+    },
+    {
+      "source": "YouTube",
+      "target": "BCC Admin Portal",
+      "type": "SUPPLIES",
+      "description": "The BCC Admin Portal supports URL-based imports from YouTube as one of its accepted video sources."
+    },
+    {
+      "source": "Vimeo",
+      "target": "BCC Admin Portal",
+      "type": "SUPPLIES",
+      "description": "The BCC Admin Portal supports URL-based imports from Vimeo as one of its accepted video sources."
+    },
+    {
+      "source": "Community",
+      "target": "Group",
+      "type": "INCLUDES",
+      "description": "A Community contains one or more Groups; in Phase 1 each Community has exactly one Group."
+    },
+    {
+      "source": "Group",
+      "target": "Sponsored Video",
+      "type": "INCLUDES",
+      "description": "A Group contains one or more Sponsored Videos; in Phase 1 each Group holds exactly one active video."
+    },
+    {
+      "source": "Community",
+      "target": "Grubhub",
+      "type": "RELATES_TO",
+      "description": "Each Community is mapped one-to-one to a Grubhub restaurant name and identified internally by community_id (Grubhub restaurant UUID)."
+    },
+    {
+      "source": "Video Metadata Retrieval",
+      "target": "REST API",
+      "type": "USES",
+      "description": "Video metadata retrieval is implemented via Genuin's paginated REST endpoint GET /goservices/third_party/grubhub/videos with cursor-based pagination."
+    },
+    {
+      "source": "Video Metadata Retrieval",
+      "target": "Genuin Content Store",
+      "type": "DEPENDS_ON",
+      "description": "The nightly batch retrieves the catalogue held in Genuin's content store and refreshes Grubhub's local mapping table."
+    },
+    {
+      "source": "Grubhub Backend",
+      "target": "Video Metadata Retrieval",
+      "type": "USES",
+      "description": "Grubhub's system runs the nightly batch metadata retrieval against Genuin to keep its local restaurant-to-video mapping fresh."
+    },
+    {
+      "source": "Webhook",
+      "target": "Phase 2",
+      "type": "PART_OF",
+      "description": "The real-time video_updated webhook is scoped as a Phase 2 capability, eliminating reliance on the nightly batch."
+    },
+    {
+      "source": "Identity Matching",
+      "target": "Grubhub Backend",
+      "type": "RUN_BY",
+      "description": "Option A of identity matching runs natively inside Grubhub's backend, using deterministic session matches or probabilistic device/IP heuristics."
+    },
+    {
+      "source": "Identity Matching",
+      "target": "ID5",
+      "type": "USES",
+      "description": "ID5 is offered as a deterministic third-party identity option when Grubhub's native match rate is insufficient."
+    },
+    {
+      "source": "Identity Matching",
+      "target": "UID 2.0",
+      "type": "USES",
+      "description": "UID 2.0 is offered as a deterministic third-party identity option for cross-device resolution."
+    },
+    {
+      "source": "Identity Matching",
+      "target": "LiveRamp ATS",
+      "type": "USES",
+      "description": "LiveRamp ATS is offered as a deterministic/probabilistic cross-device identity option."
+    },
+    {
+      "source": "Identity Matching",
+      "target": "Lotame Panorama",
+      "type": "USES",
+      "description": "Lotame Panorama is offered as a cookie-free probabilistic identity option using contextual and behavioural signals."
+    },
+    {
+      "source": "Identity Matching",
+      "target": "Epsilon CORE ID",
+      "type": "USES",
+      "description": "Epsilon CORE ID is offered as a deterministic third-party identity option with privacy-compliant output."
+    },
+    {
+      "source": "Offsite Video Sponsored Post",
+      "target": "National / Brand Sponsorships",
+      "type": "INCLUDES",
+      "description": "National / Brand Sponsorships are one of the two campaign types served via the offsite video sponsored post product."
+    },
+    {
+      "source": "Offsite Video Sponsored Post",
+      "target": "SMB / Local Sponsorships",
+      "type": "INCLUDES",
+      "description": "SMB / Local Sponsorships are the second campaign type served via the offsite video sponsored post product."
+    },
+    {
+      "source": "SMB / Local Sponsorships",
+      "target": "Identity Matching",
+      "type": "DEPENDS_ON",
+      "description": "SMB campaigns require identity resolution so Grubhub can match users to nearby restaurants by ZIP or neighbourhood before serving."
+    },
+    {
+      "source": "National / Brand Sponsorships",
+      "target": "Broad US Audience",
+      "type": "TARGETED_AT",
+      "description": "National / Brand Sponsorships target a broad US audience and do not need precise location matching."
+    },
+    {
+      "source": "SMB / Local Sponsorships",
+      "target": "ZIP-Targeted Local Audience",
+      "type": "TARGETED_AT",
+      "description": "SMB / Local Sponsorships target users in specific ZIP codes or neighbourhoods that match a restaurant's delivery coverage."
+    },
+    {
+      "source": "McDonald's",
+      "target": "National / Brand Sponsorships",
+      "type": "PART_OF",
+      "description": "McDonald's is cited as an enterprise merchant example for National / Brand Sponsorships."
+    },
+    {
+      "source": "March Madness",
+      "target": "National / Brand Sponsorships",
+      "type": "PART_OF",
+      "description": "March Madness offers are cited as an example of brand creative running under National / Brand Sponsorships."
+    },
+    {
+      "source": "Genuin Pixel",
+      "target": "Measurement & Attribution",
+      "type": "PART_OF",
+      "description": "The Genuin Pixel extends out-of-the-box measurement into full-funnel landing page visits and purchase events."
+    },
+    {
+      "source": "Measurement & Attribution",
+      "target": "Offsite Video Sponsored Post",
+      "type": "RELATES_TO",
+      "description": "Measurement & Attribution metrics (views, completion rates, clicks, CTR) are reported by default for offsite video sponsored posts."
+    },
+    {
+      "source": "Takeover",
+      "target": "Offsite Video Sponsored Post",
+      "type": "RELATES_TO",
+      "description": "Takeovers are offered alongside offsite video sponsored posts as a higher-prominence placement format."
+    },
+    {
+      "source": "BCC Admin Portal",
+      "target": "Sponsored Video",
+      "type": "RELATES_TO",
+      "description": "The BCC Admin Portal is where the is_active flag for the single Phase 1 video per Community is managed."
+    },
+    {
+      "source": "Phase 1",
+      "target": "RSS / MRSS Feed",
+      "type": "INCLUDES",
+      "description": "Phase 1 uses RSS/MRSS with standard fields only as the primary programmatic ingestion path."
+    },
+    {
+      "source": "Phase 2",
+      "target": "JSON Endpoint",
+      "type": "INCLUDES",
+      "description": "Phase 2 introduces the JSON endpoint ingestion path with richer programmatic integration."
+    },
+    {
+      "source": "Phase 1",
+      "target": "Community",
+      "type": "RELATES_TO",
+      "description": "Phase 1 constrains the model to one restaurant per Community with exactly one Group and one is_active video."
+    },
+    {
+      "source": "Phase 2",
+      "target": "Community",
+      "type": "RELATES_TO",
+      "description": "Phase 2 lifts the one-video constraint, allowing multiple Groups and videos per Community."
+    }
+  ],
+  "_src_hash": "4262a10cc05736c9f0ad83c4f8c8bd4186136fba52ada441947a742d774a6eed",
+  "_skill_sig": "4edd28021f3312b1"
+}

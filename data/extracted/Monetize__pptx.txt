@@ -1,0 +1,333 @@
+--- Slide 1 ---
+Product Use Case Overview
+
+--- Slide 2 ---
+|   Genuin Product
+WITH
+
+--- Slide 3 ---
+Upfront: Premium Placement Takeover of iHeartMedia Omnichannel
+Homepage Carousel Takeover
+Technical Requirements
+- MP4, MOV, AVI, WMV, MKV formats
+- Max File Size: Up to 2GB
+- Can sell 1 or more units to different advertisers and partners
+SPONSORED PLACEMENTS • TAKEOVER
+|  Onsite Specs
+Video Carousel Format
+- 9:16 vertical ratio
+- Video Length: < 5min
+- Multiple Linkout overlays
+Sponsored Content
+(“Highlights”)
+In-Feed Sponsored Placement
+Sponsored Content w/ Mid-Roll Ad Placement
+✅Get guaranteed revenue by enabling your partners to earn margin.
+|  Placement Layout
+
+--- Slide 4 ---
+SPONSORED PLACEMENTS • TAKEOVER
+Upfront: Premium Placement Takeover of iHeartMedia Omnichannel
+Product Status : In Progress, ETA: 17/Apr
+Note: Can be executed via manual setup
+Demand Source | Brand Direct
+Demand Creative Source | Genuin Post(s)
+Demand Configured via | BCC
+Supply Source | Own Domain/Apps
+Supply Type | Genuin Placements
+
+--- Slide 5 ---
+Pinned Podcast Highlights
+Upfront: Sponsored Community, Podcast, or Station First-In-Feed Takeover
+SPONSORED PLACEMENTS • PINNED FIRST POSITION
+|  Placement Layout
+|  Live Across 112+ Stations & Podcasts
+|  Specs
+Brand assets: brand logo, brand handle, video, video description, linkout
+
+--- Slide 6 ---
+Upfront: Sponsored Community, Podcast, or Station First-In-Feed Takeover
+Product Status : In Progress, ETA: 17/Apr
+Note: Can be executed via manual setup
+Demand Source | Brand Direct
+Demand Creative Source | Genuin Post(s)
+Demand Configured via | BCC
+Supply Source | Own Domain/Apps
+Supply Type | Genuin Placements
+SPONSORED PLACEMENTS • PINNED FIRST POSITION
+
+--- Slide 7 ---
+PROGRAMMATIC • IN-FEED (VERTICAL VIDEO AD)
+In-Feed: Vertical Video Ad in Placement
+|  Desktop Ad Unit  Layout
+|  Mobile Ad Unit  Layout
+In-Feed Ad
+In-Feed Ad
+|  Specs
+Connect your ad server: GAM, Anniview, InfyTV
+Activate in-feed and in-stream in ad settings
+
+--- Slide 8 ---
+In-Feed: Vertical Video Ad in Placement
+Product Status : Releasing Tomorrow
+Demand Source | Brand Direct Programmatic or oRTB Programmatic
+Demand Creative Source | Programmatic
+Demand Configured via | Ad Server
+Supply Source | Own Domain/Apps
+Supply Type | Programmatic Enabled Genuin Placements
+PROGRAMMATIC • IN-FEED (VERTICAL VIDEO AD)
+
+--- Slide 9 ---
+IAB compatible tags on iHeart properties
+PROGRAMMATIC • SESSION TAKEOVER
+✅ New margin from your existing Programmatic Deals
+|  Programmatic Partners
+|  Ad Unit  Layout
+Your Brand 1
+Your Brand 2
+Your Brand 3
+Your Brand 4
+Your Brand 5
+Your Brand 1
+300x600
+Your Brand 2
+Your Brand 3
+Your Brand 4
+Your Brand 5
+300x250
+|  Specs
+Ad Creatives: video post, ad copy, CTA, hashtags
+Tracking: pixel URL, GTM ID
+
+--- Slide 10 ---
+Product Status : Partially available(Brand Direct)
+Note: Can be fully executed via manual setups
+Demand Source | Brand Direct OR Brand Direct Programmatic
+Demand Creative Source | Genuin Post(s) OR Programmatic VAST
+Demand Configured via | BCC
+Supply Source | Own Domain/Apps
+Supply Type | IAB Standard Tag(300x600, 300x250)
+PROGRAMMATIC • SESSION TAKEOVER
+IAB compatible tags on iHeart properties
+
+--- Slide 11 ---
+PROGRAMMATIC • IN-STREAM
+In-Stream: Pre, Mid, and End Roll
+Pre-Roll
+Mid-Roll
+End-Roll
+|  Placement View, On-Click Full View
+|  Specs
+Connect your ad server: GAM, Anniview, InfyTV
+Activate in-feed and in-stream in ad settings
+In-Stream Mid Roll Ad
+
+--- Slide 12 ---
+Product Status : Releasing Tomorrow
+Demand Source | Brand Direct OR Brand Direct Programmatic
+Demand Creative Source | Genuin Post(s) OR Programmatic VAST
+Demand Configured via | BCC
+Supply Source | Own Domain/Apps
+Supply Type | IAB Standard Tag(300x600, 300x250)
+PROGRAMMATIC • IN-STREAM
+In-Stream: Pre, Mid, and End Roll
+
+--- Slide 13 ---
+Offsite
+Extend relevance across open web
+Distribute Tags • Optimize ROAS
+|   Genuin Product
+Monetize
+Unified revenue strategies
+Earn • Sponsorships, Subscriptions & Ads
+WITH
+
+--- Slide 14 ---
+2026. All information herein deemed confidential.
+Takeover Sponsored Placement on Network partners’ properties
+EXTENDED PLACEMENT • IN NETWORK
+✅ Control journey of audience extension
+✅ Activate your advertisers’ social ads in offsite takeover
+|  Available to Partner In-Network
+& more
+…and invite your partners to the Network
+|  Specs
+Brand assets: brand logo, brand handle, video, video description, linkout
+
+--- Slide 15 ---
+Product Status : Pending
+Note: Can be executed via manual setup
+Demand Source | Brand Direct
+Demand Creative Source | Genuin Post(s)
+Demand Configured via | BCC
+Supply Source | Partner’s Domain/Apps
+Supply Type | Genuin Placement
+Takeover Sponsored Placement on Network partners’ properties
+EXTENDED PLACEMENT • IN NETWORK
+
+--- Slide 16 ---
+EXTENDED SPONSORED PLACEMENT  • IN NETWORK
+Extend Sponsored Video Placement to Network partners’ properties
+|  Ad Unit  Layout
+|  Specs
+Brand assets: brand logo, brand handle, video, video description, linkout
+
+--- Slide 17 ---
+Product Status : Pending
+Note: Can be executed via manual setup
+Demand Source | Brand Direct
+Demand Creative Source | Genuin Post(s)
+Demand Configured via | BCC
+Supply Source | Partner’s Domain/Apps
+Supply Type | Genuin Placement
+EXTENDED SPONSORED PLACEMENT  • IN NETWORK
+Extend Sponsored Video Placement to Network partners’ properties
+
+--- Slide 18 ---
+PROGRAMMATIC EXTENDED O&O • IN-FEED, IN-STREAM
+Extend Programmatic Ad Placement to Network partners’ properties
+|  Ad Unit  Layout
+In-Feed
+In-Stream
+|  Specs
+Connect your ad server: GAM, Anniview, InfyTV
+Activate in-feed and in-stream in ad settings
+
+--- Slide 19 ---
+Product Status : Available via Ad Server
+Note: Can be executed via manual setup
+Demand Source | Brand Direct Programmatic
+Demand Creative Source | DSP
+Demand Configured via | Ad Server
+Supply Source | Partner’s Domain/Apps
+Supply Type | Genuin Placement
+PROGRAMMATIC EXTENDED O&O • IN-FEED, IN-STREAM
+Extend Programmatic Ad Placement to Network partners’ properties
+
+--- Slide 20 ---
+Include specs for each product
+IAB compatible tags for audience extension across trusted Network partners
+PROGRAMMATIC PG/PMP • AUDIENCE EXTENSION
+✅ PMP, DealIDs, Unified Auction
+|  Ad Unit  Layout
+Sponsored Content (Highlights)
+Your Brand
+Sponsored
+300x600
+Your Brand
+Sponsored
+Your Brand
+Sponsored
+300x250
+Sponsored Content (Highlights)
+Your Brand
+Sponsored Content (Highlights)
+|  Offsite In-Network
+& More Across Genuin Network
+|  Programmatic Partners
+|  Specs
+Ad Creatives: video post, ad copy, CTA, hashtags
+Tracking: pixel URL, GTM ID
+
+--- Slide 21 ---
+Product Status : Partially available(Brand Direct)
+Note: Can be fully executed via manual setup
+Demand Source | Brand Direct OR Brand Direct Programmatic
+Demand Creative Source | BCC OR DSP
+Demand Configured via | BCC
+Supply Source | Partner’s Domain/Apps
+Supply Type | IAB Standard Placement(300x600, 300x250)
+IAB compatible tags for audience extension across trusted Network partners
+PROGRAMMATIC PG/PMP • AUDIENCE EXTENSION
+
+--- Slide 22 ---
+Subscription
+Unlock Revenue from Network
+
+--- Slide 23 ---
+Give paid access to appear in contextually relevant placements across the onsite + offsite activation and grow organic distribution of the content for extended Podcast partners.
+Create custom paid subscription access plans for your network.
+* Moderation and curation will be managed by BCC
+Allow Post in Highlights for $99.Month to Extended Podcaster and Station Partners
+EXAMPLE SUBSCRIPTION PLAN
+
+--- Slide 24 ---
+Earnings and Payouts
+Manage Reports and Payouts
+
+--- Slide 25 ---
+Relevance Analytics
+Earning and Relevance Analytics to Guide Partnerships
+
+--- Slide 26 ---
+Getting Started
+Monetization Playbook
+
+--- Slide 27 ---
+Quick Start Guide
+
+--- Slide 28 ---
+Why Monetize: Scale revenue while maintaining control of experience
+ONSITE: Within owned properties
+- Sponsored Placements: Takeover
+- Sponsored Placements: Pinned First Position
+- Community Sponsorship: Exclusive SOV
+- Programmatic: In-Stream
+- Programmatic: In-Feed
+WITH GENUIN:✅ Continuous video discovery infrastructure
+✅ Native in-feed sponsorships 
+✅ Unified ecosystem for editorial, talent, creators & advertisers
+✅ Ongoing audience engagement boosts LTV
+✅ Consolidated monetization infrastructure across formats | BEFORE:
+❌ Static inventory and limited discovery
+❌ Campaign-based sponsorships 
+❌ Separate editorial, talent & advertiser experiences
+❌ Limited video-native monetization inside O&O
+❌ Fragmented revenue streams across multiple tools
+OFFSITE: Extend beyond owned properties
+- Extended Placement: In Network
+- Extended Sponsored Post: In Network
+- Programmatic Extended O&O: In-Feed, In-Stream
+- Programmatic PG/PMP - Audience Extension
+WITH GENUIN:✅ Contextual video distribution across trusted open web partners
+✅ Controlled, brand-safe environments beyond owned channels
+✅ Unified onsite + offsite monetization infrastructure
+✅ Expanded revenue from existing content, talent, and audiences | BEFORE:
+❌ Limited scale beyond owned properties without social platforms
+❌ Lost context, brand safety, and transparency offsite
+❌ Separate workflows for owned vs extended distribution
+❌ Limited ability to monetize talent, partner, or editorial content
+
+--- Slide 29 ---
+Spec
+
+--- Slide 30 ---
+Set - up / intro
+(optional, if needed)
+
+--- Slide 31 ---
+Genuin powers video experiences
+inside owned channels
+For Publishers & Retailers >
+Embedded video community feeds drive more onsite engagement, sales & media revenue.
+For Brands & Advertisers >
+Reach and distribution of your video assets with engaged audiences in our Network.
+For Consumers >
+Personalized feeds surface relevant content, offers & social interaction.
+Update for iheart content
+
+--- Slide 32 ---
+The Network supercharges campaigns & drives
+performance for advertisers & creators.
+H1 2026. All information herein deemed confidential.
+DISTRIBUTION
+Boost reach of video assets with verified audiences, beyond walled gardens and across our Network.
+PLACEMENTS
+Native personalized feeds drive discovery, engagement & revenue.
+Update for iheart content
+
+--- Slide 33 ---
+SPONSORED CATEGORY • EXCLUSIVE SOV
+Category Access: Exclusive Share of Voice for Context, Category, and Community.
+✅ Brand Watermark & Intro Card for Sponsored Category Content
+|  Example of Category & Community Access

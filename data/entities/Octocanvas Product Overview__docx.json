@@ -1,0 +1,487 @@
+{
+  "source_doc": "Octocanvas Product Overview",
+  "entities": [
+    {
+      "name": "Octocanvas",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "Octo Canvas"
+      ],
+      "description": "Genuin's AI-powered brand experience platform that gives brands a unified workspace to build, preview, customize, and deploy digital experiences through natural language prompting without writing code."
+    },
+    {
+      "name": "Octo",
+      "bucket": "Product",
+      "type": "AIAssistant",
+      "aliases": [
+        "Octo AI Engine"
+      ],
+      "description": "The AI assistant embedded inside every Octocanvas module that accepts natural language instructions and translates them into visual, structural, or configuration changes in real time, grounded in each brand's knowledge retrieved from Maya."
+    },
+    {
+      "name": "Maya",
+      "bucket": "Product",
+      "type": "KnowledgeSystem",
+      "aliases": [
+        "Maya System",
+        "Genuin Brand Intelligence System"
+      ],
+      "description": "Genuin's central brand knowledge repository that stores structured information about every brand including identity, visual language, content history, audience parameters, integration settings, and platform configuration."
+    },
+    {
+      "name": "Brand Control Center",
+      "bucket": "Product",
+      "type": "Module",
+      "aliases": [
+        "Module 1",
+        "Octocanvas Module 1"
+      ],
+      "description": "The master workspace for building and evolving a brand's prototype web experience with full version history, multi-user collaboration, and a structured Pull Request approval workflow at prototype.brands.begenuin.com."
+    },
+    {
+      "name": "Brand-Specific Demo Creation",
+      "bucket": "Product",
+      "type": "Module",
+      "aliases": [
+        "Module 2",
+        "Demo Creation Module"
+      ],
+      "description": "A rapid demo-generation engine that lets brands produce polished, shareable static product demos from a screenshot, live URL, or from scratch, deployed to S3 or Bunny Bucket."
+    },
+    {
+      "name": "Brand-Specific Generative Destinations",
+      "bucket": "Product",
+      "type": "Module",
+      "aliases": [
+        "Module 3",
+        "Generative Destinations Module"
+      ],
+      "description": "A full web publishing system where brands generate and deploy production-ready web pages at their own live URLs using Genuin's component library or their own proprietary component library."
+    },
+    {
+      "name": "Brand-Specific Generative SDK Creation",
+      "bucket": "Product",
+      "type": "Module",
+      "aliases": [
+        "Module 4",
+        "SDK Creation Module",
+        "Generative SDK Creation"
+      ],
+      "description": "A tool for configuring and deploying Genuin's embeddable video placements (SDKs and card components) across third-party web properties via a three-panel workspace producing a JSON SDK config."
+    },
+    {
+      "name": "Genuin Integration Layer",
+      "bucket": "Engineering",
+      "type": "Service",
+      "aliases": [],
+      "description": "The connective tissue sitting beneath Octo Canvas that links all four modules to Genuin's backend services, brand knowledge systems, and deployment infrastructure, ensuring correct brand context and output routing."
+    },
+    {
+      "name": "Dev Mode",
+      "bucket": "Product",
+      "type": "Mode",
+      "aliases": [],
+      "description": "Octocanvas mode for engineering and technical teams focused on precision editing, version control, pull request workflows, and codebase management."
+    },
+    {
+      "name": "Vibe Mode",
+      "bucket": "Product",
+      "type": "Mode",
+      "aliases": [],
+      "description": "Octocanvas mode for marketing, brand, and creative teams enabling natural language prompting, visual generation, and no-code experience building."
+    },
+    {
+      "name": "Octo Chat Interface",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Octo Chat"
+      ],
+      "description": "The conversational chat surface inside each module where users prompt Octo to make changes, with live preview rendering updates in real time."
+    },
+    {
+      "name": "Live Preview Panel",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Live Preview"
+      ],
+      "description": "The real-time rendering panel in every Octocanvas module that reflects Octo's generated changes instantly as the user iterates on prompts."
+    },
+    {
+      "name": "JSON SDK Configuration",
+      "bucket": "Product",
+      "type": "Output",
+      "aliases": [
+        "JSON SDK Config",
+        "SDK Config"
+      ],
+      "description": "The final output of Module 4: a JSON-based configuration object defining placement layout, data sources, visual style, interaction model, and integration settings, stored in Genuin's database and served dynamically to all active placements."
+    },
+    {
+      "name": "S3",
+      "bucket": "Engineering",
+      "type": "Storage",
+      "aliases": [
+        "Amazon S3"
+      ],
+      "description": "Static file storage destination used by Module 2 to host self-contained demo HTML files at the brand's demo subdomain."
+    },
+    {
+      "name": "Bunny Bucket",
+      "bucket": "Engineering",
+      "type": "Storage",
+      "aliases": [],
+      "description": "Static file storage destination used alongside S3 by Module 2 to host self-contained demo HTML files."
+    },
+    {
+      "name": "Pull Request Workflow",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "PR Workflow"
+      ],
+      "description": "The structured approval workflow used by Module 1 where Octo-generated changes are raised as a Pull Request on the repository for developer review and merge before going live."
+    },
+    {
+      "name": "Session Rebase Mechanism",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Rebase Against QA/Develop"
+      ],
+      "description": "Module 1 mechanism where every new or resumed editing session automatically rebases the working branch against the QA or Develop branch to incorporate accumulated changes and prevent merge conflicts."
+    },
+    {
+      "name": "Brand Genuin (brandID 99)",
+      "bucket": "Business",
+      "type": "Account",
+      "aliases": [
+        "brandID 99",
+        "Master Global Knowledge Layer"
+      ],
+      "description": "The master global brand knowledge layer used by the Brand Control Center, identified by brandID 99, against which all Octo responses and component suggestions are grounded in Module 1."
+    },
+    {
+      "name": "Multi-Tenant Isolation",
+      "bucket": "Engineering",
+      "type": "Architecture",
+      "aliases": [
+        "Brand Isolation"
+      ],
+      "description": "Architectural principle ensuring each brand's knowledge, embeddings, prompts, configurations, and generated outputs are stored and processed independently with no cross-brand data access possible."
+    },
+    {
+      "name": "Role-Based Access Control",
+      "bucket": "Engineering",
+      "type": "SecurityPolicy",
+      "aliases": [
+        "RBAC",
+        "Role-Based Access"
+      ],
+      "description": "Permissioning model that authenticates every user action against a brand account and gates production deployment functions behind appropriate role permissions."
+    },
+    {
+      "name": "Audit Trail",
+      "bucket": "Engineering",
+      "type": "Observability",
+      "aliases": [
+        "Audit Log"
+      ],
+      "description": "Tamper-evident log that records every action taken within Octocanvas including who made a change, when, in which module, and the resulting output, supporting enterprise compliance and governance."
+    },
+    {
+      "name": "Generative Memory",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Session Memory"
+      ],
+      "description": "Octo capability that maintains awareness of the current session's editing history so each prompt builds on the previous state, scoped to the current session unless explicitly saved."
+    },
+    {
+      "name": "Component Library",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Genuin Component Library"
+      ],
+      "description": "Genuin's reusable UI component set available in Module 3 for building production pages; Module 3 also supports a brand's proprietary component library side by side."
+    },
+    {
+      "name": "Staging Environment",
+      "bucket": "Engineering",
+      "type": "Environment",
+      "aliases": [
+        "Prototype Subdomain",
+        "Staging"
+      ],
+      "description": "The sandboxed prototype subdomain environment where all editing and preview activity takes place before deliberate, permissioned promotion to production."
+    },
+    {
+      "name": "iHeartVIP",
+      "bucket": "Partnerships",
+      "type": "BrandTenant",
+      "aliases": [],
+      "description": "Example brand tenant referenced throughout the document whose demo and destination URLs (iheartvip.begenuin.com) illustrate Octocanvas's brand-specific deployment patterns."
+    },
+    {
+      "name": "A/B Testing Support",
+      "bucket": "Product",
+      "type": "RoadmapFeature",
+      "aliases": [],
+      "description": "Medium-term roadmap feature for Modules 2 and 3 enabling brands to generate multiple variants of a page or demo and run controlled comparisons."
+    },
+    {
+      "name": "Scheduled Deployments",
+      "bucket": "Product",
+      "type": "RoadmapFeature",
+      "aliases": [],
+      "description": "Medium-term roadmap feature allowing brands to queue production deployments for specific dates and times."
+    },
+    {
+      "name": "Autonomous Optimization",
+      "bucket": "Product",
+      "type": "RoadmapFeature",
+      "aliases": [],
+      "description": "Long-term roadmap vision where Octo proactively suggests improvements to live pages and placements based on performance data without waiting for user prompts."
+    },
+    {
+      "name": "Embeddable Video Placements",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "SDK Placements",
+        "Card Components"
+      ],
+      "description": "Genuin's SDKs and card components that sit inside third-party web pages, apps, and platforms, configured and deployed via Module 4."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Octocanvas",
+      "target": "Brand Control Center",
+      "type": "INCLUDES",
+      "description": "Octocanvas integrates the Brand Control Center as Module 1 of its four-module platform."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Brand-Specific Demo Creation",
+      "type": "INCLUDES",
+      "description": "Octocanvas integrates Brand-Specific Demo Creation as Module 2 of its four-module platform."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Brand-Specific Generative Destinations",
+      "type": "INCLUDES",
+      "description": "Octocanvas integrates Brand-Specific Generative Destinations as Module 3 of its four-module platform."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Brand-Specific Generative SDK Creation",
+      "type": "INCLUDES",
+      "description": "Octocanvas integrates Brand-Specific Generative SDK Creation as Module 4 of its four-module platform."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Octo",
+      "type": "FEATURES",
+      "description": "Octo is the AI engine embedded inside every Octocanvas module."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Dev Mode",
+      "type": "INCLUDES",
+      "description": "Octocanvas operates in Dev Mode for engineering and technical teams."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Vibe Mode",
+      "type": "INCLUDES",
+      "description": "Octocanvas operates in Vibe Mode for marketing, brand, and creative teams."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Genuin Integration Layer",
+      "type": "DEPENDS_ON",
+      "description": "Octocanvas sits above the Genuin Integration Layer which routes module outputs to backend services and deployment infrastructure."
+    },
+    {
+      "source": "Octo",
+      "target": "Maya",
+      "type": "USES",
+      "description": "Octo retrieves brand-specific knowledge from Maya before formulating responses or generating output for any prompt."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Octo",
+      "type": "USES",
+      "description": "The Brand Control Center uses the Octo chat interface to translate user prompts into web page changes."
+    },
+    {
+      "source": "Brand-Specific Demo Creation",
+      "target": "Octo",
+      "type": "USES",
+      "description": "Module 2 uses Octo to generate or modify demos from screenshots, URLs, or first principles."
+    },
+    {
+      "source": "Brand-Specific Generative Destinations",
+      "target": "Octo",
+      "type": "USES",
+      "description": "Module 3 uses Octo to generate and edit production web pages via natural language prompts."
+    },
+    {
+      "source": "Brand-Specific Generative SDK Creation",
+      "target": "Octo",
+      "type": "USES",
+      "description": "Module 4 uses Octo within its three-panel workspace to configure embeddable placements through prompts."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Maya",
+      "type": "DEPENDS_ON",
+      "description": "The Brand Control Center retrieves the master Brand Genuin (brandID 99) knowledge context from Maya."
+    },
+    {
+      "source": "Brand-Specific Demo Creation",
+      "target": "Maya",
+      "type": "DEPENDS_ON",
+      "description": "Module 2 retrieves the specific brand's knowledge dynamically from Maya for every generation and modification."
+    },
+    {
+      "source": "Brand-Specific Generative Destinations",
+      "target": "Maya",
+      "type": "DEPENDS_ON",
+      "description": "Module 3 retrieves the specific brand's knowledge dynamically from Maya to inform every page generation and modification."
+    },
+    {
+      "source": "Brand-Specific Generative SDK Creation",
+      "target": "Maya",
+      "type": "DEPENDS_ON",
+      "description": "Module 4 retrieves the specific brand's knowledge dynamically from Maya to inform every placement configuration."
+    },
+    {
+      "source": "Brand-Specific Demo Creation",
+      "target": "S3",
+      "type": "INTEGRATES_WITH",
+      "description": "Module 2 deploys finished demos as static HTML files to S3 storage."
+    },
+    {
+      "source": "Brand-Specific Demo Creation",
+      "target": "Bunny Bucket",
+      "type": "INTEGRATES_WITH",
+      "description": "Module 2 deploys finished demos as static HTML files to Bunny Bucket storage."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Pull Request Workflow",
+      "type": "USES",
+      "description": "Module 1 raises a Pull Request for developer review and merge before changes go live."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Session Rebase Mechanism",
+      "type": "USES",
+      "description": "Module 1 automatically rebases working branches against QA/Develop on every new or resumed session to prevent conflicts."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Brand Genuin (brandID 99)",
+      "type": "USES",
+      "description": "Module 1 always operates against the master global knowledge layer Brand Genuin with brandID 99."
+    },
+    {
+      "source": "Brand-Specific Generative SDK Creation",
+      "target": "JSON SDK Configuration",
+      "type": "PRODUCES",
+      "description": "Module 4's Generate or Update action outputs a JSON-based SDK configuration object stored against the brand's account."
+    },
+    {
+      "source": "Brand-Specific Generative SDK Creation",
+      "target": "Embeddable Video Placements",
+      "type": "CONFIGURES",
+      "description": "Module 4 configures and deploys Genuin's embeddable video placements across third-party web properties."
+    },
+    {
+      "source": "Octo",
+      "target": "Octo Chat Interface",
+      "type": "FEATURES",
+      "description": "Octo is surfaced to users through the Octo Chat Interface embedded in every module."
+    },
+    {
+      "source": "Octo",
+      "target": "Live Preview Panel",
+      "type": "FEATURES",
+      "description": "Octo's generated changes render in real time inside the Live Preview Panel."
+    },
+    {
+      "source": "Octo",
+      "target": "Generative Memory",
+      "type": "FEATURES",
+      "description": "Octo maintains session-scoped Generative Memory so each prompt builds incrementally on the previous state."
+    },
+    {
+      "source": "Brand-Specific Generative Destinations",
+      "target": "Component Library",
+      "type": "USES",
+      "description": "Module 3 supports both Genuin's Component Library and brand-owned proprietary libraries for page generation."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Multi-Tenant Isolation",
+      "type": "USES",
+      "description": "Octocanvas enforces strict Multi-Tenant Isolation so no brand can access or influence another brand's data."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Role-Based Access Control",
+      "type": "USES",
+      "description": "Octocanvas gates production deployment and module access through Role-Based Access Control."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Audit Trail",
+      "type": "FEATURES",
+      "description": "Every action in Octocanvas is recorded in a tamper-evident Audit Trail for compliance and governance."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Staging Environment",
+      "type": "USES",
+      "description": "All editing and preview activity in Octocanvas takes place on prototype Staging Environments before promotion to production."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Brand-Specific Demo Creation",
+      "type": "USES",
+      "description": "iHeartVIP is referenced as the example brand whose demo subdomain illustrates Module 2's deployment URL pattern."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Brand-Specific Generative Destinations",
+      "type": "USES",
+      "description": "iHeartVIP is referenced as the example brand whose live subdomain illustrates Module 3's production URL pattern."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "A/B Testing Support",
+      "type": "RELATES_TO",
+      "description": "A/B Testing Support is a medium-term roadmap enhancement for Modules 2 and 3."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Scheduled Deployments",
+      "type": "RELATES_TO",
+      "description": "Scheduled Deployments are a medium-term roadmap enhancement queuing production deployments for specific times."
+    },
+    {
+      "source": "Octocanvas",
+      "target": "Autonomous Optimization",
+      "type": "RELATES_TO",
+      "description": "Autonomous Optimization is a long-term roadmap vision where Octo proactively improves live pages and placements."
+    }
+  ],
+  "_src_hash": "74bfe5bb5f7a370b147e48f5bb82c2921a88f5c8723a0d047590e2690f98aa96",
+  "_skill_sig": "4edd28021f3312b1"
+}

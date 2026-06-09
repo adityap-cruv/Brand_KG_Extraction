@@ -1,0 +1,545 @@
+{
+  "source_doc": "Genuin Mastercard Sponsorship Guide",
+  "entities": [
+    {
+      "name": "Mastercard",
+      "bucket": "Business",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Brand and merchant advertiser activating sponsored, programmatic, and LLM-native video ads across iHeart destinations via Genuin's infrastructure."
+    },
+    {
+      "name": "iHeart",
+      "bucket": "Partnerships",
+      "type": "Publisher",
+      "aliases": [],
+      "description": "Web destination publisher where the Genuin SDK is embedded and Mastercard advertising is delivered to end users."
+    },
+    {
+      "name": "LiveRamp",
+      "bucket": "Partnerships",
+      "type": "IdentityPartner",
+      "aliases": [],
+      "description": "Recommended identity resolution partner that maps Genuin's pseudonymous user identifiers to Mastercard's user graph for audience targeting and closed-loop measurement."
+    },
+    {
+      "name": "Aniview",
+      "bucket": "Partnerships",
+      "type": "AdServer",
+      "aliases": [],
+      "description": "Third-party ad server that fulfils programmatic in-feed and in-stream placements via VAST/VMAP, PMP/PG deals, or oRTB bidding."
+    },
+    {
+      "name": "Koah",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Partner that powers LLM-native conversational ad delivery within the Genuin AI overlay and provides four supported ad formats."
+    },
+    {
+      "name": "OctoGPT",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Octo GPT"
+      ],
+      "description": "AI-powered conversational overlay embedded on top of the Genuin video feed; triggered by configurable dwell to surface contextual prompts and ad units."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Engineering",
+      "type": "SDK",
+      "aliases": [],
+      "description": "Client SDK embedded on iHeart's web destination that requests the video feed, resolves identity at targeting time, and renders the video carousel with ad slots."
+    },
+    {
+      "name": "Genuin Video Infrastructure",
+      "bucket": "Engineering",
+      "type": "Infrastructure",
+      "aliases": [
+        "Genuin Video Server"
+      ],
+      "description": "Backend that hosts and serves uploaded brand video creatives for Sponsored Takeover and Sponsored Post placements."
+    },
+    {
+      "name": "Genuin BCC",
+      "bucket": "Product",
+      "type": "Dashboard",
+      "aliases": [
+        "Brand Control Center"
+      ],
+      "description": "Brand Control Center used to upload direct-sold sponsored video content and access out-of-the-box performance metrics for all placements."
+    },
+    {
+      "name": "Genuin Pixel",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Lightweight JavaScript tag placed on Mastercard merchant pages that enables post-exposure conversion attribution and closed-loop reporting."
+    },
+    {
+      "name": "Sponsored Takeover",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [],
+      "description": "Highest-impact direct-sold in-feed placement that converts the first N slots of the feed into a continuous Mastercard-sponsored experience."
+    },
+    {
+      "name": "Sponsored Post",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [],
+      "description": "Direct-sold in-feed card containing Mastercard branded video served at calculated frequency-based slot positions interleaved with organic content."
+    },
+    {
+      "name": "Programmatic In-Feed Video",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [],
+      "description": "Programmatic video ad served as a feed card via Google IMA SDK and Aniview, with a CTA bar replacing standard engagement icons."
+    },
+    {
+      "name": "Programmatic In-Feed Native",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [],
+      "description": "Programmatic native card creative (headline, image, brand, description, CTA) rendered via GPT.js and fulfilled by Aniview."
+    },
+    {
+      "name": "Programmatic In-Feed Display",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [],
+      "description": "Programmatic standard banner (image or HTML5) rendered as a full feed card slot via GPT.js and Aniview."
+    },
+    {
+      "name": "In-Stream Ad",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "Pre-roll",
+        "Mid-roll",
+        "Post-roll"
+      ],
+      "description": "Linear video ads that play before, during, or after organic content videos within the Genuin video carousel player via VAST/VMAP."
+    },
+    {
+      "name": "LLM Ads",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "LLM-native conversational ads"
+      ],
+      "description": "Native conversational ad placements served within Genuin's AI-powered chat overlay, activated through the partnership with Koah."
+    },
+    {
+      "name": "Action Card",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [],
+      "description": "Koah card-format ad unit with configurable CTA buttons and destination URL designed to drive direct user action from within the conversation."
+    },
+    {
+      "name": "Image Card",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [],
+      "description": "Koah visually-led card ad featuring a brand image, headline, and optional description, suited for awareness and visual storytelling."
+    },
+    {
+      "name": "Poll",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [],
+      "description": "Koah interactive poll embedded in the LLM conversation, with pre-defined options that inform audience insight and engagement measurement."
+    },
+    {
+      "name": "Expandable",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [],
+      "description": "Koah compact teaser unit that expands to reveal full ad content on user tap, allowing richer creative without disrupting conversation flow."
+    },
+    {
+      "name": "BYOA",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Bring Your Own Algorithm"
+      ],
+      "description": "Sponsored content targeting option where Mastercard's own algorithm returns valid Genuin video_id values for per-user creative selection at serve time."
+    },
+    {
+      "name": "Catalog API",
+      "bucket": "Engineering",
+      "type": "API",
+      "aliases": [],
+      "description": "Endpoint that syncs Mastercard's CMS with Genuin's video infrastructure so the BYOA algorithm can return valid video_id references."
+    },
+    {
+      "name": "Context Attribution",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Measurement capability that tracks the video content consumed immediately before a sponsored placement to link pre-exposure content journeys to conversions."
+    },
+    {
+      "name": "Google IMA SDK",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Interactive Media Ads SDK"
+      ],
+      "description": "Google rendering SDK used to deliver programmatic in-feed video creatives from Mastercard's DSP via Aniview."
+    },
+    {
+      "name": "GPT.js",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Google Publisher Tag"
+      ],
+      "description": "Google Publisher Tag library used to render programmatic in-feed native and display creatives via Aniview."
+    },
+    {
+      "name": "VAST",
+      "bucket": "Engineering",
+      "type": "Standard",
+      "aliases": [],
+      "description": "Video ad serving template standard (versions 2.0, 3.0, 4.0) used for programmatic video creative delivery and click tracking."
+    },
+    {
+      "name": "VMAP",
+      "bucket": "Engineering",
+      "type": "Standard",
+      "aliases": [],
+      "description": "Video multiple ad playlist standard supporting one ad per pre/mid/post-roll break within the in-stream Genuin player."
+    },
+    {
+      "name": "oRTB",
+      "bucket": "Engineering",
+      "type": "Standard",
+      "aliases": [
+        "OpenRTB"
+      ],
+      "description": "Real-time bidding protocol enabling Mastercard's DSP to plug directly into Aniview and respond to bid requests for iHeart inventory."
+    },
+    {
+      "name": "PMP",
+      "bucket": "Business",
+      "type": "DealType",
+      "aliases": [
+        "Private Marketplace"
+      ],
+      "description": "Private Marketplace deal type created in Mastercard's DSP and accepted by Aniview for negotiated CPM access to iHeart inventory."
+    },
+    {
+      "name": "Programmatic Guaranteed",
+      "bucket": "Business",
+      "type": "DealType",
+      "aliases": [
+        "PG"
+      ],
+      "description": "Guaranteed-delivery deal type that secures a fixed allocation of iHeart inventory at a negotiated CPM while maintaining DSP workflow."
+    },
+    {
+      "name": "ID5",
+      "bucket": "Partnerships",
+      "type": "IdentityPartner",
+      "aliases": [],
+      "description": "Open, privacy-first identity solution offered as an alternative identity partner with strong cookieless reach on web inventory."
+    },
+    {
+      "name": "UID 2.0",
+      "bucket": "Partnerships",
+      "type": "IdentityStandard",
+      "aliases": [
+        "Unified ID 2.0"
+      ],
+      "description": "Email-based pseudonymous ID maintained by The Trade Desk, widely adopted across programmatic supply chains."
+    },
+    {
+      "name": "The Trade Desk",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Programmatic platform company that maintains the UID 2.0 identity standard."
+    },
+    {
+      "name": "Lotame",
+      "bucket": "Partnerships",
+      "type": "IdentityPartner",
+      "aliases": [],
+      "description": "Data collaboration platform offered as an alternative identity partner with cross-device graph capabilities."
+    },
+    {
+      "name": "Epsilon",
+      "bucket": "Partnerships",
+      "type": "IdentityPartner",
+      "aliases": [],
+      "description": "First-party data network offered as an alternative identity partner with strong retail and commerce media applications."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Mastercard",
+      "target": "iHeart",
+      "type": "PARTNERS_WITH",
+      "description": "Mastercard activates brand and merchant advertising across iHeart destinations under the sponsorship described in this guide."
+    },
+    {
+      "source": "Mastercard",
+      "target": "LiveRamp",
+      "type": "USES",
+      "description": "Mastercard's identity graph is mapped to Genuin's user graph via LiveRamp for audience targeting and closed-loop measurement."
+    },
+    {
+      "source": "Mastercard",
+      "target": "Koah",
+      "type": "PARTNERS_WITH",
+      "description": "Mastercard delivers LLM-native conversational ads through the joint Genuin/Koah activation managed via Koah's portal."
+    },
+    {
+      "source": "Mastercard",
+      "target": "Genuin Pixel",
+      "type": "USES",
+      "description": "Mastercard places the Genuin Pixel JavaScript tag on merchant and conversion destination pages to enable post-exposure attribution."
+    },
+    {
+      "source": "Mastercard",
+      "target": "BYOA",
+      "type": "USES",
+      "description": "Mastercard can opt into the Bring Your Own Algorithm path to control per-user creative selection for Sponsored Takeover and Sponsored Post."
+    },
+    {
+      "source": "Mastercard",
+      "target": "Genuin BCC",
+      "type": "USES",
+      "description": "Mastercard uploads direct-sold sponsored video content and reviews out-of-the-box performance metrics via the Genuin BCC dashboard."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "iHeart",
+      "type": "INTEGRATES_WITH",
+      "description": "The Genuin SDK is embedded on iHeart's web destination and loads on page load to request the targeted video feed."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Genuin Video Infrastructure",
+      "type": "DEPENDS_ON",
+      "description": "The SDK requests assembled video posts and ad slots from the Genuin backend video infrastructure for rendering in the carousel."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Genuin Video Infrastructure",
+      "type": "USES",
+      "description": "Sponsored Takeover places Mastercard-uploaded video into the first N feed slots served by Genuin's video infrastructure."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Genuin Video Infrastructure",
+      "type": "USES",
+      "description": "Sponsored Post serves Mastercard-branded video at frequency-based slot positions from Genuin's video infrastructure."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Genuin BCC",
+      "type": "SOLD_THROUGH",
+      "description": "Sponsored Takeover is a direct-sold placement with content uploaded via the Genuin Brand Control Center."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Genuin BCC",
+      "type": "SOLD_THROUGH",
+      "description": "Sponsored Post is a direct-sold placement with content uploaded via the Genuin Brand Control Center."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "BYOA",
+      "type": "INCLUDES",
+      "description": "Sponsored Takeover supports BYOA as an optional targeting path alongside the out-of-the-box targeting option."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "BYOA",
+      "type": "INCLUDES",
+      "description": "Sponsored Post supports BYOA as an optional targeting path alongside the out-of-the-box targeting option."
+    },
+    {
+      "source": "Programmatic In-Feed Video",
+      "target": "Aniview",
+      "type": "USES",
+      "description": "Programmatic in-feed video creatives are fulfilled by the Aniview ad server in real time."
+    },
+    {
+      "source": "Programmatic In-Feed Video",
+      "target": "Google IMA SDK",
+      "type": "USES",
+      "description": "Programmatic in-feed video uses Google's IMA SDK as the rendering layer for DSP-served creatives."
+    },
+    {
+      "source": "Programmatic In-Feed Video",
+      "target": "VAST",
+      "type": "USES",
+      "description": "Programmatic in-feed video supports VAST 2.0, 3.0, and 4.0 request formats with optional VPAID JS."
+    },
+    {
+      "source": "Programmatic In-Feed Native",
+      "target": "Aniview",
+      "type": "USES",
+      "description": "Programmatic in-feed native creatives are fulfilled by Aniview via GPT.js rendering."
+    },
+    {
+      "source": "Programmatic In-Feed Native",
+      "target": "GPT.js",
+      "type": "USES",
+      "description": "Programmatic in-feed native uses Google Publisher Tag (GPT.js) as the rendering SDK."
+    },
+    {
+      "source": "Programmatic In-Feed Display",
+      "target": "Aniview",
+      "type": "USES",
+      "description": "Programmatic in-feed display banners are fulfilled by Aniview."
+    },
+    {
+      "source": "Programmatic In-Feed Display",
+      "target": "GPT.js",
+      "type": "USES",
+      "description": "Programmatic in-feed display banners are rendered via Google Publisher Tag (GPT.js)."
+    },
+    {
+      "source": "In-Stream Ad",
+      "target": "Aniview",
+      "type": "USES",
+      "description": "In-stream linear video ads run programmatically through the Aniview ad server."
+    },
+    {
+      "source": "In-Stream Ad",
+      "target": "VAST",
+      "type": "USES",
+      "description": "In-stream placements support VAST 2.0/3.0/4.0 with optional VPAID JS creatives."
+    },
+    {
+      "source": "In-Stream Ad",
+      "target": "VMAP",
+      "type": "USES",
+      "description": "In-stream placements support VMAP with one ad per pre/mid/post-roll break; ad podding is not supported."
+    },
+    {
+      "source": "Programmatic In-Feed Video",
+      "target": "oRTB",
+      "type": "USES",
+      "description": "Programmatic in-feed video can be transacted via DSP oRTB bidding integration path with Aniview."
+    },
+    {
+      "source": "In-Stream Ad",
+      "target": "oRTB",
+      "type": "USES",
+      "description": "In-stream placements can be transacted via DSP oRTB bidding integration path with Aniview."
+    },
+    {
+      "source": "Aniview",
+      "target": "PMP",
+      "type": "INCLUDES",
+      "description": "Aniview accepts PMP deal IDs created in Mastercard's DSP as the recommended programmatic integration path."
+    },
+    {
+      "source": "Aniview",
+      "target": "Programmatic Guaranteed",
+      "type": "INCLUDES",
+      "description": "Aniview accepts Programmatic Guaranteed deal IDs as the recommended path for guaranteed delivery and fixed pricing."
+    },
+    {
+      "source": "Koah",
+      "target": "LLM Ads",
+      "type": "POWERS",
+      "description": "Koah selects and serves LLM ad units within the Octo GPT conversation overlay in real time."
+    },
+    {
+      "source": "OctoGPT",
+      "target": "LLM Ads",
+      "type": "POWERS",
+      "description": "The Octo GPT AI overlay is the surface within which LLM ad units are rendered and contextualised to the conversation."
+    },
+    {
+      "source": "Action Card",
+      "target": "LLM Ads",
+      "type": "PART_OF",
+      "description": "Action Card is one of four Koah ad formats available within the LLM conversation overlay."
+    },
+    {
+      "source": "Image Card",
+      "target": "LLM Ads",
+      "type": "PART_OF",
+      "description": "Image Card is one of four Koah ad formats available within the LLM conversation overlay."
+    },
+    {
+      "source": "Poll",
+      "target": "LLM Ads",
+      "type": "PART_OF",
+      "description": "Poll is one of four Koah ad formats available within the LLM conversation overlay."
+    },
+    {
+      "source": "Expandable",
+      "target": "LLM Ads",
+      "type": "PART_OF",
+      "description": "Expandable is one of four Koah ad formats available within the LLM conversation overlay."
+    },
+    {
+      "source": "LLM Ads",
+      "target": "LiveRamp",
+      "type": "USES",
+      "description": "Audience-targeted LLM placements pass Mastercard identity segments resolved via LiveRamp to Koah for targeting within the overlay."
+    },
+    {
+      "source": "BYOA",
+      "target": "Catalog API",
+      "type": "DEPENDS_ON",
+      "description": "BYOA requires the Catalog API video ID sync so Mastercard's algorithm can return valid Genuin video_id values in its response."
+    },
+    {
+      "source": "UID 2.0",
+      "target": "The Trade Desk",
+      "type": "OWNED_BY",
+      "description": "UID 2.0 is the email-based pseudonymous identity standard maintained by The Trade Desk."
+    },
+    {
+      "source": "ID5",
+      "target": "LiveRamp",
+      "type": "RELATES_TO",
+      "description": "ID5 is offered as an alternative identity partner to LiveRamp for resolution against iHeart inventory."
+    },
+    {
+      "source": "UID 2.0",
+      "target": "LiveRamp",
+      "type": "RELATES_TO",
+      "description": "UID 2.0 is offered as an alternative identity standard to LiveRamp for programmatic identity resolution."
+    },
+    {
+      "source": "Lotame",
+      "target": "LiveRamp",
+      "type": "RELATES_TO",
+      "description": "Lotame is offered as an alternative identity partner to LiveRamp with cross-device graph capabilities."
+    },
+    {
+      "source": "Epsilon",
+      "target": "LiveRamp",
+      "type": "RELATES_TO",
+      "description": "Epsilon is offered as an alternative identity partner to LiveRamp with retail and commerce media applications."
+    },
+    {
+      "source": "Genuin Pixel",
+      "target": "Context Attribution",
+      "type": "INCLUDES",
+      "description": "Genuin's measurement stack pairs Pixel-based post-exposure attribution with Context Attribution for pre-exposure content journey insight."
+    },
+    {
+      "source": "Mastercard",
+      "target": "Aniview",
+      "type": "INTEGRATES_WITH",
+      "description": "Mastercard's DSP integrates with Aniview via VAST tags, PMP/PG deal IDs, or oRTB bidding to serve programmatic creatives."
+    }
+  ],
+  "_src_hash": "5a189bb8e383c3fe2d52795e297e87ef28522399a09a513da37dd811b32ab0a9",
+  "_skill_sig": "4edd28021f3312b1"
+}

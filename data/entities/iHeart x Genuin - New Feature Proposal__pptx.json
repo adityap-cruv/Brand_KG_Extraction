@@ -1,0 +1,617 @@
+{
+  "source_doc": "iHeart x Genuin - New Feature Proposal",
+  "entities": [
+    {
+      "name": "iHeartMedia",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "iHeart",
+        "iHeartMedia"
+      ],
+      "description": "Media company partnering with Genuin to amplify podcast engagement by auto-generating and distributing podcast clips across its ecosystem."
+    },
+    {
+      "name": "iHeart App",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "iHeart application"
+      ],
+      "description": "iHeartMedia's consumer app where creators connect podcasts, listeners play episodes, and clips are posted to community and social handles."
+    },
+    {
+      "name": "Social Accounts Connect & Podcast Clip Share",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Social Accounts Connect",
+        "Podcast Clip Share"
+      ],
+      "description": "Proposed iHeart feature enabling talent and producers to connect podcasts and social handles, auto-generate clips, review them, and publish to community plus connected social media."
+    },
+    {
+      "name": "Brand Control Center",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "BCC",
+        "Brand Control Center dashboard"
+      ],
+      "description": "Genuin dashboard from which iHeart producers and admins can review generated clips and post them to communities and connected social handles."
+    },
+    {
+      "name": "Clip Generator Agent",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Podcast to video agent"
+      ],
+      "description": "Genuin AI agent that converts 1.5hr+ podcast audio/video into contextual short clips with hook, body, and CTA, plus captions and smart crop."
+    },
+    {
+      "name": "Closed Captions",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Captioning capability included in the Clip Generator Agent output."
+    },
+    {
+      "name": "Contextual Clips Generator",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Capability that produces contextual clips structured with an intro hook, body, and CTA outro."
+    },
+    {
+      "name": "Contextual Titles Generator",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Capability that generates contextual titles for podcast clips."
+    },
+    {
+      "name": "Smart Crop",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Active subject detection"
+      ],
+      "description": "Active subject detection technology that reframes podcast video clips dynamically."
+    },
+    {
+      "name": "Background Music Generator AI",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Bg music generator AI"
+      ],
+      "description": "AI capability that generates background music for clips."
+    },
+    {
+      "name": "Community Strategist Agent",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Genuin agent that organizes generated videos into the proper community and group."
+    },
+    {
+      "name": "Thumbnail Generator",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Capability that generates thumbnails for clips."
+    },
+    {
+      "name": "SEO Description Generator",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "SEO friendly description generator"
+      ],
+      "description": "Capability that generates SEO-friendly descriptions for podcast clips."
+    },
+    {
+      "name": "Virality Score",
+      "bucket": "Product",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Score derived from hook, flow, value, and trend dimensions to estimate a clip's virality."
+    },
+    {
+      "name": "Multi-language Support",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "110+ languages support"
+      ],
+      "description": "Clip generation capability that supports over 110 languages."
+    },
+    {
+      "name": "Repost by Users",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Allows iHeart users to repost content to multiple social accounts or other communities in one action."
+    },
+    {
+      "name": "Remix for Creators",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Remix"
+      ],
+      "description": "Allows iHeart producers to remix a clip and repost it to other groups and social media handles."
+    },
+    {
+      "name": "Download & Share",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Lets iHeart users download content with brand watermark to their device and share to other social platforms."
+    },
+    {
+      "name": "Brand Watermark",
+      "bucket": "Marketing",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Watermark applied to downloaded clips so that shared content retains brand attribution across platforms."
+    },
+    {
+      "name": "Play Podcast from Profile",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Listener flow that starts a creator's podcast when tapping the profile image on the creator profile page."
+    },
+    {
+      "name": "Notification of Generated Clips",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Notifies producers and admins when new podcast clips have been generated and are ready to review."
+    },
+    {
+      "name": "Elvis Duran",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "iHeartMedia radio and podcast personality referenced as the talent whose podcast is played and whose posts are distributed to social platforms.",
+      "seniority_tier": "IC",
+      "role_title": "Podcast Host",
+      "affiliation": "iHeartMedia"
+    },
+    {
+      "name": "iHeart Producers",
+      "bucket": "People",
+      "type": "Role",
+      "aliases": [
+        "Producers",
+        "Admins"
+      ],
+      "description": "iHeartMedia producers and administrators who connect podcasts, review generated clips, and publish them to communities and social handles."
+    },
+    {
+      "name": "iHeart Listeners",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "iHeart users"
+      ],
+      "description": "End users of the iHeart App who play podcasts, repost content, and download or share clips."
+    },
+    {
+      "name": "iHeart Community",
+      "bucket": "Audience",
+      "type": "Community",
+      "aliases": [],
+      "description": "Community space within the iHeart App where producers post clips and users engage with content."
+    },
+    {
+      "name": "X",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "Twitter"
+      ],
+      "description": "External social media platform to which iHeart producers and users can repost generated podcast clips."
+    },
+    {
+      "name": "Instagram",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "Instagram Story"
+      ],
+      "description": "External social platform supported as a repost destination, including Instagram Story posts."
+    },
+    {
+      "name": "LinkedIn",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "External social platform supported as a repost destination for podcast clip content."
+    },
+    {
+      "name": "TED",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "TED community"
+      ],
+      "description": "Organization referenced as benefiting from creator/curator remixing of UGC content and boosted community engagement around shared ideas."
+    },
+    {
+      "name": "Share of Voice Measurement",
+      "bucket": "Marketing",
+      "type": "Metric",
+      "aliases": [
+        "Thoughts' Share of Voice"
+      ],
+      "description": "Capability to identify which ideas resonate with users and spotlight them to enrich community discussions."
+    },
+    {
+      "name": "Dynamic Text Adjustment",
+      "bucket": "Engineering",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Upcoming Genuin capability for dynamic text adjustment in clips."
+    },
+    {
+      "name": "Non-Transcribable Video Processing",
+      "bucket": "Engineering",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Upcoming capability to process video that cannot be transcribed conventionally."
+    },
+    {
+      "name": "Custom Caption Styles",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Upcoming feature offering custom caption styling for clips."
+    },
+    {
+      "name": "Generative B-Rolls",
+      "bucket": "Engineering",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Upcoming capability to generate b-roll footage to enrich clips."
+    },
+    {
+      "name": "Transitions",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Upcoming clip-editing feature adding transitions between scenes."
+    },
+    {
+      "name": "Gifs Emojis and Stickers",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Upcoming feature to overlay gifs, emojis, and stickers on clips."
+    },
+    {
+      "name": "Overlays",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Upcoming feature to add visual overlays to clips."
+    },
+    {
+      "name": "Sound Effects",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Upcoming feature to add sound effects to generated clips."
+    },
+    {
+      "name": "Clip Scheduling",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Schedules"
+      ],
+      "description": "Upcoming capability to schedule clip posts."
+    },
+    {
+      "name": "Multi-lingual Clips",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Upcoming feature delivering multilingual clip outputs."
+    },
+    {
+      "name": "Clip Editor",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Editor"
+      ],
+      "description": "Upcoming editor capability for refining generated clips."
+    },
+    {
+      "name": "Super Resolution",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Upcoming technology to upscale clip resolution."
+    },
+    {
+      "name": "Community Sponsored Brands",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Sponsored brands element combined into community clip outputs alongside brand handle, logo, and assets."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Social Accounts Connect & Podcast Clip Share",
+      "target": "iHeart App",
+      "type": "PART_OF",
+      "description": "The feature is delivered inside the iHeart App for producers and listeners."
+    },
+    {
+      "source": "iHeartMedia",
+      "target": "iHeart App",
+      "type": "OWNED_BY",
+      "description": "iHeart App is owned and operated by iHeartMedia."
+    },
+    {
+      "source": "iHeart Producers",
+      "target": "iHeartMedia",
+      "type": "WORKS_FOR",
+      "description": "Producers and admins are iHeartMedia staff who manage podcast distribution."
+    },
+    {
+      "source": "Elvis Duran",
+      "target": "iHeartMedia",
+      "type": "WORKS_FOR",
+      "description": "Elvis Duran is an iHeartMedia podcast host featured in the proposal."
+    },
+    {
+      "source": "Elvis Duran",
+      "target": "iHeart Community",
+      "type": "APPEARS_IN",
+      "description": "Elvis Duran's content is posted into the iHeart community."
+    },
+    {
+      "source": "Social Accounts Connect & Podcast Clip Share",
+      "target": "Clip Generator Agent",
+      "type": "USES",
+      "description": "The feature relies on the Clip Generator Agent to turn podcasts into short clips."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Closed Captions",
+      "type": "INCLUDES",
+      "description": "Closed captions are part of the agent's clip output."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Contextual Clips Generator",
+      "type": "INCLUDES",
+      "description": "Contextual clip generation with hook, body, and CTA is part of the agent."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Contextual Titles Generator",
+      "type": "INCLUDES",
+      "description": "Contextual title generation is part of the agent."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Smart Crop",
+      "type": "USES",
+      "description": "The agent uses smart crop with active subject detection to reframe videos."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Background Music Generator AI",
+      "type": "USES",
+      "description": "The agent uses an AI background music generator for clip audio."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Thumbnail Generator",
+      "type": "INCLUDES",
+      "description": "Thumbnail generation is part of the agent's output."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "SEO Description Generator",
+      "type": "INCLUDES",
+      "description": "SEO-friendly description generation is part of the agent's output."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Multi-language Support",
+      "type": "INCLUDES",
+      "description": "The agent supports 110+ languages."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Virality Score",
+      "type": "PRODUCES",
+      "description": "The agent produces a virality score based on hook, flow, value, and trend."
+    },
+    {
+      "source": "Community Strategist Agent",
+      "target": "iHeart Community",
+      "type": "RUN_BY",
+      "description": "The Community Strategist Agent organizes generated videos into the appropriate iHeart community and groups."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Social Accounts Connect & Podcast Clip Share",
+      "type": "SUPPORTS",
+      "description": "Producers can review and post generated clips from the Brand Control Center dashboard."
+    },
+    {
+      "source": "Notification of Generated Clips",
+      "target": "iHeart Producers",
+      "type": "TARGETED_AT",
+      "description": "Notifications about generated clips are sent to producers and admins."
+    },
+    {
+      "source": "Play Podcast from Profile",
+      "target": "iHeart App",
+      "type": "PART_OF",
+      "description": "Playing a podcast from a creator's profile page is a flow in the iHeart App."
+    },
+    {
+      "source": "iHeart Listeners",
+      "target": "Play Podcast from Profile",
+      "type": "USES",
+      "description": "iHeart listeners use the profile-tap interaction to play podcasts."
+    },
+    {
+      "source": "Repost by Users",
+      "target": "iHeart Listeners",
+      "type": "TARGETED_AT",
+      "description": "Repost by Users is a feature for iHeart listeners to redistribute content."
+    },
+    {
+      "source": "Repost by Users",
+      "target": "X",
+      "type": "DISTRIBUTES",
+      "description": "Users can repost iHeart clips to X."
+    },
+    {
+      "source": "Repost by Users",
+      "target": "Instagram",
+      "type": "DISTRIBUTES",
+      "description": "Users can repost iHeart clips to Instagram, including Stories."
+    },
+    {
+      "source": "Repost by Users",
+      "target": "LinkedIn",
+      "type": "DISTRIBUTES",
+      "description": "Users can repost iHeart clips to LinkedIn."
+    },
+    {
+      "source": "Remix for Creators",
+      "target": "iHeart Producers",
+      "type": "TARGETED_AT",
+      "description": "Remix is provided to iHeart producers for re-editing and reposting clips."
+    },
+    {
+      "source": "Download & Share",
+      "target": "Brand Watermark",
+      "type": "INCLUDES",
+      "description": "Downloaded clips carry a brand watermark when shared off-platform."
+    },
+    {
+      "source": "Download & Share",
+      "target": "iHeart Listeners",
+      "type": "TARGETED_AT",
+      "description": "Download & Share is offered to iHeart listeners."
+    },
+    {
+      "source": "Share of Voice Measurement",
+      "target": "TED",
+      "type": "TARGETED_AT",
+      "description": "The share-of-voice measurement is framed as a benefit for the TED community."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Dynamic Text Adjustment",
+      "type": "INCLUDES",
+      "description": "Dynamic Text Adjustment is on the roadmap for clip generation."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Non-Transcribable Video Processing",
+      "type": "INCLUDES",
+      "description": "Non-transcribable video processing is an upcoming capability."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Custom Caption Styles",
+      "type": "INCLUDES",
+      "description": "Custom caption styles are an upcoming clip feature."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Generative B-Rolls",
+      "type": "INCLUDES",
+      "description": "Generative b-rolls are upcoming for richer clip composition."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Transitions",
+      "type": "INCLUDES",
+      "description": "Transitions are upcoming for clip editing."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Gifs Emojis and Stickers",
+      "type": "INCLUDES",
+      "description": "Gifs, emojis, and stickers are upcoming overlay capabilities."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Overlays",
+      "type": "INCLUDES",
+      "description": "Overlays are upcoming for clip visuals."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Sound Effects",
+      "type": "INCLUDES",
+      "description": "Sound effects are upcoming for clip audio."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Clip Scheduling",
+      "type": "INCLUDES",
+      "description": "Scheduling is upcoming for clip posting."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Multi-lingual Clips",
+      "type": "INCLUDES",
+      "description": "Multi-lingual clip output is upcoming."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Clip Editor",
+      "type": "INCLUDES",
+      "description": "An editor is upcoming for refining clips."
+    },
+    {
+      "source": "Clip Generator Agent",
+      "target": "Super Resolution",
+      "type": "USES",
+      "description": "Super resolution is an upcoming technology in the clip pipeline."
+    },
+    {
+      "source": "Community Sponsored Brands",
+      "target": "iHeart Community",
+      "type": "PROMOTED_BY",
+      "description": "Community-sponsored brand elements appear in iHeart community clip outputs."
+    },
+    {
+      "source": "iHeartMedia",
+      "target": "X",
+      "type": "PARTNERS_WITH",
+      "description": "iHeart distributes podcast clips to X as a connected social platform."
+    },
+    {
+      "source": "iHeartMedia",
+      "target": "Instagram",
+      "type": "PARTNERS_WITH",
+      "description": "iHeart distributes podcast clips to Instagram as a connected social platform."
+    },
+    {
+      "source": "iHeartMedia",
+      "target": "LinkedIn",
+      "type": "PARTNERS_WITH",
+      "description": "iHeart distributes podcast clips to LinkedIn as a connected social platform."
+    }
+  ],
+  "_src_hash": "09bb29ef5161206bf94ca4e75780a77ed4b7c757caa11fb1b069030a94bca56c",
+  "_skill_sig": "4edd28021f3312b1"
+}

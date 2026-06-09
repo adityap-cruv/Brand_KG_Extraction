@@ -1,0 +1,133 @@
+{
+  "Fact Retrieval": {
+    "rouge_score": 0.35143802035555605,
+    "answer_correctness": 0.5771495617785675
+  },
+  "Complex Reasoning": {
+    "rouge_score": 0.2034481202559278,
+    "answer_correctness": 0.5316400104401702
+  },
+  "Contextual Summarize": {
+    "answer_correctness": 0.6518076266521518,
+    "coverage_score": 0.5195593067163189
+  },
+  "Creative Generation": {
+    "answer_correctness": 0.5094271125839364,
+    "coverage_score": 0.3165852790732251,
+    "faithfulness": 0.3935267857142857
+  },
+  "_summary": {
+    "average": 0.4505090915077932,
+    "by_question_type_average": {
+      "Fact Retrieval": 0.46429379106706176,
+      "Complex Reasoning": 0.36754406534804895,
+      "Contextual Summarize": 0.5856834666842353,
+      "Creative Generation": 0.4065130591238157
+    }
+  },
+  "_cost_estimate": {
+    "generated_at": "2026-06-04T04:44:40+00:00",
+    "subset": "novel",
+    "answer_source": "llm",
+    "question_count": 2010,
+    "models": {
+      "answer_generation": {
+        "engine": "codex",
+        "model": "gpt-5.5",
+        "pricing_status": "codex_oauth_run; no direct API usage object was saved"
+      },
+      "benchmark_evaluation": {
+        "model": "gpt-4o-mini",
+        "embedding_model": "BAAI/bge-large-en-v1.5"
+      }
+    },
+    "token_estimates": {
+      "answer_generation": {
+        "input_tokens_estimate": 1756483,
+        "output_tokens_estimate": 118088,
+        "total_tokens_estimate": 1874571,
+        "by_question_type": {
+          "Fact Retrieval": {
+            "questions": 971,
+            "input_tokens_estimate": 834544,
+            "output_tokens_estimate": 11590,
+            "total_tokens_estimate": 846134
+          },
+          "Complex Reasoning": {
+            "questions": 610,
+            "input_tokens_estimate": 532103,
+            "output_tokens_estimate": 48336,
+            "total_tokens_estimate": 580439
+          },
+          "Contextual Summarize": {
+            "questions": 362,
+            "input_tokens_estimate": 326408,
+            "output_tokens_estimate": 49564,
+            "total_tokens_estimate": 375972
+          },
+          "Creative Generation": {
+            "questions": 67,
+            "input_tokens_estimate": 63428,
+            "output_tokens_estimate": 8598,
+            "total_tokens_estimate": 72026
+          }
+        }
+      },
+      "benchmark_evaluation": {
+        "model": "gpt-4o-mini",
+        "llm_calls_estimate": 7022,
+        "input_tokens_estimate": 1274259,
+        "output_tokens_estimate": 1161852,
+        "total_tokens_estimate": 2436111,
+        "by_question_type": {
+          "Fact Retrieval": {
+            "questions": 971,
+            "llm_calls_estimate": 2913,
+            "input_tokens_estimate": 289107,
+            "output_tokens_estimate": 300147,
+            "total_tokens_estimate": 589254
+          },
+          "Complex Reasoning": {
+            "questions": 610,
+            "llm_calls_estimate": 1830,
+            "input_tokens_estimate": 281556,
+            "output_tokens_estimate": 293911,
+            "total_tokens_estimate": 575467
+          },
+          "Contextual Summarize": {
+            "questions": 362,
+            "llm_calls_estimate": 1810,
+            "input_tokens_estimate": 522032,
+            "output_tokens_estimate": 448374,
+            "total_tokens_estimate": 970406
+          },
+          "Creative Generation": {
+            "questions": 67,
+            "llm_calls_estimate": 469,
+            "input_tokens_estimate": 181564,
+            "output_tokens_estimate": 119420,
+            "total_tokens_estimate": 300984
+          }
+        }
+      },
+      "combined_total_tokens_estimate": 4310682
+    },
+    "cost_estimates_usd": {
+      "answer_generation": {
+        "cost_usd": null,
+        "reason": "The answer generation used Codex OAuth with local model gpt-5.5; the run did not save billable usage and gpt-5.5 is not listed in the official OpenAI API pricing table.",
+        "proxy_model": "gpt-5-codex",
+        "proxy_input_per_1m_tokens_usd": 1.25,
+        "proxy_output_per_1m_tokens_usd": 10.0,
+        "proxy_cost_usd_if_priced_like_gpt_5_codex": 3.376484
+      },
+      "benchmark_evaluation": {
+        "model": "gpt-4o-mini",
+        "input_per_1m_tokens_usd": 0.15,
+        "output_per_1m_tokens_usd": 0.6,
+        "cost_usd_estimate": 0.88825
+      },
+      "combined_proxy_cost_usd_estimate": 4.264734
+    }
+  }
+}

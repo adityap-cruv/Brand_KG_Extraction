@@ -1,0 +1,379 @@
+{
+  "source_doc": "Ad_Prioritisation_Logic",
+  "entities": [
+    {
+      "name": "Monetize",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Monetize Product"
+      ],
+      "description": "The Genuin product line under which the Ad Prioritisation Logic for video feed placements is defined."
+    },
+    {
+      "name": "Ad Prioritisation Logic",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Ad Prioritization Logic",
+        "Prioritisation Logic"
+      ],
+      "description": "The rules that determine which ads appear in each paginated page of 10 videos on a placement, ordering takeovers, sponsored posts, and programmatic fallback."
+    },
+    {
+      "name": "Video Feed Placement",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Placement",
+        "Video Feed"
+      ],
+      "description": "A surface that serves video feeds in paginated calls of 10 videos each and on which managed ad types can be configured."
+    },
+    {
+      "name": "Paginated View",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "Paginated Page",
+        "Page of 10"
+      ],
+      "description": "A single page of 10 video slots delivered by the video feed placement; the unit at which ad prioritisation and slot allocation are evaluated."
+    },
+    {
+      "name": "Sponsored Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Takeover"
+      ],
+      "description": "A managed ad type that occupies the entire paginated view exclusively when active, suppressing sponsored posts and programmatic ads on that page."
+    },
+    {
+      "name": "Sponsored Post",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "In-Feed Sponsored Post"
+      ],
+      "description": "A managed ad type that occupies only the designated in-feed ad slots within a paginated view, competing with other sponsored posts by CPM."
+    },
+    {
+      "name": "Programmatic Ad",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Programmatic",
+        "PG"
+      ],
+      "description": "Fallback ad type that fills in-feed slots when no sponsored post is eligible or when sponsored post budgets are exhausted."
+    },
+    {
+      "name": "Organic Content",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "Organic Video",
+        "Content"
+      ],
+      "description": "Non-ad video content that fills remaining slots in a paginated view when ads do not occupy every slot."
+    },
+    {
+      "name": "CPM Configuration",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "CPM",
+        "Bid Value"
+      ],
+      "description": "Placement-level configuration capturing the bid value of a takeover or sponsored post; used to order competing ads from highest to lowest."
+    },
+    {
+      "name": "Ad Duration Configuration",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "Duration",
+        "Flight Window"
+      ],
+      "description": "The flight window within which a sponsored takeover or sponsored post is eligible to serve on a placement."
+    },
+    {
+      "name": "Creative Videos Configuration",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "Number of Creative Videos",
+        "Creative Video Set"
+      ],
+      "description": "The set of videos a sponsor supplies for a takeover or sponsored post; drives the cycling behaviour across slots and pages."
+    },
+    {
+      "name": "In-Feed Ad Slots Configuration",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "In-Feed Ad Slots",
+        "In-Feed Slots"
+      ],
+      "description": "Placement-level configuration controlling how many of the 10 slots in a paginated view are reserved for in-feed sponsored post ads."
+    },
+    {
+      "name": "Allow Content To Play With Sponsored Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Allow Content Setting",
+        "Allow Content Flag"
+      ],
+      "description": "Per-takeover configuration controlling whether organic content can fill slots not occupied by the takeover's creative videos on a takeover page."
+    },
+    {
+      "name": "Takeover Video Cycling",
+      "bucket": "Product",
+      "type": "Process",
+      "aliases": [
+        "Takeover Sliding Window",
+        "Takeover Circular Buffer"
+      ],
+      "description": "Algorithm that cycles a takeover's creative videos through a circular buffer with a sliding window of 10, advancing by 10 modulo N each page."
+    },
+    {
+      "name": "Sponsored Post Video Cycling",
+      "bucket": "Product",
+      "type": "Process",
+      "aliases": [
+        "Sponsored Post Sliding Window"
+      ],
+      "description": "Algorithm that cycles a sponsored post's creative videos across the available in-feed ad slots on every page via a circular buffer."
+    },
+    {
+      "name": "Takeover Exclusivity Rule",
+      "bucket": "Product",
+      "type": "Process",
+      "aliases": [
+        "Takeover Suppression Rule"
+      ],
+      "description": "Rule that an active sponsored takeover is the exclusive ad type for that page, suppressing all sponsored posts and other takeovers on the same placement."
+    },
+    {
+      "name": "Priority Order",
+      "bucket": "Product",
+      "type": "Process",
+      "aliases": [
+        "Ad Priority Order"
+      ],
+      "description": "Ordering used when filling a paginated view: sponsored takeovers by CPM, then sponsored posts by CPM within in-feed slots, then programmatic as fallback."
+    },
+    {
+      "name": "User-Level Frequency Caps",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Frequency Caps",
+        "User Frequency Cap"
+      ],
+      "description": "Planned per-user-per-day or per-user-per-session ceiling on how many times a sponsored post's creative videos can be shown to the same user, diversifying user experience while preserving CPM-driven delivery."
+    },
+    {
+      "name": "Sponsored Post Repeatability",
+      "bucket": "Audience",
+      "type": "Concept",
+      "aliases": [
+        "Creative Repetition",
+        "User Fatigue"
+      ],
+      "description": "User-experience consequence of the cycling rules where a single user can see the same sponsored post's creative videos multiple times within a page and across consecutive pages."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Ad Prioritisation Logic",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "The Ad Prioritisation Logic document defines behaviour for the Monetize product."
+    },
+    {
+      "source": "Video Feed Placement",
+      "target": "Monetize",
+      "type": "PART_OF",
+      "description": "Video feed placements are surfaces governed by the Monetize product."
+    },
+    {
+      "source": "Video Feed Placement",
+      "target": "Paginated View",
+      "type": "INCLUDES",
+      "description": "Video feeds on a placement are served in paginated calls of 10 videos each, i.e. paginated views."
+    },
+    {
+      "source": "Ad Prioritisation Logic",
+      "target": "Paginated View",
+      "type": "RELATES_TO",
+      "description": "The prioritisation logic determines what appears in each paginated view of 10 slots."
+    },
+    {
+      "source": "Ad Prioritisation Logic",
+      "target": "Priority Order",
+      "type": "INCLUDES",
+      "description": "The logic enforces the priority order of takeovers, sponsored posts, then programmatic fallback."
+    },
+    {
+      "source": "Priority Order",
+      "target": "Sponsored Takeover",
+      "type": "INCLUDES",
+      "description": "Sponsored takeovers sit at the top of the priority order, sorted by CPM highest first."
+    },
+    {
+      "source": "Priority Order",
+      "target": "Sponsored Post",
+      "type": "INCLUDES",
+      "description": "Sponsored posts come next in the priority order, sorted by CPM within available in-feed slots."
+    },
+    {
+      "source": "Priority Order",
+      "target": "Programmatic Ad",
+      "type": "INCLUDES",
+      "description": "Programmatic ads serve as the fallback layer in the priority order for unfilled in-feed slots."
+    },
+    {
+      "source": "Video Feed Placement",
+      "target": "Sponsored Takeover",
+      "type": "FEATURES",
+      "description": "Sponsored takeovers are one of the managed ad types configurable on a video feed placement."
+    },
+    {
+      "source": "Video Feed Placement",
+      "target": "Sponsored Post",
+      "type": "FEATURES",
+      "description": "Sponsored posts are one of the managed ad types configurable on a video feed placement."
+    },
+    {
+      "source": "Video Feed Placement",
+      "target": "Programmatic Ad",
+      "type": "FEATURES",
+      "description": "Programmatic ads fill in-feed slots on the placement when sponsored posts are not eligible or are exhausted."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "CPM Configuration",
+      "type": "USES",
+      "description": "Sponsored takeovers are configured with a CPM that orders competing takeovers from highest to lowest."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Ad Duration Configuration",
+      "type": "USES",
+      "description": "Sponsored takeovers are configured with a duration that bounds the flight window of eligibility."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Creative Videos Configuration",
+      "type": "USES",
+      "description": "Sponsored takeovers use a configured set of creative videos that are cycled through the paginated view."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "CPM Configuration",
+      "type": "USES",
+      "description": "Sponsored posts use CPM to compete for in-feed slots, highest first."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Ad Duration Configuration",
+      "type": "USES",
+      "description": "Sponsored posts use a duration that bounds their eligibility window."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Creative Videos Configuration",
+      "type": "USES",
+      "description": "Sponsored posts use a configured set of creative videos that are cycled across in-feed slots."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "In-Feed Ad Slots Configuration",
+      "type": "USES",
+      "description": "Sponsored posts occupy only the in-feed ad slots defined by the placement's slot configuration."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Allow Content To Play With Sponsored Takeover",
+      "type": "USES",
+      "description": "Each takeover has its own Allow Content flag that controls whether organic content interleaves with takeover creative videos."
+    },
+    {
+      "source": "Allow Content To Play With Sponsored Takeover",
+      "target": "Organic Content",
+      "type": "RELATES_TO",
+      "description": "When enabled, slots beyond the takeover's creative count are filled with organic content; when disabled, no organic content is interleaved."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Takeover Video Cycling",
+      "type": "USES",
+      "description": "Takeovers cycle their creative videos through a sliding window of 10 across pages, advancing by 10 modulo N each page."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Sponsored Post Video Cycling",
+      "type": "USES",
+      "description": "Sponsored posts cycle their creative videos across the available in-feed slots on every page."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Takeover Exclusivity Rule",
+      "type": "RELATES_TO",
+      "description": "An active takeover is the exclusive ad type for that page, suppressing sponsored posts and other takeovers."
+    },
+    {
+      "source": "Takeover Exclusivity Rule",
+      "target": "Sponsored Post",
+      "type": "RELATES_TO",
+      "description": "While any takeover is active, sponsored posts are suppressed on that placement."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Programmatic Ad",
+      "type": "DEPENDS_ON",
+      "description": "In-feed slots not filled by an eligible sponsored post fall back to programmatic ads."
+    },
+    {
+      "source": "Paginated View",
+      "target": "In-Feed Ad Slots Configuration",
+      "type": "INCLUDES",
+      "description": "A paginated view contains the number of in-feed ad slots set by the placement-level configuration, with the remainder available for organic content."
+    },
+    {
+      "source": "Paginated View",
+      "target": "Organic Content",
+      "type": "INCLUDES",
+      "description": "Paginated views include organic content in slots not occupied by ads."
+    },
+    {
+      "source": "User-Level Frequency Caps",
+      "target": "Sponsored Post",
+      "type": "RELATES_TO",
+      "description": "Frequency caps will limit how many times a sponsored post's creative videos can be shown to the same user within a capping window."
+    },
+    {
+      "source": "User-Level Frequency Caps",
+      "target": "Sponsored Post Repeatability",
+      "type": "RESPONDS_TO",
+      "description": "Frequency caps are the planned remedy for the within-page and cross-page repetition users currently experience under the cycling rules."
+    },
+    {
+      "source": "Sponsored Post Repeatability",
+      "target": "Sponsored Post Video Cycling",
+      "type": "DEPENDS_ON",
+      "description": "Repeatability for a user arises because the active sponsored post's videos cycle to fill every available in-feed slot under the current rules."
+    },
+    {
+      "source": "User-Level Frequency Caps",
+      "target": "Sponsored Takeover",
+      "type": "RELATES_TO",
+      "description": "Frequency caps may later be extended to sponsored takeovers to prevent repeated exposure across pages, though this is out of scope for the current release."
+    }
+  ],
+  "_src_hash": "578ab97f05110355f6601fbcf20fa27edde9f9ecef57dc16fbec9c6d201b322e",
+  "_skill_sig": "4edd28021f3312b1"
+}

@@ -1,0 +1,506 @@
+{
+  "source_doc": "Genuin Ad Ops Guide - MCC (1)",
+  "entities": [
+    {
+      "name": "Genuin Monetize",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Monetize",
+        "Genuin Monetize Framework",
+        "Monetize MCC Edition"
+      ],
+      "description": "Genuin's layered monetization product offering in-feed and in-stream ad formats for partner brands, with both direct-sold and programmatic demand paths."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "The client SDK that powers Genuin's video carousels and feeds embedded on partner websites and apps; renders both organic content and ads."
+    },
+    {
+      "name": "Genuin Video Player",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Genuin Video Carousel Player"
+      ],
+      "description": "The in-app video player that supports in-stream linear video ads (pre-roll, mid-roll, post-roll) and renders feed content."
+    },
+    {
+      "name": "Genuin Video Server",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Genuin's backend video server that serves direct-sold Sponsored Takeovers and Sponsored Posts into feed slots."
+    },
+    {
+      "name": "Brand Control Center",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "BCC",
+        "BCC Dashboard"
+      ],
+      "description": "Genuin's dashboard for partner brands to manage Monetize Presets, ad waterfall priority, frequency/density settings, sponsorships, and placements."
+    },
+    {
+      "name": "BCC Analytics",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Genuin BCC Analytics"
+      ],
+      "description": "Aggregate ad activity reporting within BCC for direct-sold Sponsored Posts and Takeovers, covering impressions, engagement rates, and revenue summaries."
+    },
+    {
+      "name": "Monetize Preset",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Preset"
+      ],
+      "description": "Strategic control layer in BCC that defines which ad types are active for a placement, their waterfall priority, and frequency/behavior parameters."
+    },
+    {
+      "name": "Premium Preset",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "System default preset that enables sponsored content only (Takeover or Sponsored Posts) and disables all programmatic and in-stream ads."
+    },
+    {
+      "name": "Aggressive Preset",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "System default preset for maximum revenue: in-feed enabled at start slot 2 / repeat 2 and in-stream enabled across all positions."
+    },
+    {
+      "name": "Balanced Preset",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Balanced (Default) Preset"
+      ],
+      "description": "Recommended MCC default preset with in-feed start 2 / repeat 4 and in-stream limited to mid-roll only to avoid back-to-back ads."
+    },
+    {
+      "name": "Conservative In-Stream Only Preset",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "System default preset that disables in-feed ads and runs in-stream only when users expand to full-screen player view."
+    },
+    {
+      "name": "Conservative In-Feed Only Preset",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "System default preset with in-feed at start 3 / repeat 5 and in-stream disabled so content videos play uninterrupted."
+    },
+    {
+      "name": "Sponsored Takeover",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "In-Feed Sponsored Takeover",
+        "Full Feed Takeover"
+      ],
+      "description": "Highest-priority direct-sold in-feed format that converts the first n feed slots into a continuous brand-sponsored experience served by the Genuin Video Server."
+    },
+    {
+      "name": "Sponsored Post",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "In-Feed Sponsored Post",
+        "Sponsored Posts"
+      ],
+      "description": "Direct-sold in-feed card containing brand-sponsored video content placed into calculated frequency-based ad slots and served by the Genuin Video Server."
+    },
+    {
+      "name": "Programmatic In-Feed Video Ad",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "In-Feed Programmatic Video"
+      ],
+      "description": "Programmatic video creative served via Google's IMA SDK and fulfilled by the Aniview ad server, rendered as a video card with a blue CTA bar in place of engagement icons."
+    },
+    {
+      "name": "Programmatic In-Feed Native Ad",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "In-Feed Programmatic Native"
+      ],
+      "description": "Programmatic native static card (headline, image, brand logo, description, CTA) served via GPT.js and fulfilled by the Aniview ad server."
+    },
+    {
+      "name": "Programmatic In-Feed Display Ad",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "In-Feed Programmatic Display"
+      ],
+      "description": "Programmatic standard banner (image or HTML5) served via GPT.js and Aniview, occupying the full feed card slot as a static visual unit."
+    },
+    {
+      "name": "In-Stream Video Ad",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "In-Stream Pre/Mid/Post-roll",
+        "In-Stream Programmatic Ads"
+      ],
+      "description": "Linear VAST/VMAP video ads served programmatically via IMA SDK and Aniview at pre-roll, mid-roll, or post-roll positions inside the Genuin video player."
+    },
+    {
+      "name": "House Fallback",
+      "bucket": "Product",
+      "type": "AdFormat",
+      "aliases": [
+        "House / Fallback"
+      ],
+      "description": "Mandatory always-on Genuin-served content that fills empty in-feed slots when all programmatic demand sources return no fill."
+    },
+    {
+      "name": "In-Feed Waterfall",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "In-Feed Waterfall Model",
+        "Ad Waterfall"
+      ],
+      "description": "Sequential resolution model where higher-priority ad types (Takeover, Sponsored Post, Programmatic Video/Native/Display, House) are attempted in order to fill an in-feed slot."
+    },
+    {
+      "name": "Aniview",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "Aniview Ad Server"
+      ],
+      "description": "Third-party ad server that fulfills Genuin's programmatic in-feed (video/native/display) and in-stream demand and exposes brand safety controls and reporting."
+    },
+    {
+      "name": "Aniview Dashboard",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Aniview's reporting dashboard providing granular programmatic reporting on impressions, fill rate, CPM, and revenue broken down by channel/placement."
+    },
+    {
+      "name": "IMA SDK",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Google IMA SDK",
+        "Interactive Media Ads SDK"
+      ],
+      "description": "Google's Interactive Media Ads SDK used to render programmatic in-feed video ads and in-stream VAST/VMAP ads inside the Genuin video player."
+    },
+    {
+      "name": "GPT.js",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Google Publisher Tag"
+      ],
+      "description": "Google Publisher Tag JavaScript library used to render in-feed native and display programmatic ads as static card creatives."
+    },
+    {
+      "name": "VAST",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "VAST 2.0",
+        "VAST 3.0",
+        "VAST 4.0"
+      ],
+      "description": "IAB Video Ad Serving Template standard used for in-stream and programmatic in-feed video ad creatives and click/tracking URLs on Genuin."
+    },
+    {
+      "name": "VMAP",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "IAB Video Multiple Ad Playlist standard used by the Genuin player for one ad request per pre/mid/post-roll break (no podding)."
+    },
+    {
+      "name": "McClatchy",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "MCC",
+        "McClatchy Edition"
+      ],
+      "description": "Publisher partner brand for whom this MCC edition of the Monetize guide is written; example placements include Kansas City Star and other McClatchy news properties."
+    },
+    {
+      "name": "IAB",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "Interactive Advertising Bureau"
+      ],
+      "description": "Standards body whose impression measurement and skippability guidelines (ads beyond 15 seconds must be skippable) Genuin's Monetize platform aligns with."
+    },
+    {
+      "name": "Partner Brands",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "The advertiser/publisher brands that activate Genuin Monetize and operate the BCC dashboard; the primary audience for this guide."
+    },
+    {
+      "name": "Consumer Brands",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "Consumer-facing advertiser brands that embed Genuin video experiences and run ads through the Monetize platform."
+    },
+    {
+      "name": "Retailer Brands",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "Retailer advertiser brands that embed Genuin video experiences on their owned-and-operated properties."
+    },
+    {
+      "name": "Media Brands",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "Media and publisher brands (e.g., McClatchy titles, Woman's World, US Weekly) that use Genuin to embed video feeds and monetize via ads."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sponsored Takeover",
+      "target": "Genuin Monetize",
+      "type": "PART_OF",
+      "description": "Sponsored Takeover is the highest-priority in-feed format within the Genuin Monetize framework."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Genuin Monetize",
+      "type": "PART_OF",
+      "description": "Sponsored Posts are the primary direct-sold in-feed format within Genuin Monetize."
+    },
+    {
+      "source": "Programmatic In-Feed Video Ad",
+      "target": "Genuin Monetize",
+      "type": "PART_OF",
+      "description": "Programmatic in-feed video is the third-priority in-feed format in the Monetize waterfall."
+    },
+    {
+      "source": "Programmatic In-Feed Native Ad",
+      "target": "Genuin Monetize",
+      "type": "PART_OF",
+      "description": "Programmatic in-feed native is the fourth-priority in-feed format in the Monetize waterfall."
+    },
+    {
+      "source": "Programmatic In-Feed Display Ad",
+      "target": "Genuin Monetize",
+      "type": "PART_OF",
+      "description": "Programmatic in-feed display is the fifth-priority in-feed format in the Monetize waterfall."
+    },
+    {
+      "source": "In-Stream Video Ad",
+      "target": "Genuin Monetize",
+      "type": "PART_OF",
+      "description": "In-stream linear video ads are a core Monetize format that plays inside the Genuin video player."
+    },
+    {
+      "source": "House Fallback",
+      "target": "Genuin Monetize",
+      "type": "PART_OF",
+      "description": "House/Fallback is the mandatory last layer of the Monetize in-feed waterfall."
+    },
+    {
+      "source": "In-Feed Waterfall",
+      "target": "Genuin Monetize",
+      "type": "PART_OF",
+      "description": "The in-feed waterfall is the resolution model that drives ad selection within Genuin Monetize."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Genuin Video Server",
+      "type": "USES",
+      "description": "Takeover content is uploaded by the partner brand and served by the Genuin Video Server."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Genuin Video Server",
+      "type": "USES",
+      "description": "Sponsored Posts are distributed by the Genuin Video Server into calculated ad slots."
+    },
+    {
+      "source": "Programmatic In-Feed Video Ad",
+      "target": "IMA SDK",
+      "type": "USES",
+      "description": "In-feed programmatic video ads render through Google's IMA SDK."
+    },
+    {
+      "source": "Programmatic In-Feed Native Ad",
+      "target": "GPT.js",
+      "type": "USES",
+      "description": "In-feed programmatic native ads render through GPT.js."
+    },
+    {
+      "source": "Programmatic In-Feed Display Ad",
+      "target": "GPT.js",
+      "type": "USES",
+      "description": "In-feed programmatic display banners render through GPT.js."
+    },
+    {
+      "source": "In-Stream Video Ad",
+      "target": "IMA SDK",
+      "type": "USES",
+      "description": "In-stream ads are delivered to the player via the IMA SDK."
+    },
+    {
+      "source": "In-Stream Video Ad",
+      "target": "VAST",
+      "type": "USES",
+      "description": "In-stream creatives are trafficked using VAST 2.0/3.0/4.0 with optional VPAID JS."
+    },
+    {
+      "source": "In-Stream Video Ad",
+      "target": "VMAP",
+      "type": "USES",
+      "description": "Pre/mid/post-roll breaks are scheduled via VMAP, one ad request per break."
+    },
+    {
+      "source": "IMA SDK",
+      "target": "Aniview",
+      "type": "INTEGRATES_WITH",
+      "description": "IMA SDK requests are fulfilled by the Aniview ad server for both in-feed and in-stream video demand."
+    },
+    {
+      "source": "GPT.js",
+      "target": "Aniview",
+      "type": "INTEGRATES_WITH",
+      "description": "GPT.js native and display requests are fulfilled by the Aniview ad server."
+    },
+    {
+      "source": "Aniview",
+      "target": "Programmatic In-Feed Video Ad",
+      "type": "POWERS",
+      "description": "Aniview serves and brand-safety-filters programmatic in-feed video demand."
+    },
+    {
+      "source": "Aniview",
+      "target": "In-Stream Video Ad",
+      "type": "POWERS",
+      "description": "Aniview is the ad server that fulfills programmatic in-stream VAST/VMAP demand."
+    },
+    {
+      "source": "Aniview Dashboard",
+      "target": "Aniview",
+      "type": "PART_OF",
+      "description": "The Aniview Dashboard is the reporting surface within the Aniview platform."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Monetize Preset",
+      "type": "INCLUDES",
+      "description": "Monetize Presets are configured and assigned to placements inside the BCC dashboard."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "BCC Analytics",
+      "type": "INCLUDES",
+      "description": "BCC Analytics is the aggregate reporting module inside BCC for direct-sold ad activity."
+    },
+    {
+      "source": "Monetize Preset",
+      "target": "Premium Preset",
+      "type": "INCLUDES",
+      "description": "Premium is one of the five read-only system default Monetize Presets."
+    },
+    {
+      "source": "Monetize Preset",
+      "target": "Aggressive Preset",
+      "type": "INCLUDES",
+      "description": "Aggressive is a system default Monetize Preset optimized for maximum revenue."
+    },
+    {
+      "source": "Monetize Preset",
+      "target": "Balanced Preset",
+      "type": "INCLUDES",
+      "description": "Balanced is the default system Monetize Preset recommended as the MCC starting point."
+    },
+    {
+      "source": "Monetize Preset",
+      "target": "Conservative In-Stream Only Preset",
+      "type": "INCLUDES",
+      "description": "Conservative In-Stream Only is a system default Monetize Preset."
+    },
+    {
+      "source": "Monetize Preset",
+      "target": "Conservative In-Feed Only Preset",
+      "type": "INCLUDES",
+      "description": "Conservative In-Feed Only is a system default Monetize Preset."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Genuin Video Player",
+      "type": "POWERS",
+      "description": "The Genuin SDK initializes and powers the Genuin video player and feed rendering."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Partner Brands",
+      "type": "TARGETED_AT",
+      "description": "The Monetize guide and platform are explicitly intended for Genuin partner brands."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Consumer Brands",
+      "type": "TARGETED_AT",
+      "description": "Genuin Monetize is offered to consumer brands embedding video carousels and feeds."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Retailer Brands",
+      "type": "TARGETED_AT",
+      "description": "Genuin Monetize is offered to retailer brands embedding video carousels and feeds."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Media Brands",
+      "type": "TARGETED_AT",
+      "description": "Genuin Monetize is offered to media brands embedding video carousels and feeds, including McClatchy titles."
+    },
+    {
+      "source": "McClatchy",
+      "target": "Genuin Monetize",
+      "type": "USES",
+      "description": "McClatchy is the partner publisher activating the Monetize MCC Edition described in this guide."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "IAB",
+      "type": "RELATES_TO",
+      "description": "Monetize impression counting and skippability rules align with IAB measurement standards."
+    },
+    {
+      "source": "VAST",
+      "target": "IAB",
+      "type": "PART_OF",
+      "description": "VAST is an IAB-defined video ad serving standard used by the Monetize platform."
+    },
+    {
+      "source": "VMAP",
+      "target": "IAB",
+      "type": "PART_OF",
+      "description": "VMAP is an IAB-defined ad break playlist standard used by the Genuin player."
+    }
+  ],
+  "_src_hash": "e2a772bf998bf126c7dcad59209645036c442120c4b59f31ac465ea9873f13db",
+  "_skill_sig": "4edd28021f3312b1"
+}

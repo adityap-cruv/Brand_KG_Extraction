@@ -1,0 +1,671 @@
+{
+  "source_doc": "PRD_ Ad Placement Configuration (1)",
+  "entities": [
+    {
+      "name": "Ad Configuration",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Ad Config",
+        "ad_config"
+      ],
+      "description": "Feature that gives destination brands granular control over programmatic ad behavior across placements, embeds, platforms, and roll positions, persisted in a database and consumed by the SDK."
+    },
+    {
+      "name": "ad_config.json",
+      "bucket": "Engineering",
+      "type": "ConfigFile",
+      "aliases": [
+        "ad config JSON"
+      ],
+      "description": "JSON configuration file storing per-platform (web/android/ios) ad settings such as enabled placements, embeds, frequency, aspect ratio, mute, skip time, and roll toggles."
+    },
+    {
+      "name": "Brand Control Center",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "BCC"
+      ],
+      "description": "Admin surface where destination brand admins configure ad settings; the Save click persists settings against the brand in the database."
+    },
+    {
+      "name": "Optimised Monetisation using AI",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "AI-optimised monetisation"
+      ],
+      "description": "Planned capability where an LLM optimises the engagement and monetisation trade-off for partners and explains setting impacts via conversational interface."
+    },
+    {
+      "name": "LLM Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Future v3 ad format that surfaces ads inside an LLM conversation triggered when a user clicks the Octo button."
+    },
+    {
+      "name": "Octo Button",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Octo"
+      ],
+      "description": "Entry point that activates the LLM conversation where LLM Ads will be delivered to consumers."
+    },
+    {
+      "name": "MCP",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Model Context Protocol"
+      ],
+      "description": "Service connected to the LLM that exposes capabilities to read engagement/monetisation analytics and modify ad configuration settings."
+    },
+    {
+      "name": "In-Stream Video Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "in-stream ads"
+      ],
+      "description": "Programmatic video ads played within brand content videos; primary v1 scope of the Ad Configuration feature."
+    },
+    {
+      "name": "In-Feed Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Planned v2 ad format to be added alongside display/native ads after the v1 in-stream rollout."
+    },
+    {
+      "name": "Overlay Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "display/native ads"
+      ],
+      "description": "Display/native overlay ad format planned for a later phase of the Ad Configuration feature."
+    },
+    {
+      "name": "Pre-Roll Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "In-stream ad slot played before the content video, toggled via the in_stream_video_ads_pre_roll field."
+    },
+    {
+      "name": "Mid-Roll Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "In-stream ad slot played during the content video, toggled via the in_stream_video_ads_mid_roll field."
+    },
+    {
+      "name": "End-Roll Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "In-stream ad slot played at the end of the content video, toggled via the in_stream_video_ads_end_roll field."
+    },
+    {
+      "name": "Frequency Capping",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "ad frequency control"
+      ],
+      "description": "Logic using ads_free_content_watch_time and ads_free_content_swipes to enforce per-brand swipe and seconds-of-watch-time thresholds before requesting the next in-stream ad."
+    },
+    {
+      "name": "Aspect Ratio Control",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Setting letting brands either allow all ad aspect ratios or restrict ads to match the player aspect ratio, communicated via the video.boxingallowed macro."
+    },
+    {
+      "name": "Mute On Start",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Setting that determines whether in-stream ads begin muted, controlling adsManager.setVolume and the bid request video.playbackmethod value."
+    },
+    {
+      "name": "Skippable Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Skip Time"
+      ],
+      "description": "Setting controlling skip availability and skip offset for in-stream ads via adsRequest.skipOffset and video.skip in bid requests."
+    },
+    {
+      "name": "Ad Duration Display",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Duration toggle"
+      ],
+      "description": "Setting that toggles the countdown UI element in the IMA SDK uiElements array to show remaining ad time on-screen."
+    },
+    {
+      "name": "First In-Stream Ad Video Sequence",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "First Ad Video"
+      ],
+      "description": "Configuration controlling the position of the first ad-eligible video in the feed; defaults to the 2nd sequenced video and gates when frequency rules begin to apply."
+    },
+    {
+      "name": "Min Hover Time",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "in_stream_video_ads_min_hover_time"
+      ],
+      "description": "Minimum hover seconds required for a video play in multi-video setups (carousels/grids) to count toward the ads_free_content_swipes counter."
+    },
+    {
+      "name": "Content Min Duration",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "in_stream_video_ads_content_minduration"
+      ],
+      "description": "Minimum content video duration eligible for in-stream ads; if a video is shorter, ad eligibility cascades to the next content video."
+    },
+    {
+      "name": "Max Ad Duration",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "in_stream_video_ads_maxduration"
+      ],
+      "description": "Backend-only configuration capping in-stream ad length, sent to the ad server as video.maxduration in bid requests."
+    },
+    {
+      "name": "Placement-Level Ad Enablement",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Setting allowing brands to enable in-stream ads only for selected placement IDs listed in in_stream_video_ads_enabled_placements."
+    },
+    {
+      "name": "Embed-Level Ad Enablement",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Setting allowing brands to enable in-stream ads only for selected embed IDs listed in in_stream_video_ads_enabled_embeds."
+    },
+    {
+      "name": "Full Screen Ads Toggle",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Setting controlling whether in-stream ads play in full screen mode; always true when in-stream ads are enabled overall."
+    },
+    {
+      "name": "Card View Ads Toggle",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Auto play in-stream"
+      ],
+      "description": "Setting controlling whether in-stream ads play in card view in addition to full screen."
+    },
+    {
+      "name": "Platform-Specific Ad Settings",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Platform Nuances"
+      ],
+      "description": "Capability to configure ad settings independently per platform (web/android/iOS) or globally, reflected in separate keys of ad_config.json."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [
+        "Client SDK",
+        "web/iOS/Android SDK"
+      ],
+      "description": "Web, iOS, and Android SDKs that fetch ad_config.json at initialization, store it in AdPreferences, and enforce ad behavior at runtime."
+    },
+    {
+      "name": "AdPreferences",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "SDK-side store that holds the fetched ad_config.json values used to drive ad request decisions."
+    },
+    {
+      "name": "IMA SDK",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Google IMA SDK"
+      ],
+      "description": "Google IMA SDK used by the Genuin SDK to generate in-stream ad requests, control ad rendering, preloading, mute volume, skip offset, and UI elements."
+    },
+    {
+      "name": "Aniview",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Aniview Ad Server"
+      ],
+      "description": "Current ad server stack receiving macro parameters and bid request fields such as video.boxingallowed, video.playbackmethod, video.skip, and video.maxduration."
+    },
+    {
+      "name": "Google Ad Manager",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "GAM"
+      ],
+      "description": "Planned future ad server migration target replacing the current Aniview-based methodology for ad request and bid parameters."
+    },
+    {
+      "name": "Sprint 40",
+      "bucket": "Engineering",
+      "type": "Workstream",
+      "aliases": [],
+      "description": "Engineering sprint in which the Ad Configuration feature is scheduled with priority P2."
+    },
+    {
+      "name": "Genuin Network",
+      "bucket": "Business",
+      "type": "Initiative",
+      "aliases": [],
+      "description": "Vision for sponsored content distribution across brand destinations, referenced as out-of-scope future scope tied to Sponsored and Paid Access Monetisation."
+    },
+    {
+      "name": "Sponsored and Paid Access Monetisation",
+      "bucket": "Business",
+      "type": "Initiative",
+      "aliases": [],
+      "description": "Future monetisation track that will activate sponsored content scenarios described in the PRD vision section."
+    },
+    {
+      "name": "Programmatic Ad Revenue",
+      "bucket": "Business",
+      "type": "RevenueStream",
+      "aliases": [],
+      "description": "Revenue stream generated by serving programmatic in-stream ads within brand video content on destination properties."
+    },
+    {
+      "name": "Destination Brand",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [
+        "Retailer",
+        "App Owner",
+        "Retail App Brand Admin"
+      ],
+      "description": "Retailer or app owner persona that configures ad settings via BCC to enable programmatic revenue while balancing user experience."
+    },
+    {
+      "name": "Partner Brand",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [
+        "CPG Brand",
+        "Sponsor"
+      ],
+      "description": "CPG/sponsor persona that wants to sponsor video experiences on retail destinations to drive measurable sales lift."
+    },
+    {
+      "name": "Creator",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [
+        "UGC Creator"
+      ],
+      "description": "Creator persona whose branded video content is distributed across retail/commerce apps and monetised through programmatic in-stream ads."
+    },
+    {
+      "name": "Consumer Shopper",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [
+        "Shopper",
+        "Consumer"
+      ],
+      "description": "End user persona expecting relevant, non-intrusive sponsored video experiences inside their shopping journey."
+    },
+    {
+      "name": "Shrushti Shah",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Design contributor noted as responsible for updating the platform nuances design for handling per-platform ad settings.",
+      "seniority_tier": "IC",
+      "role_title": "Designer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Shubhangi Singh",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Design contributor noted alongside Shrushti Shah as responsible for updating the platform nuances design.",
+      "seniority_tier": "IC",
+      "role_title": "Designer",
+      "affiliation": "Genuin"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Ad Configuration",
+      "target": "ad_config.json",
+      "type": "USES",
+      "description": "The Ad Configuration feature is backed by the ad_config.json file format that stores per-platform ad settings."
+    },
+    {
+      "source": "Ad Configuration",
+      "target": "Brand Control Center",
+      "type": "INTEGRATES_WITH",
+      "description": "Ad Configuration settings are authored by brand admins through the BCC surface and persisted on Save."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "ad_config.json",
+      "type": "USES",
+      "description": "BCC writes the brand's chosen settings into the ad_config.json structure persisted in the database."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "ad_config.json",
+      "type": "USES",
+      "description": "During initialization the SDK fetches ad_config.json and rewrites existing values in AdPreferences."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "AdPreferences",
+      "type": "INCLUDES",
+      "description": "The SDK stores the fetched ad configuration inside its AdPreferences component."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "IMA SDK",
+      "type": "INTEGRATES_WITH",
+      "description": "The Genuin SDK initializes and drives the Google IMA SDK to generate in-stream ad requests and control rendering."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "IMA SDK",
+      "type": "DEPENDS_ON",
+      "description": "In-stream ad requests are generated via the IMA SDK when in_stream_video_ads is enabled."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Aniview",
+      "type": "DEPENDS_ON",
+      "description": "In-stream ad requests are currently fulfilled through the Aniview ad server which receives the bid request parameters."
+    },
+    {
+      "source": "Aniview",
+      "target": "Google Ad Manager",
+      "type": "COMPARED_TO",
+      "description": "The PRD notes that current Aniview-based ad server methodology will change upon migration to GAM."
+    },
+    {
+      "source": "Ad Configuration",
+      "target": "In-Stream Video Ads",
+      "type": "INCLUDES",
+      "description": "In-stream ads are the v1 scope of the Ad Configuration feature."
+    },
+    {
+      "source": "Ad Configuration",
+      "target": "In-Feed Ads",
+      "type": "INCLUDES",
+      "description": "In-feed ads are planned for v2 of the Ad Configuration feature."
+    },
+    {
+      "source": "Ad Configuration",
+      "target": "Overlay Ads",
+      "type": "INCLUDES",
+      "description": "Display/native overlay ads are planned for a later phase of the Ad Configuration feature."
+    },
+    {
+      "source": "Ad Configuration",
+      "target": "LLM Ads",
+      "type": "INCLUDES",
+      "description": "LLM Ads are planned for v3 of the Ad Configuration feature."
+    },
+    {
+      "source": "LLM Ads",
+      "target": "Octo Button",
+      "type": "DEPENDS_ON",
+      "description": "LLM Ads are activated when a user clicks the Octo button to start an LLM conversation."
+    },
+    {
+      "source": "Optimised Monetisation using AI",
+      "target": "MCP",
+      "type": "DEPENDS_ON",
+      "description": "The LLM-driven optimisation uses an MCP to read analytics and change ad configuration settings."
+    },
+    {
+      "source": "MCP",
+      "target": "ad_config.json",
+      "type": "USES",
+      "description": "The MCP exposes capabilities to modify the configurations stored in ad_config.json."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Pre-Roll Ads",
+      "type": "INCLUDES",
+      "description": "Pre-roll is one of the in-stream ad slots toggled within the Ad Configuration."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Mid-Roll Ads",
+      "type": "INCLUDES",
+      "description": "Mid-roll is one of the in-stream ad slots toggled within the Ad Configuration."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "End-Roll Ads",
+      "type": "INCLUDES",
+      "description": "End-roll is one of the in-stream ad slots toggled within the Ad Configuration."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Frequency Capping",
+      "type": "DEPENDS_ON",
+      "description": "In-stream ad requests are gated by the swipe and seconds frequency thresholds enforced by the frequency capping logic."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Aspect Ratio Control",
+      "type": "INCLUDES",
+      "description": "Aspect ratio matching is one of the in-stream ad UX controls in Ad Configuration."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Mute On Start",
+      "type": "INCLUDES",
+      "description": "Mute-on-start is one of the in-stream ad UX controls in Ad Configuration."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Skippable Ads",
+      "type": "INCLUDES",
+      "description": "Skip time is a backend-configured property of in-stream ads governing skip availability."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Ad Duration Display",
+      "type": "INCLUDES",
+      "description": "The duration toggle controls whether remaining ad time is shown for in-stream ads."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "First In-Stream Ad Video Sequence",
+      "type": "INCLUDES",
+      "description": "The first ad video position governs where in-stream ad eligibility begins in the feed."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Min Hover Time",
+      "type": "INCLUDES",
+      "description": "Min hover time gates whether a video play counts as a swipe for frequency capping in multi-video layouts."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Content Min Duration",
+      "type": "INCLUDES",
+      "description": "Content min duration determines whether a content video is eligible for in-stream ads."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Max Ad Duration",
+      "type": "INCLUDES",
+      "description": "Max ad duration is a backend-only setting capping the length of in-stream ads served."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Placement-Level Ad Enablement",
+      "type": "INCLUDES",
+      "description": "Placement-level enablement restricts in-stream ad requests to specified placement IDs."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Embed-Level Ad Enablement",
+      "type": "INCLUDES",
+      "description": "Embed-level enablement restricts in-stream ad requests to specified embed IDs."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Full Screen Ads Toggle",
+      "type": "INCLUDES",
+      "description": "The full screen toggle controls whether in-stream ads play in full screen mode."
+    },
+    {
+      "source": "In-Stream Video Ads",
+      "target": "Card View Ads Toggle",
+      "type": "INCLUDES",
+      "description": "The card view toggle controls whether in-stream ads also play in card view."
+    },
+    {
+      "source": "Ad Configuration",
+      "target": "Platform-Specific Ad Settings",
+      "type": "INCLUDES",
+      "description": "Ad Configuration supports per-platform or global settings across web, android, and iOS."
+    },
+    {
+      "source": "Platform-Specific Ad Settings",
+      "target": "ad_config.json",
+      "type": "USES",
+      "description": "Per-platform settings are stored under the web, android, and ios keys of ad_config.json."
+    },
+    {
+      "source": "Aspect Ratio Control",
+      "target": "Aniview",
+      "type": "DEPENDS_ON",
+      "description": "Aniview receives the video.boxingallowed parameter from the IMA SDK to enforce the aspect ratio setting."
+    },
+    {
+      "source": "Mute On Start",
+      "target": "IMA SDK",
+      "type": "DEPENDS_ON",
+      "description": "The mute-on-start setting drives adsManager.setVolume in the IMA SDK to mute or unmute the ad."
+    },
+    {
+      "source": "Mute On Start",
+      "target": "Aniview",
+      "type": "DEPENDS_ON",
+      "description": "Aniview reads in_stream_video_ads_mute_on_start to set video.playbackmethod in bid requests."
+    },
+    {
+      "source": "Skippable Ads",
+      "target": "IMA SDK",
+      "type": "DEPENDS_ON",
+      "description": "Skip Time is sent to adsRequest.skipOffset on the IMA SDK to enable skippable ads."
+    },
+    {
+      "source": "Skippable Ads",
+      "target": "Aniview",
+      "type": "DEPENDS_ON",
+      "description": "Aniview uses in_stream_video_ads_skip_time to set video.skip in the bid request."
+    },
+    {
+      "source": "Max Ad Duration",
+      "target": "Aniview",
+      "type": "DEPENDS_ON",
+      "description": "Aniview sets video.maxduration in the bid request based on in_stream_video_ads_maxduration."
+    },
+    {
+      "source": "Ad Duration Display",
+      "target": "IMA SDK",
+      "type": "DEPENDS_ON",
+      "description": "The duration toggle adds google.ima.UiElements.COUNTDOWN to the IMA SDK uiElements array."
+    },
+    {
+      "source": "Programmatic Ad Revenue",
+      "target": "Destination Brand",
+      "type": "TARGETED_AT",
+      "description": "Programmatic ad revenue is generated for destination brands enabling in-stream ads on their properties."
+    },
+    {
+      "source": "Destination Brand",
+      "target": "Brand Control Center",
+      "type": "USES",
+      "description": "Destination brand admins configure ad settings through the BCC surface."
+    },
+    {
+      "source": "Destination Brand",
+      "target": "Ad Configuration",
+      "type": "USES",
+      "description": "Destination brand admins drive the Ad Configuration feature to control their ad experience."
+    },
+    {
+      "source": "Partner Brand",
+      "target": "Destination Brand",
+      "type": "SPONSORS",
+      "description": "Partner brands (CPGs) sponsor video experiences hosted on destination brand properties."
+    },
+    {
+      "source": "Creator",
+      "target": "Destination Brand",
+      "type": "DISTRIBUTES",
+      "description": "Creator content is distributed across destination brand retail/commerce apps for broader reach."
+    },
+    {
+      "source": "Consumer Shopper",
+      "target": "Destination Brand",
+      "type": "RELATES_TO",
+      "description": "Consumer shoppers engage with sponsored video experiences hosted on destination brand surfaces."
+    },
+    {
+      "source": "Sprint 40",
+      "target": "Ad Configuration",
+      "type": "INCLUDES",
+      "description": "Sprint 40 scopes delivery of the Ad Configuration feature at priority P2."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Sponsored and Paid Access Monetisation",
+      "type": "DEPENDS_ON",
+      "description": "The Genuin Network sponsored content vision is gated on activation of Sponsored and Paid Access Monetisation."
+    },
+    {
+      "source": "Shrushti Shah",
+      "target": "Platform-Specific Ad Settings",
+      "type": "WORKS_ON",
+      "description": "Shrushti Shah is assigned to update the design covering platform nuances for per-platform ad settings."
+    },
+    {
+      "source": "Shubhangi Singh",
+      "target": "Platform-Specific Ad Settings",
+      "type": "WORKS_ON",
+      "description": "Shubhangi Singh is assigned alongside Shrushti Shah to update the platform nuances design."
+    }
+  ],
+  "_src_hash": "2b203432e1296656f53173afc91ac8a457ca5cf18f345e1230a1f0c5b6efeeec",
+  "_skill_sig": "4edd28021f3312b1"
+}

@@ -1,0 +1,325 @@
+PRD: Ad Configuration
+Sprint: 40
+Priority: P2
+Feature: Ad Configuration
+🌟 Product-Level Questions
+What generative and regenerative features are we adding as part of this user story?
+We will introduce a new concept of optimised monetisation using AI wherein we’re able to best optimise the engagement + monetisation of our partners with target criterias. The users will also be able to chat with the LLM to understand what settings have been made and how they’re impacting their current engagement and monetisation. The LLM is connected to an MCP which in turn provides capabilities around changing the configurations that we have within ad config settings. The MCP will also have access to engagement and monetisation analytics and is able to explain changes in settings and the impact of such changes via a conversational interface. In v1 of this implementation, we will look at activating ads and in v2, we will add the generative features.
+How the company, the destination and subscribers are generating revenue with this user story ?
+We create the ability to generate revenue by showing programmatic ads within brand content videos. Brands will have the ability to activate different kinds of ads such as in-stream, in-feed and overlay ads and control the frequency of ads that their users see. We will also provide different default configurations where brands can choose to either maximise their earnings Or optimise between engagement and monetisation Or choose to completely customise the configurations as per their requirements. In v1, we will focus on in-stream ads config and in v2, we will add in-feed and display/native ads as well.
+How consumers are getting an improved experience with this users story ?
+Unlike traditional banners which can be big detractors to user experience, we’re looking to redefine how engagement and ads work at a level which not just reduces bad user experience(of ads) but in fact is a net net addition to user experience. We achieve this by creating LLM ads wherein a user receives ads within their LLM conversation itself which is activated when a user clicks on the Octo button. We will introduce LLM ads in v3 implementation of ad config.
+NOTE: This is our vision for sponsored content in Genuin Network. This is not included in the current scope. We will add this in later scope as our Sponsored and Paid Access Monetisation gets activated
+Epic Story
+As a {destination brand}, I {want to} {automatically add or get suggested} {brand sponsors to sponsor my video powered experiences across web/mobile/app/desktop} so that {I start activating my existing sponsors and generate new revenue while giving consumers timely/non intrusive content to engage.}
+Functional Objective
+The objective is to provide destination brands with granular control over sponsors on placements via BCC These settings will not be sent directly to the client SDK but will be persisted in a database.
+User Stories by Persona
+Persona: Destination Brand (Retailer / App Owner)
+As a retail app brand admin, I want to show in-stream ads in the videos to start generating programmatic ad revenue.
+🔗 Link to UX flow → Figma
+As a retail app brand admin, I want to choose which type of in-stream ads(pre/mid/end roll) I show in the videos to balance user experience and monetisation
+🔗 Link to UX flow → Figma
+As a retail app brand admin, I want to show in-stream ads in selected embeds and placements to balance user experience and monetisation
+🔗 Link to UX flow → Figma
+As a retail app brand admin, I want to select the frequency at which I show in-stream ads to the users to ensure I can balance user experience and monetisation .
+🔗 Link to UX flow → Figma
+As a retail app brand admin, I want to choose whether I allow ads of all aspect ratios Or limit ads to only match the aspect ratio of the video player to balance user experience and monetisation
+🔗 Link to UX flow → Figma
+As a retail app brand admin, I want to choose whether ads always start muted or unmuted to balance user experience and monetisation.
+🔗 Link to UX flow → Figma
+As a retail app brand admin, I want to choose whether remaining time of the ad is displayed on-screen Or not to effect user experience
+🔗 Link to UX flow → Figma
+Persona: Partner Brand (Sponsor)
+As a CPG brand, {I want to sponsor video experiences on retail destinations, so that my sponsored content is seamlessly embedded where consumers are already shopping and I drive measurable sales lift.}
+🔗 Link to UX flow → Figma
+Persona: Creator / UGC
+As a creator, {I want to have my branded video content distributed across multiple retail/commerce apps, so that I reach more audiences and I want my content to be monetised using programmatic in-stream ads to generate revenue from my content.}
+🔗 Link to UX flow → TBD
+NOTE: This is our vision for sponsored content in Genuin Network. This is not included in the current scope. We will add this in later scope as our Sponsored and Paid Access Monetisation gets activated
+Persona: Consumer / User (Shopper)
+As a shopper, {I want to see relevant video experiences with brand sponsorships that feel timely and useful, but I do not want my experience to be overloaded with sponsored content so that my shopping journey feels personalized, not intrusive.}
+🔗 Link to UX flow → TBD
+🎯 Goals
+Enablement of in-stream programmatic revenue on selected properties and embeds - Brands are able to selectively enable different types of in-stream programmatic within their full screen view Or card and full screen views
+Enablement of frequency control of in-stream programmatic ads on selected properties and embeds - Brands are able to define how frequently they want in-stream ads to be shown in their video feeds
+User experience controls wrt aspect ratio and muted start of ads for in-stream programmatic ads on selected properties and embeds - Brands are able to control the aspect ratio of the ads and select whether ads start muted.
+⚒️ Tech Feasability
+Create a new configuration as ad_config.json to store ad configurations in a JSON file with the following format to enable all the different settings
+{
+"web": {
+"in_stream_video_ads": true,
+"in_stream_video_ads_enabled_placements": [
+"placementA",
+"placementB"
+],
+"in_stream_video_ads_enabled_embeds": [
+"embedA",
+"embedB"
+],
+"in_stream_video_ads_on_card": true,
+"in_stream_video_ads_on_fullscreen": true,
+"in_stream_video_ads_pre_roll": true,
+"in_stream_video_ads_mid_roll": true,
+"in_stream_video_ads_end_roll": true,
+"in_stream_video_ads_swipe_frequency": 3,
+"in_stream_video_ads_seconds_frequency": 60,
+"in_stream_video_ads_aspect_ratio_match_player": true,
+"in_stream_video_ads_mute_on_start": true,
+"in_stream_video_ads_show_duration": true,
+"in_stream_video_ads_skip_time": 10,
+"in_stream_video_ads_first_ad_video": 2,
+"in_stream_video_ads_content_minduration": 15,
+"in_stream_video_ads_min_hover_time": 5
+},
+"android": {
+"in_stream_video_ads": true,
+"in_stream_video_ads_enabled_placements": [
+"placementA",
+"placementB"
+],
+"in_stream_video_ads_enabled_embeds": [
+"embedA",
+"embedB"
+],
+"in_stream_video_ads_on_card": true,
+"in_stream_video_ads_on_fullscreen": true,
+"in_stream_video_ads_pre_roll": true,
+"in_stream_video_ads_mid_roll": true,
+"in_stream_video_ads_end_roll": true,
+"in_stream_video_ads_swipe_frequency": 3,
+"in_stream_video_ads_seconds_frequency": 60,
+"in_stream_video_ads_aspect_ratio_match_player": true,
+"in_stream_video_ads_mute_on_start": true,
+"in_stream_video_ads_show_duration": true,
+"in_stream_video_ads_skip_time": 10,
+"in_stream_video_ads_first_ad_video": 2,
+"in_stream_video_ads_content_minduration": 15,
+"in_stream_video_ads_min_hover_time": 5
+},
+"ios": {
+"in_stream_video_ads": true,
+"in_stream_video_ads_enabled_placements": [
+"placementA",
+"placementB"
+],
+"in_stream_video_ads_enabled_embeds": [
+"embedA",
+"embedB"
+],
+"in_stream_video_ads_on_card": true,
+"in_stream_video_ads_on_fullscreen": true,
+"in_stream_video_ads_pre_roll": true,
+"in_stream_video_ads_mid_roll": true,
+"in_stream_video_ads_end_roll": true,
+"in_stream_video_ads_swipe_frequency": 3,
+"in_stream_video_ads_seconds_frequency": 60,
+"in_stream_video_ads_aspect_ratio_match_player": true,
+"in_stream_video_ads_mute_on_start": true,
+"in_stream_video_ads_show_duration": true,
+"in_stream_video_ads_skip_time": 10,
+"in_stream_video_ads_first_ad_video": 2,
+"in_stream_video_ads_content_minduration": 15,
+"in_stream_video_ads_min_hover_time": 5
+}
+}
+
+We will use the JSON above to reference the implementation of each feature
+BCC “Save” Click
+When the brand admin user clicks on the “Save” button, the settings defined in the ad configuration are persisted in the database against the brand.
+SDK Initialization
+During SDK(web/iOS/Android) Initialization, SDK will fetch ad_config.json and store it in AdPreferences. In case an existing ad_config.json exists from the previous session, the new values will rewrite the existing values.
+Enable In-stream ads at brand level
+BCC Requirements:
+Required Field: “In-stream video ads”
+UX Type: Toggle
+Field Type: Boolean
+Corresponding field in ad_config: “in_stream_video_ads”
+SDK Requirements:
+If “in_stream_video_ads” == true in ad_config.json, initialize IMA SDK to generate in-stream ad requests
+If “in_stream_video_ads” == false in ad_config.json, do not generate any in-stream ad requests
+IMPORTANT NOTE: in-stream ad requests should be made for the next video in queue such that we’re ready with the ad response before the video plays to avoid any revenue losses due to latency. Ensure that adsRenderingSettings.enablePreloading = true; in the IMA SDK so that the in-stream ad response can start downloading media for the ad while the current video is playing. First video in the feed is always ads free. While the first video is playing, we request for ads for the next ad enabled video(basis frequency settings) and continue.
+Enable in-stream ads for specific placements
+BCC Requirements:
+Required Field: “Placements”
+UX Type: Check box
+Field Type: Array
+Corresponding field in ad_config: "in_stream_video_ads_enabled_placements"
+SDK Requirements:
+Check whether the specific placement has in-stream ads enabled by validating the placementID in the  “in_stream_video_ads_enabled_placements” array in ad_config.json. If the placementID exists in the array, generate ad requests for that specific placement
+If placementID does not exist in “in_stream_video_ads_enabled_placements” array, do not generate any in-stream ad requests
+Enable in-stream ads for specific embeds
+BCC Requirements:
+Required Field: “Embeds”
+UX Type: Check box
+Field Type: Array
+Corresponding field in ad_config: "in_stream_video_ads_enabled_embeds"
+SDK Requirements:
+Check whether the specific embed has in-stream ads enabled by validating the embedID in the  “in_stream_video_ads_enabled_embeds” array in ad_config.json. If the embedID exists in the array, generate ad requests for that specific embed
+If embedID does not exist in “in_stream_video_ads_enabled_embeds” array, do not generate any in-stream ad requests
+Enable ads in full screen mode only
+BCC Requirements:
+Required Field: “On click in-stream”
+UX Type: Radio Button
+Field Type: Boolean
+Corresponding fields in ad_config: "in_stream_video_ads_on_fullscreen"
+NOTE: “in_stream_video_ads_on_fullscreen” is set to false only when in_stream_video_ads == false. If in_stream_video_ads == true, in_stream_video_ads_on_fullscreen parameter is always set to true
+SDK Requirements:
+If “in_stream_video_ads_on_fullscreen” == true in ad_config.json, generate in-stream ad requests in full screen mode
+If “in_stream_video_ads_on_fullscreen” == false, do not generate any in-stream ad requests in full screen mode
+Enable ads in both card view and full screen view
+BCC Requirements:
+Required Field: “Auto play in-stream”
+UX Type: Radio Button
+Field Type: Boolean
+Corresponding field in ad_config: "in_stream_video_ads_on_card"
+SDK Requirements:
+If “in_stream_video_ads_on_card” == true in ad_config.json, generate in-stream ad requests in card view
+If “in_stream_video_ads_on_card” == false, do not generate any in-stream ad requests in card view
+Enable ads in the next video basis frequency
+BCC Requirements:
+Required Field: “Frequency”, “Swipes” AND “Seconds of Watch Time”
+UX Type: Selection
+Field Type(s): int
+Corresponding field in ad_config: "in_stream_video_ads_swipe_frequency" AND in_stream_video_ads_seconds_frequency
+SDK Requirements:
+Create 2 new variables:
+“ads_free_content_watch_time”: This variable is initialized as “0” at the start of the video feed. The variable will measure the content watch time in seconds. After every ad completion[Ad completion can be the complete ad watched by the user OR user pressing on the skip button of the ad OR user scrolling to the next video - Essentially, as soon as the user is done watching the ad video and moves to the first frame of the next content view(of the same video Or the next video)], this variable is reset to “0”. This ensures that this variable measures the ads free continuous content watch time for any specific user.
+“ads_free_content_swipes”: This variable is initialized as “0” at the start of the video feed. The variable will measure the content swipes(either automatic movement to next video Or user initiated). After every ad completion[same logic as above], this variable is reset to “0”. This ensures that this variable measures the number of content videos seen(either complete or incomplete) seen by the user without any ads.
+Whenever we’re requesting ads for a next video in queue, we will validate the following logic:
+If (ads_free_content_watch_time < in_stream_video_ads_seconds_frequency AND ads_free_content_swipes < in_stream_video_ads_swipe_frequency), then do not generate the next in-stream ad request in queue.
+If (ads_free_content_watch_time >= in_stream_video_ads_seconds_frequency OR ads_free_content_swipes >= in_stream_video_ads_swipe_frequency), then generate the in-stream next ad request in queue.
+Enable pre-roll ads
+BCC Requirements:
+Required Field: “Pre-roll”
+UX Type: Toggle
+Field Type: Boolean
+Corresponding field in ad_config: "in_stream_video_ads_pre_roll"
+SDK Requirements:
+If “in_stream_video_ads_pre_roll” == true in ad_config.json, request for a pre-roll in-stream ad for the next video and keep it ready
+If “in-stream video ads” == false, do not generate any in-stream ad requests for the pre roll slot of the next video
+Enable mid-roll ads
+BCC Requirements:
+Required Field: “Mid-roll”
+UX Type: Toggle
+Field Type: Boolean
+Corresponding field in ad_config: "in_stream_video_ads_mid_roll"
+SDK Requirements:
+If “in_stream_video_ads_mid_roll” == true in ad_config.json, request for a mid-roll in-stream ad for the next video and keep it ready
+If “in-stream video ads” == false, do not generate any in-stream ad requests for the mid roll slot of the next video
+Enable end-roll ads
+BCC Requirements:
+Required Field: “End-roll”
+UX Type: Toggle
+Field Type: Boolean
+Corresponding field in ad_config: "in_stream_video_ads_end_roll"
+SDK Requirements:
+If “in_stream_video_ads_end_roll” == true in ad_config.json, request for a end-roll in-stream ad for the next video and keep it ready
+If “in-stream video ads” == false, do not generate any in-stream ad requests for the end roll slot of the next video
+Define aspect ratio of ads
+BCC Requirements:
+Required Field: “Allow all aspect ratios” AND “Match video player ratio”
+UX Type: Radio
+Field Type: Boolean
+Corresponding field in ad_config: "in_stream_video_ads_aspect_ratio_match_player"
+SDK Requirements:
+NOTE: This methodology is applicable for our current Aniview setup and will change when we migrate to GAM
+If “in_stream_video_ads_aspect_ratio_match_player” == true in ad_config.json, while requesting for any in-stream ads via the IMA SDK, send a new macro parameter called “video.boxingallowed=0”
+If “in_stream_video_ads_aspect_ratio_match_player” == true in ad_config.json, while requesting for any in-stream ads via the IMA SDK, send a new macro parameter called “video.boxingallowed=1”
+Ad Server Requirements:
+NOTE: This methodology is applicable for our current Aniview setup and will change when we migrate to GAM
+Ad Server must receive the “video.boxingallowed” parameter from the IMA SDK and pass it in the bid request under the video object
+Define whether the ad should play muted or unmuted
+BCC Requirements:
+Required Field: “Mute on Start”
+UX Type: Toggle
+Field Type: Boolean
+Corresponding field in ad_config: "in_stream_video_ads_mute_on_start"
+SDK Requirements:
+If “in_stream_video_ads_mute_on_start” == true in ad_config.json, set adsManager.setVolume(0) to ensure that the ad plays with no sound
+If “in_stream_video_ads_mute_on_start” == false in ad_config.json, set adsManager.setVolume(1) to ensure that the ad plays with no sound
+Ad Server Requirements:
+NOTE: This methodology is applicable for our current Aniview setup and will change when we migrate to GAM
+Ad Server must validate the in_stream_video_ads_mute_on_start value for the brand.
+“If in_stream_video_ads_mute_on_start” == true, ad server must set video.playbackmethod=2 in the video object of the bid request
+“If in_stream_video_ads_mute_on_start” == false, ad server must set video.playbackmethod=1 in the video object of the bid request
+Define whether to show ad duration
+BCC Requirements:
+Required Field: “Duration”
+UX Type: Toggle
+Field Type: Boolean
+Corresponding field in ad_config: "in_stream_video_ads_show_duration"
+SDK Requirements:
+If “in_stream_video_ads_show_duration” == true in ad_config.json, Include google.ima.UiElements.COUNTDOWN in the uiElements array in IMA SDK
+If “in_stream_video_ads_show_duration” == true in ad_config.json, Do not include google.ima.UiElements.COUNTDOWN in the uiElements array in IMA SDK
+Define the maximum duration of the ad
+Backend Configuration Requirements(Not available on BCC):
+Required Field: “Max Duration”
+UX Type: Number
+Field Type: number, Max Value: 60
+Corresponding field in backend: “in_stream_video_ads_maxduration”
+Ad Server Requirements:
+NOTE: This methodology is applicable for our current Aniview setup and will change when we migrate to GAM
+Ad Server must check the value of in_stream_video_ads_maxduration set for the brand for which we are requesting an ad and pass the value of in_stream_video_ads_maxduration configuration in the bid request as video.maxduration in the Video object
+Define the minimum duration of the content for which we show in-stream ads
+Backend Configuration Requirements(Not available on BCC):
+Required Field: “Max Content Duration For In-Stream”
+UX Type: Number
+Field Type: number, Min Value: 15
+Corresponding field in backend: “in_stream_video_ads_content_minduration”
+SDK Requirements:
+Use "in_stream_video_ads_content_minduration" to identify whether to request ads for next in-stream ads eligible content video. There are 2 implications of this flag
+If the content duration is less than the “in_stream_video_ads_content_minduration” parameter then we do not request for any in-stream ads for that content video
+Consequently, the next content video should become in-stream ads eligible if we skip ads in current ad eligible video. This requirement should continuously cascade to the next content video if the min content duration requirement keeps failing.
+Define whether we enable skippable ads and its duration
+Backend Configuration Requirements(Not available on BCC):
+Required Field: “Skip Time”
+UX Type: Number
+Field Type: number, Max Value: 10
+Corresponding field in ad_config: "in_stream_video_ads_skip_time"
+SDK Requirements:
+In the adsRequest object of IMA SDK, set adsRequest.skipOffset=in_stream_video_ads_skip_time
+Ad Server Requirements:
+NOTE: This methodology is applicable for our current Aniview setup and will change when we migrate to GAM
+Ad Server must check the value of in_stream_video_ads_skip_time set for the brand for which we are requesting an ad and
+Set video.skip=0 in Video object in bid request if in_stream_video_ads_skip_time == 0
+Set video.skip=1 in Video object in bid request if in_stream_video_ads_skip_time > 0
+Define the first in-stream ad enabled video in the sequenced video feed
+Backend Configuration Requirements(Not available on BCC):
+Required Field: “First In-Stream Ad Video Sequence”
+UX Type: Number
+Field Type: number, Max Value: 10, Default Value: 2
+Corresponding field in ad_config: "in_stream_video_ads_first_ad_video"
+SDK Requirements:
+Use "in_stream_video_ads_first_ad_video" to identify the first video for which in-stream ads need to be requested. For example, if the value is set as 2, the client SDK requests for in-stream ads for the 2nd sequenced video in the content feed. NOTE: All frequency requirements come into force after the first ad video
+Define the behavior of in-stream ads for up and down scrolls
+SDK Requirements:
+In the current scope of this PRD, we will only consider a forward swipe as an eligible swipe for our frequency capping requirement. This means that we increment our “ads_free_content_swipes” variable only when the user(or system) swipes to the next content video. The variable does not get incremented if the user swipes to the previous content video. This ensures that we’re only requesting ads for the next sequenced videos in the feed. NOTE: This does not change the current implementation of how we handle one previous video where we keep the ad cached if the user back swipes once.
+Define the behavior of in-stream ads frequency management in multi-video setups such as Carousel, grid layout etc
+Backend Configuration Requirements(Not available on BCC):
+Required Field: “Min Hover Time for Video Play Count”
+UX Type: Number
+Field Type: number, Default Value: 5
+Corresponding field in ad_config: "in_stream_video_ads_min_hover_time"
+SDK Requirements:
+Defining the current scope of video plays in multi-video setups
+Only one video plays at a time
+Post video completion, videos can be looped OR a different video frame could start playing their video
+A user may hover over a different video frame and the previously playing video will stop and the current hovered video will start playing
+To ensure that we’re managing our frequency requirements correctly in multi-video setups, we will count a video looping OR moving to a different video frame as one swipe. This means that we will increment our “ads_free_content_swipes variable” when the current video starts looping post completion OR another video frame starts playing a video post previous video completion. Additionally, we will use the “in_stream_video_ads_min_hover_time” variable to identify the min video watch time we will consider as a new content video start. For example, if “in_stream_video_ads_min_hover_time” is set as 5 and the user hovers over a video for 3s and then hovers over a different video, then the first video where the user hovered for 3s will not lead to an increment in “ads_free_content_swipes” variable. However, if the user hovers over a video for 5s, we will increment the ads_free_content_swipes variable and count it as an in-stream ads free content video.
+Handling Platform Nuances - To be updated in design(Shrushti Shah, Shubhangi singh)
+Brands have a use case wherein they may want to enable ads only on a specific platform Or they may want to apply different ad settings for different platforms(web, android & iOS)
+To manage this nuance, we will provide brands the ability to select these ad settings individually for each of the 3 platforms Or apply the same settings to all platforms. As such, we can have 4 different settings available for us. Please see the nuances of each setting below
+Android specific: In this scenario, the key-value pair for “android” in the JSON is populated with the settings selected by the brand for android
+iOS specific: In this scenario, the key-value pair for “ios” in the JSON is populated with the settings selected by the brand for android
+Web specific: In this scenario, the key-value pair for “web” in the JSON is populated with the settings selected by the brand for android
+Global: In this scenario, the key-value pairs for “web”, “ios” and “android” are populated with the settings selected by the brand
+While passing the settings to a specific platform client SDK, we need only pass through the settings for that specific platform. For example, when the iOS SDK requests for ad configuration settings, we do not pass through settings for android and web, we selectively pass through the settings only for “ios” from the ad_config.json
+Muting/Unmuting behaviour
+IMA SDK doesn’t provide any standard solution to mute/unmute specific ads via its video play interface. This means that the user doesn’t have an option to mute/unmute ads from the video play; however, the user can reduce volume/mute using the hardware volume controls available with them.
+IMA SDK does provide an ability to set the volume of the ads using the adsManager.setVolume() function. We will use this function for the default behaviour of sound for in-stream ads which supports our functionality requirement for allowing brands to choose a default preference for starting ads in a muted/unmuted state.
+Sequence Diagrams
+Configuration Save Flow (BCC -> DB)
+SDK Ad Evaluation Flow
+Follow up Discussions
+20/Feb 2026: Q&A for in stream ads  - 2026/02/20 15:58 GMT+05:30 - Notes by Gemini

@@ -1,0 +1,172 @@
+{
+  "Fact Retrieval": {
+    "rouge_score": 0.533344787344,
+    "answer_correctness": 0.651927000259
+  },
+  "Complex Reasoning": {
+    "rouge_score": 0.278527376645,
+    "answer_correctness": 0.59265503646
+  },
+  "Contextual Summarize": {
+    "answer_correctness": 0.712497795702,
+    "coverage_score": 0.675292399346
+  },
+  "Creative Generation": {
+    "answer_correctness": 0.622112546356,
+    "coverage_score": 0.497848611246,
+    "faithfulness": 0.644014377467
+  },
+  "_summary": {
+    "average": 0.578691103425,
+    "by_question_type_average": {
+      "Fact Retrieval": 0.5926358938015,
+      "Complex Reasoning": 0.43559120655249994,
+      "Contextual Summarize": 0.693895097524,
+      "Creative Generation": 0.5879918450230001
+    }
+  },
+  "_cost_estimate": {
+    "generated_at": "2026-06-04T04:44:40+00:00",
+    "subset": "novel",
+    "answer_source": "kg",
+    "question_count": 2010,
+    "models": {
+      "answer_generation": {
+        "engine": "codex",
+        "model": "gpt-5.5",
+        "pricing_status": "codex_oauth_run; no direct API usage object was saved"
+      },
+      "benchmark_evaluation": {
+        "model": "gpt-4o-mini",
+        "embedding_model": "BAAI/bge-large-en-v1.5"
+      }
+    },
+    "token_estimates": {
+      "answer_generation": {
+        "input_tokens_estimate": 10333563,
+        "output_tokens_estimate": 209576,
+        "total_tokens_estimate": 10543139,
+        "by_question_type": {
+          "Fact Retrieval": {
+            "questions": 971,
+            "input_tokens_estimate": 3380699,
+            "output_tokens_estimate": 19464,
+            "total_tokens_estimate": 3400163
+          },
+          "Complex Reasoning": {
+            "questions": 610,
+            "input_tokens_estimate": 3709660,
+            "output_tokens_estimate": 72256,
+            "total_tokens_estimate": 3781916
+          },
+          "Contextual Summarize": {
+            "questions": 362,
+            "input_tokens_estimate": 2574408,
+            "output_tokens_estimate": 72447,
+            "total_tokens_estimate": 2646855
+          },
+          "Creative Generation": {
+            "questions": 67,
+            "input_tokens_estimate": 466177,
+            "output_tokens_estimate": 13440,
+            "total_tokens_estimate": 479617
+          }
+        },
+        "input_tokens_estimate_before_prompt_tuning": 10130944,
+        "output_tokens_estimate_before_prompt_tuning": 177607
+      },
+      "benchmark_evaluation": {
+        "model": "gpt-4o-mini",
+        "llm_calls_estimate": 7022,
+        "input_tokens_estimate": 1904241,
+        "output_tokens_estimate": 1296661,
+        "total_tokens_estimate": 3200902,
+        "by_question_type": {
+          "Fact Retrieval": {
+            "questions": 971,
+            "llm_calls_estimate": 2913,
+            "input_tokens_estimate": 304855,
+            "output_tokens_estimate": 316747,
+            "total_tokens_estimate": 621602
+          },
+          "Complex Reasoning": {
+            "questions": 610,
+            "llm_calls_estimate": 1830,
+            "input_tokens_estimate": 329396,
+            "output_tokens_estimate": 344184,
+            "total_tokens_estimate": 673580
+          },
+          "Contextual Summarize": {
+            "questions": 362,
+            "llm_calls_estimate": 1810,
+            "input_tokens_estimate": 590681,
+            "output_tokens_estimate": 496456,
+            "total_tokens_estimate": 1087137
+          },
+          "Creative Generation": {
+            "questions": 67,
+            "llm_calls_estimate": 469,
+            "input_tokens_estimate": 597308,
+            "output_tokens_estimate": 139274,
+            "total_tokens_estimate": 736582
+          }
+        },
+        "input_tokens_estimate_before_prompt_tuning": 1822240,
+        "output_tokens_estimate_before_prompt_tuning": 1296661
+      },
+      "combined_total_tokens_estimate": 13744041
+    },
+    "cost_estimates_usd": {
+      "answer_generation": {
+        "cost_usd": null,
+        "reason": "The answer generation used Codex OAuth with local model gpt-5.5; the run did not save billable usage and gpt-5.5 is not listed in the official OpenAI API pricing table.",
+        "proxy_model": "gpt-5-codex",
+        "proxy_input_per_1m_tokens_usd": 1.25,
+        "proxy_output_per_1m_tokens_usd": 10.0,
+        "proxy_cost_usd_if_priced_like_gpt_5_codex": 15.012714
+      },
+      "benchmark_evaluation": {
+        "model": "gpt-4o-mini",
+        "input_per_1m_tokens_usd": 0.15,
+        "output_per_1m_tokens_usd": 0.6,
+        "cost_usd_estimate": 1.063633
+      },
+      "combined_proxy_cost_usd_estimate": 16.076347
+    },
+    "scope": "prompt_tuned_estimate_not_measured",
+    "description": "Estimated tokens/cost after the prompt-tuning changes; not measured from provider usage."
+  },
+  "_estimate_metadata": {
+    "estimated": true,
+    "generated_at": "2026-06-05T05:40:13+00:00",
+    "based_on_file": "bench/graphrag_bench/results_novel_kg.json",
+    "implementation_change": "prompt tuning for reference-answer style, task-specific length/structure, graph-term removal, and fuller grounded answers",
+    "important_note": "These are forecast values, not measured benchmark results. Run graphrag-eval on regenerated predictions for real values.",
+    "previous_summary": {
+      "average": 0.530913325647196,
+      "by_question_type_average": {
+        "Fact Retrieval": 0.5576358938014733,
+        "Complex Reasoning": 0.38059120655235734,
+        "Contextual Summarize": 0.6438950975240916,
+        "Creative Generation": 0.5379918450229731
+      }
+    },
+    "metric_deltas_applied": {
+      "Fact Retrieval.rouge_score": 0.055,
+      "Fact Retrieval.answer_correctness": 0.015,
+      "Complex Reasoning.rouge_score": 0.085,
+      "Complex Reasoning.answer_correctness": 0.025,
+      "Contextual Summarize.answer_correctness": 0.025,
+      "Contextual Summarize.coverage_score": 0.075,
+      "Creative Generation.answer_correctness": 0.025,
+      "Creative Generation.coverage_score": 0.085,
+      "Creative Generation.faithfulness": 0.04
+    },
+    "token_uplift_factors_applied": {
+      "gen_input": 1.02,
+      "gen_output": 1.18,
+      "eval_input": 1.045,
+      "eval_output": 1.0
+    }
+  }
+}

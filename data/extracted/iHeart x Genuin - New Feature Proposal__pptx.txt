@@ -1,0 +1,159 @@
+--- Slide 1 ---
+Amplifying engagement by auto-generating, organizing, and posting podcast clips across iHeart’s ecosystem.
+iHeart X Genuin
+03/10/2025
+Social Accounts Connect & Podcast Clip Share
+DEMO DESIGN UPDATES
+X
+
+--- Slide 2 ---
+STRATEGY:
+Enable iHeartMedia talent & producers to seamlessly promote  their show within the iHeart app through automated short clips generation, seamless review and editing, and direct publishing to their community + connected social media handles.
+Social Accounts Connect & Podcast Clip Share
+OBJECTIVE:
+Boost engagement and retention for creators within iHeart’s ecosystem. Shift from push to pull with social.
+
+--- Slide 3 ---
+CONNECT
+Connect podcast to the community
+Connect creator’s social handles to the iHeart App
+>
+As an iHeart producer, I connect my podcast channel to my community and my social media accounts to the iHeart app, enabling me to effortlessly share and post generated clips from my podcast episodes across my social handles.
+>
+
+--- Slide 4 ---
+Notification of generated clips from podcast episodes
+Posted successfully
+>
+>
+REVIEW & POST
+Producers/Admins will receive notifications about generated clips of  podcast episodes and can review + post it to their community as well as connected social handles from iHeart App or Brand Control Center dashboard
+Review Clip
+Post Details: Select social media accounts to post
+>
+
+--- Slide 5 ---
+Creator profile page
+Elvis Duran podcast starts playing
+PLAY PODCAST
+As an iHeart listener, I want to play podcast of a specific creator from their profile page
+Tap on the profile image to play creators podcast
+
+--- Slide 6 ---
+Posted successfully
+REPOST BY USERS
+iHeart users can repost the content to  multiple social accounts in one go
+Click on repost
+Select your preferred social media account
+
+--- Slide 7 ---
+Preview the video after recording
+REMIX FOR CREATORS
+iHeart producers can remix the clip and repost to other groups and social media handles as well
+Click on remix
+Record
+Select the group you want to post in and continue
+
+--- Slide 8 ---
+Video will be downloaded in your gallery
+DOWNLOAD & SHARE
+iHeart users can download any content to their device having brand watermark and it can be shared to other social platforms with brand watermark
+Click on three dot menu
+Click on Download video
+Share video to other platforms
+
+--- Slide 9 ---
+03/10/2025
+Generation Capabilities at Genuin
+
+--- Slide 10 ---
+Clip Generator Agent - Podcast to video
+1.5 hr+ long audio/video to clips
+Closed captions
+Contextual clips generator with hook (intro), body, and CTA (outraw)
+Contextual titles generator
+Smart crop (active subject detection)
+Bg music generator AI
+Supports 110+ languages
+Community strategist agent organizes the videos in proper community and group
+Thumbnail generator
+SEO friendly description generator
+Virality Score
+Hook
+Flow
+Value
+Trend
+
+--- Slide 11 ---
+Combining Elements in the video
+Community elements:
+Brand handle
+Brand Logo
+Brand Assets
+Community Profile Picture + Banner
+Caption (transcript)
+CTA
+Linkout
+Admin
+Comments
+Community Sponsored Brands
+Podcast Elements:
+Original Podcast Image
+Speakers, Guests
+Sponsors
+Context (can be translated to longtail engagement, community and group) -> the last 25% secs: what’s next? You may like to part of this community or group
+
+--- Slide 12 ---
+Smart Crop
+Sample Input & Outputs
+
+--- Slide 13 ---
+THANK YOU!
+
+--- Slide 14 ---
+01.
+ATTRACT CREATORS & CURATORS
+Offer fresh UGC content for them to remix and share, expanding TED’s content reach.
+02.
+BOOST COMMUNITY ENGAGEMENT
+Encourage more interaction within TED community around shared ideas.
+03.
+MEASURE THOUGHTS’ SHARE OF VOICE
+Identify which ideas resonate with users and spotlight them to enrich community discussions.
+10/22/2024
+BENEFITS
+REMIX AND SHARE YOUR THOUGHTS
+
+--- Slide 15 ---
+Elvis Duran posted on iHeart community
+Posted on X
+REPOST ON SOCIALS
+As an iHeart listener, post the content to other communities or other social accounts.
+Posted on instagram story
+Posted on Linkedin
+
+--- Slide 16 ---
+Click on repost
+Posted successfully
+>
+>
+Repost by users
+iHeart users can repost the content to other communities or other social accounts.
+Select community/ social account
+On social
+>
+
+--- Slide 18 ---
+1. Dynamic Text Adjustment
+2. Non-Transcribable Video Processing
+3. Custom captions styles
+4. Generative b-rolls
+5. Transitions
+6. Gifs emojis + stickers
+7. Overlays
+8. Sound effects
+9. Schedules
+10. Multi-lingual clips
+11. Editor
+12. Super resolution
+What’s coming?

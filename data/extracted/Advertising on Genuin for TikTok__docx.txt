@@ -1,0 +1,81 @@
+Overview
+Genuin powers short-form video infrastructure for a network of premium brands. Each brand integrates Genuin’s SDK, embedding a video feed natively within their app or website. This document outlines the advertising opportunities available to TikTok across that network — the formats on offer and how they work.
+1. SDK Integration & Placement Rendering
+Genuin’s SDK is embedded in each in-network publisher’s app or web property. It renders the Genuin-powered video feed. Brands integrate the SDK once; all placement and targeting logic is managed server-side by Genuin.
+1.1  Brand Runtime Flow
+1.2  Genuin SDK
+2. Sponsored Takeover
+The Sponsored Takeover is Genuin’s highest-impact placement. TikTok’s brand videos take over the entire content feed on a selected in-network brand — every video slot a user encounters is a TikTok-served experience. There is no competing content in the feed during a Takeover, giving TikTok 100% share of voice for the duration of the session.
+Creative Specifications
+3. Sponsored Post
+Sponsored Posts are TikTok-branded video cards that appear naturally within the organic content feed, interleaved with editorial content at calculated positions. Unlike the Takeover, organic content continues to appear around the ad — the Sponsored Post is designed to look and feel native to the feed experience, creating brand moments that blend into the user’s natural scroll.
+Creative Specifications
+4. Programmatic Audience Extension
+Programmatic Audience Extension allows TikTok to extend its existing programmatic campaigns to Genuin’s programmatically enabled in-network brands. TikTok’s demand is integrated directly into each brand’s unified ad auction at the ad server level — and given top priority in the programmatic stack. This means TikTok’s ads are first in line for every eligible impression, ahead of all other programmatic demand sources, across both in-feed video and in-stream video placements.
+4.1  In-Feed Video
+TikTok’s video creatives appear as native cards within the Genuin-powered content feed, rendered by the IMA SDK. The ad is delivered in response to the highest-priority bid in the unified auction and plays automatically as the user scrolls to it.
+Creative Specifications
+4.2  In-Stream Video
+TikTok’s creatives run as linear video ads around content on in-network brand properties — before the content begins (pre-roll), at natural breaks within it (mid-roll), or after it concludes (post-roll). In-stream inventory is available at the top of the unified auction, giving TikTok first-look priority across all three positions.
+Creative Specifications
+5. Data Privacy & Targeting Controls
+A core principle of the Genuin partnership model is that TikTok’s data never leaves TikTok-controlled systems. Whether buying sponsored placements or extending programmatic campaigns, all targeting decisions are made within infrastructure that TikTok owns and controls — Genuin provides the inventory surface, not the targeting logic.
+5.1  Sponsorships — Bring Your Own Algorithm
+For Sponsored Takeover and Sponsored Post, TikTok can connect its own targeting algorithm directly to the Genuin feed. Rather than delegating audience selection to Genuin, TikTok’s server makes the targeting decision for every impression in real time.
+5.2  Programmatic Audience Extension — Programmatic Controlled Targeting
+For Programmatic Audience Extension, targeting is owned end-to-end by TikTok’s demand-side platform. Genuin’s role is to surface the impression opportunity and pass standard bid request signals through the programmatic pipe — audience matching, frequency controls, and creative selection are all decisions that happen within TikTok’s programmatic interface, not on Genuin’s infrastructure.
+Genuin × TikTok
+Advertising on Genuin 
+Confidential  ·  April 2026
+Ad Format | Type | Placement
+Sponsored Takeover | Direct — Genuin-served | Full video feed takeover across in-network brands
+Sponsored Post | Direct — Genuin-served | Individual branded video cards within the content feed across in-network brands
+Programmatic Audience Extension | Programmatic — top-priority unified auction | In-feed video · In-stream pre/mid/post-roll
+Requirement | Detail
+SDK type | Genuin Web SDK (JavaScript) or Mobile SDK (iOS / Android)
+Integration method | Tag-based (web) or native library (mobile app)
+Ad rendering —Sponsorships | Genuin Video Player
+Ad rendering — in-stream | Google IMA SDK
+ | How it works:  TikTok uploads branded video content to Genuin’s Brand Content Console (BCC). Genuin serves these videos into every feed slot on the selected placement for the in-network brand. The user experiences a continuous, immersive TikTok-branded feed for the duration of their session.
+Best for:  Product launches, tentpole campaigns, and moments where TikTok wants undivided attention from a brand’s audience.
+Buying model | Direct — facilitated by Genuin
+Share of voice | 100% — no competing content in feed during the takeover
+Content upload | TikTok uploads video(s) to Genuin BCC — Genuin handles delivery
+Targeting | Genuin out-of-the-box audience targeting on the selected in-network brand or Bring Your Own Algorithm(See section 5.1) to target using TikTok’s own decision engine
+Video format | MP4 (H.264)
+Aspect ratio | 9:16 vertical (required)
+Resolution | 1080 × 1920 px
+Duration | Up to 60 seconds · 15–30 seconds recommended
+Max file size | 2 GB
+ | How it works:  TikTok uploads branded video to Genuin BCC. Genuin serves the post at brand defined ad-slot positions within the content feed — typically every N organic posts. The ad renders identically to organic feed content, with a subtle “Sponsored” label.
+Best for:  Always-on brand presence, awareness campaigns, and content that benefits from a native, non-interruptive format.
+Buying model | Direct — facilitated by Genuin
+Ad slot position | As configured by host brand  — e.g., 1 sponsored post per every N organic posts
+Content upload | TikTok uploads video(s) to Genuin BCC — Genuin handles delivery
+Targeting | Genuin out-of-the-box audience targeting on the selected in-network brand or Bring Your Own Algorithm(See section 5.1) to target using TikTok’s own decision engine
+Video format | MP4 (H.264)
+Aspect ratio | 9:16 vertical (required)
+Resolution | 1080 × 1920 px
+Duration | Up to 60 seconds · 15–30 seconds recommended
+Max file size | 2 GB
+ | How it works:  TikTok’s programmatic demand is plugged directly into the ad server of each Genuin in-network brand. When an ad slot opens — in the feed or around video content — TikTok’s demand is evaluated first, at the top of the unified auction, before any other DSP or demand source. TikTok’s DSP submits a bid, and if it meets the floor, the impression is won without going through the open auction.
+Best for:  Extending the reach of TikTok’s programmatic campaigns beyond its own platform — reaching the same audiences in their content consumption moments across premium in-network brands, with guaranteed first look at every impression.
+Buying model | Programmatic — TikTok bids directly at ad server level
+Priority tier | Top priority in unified auction — evaluated before all other programmatic demand
+Placements | In-feed video · In-stream (pre-roll, mid-roll, post-roll)
+Integration path | Direct ad server integration — no intermediary ad network
+Supported brands | All programmatically enabled Genuin in-network brands
+Creative | Video creatives served by TikTok’s programmatic intermediary — IMA SDK integrated within Genuin SDK renders them natively in the feed or player
+Ad position | Within the organic content feed at fixed positions configured by the host brand
+Click destination | Landing page URL or deep link (HTTPS required)
+Video format | MP4 (H.264 / H.265)
+Aspect ratio | 9:16 vertical (preferred) · 1:1 square · 16:9 landscape
+Duration | 6–60 seconds · 15 or 30 seconds recommended
+Ad positions | Pre-roll · Mid-roll · Post-roll
+Pre-roll | Plays before video starts
+Mid-roll | Plays at video mid-point
+Post-roll | Plays after video ends
+Click destination | Landing page URL or deep link (HTTPS required)
+Video format | MP4 (H.264 / H.265)
+Aspect ratio | 9:16 vertical (preferred) · 1:1 square · 16:9 landscape
+Duration | 6–30 seconds

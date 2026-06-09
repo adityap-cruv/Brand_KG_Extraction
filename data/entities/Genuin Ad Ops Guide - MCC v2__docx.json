@@ -1,0 +1,252 @@
+{
+  "source_doc": "Genuin Ad Ops Guide - MCC v2",
+  "entities": [
+    {
+      "name": "Genuin SDK",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Embeddable SDK that powers video carousels and feeds on partner websites and apps, enabling native short-form video experiences."
+    },
+    {
+      "name": "Genuin Ad Ops Guide - MCC Edition",
+      "bucket": "Marketing",
+      "type": "Document",
+      "aliases": [
+        "MCC Ad Ops Guide",
+        "Ad Ops Guide MCC Edition"
+      ],
+      "description": "Confidential McClatchy-edition reference guide (March 2026) covering activation, configuration, and management of all in-stream and in-feed ad formats on the Genuin platform."
+    },
+    {
+      "name": "Brand Control Center",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "BCC"
+      ],
+      "description": "Genuin's operational console used by partner brands to configure and manage ad placements and sponsored content workflows."
+    },
+    {
+      "name": "Aniview",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Third-party ad server used to render in-stream pre/mid/post-roll programmatic ads within the Genuin Video Player via VAST."
+    },
+    {
+      "name": "Genuin Video Player",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Player that renders Genuin video content and supports VAST-based programmatic in-stream ads."
+    },
+    {
+      "name": "In-Stream Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Pre-roll",
+        "Mid-roll",
+        "Post-roll",
+        "In-Stream Pre/Mid/Post-roll"
+      ],
+      "description": "Programmatic ads that play inside the video player as pre-roll, mid-roll, or post-roll spots."
+    },
+    {
+      "name": "In-Feed Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Card-format ads that appear within the scrollable video feed alongside organic content."
+    },
+    {
+      "name": "In-Feed Sponsored Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Sponsored Takeover"
+      ],
+      "description": "In-feed ad placement that occupies the first five feed slots for a sponsoring brand."
+    },
+    {
+      "name": "Onsite Placements",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Onsite"
+      ],
+      "description": "Deployment model where the Genuin SDK is embedded on a partner site/app and a backend-driven feed serves dynamic content supporting both in-stream and in-feed ads."
+    },
+    {
+      "name": "Offsite Placements",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Offsite"
+      ],
+      "description": "Deployment model using standard IAB banner slots (300x250, 300x600) on external pages, running preset video collections in a Genuin-powered player; supports in-stream playback only."
+    },
+    {
+      "name": "VAST",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Video Ad Serving Template standard used by the Genuin Video Player to render programmatic in-stream ads via Aniview."
+    },
+    {
+      "name": "IAB Banner Slots",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "300x250",
+        "300x600"
+      ],
+      "description": "Standard IAB banner sizes (300x250 and 300x600) used for Offsite Genuin placements on external pages."
+    },
+    {
+      "name": "McClatchy",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "MCC"
+      ],
+      "description": "Publisher partner for which this March 2026 confidential edition of the Genuin Ad Ops Guide was prepared."
+    },
+    {
+      "name": "Partner Brands",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Destination Brands"
+      ],
+      "description": "Publishers, retailers, and media companies that embed Genuin video experiences and activate ad formats on their websites and apps."
+    },
+    {
+      "name": "Programmatic Advertising",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Monetization channel through which Genuin sells in-stream pre/mid/post-roll inventory, rendered via Aniview and VAST."
+    },
+    {
+      "name": "Direct Sponsored Content",
+      "bucket": "Business",
+      "type": "Process",
+      "aliases": [],
+      "description": "Workflow for creating and managing directly-sold sponsored content placements as part of Genuin's layered monetization model."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Genuin Ad Ops Guide - MCC Edition",
+      "target": "McClatchy",
+      "type": "PART_OF",
+      "description": "The guide is the McClatchy-specific edition prepared for the publisher partner."
+    },
+    {
+      "source": "Genuin Ad Ops Guide - MCC Edition",
+      "target": "Brand Control Center",
+      "type": "MENTIONS",
+      "description": "The guide documents workflows for Genuin's Brand Control Center."
+    },
+    {
+      "source": "Genuin Ad Ops Guide - MCC Edition",
+      "target": "Aniview",
+      "type": "MENTIONS",
+      "description": "The guide documents the Aniview ad server workflow used for in-stream ads."
+    },
+    {
+      "source": "Genuin Ad Ops Guide - MCC Edition",
+      "target": "In-Stream Ads",
+      "type": "MENTIONS",
+      "description": "The guide is the definitive reference for activating and managing in-stream ads."
+    },
+    {
+      "source": "Genuin Ad Ops Guide - MCC Edition",
+      "target": "In-Feed Ads",
+      "type": "MENTIONS",
+      "description": "The guide is the definitive reference for activating and managing in-feed ads."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Partner Brands",
+      "type": "TARGETED_AT",
+      "description": "The SDK is embedded by partner publishers, retailers, and media companies on their sites and apps."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Onsite Placements",
+      "type": "POWERS",
+      "description": "Onsite deployments embed the Genuin SDK directly on partner websites and apps."
+    },
+    {
+      "source": "Onsite Placements",
+      "target": "In-Stream Ads",
+      "type": "INCLUDES",
+      "description": "Onsite placements support in-stream pre/mid/post-roll ad formats."
+    },
+    {
+      "source": "Onsite Placements",
+      "target": "In-Feed Ads",
+      "type": "INCLUDES",
+      "description": "Onsite placements support all in-feed ad types."
+    },
+    {
+      "source": "Offsite Placements",
+      "target": "IAB Banner Slots",
+      "type": "USES",
+      "description": "Offsite placements run inside standard IAB banner slots on external pages."
+    },
+    {
+      "source": "Offsite Placements",
+      "target": "In-Stream Ads",
+      "type": "INCLUDES",
+      "description": "Offsite placements support direct in-stream video playback within the banner."
+    },
+    {
+      "source": "In-Stream Ads",
+      "target": "Genuin Video Player",
+      "type": "PART_OF",
+      "description": "In-stream ads render inside the Genuin Video Player."
+    },
+    {
+      "source": "In-Stream Ads",
+      "target": "Aniview",
+      "type": "DEPENDS_ON",
+      "description": "In-stream pre/mid/post-roll ads are served programmatically via the Aniview ad server."
+    },
+    {
+      "source": "Genuin Video Player",
+      "target": "VAST",
+      "type": "USES",
+      "description": "The Genuin Video Player uses the VAST standard to render programmatic ad responses."
+    },
+    {
+      "source": "In-Feed Sponsored Takeover",
+      "target": "In-Feed Ads",
+      "type": "PART_OF",
+      "description": "Sponsored Takeover is an in-feed ad format occupying the first five feed slots."
+    },
+    {
+      "source": "In-Stream Ads",
+      "target": "Programmatic Advertising",
+      "type": "PART_OF",
+      "description": "In-stream pre/mid/post-roll inventory is sold programmatically."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Partner Brands",
+      "type": "TARGETED_AT",
+      "description": "BCC is the console used by partner brands to configure ad placements and sponsored content."
+    },
+    {
+      "source": "Direct Sponsored Content",
+      "target": "Brand Control Center",
+      "type": "DEPENDS_ON",
+      "description": "Direct sponsored content creation is managed through the Brand Control Center workflows."
+    }
+  ],
+  "_src_hash": "d222a8f9642289ce142c4f96928ce39c273be7543faf779386a6e6043e93b319",
+  "_skill_sig": "4edd28021f3312b1"
+}

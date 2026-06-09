@@ -5,11 +5,14 @@ No Brand root, no buckets, no tiers. Every node/relationship is namespaced by a
 Nodes carry a single `:Entity` label; the descriptive kind is a `type` property.
 """
 from __future__ import annotations
+import logging
 import re
 
 from neo4j import GraphDatabase
 
 from .. import config
+
+log = logging.getLogger("brandkg.bench")
 
 
 def driver():
@@ -68,21 +71,34 @@ def load(s, payloads, corpus: str):
     """MERGE entities + relationships for one corpus. Returns (entities, rels)."""
     seen = set()
     te = tr = 0
+    skipped = 0
     for p in payloads:
+        if not isinstance(p, dict):
+            skipped += 1
+            continue
         doc = p.get("source_doc", "doc")
-        for e in p.get("entities", []):
+        for e in p.get("entities", []) or []:
+            # Local models sometimes emit a bare string instead of {name,...};
+            # skip anything that isn't a well-formed object rather than crashing.
+            if not isinstance(e, dict):
+                skipped += 1
+                continue
             name = (e.get("name") or "").strip()
             nk = _nk(name)
             if not nk:
                 continue
-            aliases = sorted({a.strip() for a in e.get("aliases", []) if a and a.strip()})
+            aliases = sorted({a.strip() for a in e.get("aliases", []) or []
+                              if isinstance(a, str) and a.strip()})
             s.run(_NODE, corpus=corpus, key=nk, name=name,
                   type=(e.get("type") or "").strip(),
                   desc=(e.get("description") or "").strip(), aliases=aliases, doc=doc)
             if nk not in seen:
                 seen.add(nk)
                 te += 1
-        for r in p.get("relationships", []):
+        for r in p.get("relationships", []) or []:
+            if not isinstance(r, dict):
+                skipped += 1
+                continue
             sk, tk = _nk(r.get("source")), _nk(r.get("target"))
             if not sk or not tk:
                 continue
@@ -90,4 +106,7 @@ def load(s, payloads, corpus: str):
                   corpus=corpus, sk=sk, tk=tk,
                   desc=(r.get("description") or "").strip(), doc=doc)
             tr += 1
+    if skipped:
+        log.warning("[%s] skipped %d malformed entity/relationship entries (non-object)",
+                    corpus, skipped)
     return te, tr

@@ -1,0 +1,596 @@
+{
+  "_estimate_metadata": {
+    "estimated": true,
+    "forecast_level": "optimistic_high",
+    "generated_at": "2026-06-05T06:05:13+00:00",
+    "subset": "novel",
+    "methods": [
+      "kg",
+      "llm",
+      "hybrid"
+    ],
+    "important_note": "High-side forecast only; these files do not replace measured GraphRAG-Bench outputs."
+  },
+  "kg": {
+    "Fact Retrieval": {
+      "rouge_score": 0.568344787344,
+      "answer_correctness": 0.661927000259
+    },
+    "Complex Reasoning": {
+      "rouge_score": 0.333527376645,
+      "answer_correctness": 0.60765503646
+    },
+    "Contextual Summarize": {
+      "answer_correctness": 0.727497795702,
+      "coverage_score": 0.710292399346
+    },
+    "Creative Generation": {
+      "answer_correctness": 0.637112546356,
+      "coverage_score": 0.542848611246,
+      "faithfulness": 0.674014377467
+    },
+    "_summary": {
+      "average": 0.6070244367583333,
+      "by_question_type_average": {
+        "Fact Retrieval": 0.6151358938014999,
+        "Complex Reasoning": 0.4705912065525,
+        "Contextual Summarize": 0.718895097524,
+        "Creative Generation": 0.617991845023
+      }
+    },
+    "_cost_estimate": {
+      "generated_at": "2026-06-04T04:44:40+00:00",
+      "subset": "novel",
+      "answer_source": "kg",
+      "question_count": 2010,
+      "models": {
+        "answer_generation": {
+          "engine": "codex",
+          "model": "gpt-5.5",
+          "pricing_status": "codex_oauth_run; no direct API usage object was saved"
+        },
+        "benchmark_evaluation": {
+          "model": "gpt-4o-mini",
+          "embedding_model": "BAAI/bge-large-en-v1.5"
+        }
+      },
+      "token_estimates": {
+        "answer_generation": {
+          "input_tokens_estimate": 10384218,
+          "output_tokens_estimate": 230889,
+          "total_tokens_estimate": 10615107,
+          "by_question_type": {
+            "Fact Retrieval": {
+              "questions": 971,
+              "input_tokens_estimate": 3380699,
+              "output_tokens_estimate": 19464,
+              "total_tokens_estimate": 3400163
+            },
+            "Complex Reasoning": {
+              "questions": 610,
+              "input_tokens_estimate": 3709660,
+              "output_tokens_estimate": 72256,
+              "total_tokens_estimate": 3781916
+            },
+            "Contextual Summarize": {
+              "questions": 362,
+              "input_tokens_estimate": 2574408,
+              "output_tokens_estimate": 72447,
+              "total_tokens_estimate": 2646855
+            },
+            "Creative Generation": {
+              "questions": 67,
+              "input_tokens_estimate": 466177,
+              "output_tokens_estimate": 13440,
+              "total_tokens_estimate": 479617
+            }
+          },
+          "input_tokens_estimate_before_prompt_tuning": 10130944,
+          "output_tokens_estimate_before_prompt_tuning": 177607
+        },
+        "benchmark_evaluation": {
+          "model": "gpt-4o-mini",
+          "llm_calls_estimate": 7022,
+          "input_tokens_estimate": 1940686,
+          "output_tokens_estimate": 1296661,
+          "total_tokens_estimate": 3237347,
+          "by_question_type": {
+            "Fact Retrieval": {
+              "questions": 971,
+              "llm_calls_estimate": 2913,
+              "input_tokens_estimate": 304855,
+              "output_tokens_estimate": 316747,
+              "total_tokens_estimate": 621602
+            },
+            "Complex Reasoning": {
+              "questions": 610,
+              "llm_calls_estimate": 1830,
+              "input_tokens_estimate": 329396,
+              "output_tokens_estimate": 344184,
+              "total_tokens_estimate": 673580
+            },
+            "Contextual Summarize": {
+              "questions": 362,
+              "llm_calls_estimate": 1810,
+              "input_tokens_estimate": 590681,
+              "output_tokens_estimate": 496456,
+              "total_tokens_estimate": 1087137
+            },
+            "Creative Generation": {
+              "questions": 67,
+              "llm_calls_estimate": 469,
+              "input_tokens_estimate": 597308,
+              "output_tokens_estimate": 139274,
+              "total_tokens_estimate": 736582
+            }
+          },
+          "input_tokens_estimate_before_prompt_tuning": 1822240,
+          "output_tokens_estimate_before_prompt_tuning": 1296661
+        },
+        "combined_total_tokens_estimate": 13852454
+      },
+      "cost_estimates_usd": {
+        "answer_generation": {
+          "cost_usd": null,
+          "reason": "The answer generation used Codex OAuth with local model gpt-5.5; the run did not save billable usage and gpt-5.5 is not listed in the official OpenAI API pricing table.",
+          "proxy_model": "gpt-5-codex",
+          "proxy_input_per_1m_tokens_usd": 1.25,
+          "proxy_output_per_1m_tokens_usd": 10.0,
+          "proxy_cost_usd_if_priced_like_gpt_5_codex": 15.289163
+        },
+        "benchmark_evaluation": {
+          "model": "gpt-4o-mini",
+          "input_per_1m_tokens_usd": 0.15,
+          "output_per_1m_tokens_usd": 0.6,
+          "cost_usd_estimate": 1.0691
+        },
+        "combined_proxy_cost_usd_estimate": 16.358263
+      },
+      "scope": "optimistic_prompt_tuned_estimate_not_measured",
+      "description": "High-side estimated tokens/cost after prompt tuning; not measured from provider usage."
+    },
+    "_estimate_metadata": {
+      "estimated": true,
+      "forecast_level": "optimistic_high",
+      "generated_at": "2026-06-05T06:05:13+00:00",
+      "based_on_file": "bench/graphrag_bench/results_novel_kg.json",
+      "implementation_change": "prompt tuning for reference-answer style, task-specific length/structure, graph-term removal, and fuller grounded answers",
+      "important_note": "High-side forecast only, not measured benchmark results. Run graphrag-eval on regenerated predictions for real values.",
+      "previous_summary": {
+        "average": 0.530913325647196,
+        "by_question_type_average": {
+          "Fact Retrieval": 0.5576358938014733,
+          "Complex Reasoning": 0.38059120655235734,
+          "Contextual Summarize": 0.6438950975240916,
+          "Creative Generation": 0.5379918450229731
+        }
+      },
+      "metric_deltas_applied": {
+        "Fact Retrieval.rouge_score": 0.09,
+        "Fact Retrieval.answer_correctness": 0.025,
+        "Complex Reasoning.rouge_score": 0.14,
+        "Complex Reasoning.answer_correctness": 0.04,
+        "Contextual Summarize.answer_correctness": 0.04,
+        "Contextual Summarize.coverage_score": 0.11,
+        "Creative Generation.answer_correctness": 0.04,
+        "Creative Generation.coverage_score": 0.13,
+        "Creative Generation.faithfulness": 0.07
+      },
+      "token_uplift_factors_applied": {
+        "gen_input": 1.025,
+        "gen_output": 1.3,
+        "eval_input": 1.065,
+        "eval_output": 1.0
+      }
+    }
+  },
+  "llm": {
+    "Fact Retrieval": {
+      "rouge_score": 0.441438020356,
+      "answer_correctness": 0.602149561779
+    },
+    "Complex Reasoning": {
+      "rouge_score": 0.313448120256,
+      "answer_correctness": 0.56664001044
+    },
+    "Contextual Summarize": {
+      "answer_correctness": 0.686807626652,
+      "coverage_score": 0.639559306716
+    },
+    "Creative Generation": {
+      "answer_correctness": 0.549427112584,
+      "coverage_score": 0.456585279073,
+      "faithfulness": 0.513526785714
+    },
+    "_summary": {
+      "average": 0.5299535359522223,
+      "by_question_type_average": {
+        "Fact Retrieval": 0.5217937910675,
+        "Complex Reasoning": 0.440044065348,
+        "Contextual Summarize": 0.663183466684,
+        "Creative Generation": 0.5065130591236667
+      }
+    },
+    "_cost_estimate": {
+      "generated_at": "2026-06-04T04:44:40+00:00",
+      "subset": "novel",
+      "answer_source": "llm",
+      "question_count": 2010,
+      "models": {
+        "answer_generation": {
+          "engine": "codex",
+          "model": "gpt-5.5",
+          "pricing_status": "codex_oauth_run; no direct API usage object was saved"
+        },
+        "benchmark_evaluation": {
+          "model": "gpt-4o-mini",
+          "embedding_model": "BAAI/bge-large-en-v1.5"
+        }
+      },
+      "token_estimates": {
+        "answer_generation": {
+          "input_tokens_estimate": 1817960,
+          "output_tokens_estimate": 159419,
+          "total_tokens_estimate": 1977379,
+          "by_question_type": {
+            "Fact Retrieval": {
+              "questions": 971,
+              "input_tokens_estimate": 834544,
+              "output_tokens_estimate": 11590,
+              "total_tokens_estimate": 846134
+            },
+            "Complex Reasoning": {
+              "questions": 610,
+              "input_tokens_estimate": 532103,
+              "output_tokens_estimate": 48336,
+              "total_tokens_estimate": 580439
+            },
+            "Contextual Summarize": {
+              "questions": 362,
+              "input_tokens_estimate": 326408,
+              "output_tokens_estimate": 49564,
+              "total_tokens_estimate": 375972
+            },
+            "Creative Generation": {
+              "questions": 67,
+              "input_tokens_estimate": 63428,
+              "output_tokens_estimate": 8598,
+              "total_tokens_estimate": 72026
+            }
+          },
+          "input_tokens_estimate_before_prompt_tuning": 1756483,
+          "output_tokens_estimate_before_prompt_tuning": 118088
+        },
+        "benchmark_evaluation": {
+          "model": "gpt-4o-mini",
+          "llm_calls_estimate": 7022,
+          "input_tokens_estimate": 1363457,
+          "output_tokens_estimate": 1161852,
+          "total_tokens_estimate": 2525309,
+          "by_question_type": {
+            "Fact Retrieval": {
+              "questions": 971,
+              "llm_calls_estimate": 2913,
+              "input_tokens_estimate": 289107,
+              "output_tokens_estimate": 300147,
+              "total_tokens_estimate": 589254
+            },
+            "Complex Reasoning": {
+              "questions": 610,
+              "llm_calls_estimate": 1830,
+              "input_tokens_estimate": 281556,
+              "output_tokens_estimate": 293911,
+              "total_tokens_estimate": 575467
+            },
+            "Contextual Summarize": {
+              "questions": 362,
+              "llm_calls_estimate": 1810,
+              "input_tokens_estimate": 522032,
+              "output_tokens_estimate": 448374,
+              "total_tokens_estimate": 970406
+            },
+            "Creative Generation": {
+              "questions": 67,
+              "llm_calls_estimate": 469,
+              "input_tokens_estimate": 181564,
+              "output_tokens_estimate": 119420,
+              "total_tokens_estimate": 300984
+            }
+          },
+          "input_tokens_estimate_before_prompt_tuning": 1274259,
+          "output_tokens_estimate_before_prompt_tuning": 1161852
+        },
+        "combined_total_tokens_estimate": 4502688
+      },
+      "cost_estimates_usd": {
+        "answer_generation": {
+          "cost_usd": null,
+          "reason": "The answer generation used Codex OAuth with local model gpt-5.5; the run did not save billable usage and gpt-5.5 is not listed in the official OpenAI API pricing table.",
+          "proxy_model": "gpt-5-codex",
+          "proxy_input_per_1m_tokens_usd": 1.25,
+          "proxy_output_per_1m_tokens_usd": 10.0,
+          "proxy_cost_usd_if_priced_like_gpt_5_codex": 3.86664
+        },
+        "benchmark_evaluation": {
+          "model": "gpt-4o-mini",
+          "input_per_1m_tokens_usd": 0.15,
+          "output_per_1m_tokens_usd": 0.6,
+          "cost_usd_estimate": 0.90163
+        },
+        "combined_proxy_cost_usd_estimate": 4.76827
+      },
+      "scope": "optimistic_prompt_tuned_estimate_not_measured",
+      "description": "High-side estimated tokens/cost after prompt tuning; not measured from provider usage."
+    },
+    "_estimate_metadata": {
+      "estimated": true,
+      "forecast_level": "optimistic_high",
+      "generated_at": "2026-06-05T06:05:13+00:00",
+      "based_on_file": "bench/graphrag_bench/results_novel_llm.json",
+      "implementation_change": "prompt tuning for reference-answer style, task-specific length/structure, graph-term removal, and fuller grounded answers",
+      "important_note": "High-side forecast only, not measured benchmark results. Run graphrag-eval on regenerated predictions for real values.",
+      "previous_summary": {
+        "average": 0.4505090915077932,
+        "by_question_type_average": {
+          "Fact Retrieval": 0.46429379106706176,
+          "Complex Reasoning": 0.36754406534804895,
+          "Contextual Summarize": 0.5856834666842353,
+          "Creative Generation": 0.4065130591238157
+        }
+      },
+      "metric_deltas_applied": {
+        "Fact Retrieval.rouge_score": 0.09,
+        "Fact Retrieval.answer_correctness": 0.025,
+        "Complex Reasoning.rouge_score": 0.11,
+        "Complex Reasoning.answer_correctness": 0.035,
+        "Contextual Summarize.answer_correctness": 0.035,
+        "Contextual Summarize.coverage_score": 0.12,
+        "Creative Generation.answer_correctness": 0.04,
+        "Creative Generation.coverage_score": 0.14,
+        "Creative Generation.faithfulness": 0.12
+      },
+      "token_uplift_factors_applied": {
+        "gen_input": 1.035,
+        "gen_output": 1.35,
+        "eval_input": 1.07,
+        "eval_output": 1.0
+      }
+    }
+  },
+  "hybrid": {
+    "Fact Retrieval": {
+      "rouge_score": 0.667389077201,
+      "answer_correctness": 0.659604856141
+    },
+    "Complex Reasoning": {
+      "rouge_score": 0.540528078076,
+      "answer_correctness": 0.679190364281
+    },
+    "Contextual Summarize": {
+      "answer_correctness": 0.716645783309,
+      "coverage_score": 0.639778439153
+    },
+    "Creative Generation": {
+      "answer_correctness": 0.635301639613,
+      "coverage_score": 0.6434348339,
+      "faithfulness": 0.661554218826
+    },
+    "_summary": {
+      "average": 0.6492696989444444,
+      "by_question_type_average": {
+        "Fact Retrieval": 0.663496966671,
+        "Complex Reasoning": 0.6098592211785,
+        "Contextual Summarize": 0.678212111231,
+        "Creative Generation": 0.646763564113
+      }
+    },
+    "_cost_estimate": {
+      "generated_at": "2026-06-04T05:05:58+00:00",
+      "subset": "novel",
+      "answer_source": "hybrid",
+      "scope": "optimistic_prompt_tuned_estimate_not_measured",
+      "description": "High-side estimated tokens/cost after prompt tuning; not measured from provider usage.",
+      "question_count": 2010,
+      "question_distribution": {
+        "Fact Retrieval": 971,
+        "Complex Reasoning": 610,
+        "Contextual Summarize": 362,
+        "Creative Generation": 67
+      },
+      "projected_text_fallback_count": 484,
+      "projected_kg_answer_count": 1526,
+      "fallback_rate_source": {
+        "source_file": "predictions_novel.json",
+        "sample_question_count": 225,
+        "sample_text_fallback_count": 66,
+        "by_question_type": {
+          "Fact Retrieval": {
+            "sample_questions": 60,
+            "sample_text_fallbacks": 13,
+            "projected_full_text_fallbacks": 210,
+            "fallback_rate": 0.216667
+          },
+          "Complex Reasoning": {
+            "sample_questions": 60,
+            "sample_text_fallbacks": 12,
+            "projected_full_text_fallbacks": 122,
+            "fallback_rate": 0.2
+          },
+          "Contextual Summarize": {
+            "sample_questions": 60,
+            "sample_text_fallbacks": 20,
+            "projected_full_text_fallbacks": 121,
+            "fallback_rate": 0.333333
+          },
+          "Creative Generation": {
+            "sample_questions": 45,
+            "sample_text_fallbacks": 21,
+            "projected_full_text_fallbacks": 31,
+            "fallback_rate": 0.466667
+          }
+        }
+      },
+      "models": {
+        "answer_generation": {
+          "engine": "codex",
+          "model": "gpt-5.5",
+          "pricing_status": "codex_oauth_run; no direct API usage object was saved"
+        },
+        "benchmark_evaluation": {
+          "model": "gpt-4o-mini",
+          "embedding_model": "BAAI/bge-large-en-v1.5"
+        }
+      },
+      "token_estimates": {
+        "answer_generation": {
+          "input_tokens_estimate": 10820211,
+          "output_tokens_estimate": 209600,
+          "total_tokens_estimate": 11029811,
+          "by_question_type": {
+            "Fact Retrieval": {
+              "input_tokens_estimate": 3561187,
+              "output_tokens_estimate": 17761,
+              "total_tokens_estimate": 3578948,
+              "questions": 971,
+              "projected_kg_answer_questions": 761,
+              "projected_text_fallback_questions": 210,
+              "fallback_rate_from_current_hybrid_sample": 0.216667
+            },
+            "Complex Reasoning": {
+              "input_tokens_estimate": 3816081,
+              "output_tokens_estimate": 67472,
+              "total_tokens_estimate": 3883553,
+              "questions": 610,
+              "projected_kg_answer_questions": 488,
+              "projected_text_fallback_questions": 122,
+              "fallback_rate_from_current_hybrid_sample": 0.2
+            },
+            "Contextual Summarize": {
+              "input_tokens_estimate": 2683511,
+              "output_tokens_estimate": 64798,
+              "total_tokens_estimate": 2748309,
+              "questions": 362,
+              "projected_kg_answer_questions": 241,
+              "projected_text_fallback_questions": 121,
+              "fallback_rate_from_current_hybrid_sample": 0.333333
+            },
+            "Creative Generation": {
+              "input_tokens_estimate": 495524,
+              "output_tokens_estimate": 11200,
+              "total_tokens_estimate": 506724,
+              "questions": 67,
+              "projected_kg_answer_questions": 36,
+              "projected_text_fallback_questions": 31,
+              "fallback_rate_from_current_hybrid_sample": 0.466667
+            }
+          },
+          "input_tokens_estimate_before_prompt_tuning": 10556303,
+          "output_tokens_estimate_before_prompt_tuning": 161231
+        },
+        "benchmark_evaluation": {
+          "model": "gpt-4o-mini",
+          "llm_calls_estimate": 7022,
+          "input_tokens_estimate": 1697568,
+          "output_tokens_estimate": 1257758,
+          "total_tokens_estimate": 2955326,
+          "by_question_type": {
+            "Fact Retrieval": {
+              "llm_calls_estimate": 2913,
+              "input_tokens_estimate": 301449,
+              "output_tokens_estimate": 313157,
+              "total_tokens_estimate": 614606,
+              "questions": 971,
+              "projected_kg_answer_questions": 761,
+              "projected_text_fallback_questions": 210,
+              "fallback_rate_from_current_hybrid_sample": 0.216667
+            },
+            "Complex Reasoning": {
+              "llm_calls_estimate": 1830,
+              "input_tokens_estimate": 319828,
+              "output_tokens_estimate": 334129,
+              "total_tokens_estimate": 653957,
+              "questions": 610,
+              "projected_kg_answer_questions": 488,
+              "projected_text_fallback_questions": 122,
+              "fallback_rate_from_current_hybrid_sample": 0.2
+            },
+            "Contextual Summarize": {
+              "llm_calls_estimate": 1810,
+              "input_tokens_estimate": 567735,
+              "output_tokens_estimate": 480384,
+              "total_tokens_estimate": 1048119,
+              "questions": 362,
+              "projected_kg_answer_questions": 241,
+              "projected_text_fallback_questions": 121,
+              "fallback_rate_from_current_hybrid_sample": 0.333333
+            },
+            "Creative Generation": {
+              "llm_calls_estimate": 469,
+              "input_tokens_estimate": 404949,
+              "output_tokens_estimate": 130088,
+              "total_tokens_estimate": 535037,
+              "questions": 67,
+              "projected_kg_answer_questions": 36,
+              "projected_text_fallback_questions": 31,
+              "fallback_rate_from_current_hybrid_sample": 0.466667
+            }
+          },
+          "input_tokens_estimate_before_prompt_tuning": 1593961,
+          "output_tokens_estimate_before_prompt_tuning": 1257758
+        },
+        "combined_total_tokens_estimate": 13985137
+      },
+      "cost_estimates_usd": {
+        "answer_generation": {
+          "cost_usd": null,
+          "reason": "Answer generation used/projected Codex OAuth with local model gpt-5.5; no billable usage object was saved and gpt-5.5 is not listed in the official OpenAI API pricing table.",
+          "proxy_model": "gpt-5-codex",
+          "proxy_input_per_1m_tokens_usd": 1.25,
+          "proxy_output_per_1m_tokens_usd": 10.0,
+          "proxy_cost_usd_if_priced_like_gpt_5_codex": 15.621264
+        },
+        "benchmark_evaluation": {
+          "model": "gpt-4o-mini",
+          "input_per_1m_tokens_usd": 0.15,
+          "output_per_1m_tokens_usd": 0.6,
+          "cost_usd_estimate": 1.00929
+        },
+        "combined_proxy_cost_usd_estimate": 16.630554
+      }
+    },
+    "_estimate_metadata": {
+      "estimated": true,
+      "forecast_level": "optimistic_high",
+      "generated_at": "2026-06-05T06:05:13+00:00",
+      "based_on_file": "bench/graphrag_bench/results_novel.json",
+      "implementation_change": "prompt tuning for reference-answer style, task-specific length/structure, graph-term removal, and fuller grounded answers",
+      "important_note": "High-side forecast only, not measured benchmark results. Run graphrag-eval on regenerated predictions for real values.",
+      "previous_summary": {
+        "average": 0.5842696989445746,
+        "by_question_type_average": {
+          "Fact Retrieval": 0.6284969666710893,
+          "Complex Reasoning": 0.5398592211786138,
+          "Contextual Summarize": 0.6082121112314045,
+          "Creative Generation": 0.585096897446319
+        }
+      },
+      "metric_deltas_applied": {
+        "Fact Retrieval.rouge_score": 0.055,
+        "Fact Retrieval.answer_correctness": 0.025,
+        "Complex Reasoning.rouge_score": 0.075,
+        "Complex Reasoning.answer_correctness": 0.035,
+        "Contextual Summarize.answer_correctness": 0.035,
+        "Contextual Summarize.coverage_score": 0.115,
+        "Creative Generation.answer_correctness": 0.035,
+        "Creative Generation.coverage_score": 0.095,
+        "Creative Generation.faithfulness": 0.075
+      },
+      "token_uplift_factors_applied": {
+        "gen_input": 1.025,
+        "gen_output": 1.3,
+        "eval_input": 1.065,
+        "eval_output": 1.0
+      }
+    }
+  }
+}

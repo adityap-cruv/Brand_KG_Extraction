@@ -1,0 +1,1009 @@
+{
+  "source_doc": "Genuin Product & Technology RACI",
+  "entities": [
+    {
+      "name": "Vishal D",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Product leader at Genuin, currently in transition from Sanch.",
+      "seniority_tier": "VP",
+      "role_title": "Head of Product",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sanch",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Outgoing product leader being transitioned out as Vishal D takes over.",
+      "seniority_tier": "VP",
+      "role_title": "Product Leader (Outgoing)",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Shrushti",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Associate Product Manager currently leading customer integration; will transition fully to product role.",
+      "seniority_tier": "MANAGER",
+      "role_title": "Associate Product Manager",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Devanshu",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Product team member leading customer integration; will transition to a full-time product manager role.",
+      "seniority_tier": "MANAGER",
+      "role_title": "Product Manager",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Smit",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Product Manager on the Genuin product team.",
+      "seniority_tier": "MANAGER",
+      "role_title": "Product Manager",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sanidhya",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Leads the AI team and serves as Engineering Owner for Generative Experiences and AI infrastructure.",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "AI / Generative Experiences Lead",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Moon",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Lead Product Designer at Genuin.",
+      "seniority_tier": "MANAGER",
+      "role_title": "Lead Product Designer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Ruchita",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Product Analyst on the Genuin product team.",
+      "seniority_tier": "IC",
+      "role_title": "Product Analyst",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sandeep",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Technical Writer supporting product documentation.",
+      "seniority_tier": "IC",
+      "role_title": "Technical Writer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sushant",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Pre-Sale Associate on the Genuin product team.",
+      "seniority_tier": "IC",
+      "role_title": "Pre-Sale Associate",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Shubhangi",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Product Designer at Genuin.",
+      "seniority_tier": "IC",
+      "role_title": "Product Designer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Nayan",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Head of Engineering at Genuin and Engineering Owner for the Autonomous AI Native Tech Organization.",
+      "seniority_tier": "VP",
+      "role_title": "Head of Engineering",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Ankit Gabani",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Ankit"
+      ],
+      "description": "Principal Engineer for Mobile Tech in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Principal Engineer (Mobile Tech)",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Vishal Nirmal",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Principal Engineer for Google Tech in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Principal Engineer (Google Tech)",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Krunal Shah",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Krunal"
+      ],
+      "description": "Principal Engineer and Engineering Owner for CX (Brand-to-Consumer experience) and co-owner of SDK.",
+      "seniority_tier": "IC",
+      "role_title": "Principal Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Nilesh",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "VP of Engineering and co-Engineering Owner for BCC.",
+      "seniority_tier": "VP",
+      "role_title": "VP of Engineering",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Suhanee",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "iOS Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "iOS Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sujal",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "QA engineer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "QA",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Himanshu",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Frontend Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Bhavesh",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "QA II in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "QA II",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dhruv P.",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Dhruv P"
+      ],
+      "description": "Backend Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Backend Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Meet",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Principal Engineer and co-Engineering Owner for SLA, Governance, Deployment and Observability; transitioning ad exchange integrations to Kaushal.",
+      "seniority_tier": "IC",
+      "role_title": "Principal Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Ashish",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "iOS Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "iOS Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Shubh",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Android Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Android Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dhruv G.",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [
+        "Dhruv G"
+      ],
+      "description": "Software Development Engineer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "SDE",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jimit",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Solution Architect and co-Engineering Owner for BCC (admin, analytics, data, reporting, insights).",
+      "seniority_tier": "IC",
+      "role_title": "Solution Architect",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dhairya",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Full Stack Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Full Stack Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dev",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Frontend Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Kashish",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "QA II in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "QA II",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jalay",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Full Stack Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Full Stack Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Neel",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "DevOps engineer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "DevOps",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Om",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Software Development Engineer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "SDE",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Arjav",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Head of Mobile and co-Engineering Owner for SDK (cross-platform SDKs, developer docs, APIs, 3rd-party integrations).",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "Head of Mobile",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Rohit",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Frontend Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jaydeep",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Frontend Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Kaushal",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Full Stack Developer and co-Engineering Owner for SLA, Governance, Deployment and Observability; will lead ad exchange and monetization integrations.",
+      "seniority_tier": "IC",
+      "role_title": "Full Stack Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Riken",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "DevOps Intern in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "DevOps Intern",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dharmil",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Full Stack Intern in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Full Stack Intern",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Harshit",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Data Scientist in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Data Scientist",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Umang",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Data Scientist in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Data Scientist",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Vedant",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Data Scientist in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Data Scientist",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Kirtan",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Data Scientist in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "Data Scientist",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Dev Changela",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "iOS Developer in Genuin's engineering team.",
+      "seniority_tier": "IC",
+      "role_title": "iOS Developer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Alexey",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Engineering Owner for the robust design system and component library across all products, SDKs, and experiences.",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "Engineering Owner (Design System)",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Network",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Genuin Network"
+      ],
+      "description": "Video distribution product enabling maximum reach across brands and partner sites with cross-tenant sync and shared content libraries."
+    },
+    {
+      "name": "Controls",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Genuin Controls"
+      ],
+      "description": "Organized governance product covering ingestion, curation, algorithm yield, admin self-serve and content freshness."
+    },
+    {
+      "name": "Marketplace",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Genuin Marketplace"
+      ],
+      "description": "Hub for optimizing workflows by exchanging brand capabilities and knowledge bases across partners via a shared protocol."
+    },
+    {
+      "name": "Studio",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Genuin Studio"
+      ],
+      "description": "One-stop shop for publishing videos, tracking invite-to-upload rate, upload completion, mobile recording success and contributor retention."
+    },
+    {
+      "name": "Onsite",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Onsite discovery product for increasing LTV via SDK-driven video integration on partner web properties."
+    },
+    {
+      "name": "Offsite",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Product extending brand relevance across the open web through tag generation, redirection and external impression tracking."
+    },
+    {
+      "name": "Monetize",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Genuin Monetize"
+      ],
+      "description": "Unified revenue product covering ad opportunity utilisation, transactions, subscription setup and partner earnings growth."
+    },
+    {
+      "name": "Octo",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Genuin's AI / conversational layer that makes a brand a vibe, measured by response latency, accuracy and interaction rate."
+    },
+    {
+      "name": "BCC",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Brand Command Center"
+      ],
+      "description": "Admin, analytics, data, reporting and insights surface for partners across the Genuin platform."
+    },
+    {
+      "name": "SDK",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Client SDKs",
+        "Cross-platform SDKs"
+      ],
+      "description": "Cross-platform SDKs, developer docs, APIs and third-party integrations powering Genuin product surfaces."
+    },
+    {
+      "name": "Genuin Website",
+      "bucket": "Marketing",
+      "type": "Website",
+      "aliases": [],
+      "description": "Marketing and documentation site representing Genuin's brand and product surfaces."
+    },
+    {
+      "name": "Design System",
+      "bucket": "Engineering",
+      "type": "Framework",
+      "aliases": [
+        "Component Library"
+      ],
+      "description": "Robust design system and component library shared across all Genuin products, SDKs and experiences."
+    },
+    {
+      "name": "CX Platform",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [
+        "Brand-Consumer Experience"
+      ],
+      "description": "Brand-to-consumer end-to-end experience across devices, technologies and platforms covering app/web load, video start time and feed relevance."
+    },
+    {
+      "name": "Generative Experiences",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [
+        "AI Infrastructure"
+      ],
+      "description": "Cross-platform agentic experiences and AI infrastructure spanning onsite and offsite surfaces."
+    },
+    {
+      "name": "Autonomous AI Native Tech Organization",
+      "bucket": "Engineering",
+      "type": "Initiative",
+      "aliases": [],
+      "description": "Engineering org structure positioning Genuin's tech function as an autonomous, AI-native organization."
+    },
+    {
+      "name": "SLA Governance and Observability",
+      "bucket": "Engineering",
+      "type": "Function",
+      "aliases": [
+        "Deployment & Observability"
+      ],
+      "description": "Engineering function covering service-level agreements, governance, deployment and observability across products."
+    },
+    {
+      "name": "Priority RACI",
+      "bucket": "Business",
+      "type": "Framework",
+      "aliases": [
+        "RACI"
+      ],
+      "description": "Framework defining Responsible, Accountable, Consulted and Informed ownership across P0-P4 priorities for Product, Engineering, CSM, Design and Leadership."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Vishal D",
+      "target": "Sanch",
+      "type": "RESPONDS_TO",
+      "description": "Vishal D is taking over the product leadership currently held by Sanch, who is in transition out."
+    },
+    {
+      "source": "Shrushti",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Shrushti sits in the product org under Vishal D as APM."
+    },
+    {
+      "source": "Devanshu",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Devanshu sits in the product org under Vishal D and will transition to a full product manager role."
+    },
+    {
+      "source": "Smit",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Smit is a Product Manager in Vishal D's product org."
+    },
+    {
+      "source": "Sanidhya",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Sanidhya and the AI team are listed under the product organization led by Vishal D."
+    },
+    {
+      "source": "Moon",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Moon, Lead Product Designer, sits in the product organization under Vishal D."
+    },
+    {
+      "source": "Ruchita",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Ruchita is the Product Analyst within Vishal D's product organization."
+    },
+    {
+      "source": "Sandeep",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Sandeep, Technical Writer, sits in Vishal D's product organization."
+    },
+    {
+      "source": "Sushant",
+      "target": "Vishal D",
+      "type": "REPORTS_TO",
+      "description": "Sushant, Pre-Sale Associate, sits in Vishal D's product organization."
+    },
+    {
+      "source": "Shubhangi",
+      "target": "Moon",
+      "type": "REPORTS_TO",
+      "description": "Shubhangi, Product Designer, sits under Moon's design team."
+    },
+    {
+      "source": "Ankit Gabani",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Ankit Gabani reports into Nayan, Head of Engineering."
+    },
+    {
+      "source": "Vishal Nirmal",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Vishal Nirmal reports into Nayan, Head of Engineering."
+    },
+    {
+      "source": "Krunal Shah",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Krunal Shah reports into Nayan, Head of Engineering."
+    },
+    {
+      "source": "Nilesh",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Nilesh, VP of Engineering, reports into Nayan."
+    },
+    {
+      "source": "Meet",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Meet, Principal Engineer, reports into Nayan."
+    },
+    {
+      "source": "Arjav",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Arjav, Head of Mobile, reports into Nayan."
+    },
+    {
+      "source": "Jimit",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Jimit, Solution Architect, reports into Nayan."
+    },
+    {
+      "source": "Suhanee",
+      "target": "Arjav",
+      "type": "REPORTS_TO",
+      "description": "Suhanee, iOS Developer, sits under Arjav's mobile organization."
+    },
+    {
+      "source": "Ashish",
+      "target": "Arjav",
+      "type": "REPORTS_TO",
+      "description": "Ashish, iOS Developer, sits under Arjav's mobile organization."
+    },
+    {
+      "source": "Shubh",
+      "target": "Arjav",
+      "type": "REPORTS_TO",
+      "description": "Shubh, Android Developer, sits under Arjav's mobile organization."
+    },
+    {
+      "source": "Dev Changela",
+      "target": "Arjav",
+      "type": "REPORTS_TO",
+      "description": "Dev Changela, iOS Developer, sits under Arjav's mobile organization."
+    },
+    {
+      "source": "Sujal",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Sujal, QA, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Bhavesh",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Bhavesh, QA II, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Kashish",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Kashish, QA II, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Himanshu",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Himanshu, Frontend Developer, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Dev",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Dev, Frontend Developer, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Rohit",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Rohit, Frontend Developer, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Jaydeep",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Jaydeep, Frontend Developer, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Dhruv P.",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Dhruv P., Backend Developer, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Dhairya",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Dhairya, Full Stack Developer, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Jalay",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Jalay, Full Stack Developer, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Kaushal",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Kaushal, Full Stack Developer, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Dhruv G.",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Dhruv G., SDE, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Om",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Om, SDE, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Neel",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Neel, DevOps, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Riken",
+      "target": "Neel",
+      "type": "REPORTS_TO",
+      "description": "Riken, DevOps Intern, sits under the DevOps function led by Neel."
+    },
+    {
+      "source": "Dharmil",
+      "target": "Nayan",
+      "type": "REPORTS_TO",
+      "description": "Dharmil, Full Stack Intern, sits in Nayan's engineering organization."
+    },
+    {
+      "source": "Harshit",
+      "target": "Sanidhya",
+      "type": "REPORTS_TO",
+      "description": "Harshit, Data Scientist, sits under Sanidhya's AI / data-science team."
+    },
+    {
+      "source": "Umang",
+      "target": "Sanidhya",
+      "type": "REPORTS_TO",
+      "description": "Umang, Data Scientist, sits under Sanidhya's AI / data-science team."
+    },
+    {
+      "source": "Vedant",
+      "target": "Sanidhya",
+      "type": "REPORTS_TO",
+      "description": "Vedant, Data Scientist, sits under Sanidhya's AI / data-science team."
+    },
+    {
+      "source": "Kirtan",
+      "target": "Sanidhya",
+      "type": "REPORTS_TO",
+      "description": "Kirtan, Data Scientist, sits under Sanidhya's AI / data-science team."
+    },
+    {
+      "source": "Nayan",
+      "target": "Autonomous AI Native Tech Organization",
+      "type": "LEADS",
+      "description": "Nayan is the Engineering Owner for the Autonomous AI Native Tech Organization initiative."
+    },
+    {
+      "source": "Alexey",
+      "target": "Design System",
+      "type": "LEADS",
+      "description": "Alexey is Engineering Owner for the robust design system and component library across all products, SDKs and experiences."
+    },
+    {
+      "source": "Krunal Shah",
+      "target": "CX Platform",
+      "type": "LEADS",
+      "description": "Krunal Shah is the Engineering Owner for the brand-to-consumer CX platform across devices and channels."
+    },
+    {
+      "source": "Jimit",
+      "target": "BCC",
+      "type": "LEADS",
+      "description": "Jimit is a co-Engineering Owner for BCC (admin, analytics, data, reporting, insights)."
+    },
+    {
+      "source": "Nilesh",
+      "target": "BCC",
+      "type": "LEADS",
+      "description": "Nilesh is a co-Engineering Owner for BCC (admin, analytics, data, reporting, insights)."
+    },
+    {
+      "source": "Arjav",
+      "target": "SDK",
+      "type": "LEADS",
+      "description": "Arjav is a co-Engineering Owner for the SDK (cross-platform SDKs, developer docs, APIs, integrations)."
+    },
+    {
+      "source": "Krunal Shah",
+      "target": "SDK",
+      "type": "LEADS",
+      "description": "Krunal Shah is a co-Engineering Owner for the SDK alongside Arjav."
+    },
+    {
+      "source": "Sanidhya",
+      "target": "Generative Experiences",
+      "type": "LEADS",
+      "description": "Sanidhya is Engineering Owner for cross-platform agentic experiences and AI infrastructure (onsite and offsite)."
+    },
+    {
+      "source": "Kaushal",
+      "target": "SLA Governance and Observability",
+      "type": "LEADS",
+      "description": "Kaushal is a co-Engineering Owner for SLA, governance, deployment and observability."
+    },
+    {
+      "source": "Meet",
+      "target": "SLA Governance and Observability",
+      "type": "LEADS",
+      "description": "Meet is a co-Engineering Owner for SLA, governance, deployment and observability."
+    },
+    {
+      "source": "Kaushal",
+      "target": "Monetize",
+      "type": "WORKS_ON",
+      "description": "Kaushal will lead ad exchange integrations and monetization-related work, transitioning from Meet."
+    },
+    {
+      "source": "Meet",
+      "target": "Monetize",
+      "type": "WORKS_ON",
+      "description": "Meet previously led ad-exchange and monetization integrations and is transitioning that scope to Kaushal."
+    },
+    {
+      "source": "BCC",
+      "target": "Design System",
+      "type": "USES",
+      "description": "BCC consumes shared components from Genuin's design system and component library."
+    },
+    {
+      "source": "SDK",
+      "target": "Design System",
+      "type": "USES",
+      "description": "SDK surfaces consume the shared design system and component library."
+    },
+    {
+      "source": "Onsite",
+      "target": "SDK",
+      "type": "DEPENDS_ON",
+      "description": "Onsite discovery depends on SDK integration, measured by days from SDK access to first live video."
+    },
+    {
+      "source": "Offsite",
+      "target": "SDK",
+      "type": "DEPENDS_ON",
+      "description": "Offsite extension uses tags and integrations delivered through SDKs and external ad platforms."
+    },
+    {
+      "source": "Octo",
+      "target": "Generative Experiences",
+      "type": "PART_OF",
+      "description": "Octo's AI features are part of the broader generative experiences and AI infrastructure surface."
+    },
+    {
+      "source": "Network",
+      "target": "Controls",
+      "type": "RELATES_TO",
+      "description": "Network distribution relies on Controls-style governance for ingestion, curation and admin self-serve across partners."
+    },
+    {
+      "source": "Marketplace",
+      "target": "Network",
+      "type": "RELATES_TO",
+      "description": "Marketplace exchanges brand capabilities across partners that overlap with the Network distribution layer."
+    },
+    {
+      "source": "Studio",
+      "target": "Network",
+      "type": "INTEGRATES_WITH",
+      "description": "Studio publishes videos that flow into the Network for cross-tenant distribution."
+    },
+    {
+      "source": "Monetize",
+      "target": "Onsite",
+      "type": "INTEGRATES_WITH",
+      "description": "Monetize revenue features hook into Onsite player surfaces and partner pages."
+    },
+    {
+      "source": "Monetize",
+      "target": "Offsite",
+      "type": "INTEGRATES_WITH",
+      "description": "Monetize revenue features extend to Offsite tags and external ad platforms."
+    },
+    {
+      "source": "BCC",
+      "target": "Network",
+      "type": "MENTIONS",
+      "description": "BCC reporting surfaces the analytics and insights generated by Network distribution."
+    },
+    {
+      "source": "BCC",
+      "target": "Monetize",
+      "type": "MENTIONS",
+      "description": "BCC dashboards report on monetize revenue and adoption metrics for partners."
+    },
+    {
+      "source": "Genuin Website",
+      "target": "BCC",
+      "type": "RELATES_TO",
+      "description": "The Genuin website carries marketing and documentation content that complements the BCC product surface."
+    },
+    {
+      "source": "Priority RACI",
+      "target": "BCC",
+      "type": "RELATES_TO",
+      "description": "BCC reporting is one of the surfaces governed by the Priority RACI for P0-P4 ownership."
+    },
+    {
+      "source": "Priority RACI",
+      "target": "Monetize",
+      "type": "RELATES_TO",
+      "description": "The Priority RACI defines how Product, Engineering and CSM share P0-P4 ownership for revenue-impacting tracks like Monetize."
+    }
+  ],
+  "_src_hash": "2d136b1bcc112b3cdc549210eb2b88dcff77c4ce54eecbfdc6aa78e88cefda93",
+  "_skill_sig": "4edd28021f3312b1"
+}

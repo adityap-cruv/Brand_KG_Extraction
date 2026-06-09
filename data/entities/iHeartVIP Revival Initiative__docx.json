@@ -1,0 +1,760 @@
+{
+  "source_doc": "iHeartVIP Revival Initiative",
+  "entities": [
+    {
+      "name": "iHeartVIP Revival Initiative",
+      "bucket": "Product",
+      "type": "Initiative",
+      "aliases": [
+        "iHeartVIP Revival"
+      ],
+      "description": "A project to revive the iHeartVIP.com domain as a modern fan engagement hub powered by Genuin, transforming it from a 2019 music/industry news site into a video and community platform."
+    },
+    {
+      "name": "iHeartVIP",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "iheartvip.com"
+      ],
+      "description": "The destination platform being revived as a high-engagement video and community hub, supporting event discovery, communities, contests, and fan experiences."
+    },
+    {
+      "name": "iHeartVIP.com Domain",
+      "bucket": "Product",
+      "type": "Domain",
+      "aliases": [
+        "iheartvip.com"
+      ],
+      "description": "The domain to be white-labeled with a Genuin-powered subdomain to deliver the iHeartVIP experience."
+    },
+    {
+      "name": "Genuin Web Platform",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "Genuin web application",
+        "Genuin-powered web experience"
+      ],
+      "description": "The existing Genuin web infrastructure that will power the white-labeled iHeartVIP experience in the backend."
+    },
+    {
+      "name": "Genuin Video and Community Infrastructure",
+      "bucket": "Product",
+      "type": "Infrastructure",
+      "aliases": [],
+      "description": "Genuin's core infrastructure enabling video clips, creator uploads, discussions, event content hubs, and brand activations that will power iHeartVIP."
+    },
+    {
+      "name": "BCC",
+      "bucket": "Product",
+      "type": "System",
+      "aliases": [
+        "Brand Control Center"
+      ],
+      "description": "Genuin's brand management system inside which iHeart's brand instances are configured and subdomains are managed."
+    },
+    {
+      "name": "iHeart Brand Instance on BCC",
+      "bucket": "Product",
+      "type": "BrandInstance",
+      "aliases": [
+        "iHeartMedia brand",
+        "iheartmedia.begenuin.com"
+      ],
+      "description": "The existing iHeart production brand inside BCC, currently served at iheartmedia.begenuin.com, considered for reuse under Approach 1."
+    },
+    {
+      "name": "iHeartVIP Brand Instance on BCC",
+      "bucket": "Product",
+      "type": "BrandInstance",
+      "aliases": [
+        "iheartvip.begenuin.com"
+      ],
+      "description": "A proposed new brand inside BCC dedicated to iHeartVIP under Approach 2, served at iheartvip.begenuin.com."
+    },
+    {
+      "name": "Event Communities",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "1000+ Event Communities"
+      ],
+      "description": "Communities organized around each iHeart event, supporting video clips, creator uploads, discussions, content hubs, and brand activations on iHeartVIP."
+    },
+    {
+      "name": "Podcast Communities",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Communities on iHeartVIP organized around podcasts as part of the platform structure."
+    },
+    {
+      "name": "Artist Communities",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Communities on iHeartVIP organized around artists."
+    },
+    {
+      "name": "Contests and Fan Experiences",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Contests & Giveaways"
+      ],
+      "description": "Integrated contests, giveaways, and fan experience features available on iHeartVIP."
+    },
+    {
+      "name": "White-Labeling",
+      "bucket": "Engineering",
+      "type": "Capability",
+      "aliases": [
+        "Domain White-Label"
+      ],
+      "description": "The capability to map a custom domain (iheartvip.com) to a Genuin-powered web experience while presenting a fully branded iHeart UI."
+    },
+    {
+      "name": "Domain Mapping Configuration",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [],
+      "description": "The engineering configuration that points the iHeartVIP domain to the Genuin web application backend."
+    },
+    {
+      "name": "URL Redirects",
+      "bucket": "Engineering",
+      "type": "Mitigation",
+      "aliases": [
+        "Share URL Redirects"
+      ],
+      "description": "Mitigation strategy to support both existing iheart.com share URLs and new iheartvip.com URLs to avoid breakage under Approach 1."
+    },
+    {
+      "name": "Approach 1 - Subdomain on Existing iHeart Brand",
+      "bucket": "Engineering",
+      "type": "Approach",
+      "aliases": [
+        "Approach 1"
+      ],
+      "description": "Implementation approach reusing the existing iHeart production brand in BCC and updating its subdomain to iheartvip.begenuin.com."
+    },
+    {
+      "name": "Approach 2 - Separate Brand for iHeartVIP",
+      "bucket": "Engineering",
+      "type": "Approach",
+      "aliases": [
+        "Approach 2"
+      ],
+      "description": "Implementation approach creating a new dedicated iHeartVIP brand inside BCC with its own subdomain for cleaner separation and lower risk."
+    },
+    {
+      "name": "Content Pipeline",
+      "bucket": "Engineering",
+      "type": "Pipeline",
+      "aliases": [
+        "Overlap Content Pipeline"
+      ],
+      "description": "Existing content pipeline used for iHeart communities; open question whether iHeartVIP will reuse it or source content differently."
+    },
+    {
+      "name": "iHeartVIP iOS App",
+      "bucket": "Engineering",
+      "type": "Application",
+      "aliases": [],
+      "description": "A potential dedicated iOS application for iHeartVIP powered by Genuin, raised as an open question."
+    },
+    {
+      "name": "iHeartVIP Android App",
+      "bucket": "Engineering",
+      "type": "Application",
+      "aliases": [],
+      "description": "A potential dedicated Android application for iHeartVIP powered by Genuin, raised as an open question."
+    },
+    {
+      "name": "Devanshu Shah",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Owner of the iHeartVIP Revival Initiative document.",
+      "seniority_tier": "OTHER",
+      "role_title": "Initiative Owner",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Bhargav Patel",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Initiator of the requirement for the iHeartVIP Revival Initiative.",
+      "seniority_tier": "OTHER",
+      "role_title": "Requirement Initiator",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Nayan Mevada",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Required stakeholder for the iHeartVIP Revival Initiative.",
+      "seniority_tier": "OTHER",
+      "role_title": "Stakeholder",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Nilesh Makwana",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Required stakeholder for the iHeartVIP Revival Initiative.",
+      "seniority_tier": "OTHER",
+      "role_title": "Stakeholder",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Krunal Shah",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Required stakeholder for the iHeartVIP Revival Initiative.",
+      "seniority_tier": "OTHER",
+      "role_title": "Stakeholder",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Smit Shah",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Required stakeholder for the iHeartVIP Revival Initiative.",
+      "seniority_tier": "OTHER",
+      "role_title": "Stakeholder",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Arjav Dave",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Required stakeholder for the iHeartVIP Revival Initiative.",
+      "seniority_tier": "OTHER",
+      "role_title": "Stakeholder",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Ankit Gabani",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Required stakeholder for the iHeartVIP Revival Initiative.",
+      "seniority_tier": "OTHER",
+      "role_title": "Stakeholder",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Vishal Nirmal",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Required stakeholder for the iHeartVIP Revival Initiative.",
+      "seniority_tier": "OTHER",
+      "role_title": "Stakeholder",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "iHeartMedia",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "iHeart"
+      ],
+      "description": "Media company that partnered with Concourse Media in 2019 to launch iHeartVIP.com and is the partner brand for the proposed revival."
+    },
+    {
+      "name": "iHeartRadio",
+      "bucket": "Partnerships",
+      "type": "Brand",
+      "aliases": [],
+      "description": "The iHeart audio brand that originally partnered with Concourse Media in 2019 to launch iHeartVIP.com."
+    },
+    {
+      "name": "Concourse Media",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Media company that partnered with iHeartRadio in 2019 to launch the original iHeartVIP.com."
+    },
+    {
+      "name": "Brand Partners",
+      "bucket": "Partnerships",
+      "type": "PartnerGroup",
+      "aliases": [
+        "Brand Partner Events",
+        "Sponsored Experiences"
+      ],
+      "description": "Brand partners participating in iHeart events and sponsored experiences distributed through the iHeartVIP platform."
+    },
+    {
+      "name": "iHeart Live Events",
+      "bucket": "Marketing",
+      "type": "EventProgram",
+      "aliases": [
+        "iHeart 1000+ Live Events"
+      ],
+      "description": "More than 1000 live events run annually by iHeart, including music festivals, artist tours, radio station activations, brand partner events, podcast tours, and sponsored experiences."
+    },
+    {
+      "name": "iHeart Music Festival",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Example iHeart event that would have a dedicated community on iHeartVIP."
+    },
+    {
+      "name": "Jingle Ball Tour",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Example iHeart artist tour event that would have a dedicated community on iHeartVIP."
+    },
+    {
+      "name": "Podcast Awards",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Example iHeart podcast event that would have a dedicated community on iHeartVIP."
+    },
+    {
+      "name": "Summer Concert Series",
+      "bucket": "Marketing",
+      "type": "Event",
+      "aliases": [],
+      "description": "Example iHeart concert series that would have a dedicated community on iHeartVIP."
+    },
+    {
+      "name": "Music Festivals",
+      "bucket": "Marketing",
+      "type": "EventType",
+      "aliases": [],
+      "description": "Category of iHeart live events distributed through iHeartVIP communities."
+    },
+    {
+      "name": "Artist Tours",
+      "bucket": "Marketing",
+      "type": "EventType",
+      "aliases": [],
+      "description": "Category of iHeart live events distributed through iHeartVIP communities."
+    },
+    {
+      "name": "Radio Station Activations",
+      "bucket": "Marketing",
+      "type": "EventType",
+      "aliases": [],
+      "description": "Category of iHeart live events distributed through iHeartVIP communities."
+    },
+    {
+      "name": "Podcast Tours",
+      "bucket": "Marketing",
+      "type": "EventType",
+      "aliases": [],
+      "description": "Category of iHeart live events distributed through iHeartVIP communities."
+    },
+    {
+      "name": "Brand Activations",
+      "bucket": "Marketing",
+      "type": "EventType",
+      "aliases": [],
+      "description": "Brand-driven activations enabled within iHeartVIP event communities."
+    },
+    {
+      "name": "Contests and Giveaways Program",
+      "bucket": "Marketing",
+      "type": "Program",
+      "aliases": [],
+      "description": "Integrated contests and giveaways enabling fan participation on iHeartVIP."
+    },
+    {
+      "name": "Editorial Publishing Model",
+      "bucket": "Marketing",
+      "type": "ContentModel",
+      "aliases": [
+        "News and Article Publishing"
+      ],
+      "description": "The 2019 editorial-style content delivery format originally used by iHeartVIP.com to distribute music and industry news; open question whether to revive it."
+    },
+    {
+      "name": "iHeart Fans",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [
+        "Fans"
+      ],
+      "description": "End users who discover events, join communities, watch highlights, and participate in contests on the revived iHeartVIP platform."
+    },
+    {
+      "name": "Creators",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [
+        "Creator Community"
+      ],
+      "description": "Creators who upload clips and content into iHeartVIP event communities."
+    },
+    {
+      "name": "Artists and Hosts",
+      "bucket": "Audience",
+      "type": "AudienceSegment",
+      "aliases": [
+        "Artists",
+        "Hosts"
+      ],
+      "description": "Artists and event hosts who engage with fans through iHeartVIP communities."
+    },
+    {
+      "name": "Monetization Opportunities",
+      "bucket": "Business",
+      "type": "Capability",
+      "aliases": [
+        "Streamlined Monetization"
+      ],
+      "description": "Monetization capabilities enabled by Genuin's infrastructure on iHeartVIP, including placements and brand activations."
+    },
+    {
+      "name": "Centralized Fan Engagement Platform Strategy",
+      "bucket": "Business",
+      "type": "Strategy",
+      "aliases": [
+        "Strategic Opportunity"
+      ],
+      "description": "Strategic opportunity to consolidate fragmented iHeart event activations into a single fan engagement hub via iHeartVIP."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "iHeartVIP Revival Initiative",
+      "target": "iHeartVIP",
+      "type": "PROMOTES",
+      "description": "The initiative aims to revive and relaunch the iHeartVIP platform as a modern fan engagement hub."
+    },
+    {
+      "source": "iHeartVIP Revival Initiative",
+      "target": "iHeartMedia",
+      "type": "TARGETED_AT",
+      "description": "The revival initiative is targeted at iHeartMedia as the partner brand whose domain and audience will be revived."
+    },
+    {
+      "source": "Devanshu Shah",
+      "target": "iHeartVIP Revival Initiative",
+      "type": "LEADS",
+      "description": "Devanshu Shah is the owner of the iHeartVIP Revival Initiative."
+    },
+    {
+      "source": "Bhargav Patel",
+      "target": "iHeartVIP Revival Initiative",
+      "type": "CREATED",
+      "description": "Bhargav Patel initiated the requirement for the iHeartVIP Revival Initiative."
+    },
+    {
+      "source": "Nayan Mevada",
+      "target": "iHeartVIP Revival Initiative",
+      "type": "WORKS_ON",
+      "description": "Nayan Mevada is listed as a required stakeholder on the initiative."
+    },
+    {
+      "source": "Nilesh Makwana",
+      "target": "iHeartVIP Revival Initiative",
+      "type": "WORKS_ON",
+      "description": "Nilesh Makwana is listed as a required stakeholder on the initiative."
+    },
+    {
+      "source": "Krunal Shah",
+      "target": "iHeartVIP Revival Initiative",
+      "type": "WORKS_ON",
+      "description": "Krunal Shah is listed as a required stakeholder on the initiative."
+    },
+    {
+      "source": "Smit Shah",
+      "target": "iHeartVIP Revival Initiative",
+      "type": "WORKS_ON",
+      "description": "Smit Shah is listed as a required stakeholder on the initiative."
+    },
+    {
+      "source": "Arjav Dave",
+      "target": "iHeartVIP Revival Initiative",
+      "type": "WORKS_ON",
+      "description": "Arjav Dave is listed as a required stakeholder on the initiative."
+    },
+    {
+      "source": "Ankit Gabani",
+      "target": "iHeartVIP Revival Initiative",
+      "type": "WORKS_ON",
+      "description": "Ankit Gabani is listed as a required stakeholder on the initiative."
+    },
+    {
+      "source": "Vishal Nirmal",
+      "target": "iHeartVIP Revival Initiative",
+      "type": "WORKS_ON",
+      "description": "Vishal Nirmal is listed as a required stakeholder on the initiative."
+    },
+    {
+      "source": "iHeartRadio",
+      "target": "Concourse Media",
+      "type": "HAS_AGREEMENT_WITH",
+      "description": "iHeartRadio partnered with Concourse Media in 2019 to launch iHeartVIP.com."
+    },
+    {
+      "source": "iHeartRadio",
+      "target": "iHeartVIP",
+      "type": "CREATED",
+      "description": "iHeartRadio launched iHeartVIP.com in 2019 as a music and industry news destination."
+    },
+    {
+      "source": "Concourse Media",
+      "target": "iHeartVIP",
+      "type": "CREATED",
+      "description": "Concourse Media co-launched iHeartVIP.com in partnership with iHeartRadio in 2019."
+    },
+    {
+      "source": "iHeartMedia",
+      "target": "iHeartVIP",
+      "type": "OWNED_BY",
+      "description": "iHeartMedia owns iHeartVIP and originally deprioritized the publishing initiative before the proposed revival."
+    },
+    {
+      "source": "iHeartRadio",
+      "target": "iHeartMedia",
+      "type": "PART_OF",
+      "description": "iHeartRadio is the iHeart audio brand that operates under iHeartMedia."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Genuin Web Platform",
+      "type": "POWERS",
+      "description": "The iHeartVIP experience will be powered in the backend by the Genuin web platform via white-labeling."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Genuin Video and Community Infrastructure",
+      "type": "USES",
+      "description": "iHeartVIP will be powered by Genuin's video and community infrastructure to enable communities, clips, and discussions."
+    },
+    {
+      "source": "iHeartVIP.com Domain",
+      "target": "Genuin Web Platform",
+      "type": "INTEGRATES_WITH",
+      "description": "The iHeartVIP.com domain will be mapped to the Genuin web platform via white-labeling."
+    },
+    {
+      "source": "White-Labeling",
+      "target": "iHeartVIP.com Domain",
+      "type": "RELATES_TO",
+      "description": "White-labeling is the mechanism that allows the iHeartVIP.com domain to render the Genuin-powered experience."
+    },
+    {
+      "source": "Domain Mapping Configuration",
+      "target": "White-Labeling",
+      "type": "PART_OF",
+      "description": "Domain mapping configuration is the technical step that enables white-labeling of iHeartVIP.com."
+    },
+    {
+      "source": "iHeart Brand Instance on BCC",
+      "target": "BCC",
+      "type": "PART_OF",
+      "description": "The existing iHeartMedia brand instance is managed inside Genuin's BCC."
+    },
+    {
+      "source": "iHeartVIP Brand Instance on BCC",
+      "target": "BCC",
+      "type": "PART_OF",
+      "description": "The proposed iHeartVIP brand instance would be managed inside Genuin's BCC under Approach 2."
+    },
+    {
+      "source": "Approach 1 - Subdomain on Existing iHeart Brand",
+      "target": "iHeart Brand Instance on BCC",
+      "type": "USES",
+      "description": "Approach 1 reuses the existing iHeart brand instance in BCC and updates its subdomain to iheartvip.begenuin.com."
+    },
+    {
+      "source": "Approach 2 - Separate Brand for iHeartVIP",
+      "target": "iHeartVIP Brand Instance on BCC",
+      "type": "CREATED",
+      "description": "Approach 2 creates a new dedicated iHeartVIP brand instance in BCC."
+    },
+    {
+      "source": "Approach 1 - Subdomain on Existing iHeart Brand",
+      "target": "URL Redirects",
+      "type": "DEPENDS_ON",
+      "description": "Approach 1 depends on implementing URL redirects to mitigate share URL changes between iheart.com and iheartvip.com."
+    },
+    {
+      "source": "iHeartVIP Revival Initiative",
+      "target": "Approach 1 - Subdomain on Existing iHeart Brand",
+      "type": "INCLUDES",
+      "description": "Approach 1 is one of the two implementation approaches considered by the initiative."
+    },
+    {
+      "source": "iHeartVIP Revival Initiative",
+      "target": "Approach 2 - Separate Brand for iHeartVIP",
+      "type": "INCLUDES",
+      "description": "Approach 2 is one of the two implementation approaches considered by the initiative."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Event Communities",
+      "type": "INCLUDES",
+      "description": "iHeartVIP will host more than 1000 event-based communities."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Podcast Communities",
+      "type": "INCLUDES",
+      "description": "iHeartVIP will host podcast communities as part of its structure."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Artist Communities",
+      "type": "INCLUDES",
+      "description": "iHeartVIP will host artist communities as part of its structure."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Contests and Fan Experiences",
+      "type": "INCLUDES",
+      "description": "iHeartVIP will integrate contests and fan experiences as a core platform feature."
+    },
+    {
+      "source": "Event Communities",
+      "target": "iHeart Live Events",
+      "type": "RELATES_TO",
+      "description": "Each iHeart live event maps to a dedicated event community on iHeartVIP."
+    },
+    {
+      "source": "iHeart Live Events",
+      "target": "iHeart Music Festival",
+      "type": "INCLUDES",
+      "description": "iHeart Music Festival is one of the iHeart live events that will become a community on iHeartVIP."
+    },
+    {
+      "source": "iHeart Live Events",
+      "target": "Jingle Ball Tour",
+      "type": "INCLUDES",
+      "description": "Jingle Ball Tour is one of the iHeart live events that will become a community on iHeartVIP."
+    },
+    {
+      "source": "iHeart Live Events",
+      "target": "Podcast Awards",
+      "type": "INCLUDES",
+      "description": "Podcast Awards is one of the iHeart live events that will become a community on iHeartVIP."
+    },
+    {
+      "source": "iHeart Live Events",
+      "target": "Summer Concert Series",
+      "type": "INCLUDES",
+      "description": "Summer Concert Series is one of the iHeart live events that will become a community on iHeartVIP."
+    },
+    {
+      "source": "iHeart Live Events",
+      "target": "Music Festivals",
+      "type": "INCLUDES",
+      "description": "Music festivals are a category of iHeart live events."
+    },
+    {
+      "source": "iHeart Live Events",
+      "target": "Artist Tours",
+      "type": "INCLUDES",
+      "description": "Artist tours are a category of iHeart live events."
+    },
+    {
+      "source": "iHeart Live Events",
+      "target": "Radio Station Activations",
+      "type": "INCLUDES",
+      "description": "Radio station activations are a category of iHeart live events."
+    },
+    {
+      "source": "iHeart Live Events",
+      "target": "Podcast Tours",
+      "type": "INCLUDES",
+      "description": "Podcast tours are a category of iHeart live events."
+    },
+    {
+      "source": "iHeart Live Events",
+      "target": "Brand Activations",
+      "type": "INCLUDES",
+      "description": "Brand activations are a category of iHeart live events distributed via iHeartVIP."
+    },
+    {
+      "source": "iHeartMedia",
+      "target": "iHeart Live Events",
+      "type": "RUN_BY",
+      "description": "iHeartMedia runs more than 1000 live events annually."
+    },
+    {
+      "source": "Brand Partners",
+      "target": "iHeart Live Events",
+      "type": "SPONSORS",
+      "description": "Brand partners sponsor and participate in iHeart live events."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "iHeart Fans",
+      "type": "TARGETED_AT",
+      "description": "iHeartVIP is designed to engage iHeart fans through discovery, communities, and contests."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Creators",
+      "type": "TARGETED_AT",
+      "description": "iHeartVIP enables creators to upload clips and participate in event communities."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Artists and Hosts",
+      "type": "TARGETED_AT",
+      "description": "iHeartVIP enables artists and hosts to engage directly with fans through communities."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Monetization Opportunities",
+      "type": "FEATURES",
+      "description": "iHeartVIP unlocks streamlined monetization opportunities through the Genuin platform."
+    },
+    {
+      "source": "iHeartVIP Revival Initiative",
+      "target": "Centralized Fan Engagement Platform Strategy",
+      "type": "RELATES_TO",
+      "description": "The revival initiative implements the strategy of centralizing fragmented iHeart activations into a single fan engagement hub."
+    },
+    {
+      "source": "Contests and Giveaways Program",
+      "target": "iHeartVIP",
+      "type": "PART_OF",
+      "description": "The contests and giveaways program is part of the iHeartVIP fan experience."
+    },
+    {
+      "source": "Editorial Publishing Model",
+      "target": "iHeartVIP",
+      "type": "PART_OF",
+      "description": "The 2019 editorial publishing model was the original content format of iHeartVIP and is under consideration for revival."
+    },
+    {
+      "source": "Content Pipeline",
+      "target": "iHeartVIP",
+      "type": "RELATES_TO",
+      "description": "Open question whether iHeartVIP will reuse the existing iHeart content pipeline or source content differently."
+    },
+    {
+      "source": "iHeartVIP iOS App",
+      "target": "iHeartVIP",
+      "type": "PART_OF",
+      "description": "A potential dedicated iOS app for iHeartVIP under consideration as part of the platform."
+    },
+    {
+      "source": "iHeartVIP Android App",
+      "target": "iHeartVIP",
+      "type": "PART_OF",
+      "description": "A potential dedicated Android app for iHeartVIP under consideration as part of the platform."
+    }
+  ],
+  "_src_hash": "88bacbdbb3ea77761fd382d56fb9af69a2921212ec30f2c03cb115ac426daa6c",
+  "_skill_sig": "4edd28021f3312b1"
+}

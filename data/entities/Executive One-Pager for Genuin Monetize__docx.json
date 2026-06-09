@@ -1,0 +1,352 @@
+{
+  "source_doc": "Executive One-Pager for Genuin Monetize",
+  "entities": [
+    {
+      "name": "Genuin Monetize",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "Monetize"
+      ],
+      "description": "Unified platform that empowers brands, publishers, and retail/community media networks to unlock new revenue streams through video monetization across owned (Onsite) and partner (Offsite) inventory."
+    },
+    {
+      "name": "Sponsored Content",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Branded Posts",
+        "Takeovers"
+      ],
+      "description": "Monetization solution that directly integrates branded posts and takeovers as premium native video experiences."
+    },
+    {
+      "name": "Programmatic Advertising",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Programmatic"
+      ],
+      "description": "Leverages both open and direct programmatic demand to deliver in-feed/in-stream video ads at scale."
+    },
+    {
+      "name": "IAB-Compatible Audience Extension",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "IAB Extension",
+        "IAB Units"
+      ],
+      "description": "Uses industry-standard IAB ad units to extend reach and monetize audience extension programmatically across partner sites."
+    },
+    {
+      "name": "Onsite Monetization",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "Onsite"
+      ],
+      "description": "Monetization on a customer's owned and operated digital properties through integrated sponsored content and programmatic video ads."
+    },
+    {
+      "name": "Offsite Monetization",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "Offsite"
+      ],
+      "description": "Extends monetization beyond owned channels by tapping into trusted partner inventory within the Genuin network for audience extension."
+    },
+    {
+      "name": "Onsite Sponsored Content",
+      "bucket": "Product",
+      "type": "UseCase",
+      "aliases": [],
+      "description": "Converts direct sponsor demand into premium, native video experiences on a customer's owned properties, e.g. a retailer running a brand's sponsored post within product detail pages."
+    },
+    {
+      "name": "Onsite Programmatic",
+      "bucket": "Product",
+      "type": "UseCase",
+      "aliases": [],
+      "description": "Optimizes yield with programmatic in-feed/in-stream video ads to fill and scale revenue on owned sites, e.g. a publisher maximizing ad revenue through automated placements."
+    },
+    {
+      "name": "Onsite IAB Extension",
+      "bucket": "Product",
+      "type": "UseCase",
+      "aliases": [],
+      "description": "Drives quality audience extension with IAB-compatible units, replacing low-value content widgets, e.g. a media brand using IAB banners to offer sponsored content slots within its network."
+    },
+    {
+      "name": "Offsite Sponsored Content",
+      "bucket": "Product",
+      "type": "UseCase",
+      "aliases": [],
+      "description": "Scales direct sponsor campaigns by placing branded content on trusted partner inventory, e.g. a CPG brand distributing its sponsored video campaign across a network of relevant brands."
+    },
+    {
+      "name": "Offsite IAB Extension",
+      "bucket": "Product",
+      "type": "UseCase",
+      "aliases": [],
+      "description": "Expands reach and monetizes audience extension programmatically using portable IAB units across a programmatic exchange of partner sites."
+    },
+    {
+      "name": "Brand Direct Sponsorships",
+      "bucket": "Business",
+      "type": "RevenueModel",
+      "aliases": [
+        "Brand Direct"
+      ],
+      "description": "High-touch direct sponsorship sales channel supported within the unified Monetize platform alongside programmatic demand."
+    },
+    {
+      "name": "Genuin Network",
+      "bucket": "Partnerships",
+      "type": "Network",
+      "aliases": [
+        "Partner Inventory Network"
+      ],
+      "description": "Network of trusted partner inventory that powers Offsite audience extension and distribution of sponsored campaigns."
+    },
+    {
+      "name": "Brands",
+      "bucket": "Audience",
+      "type": "CustomerSegment",
+      "aliases": [
+        "Advertisers"
+      ],
+      "description": "Enterprise advertisers who use Monetize to run sponsored content and programmatic campaigns onsite and offsite."
+    },
+    {
+      "name": "Publishers",
+      "bucket": "Audience",
+      "type": "CustomerSegment",
+      "aliases": [],
+      "description": "Media publishers who use Monetize to fill and scale video ad revenue on their owned properties."
+    },
+    {
+      "name": "Retail Media Networks",
+      "bucket": "Audience",
+      "type": "CustomerSegment",
+      "aliases": [
+        "Retail/Community Media Networks",
+        "Community Media Networks"
+      ],
+      "description": "Retail and community media network operators who monetize their digital properties via Genuin Monetize."
+    },
+    {
+      "name": "CPG Brands",
+      "bucket": "Audience",
+      "type": "CustomerSegment",
+      "aliases": [
+        "CPG"
+      ],
+      "description": "Consumer packaged goods advertisers cited as an example user distributing sponsored video campaigns across the Genuin partner network."
+    },
+    {
+      "name": "Large Retailers",
+      "bucket": "Audience",
+      "type": "CustomerSegment",
+      "aliases": [
+        "Retailers"
+      ],
+      "description": "Large retailers cited as an example use case running sponsored posts within their product detail pages."
+    },
+    {
+      "name": "Media Brands",
+      "bucket": "Audience",
+      "type": "CustomerSegment",
+      "aliases": [],
+      "description": "Media brands cited as an example use case using IAB banners to offer sponsored content slots within their networks."
+    },
+    {
+      "name": "Native Video Experiences",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Native Video"
+      ],
+      "description": "Genuin's native video formats that maintain high engagement while delivering monetization without disrupting the user journey."
+    },
+    {
+      "name": "Control & Transparency",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Granular Control"
+      ],
+      "description": "Granular control over placements, targeting, pricing, and analytics to align campaigns with brand values and performance objectives."
+    },
+    {
+      "name": "IAB Standards",
+      "bucket": "Engineering",
+      "type": "Standard",
+      "aliases": [
+        "IAB"
+      ],
+      "description": "Industry-standard IAB ad unit specifications that Genuin's audience extension units are compatible with for broader programmatic reach."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Genuin Monetize",
+      "target": "Sponsored Content",
+      "type": "INCLUDES",
+      "description": "Monetize provides Sponsored Content as a direct-integration monetization solution."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Programmatic Advertising",
+      "type": "INCLUDES",
+      "description": "Monetize supports both open and direct programmatic demand."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "IAB-Compatible Audience Extension",
+      "type": "INCLUDES",
+      "description": "Monetize includes IAB-compatible audience extension units for broader reach."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Onsite Monetization",
+      "type": "INCLUDES",
+      "description": "Monetize enables Onsite monetization on owned and operated properties."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Offsite Monetization",
+      "type": "INCLUDES",
+      "description": "Monetize enables Offsite monetization across partner inventory."
+    },
+    {
+      "source": "Onsite Monetization",
+      "target": "Onsite Sponsored Content",
+      "type": "INCLUDES",
+      "description": "Onsite monetization includes direct sponsored content on owned properties."
+    },
+    {
+      "source": "Onsite Monetization",
+      "target": "Onsite Programmatic",
+      "type": "INCLUDES",
+      "description": "Onsite monetization includes programmatic in-feed/in-stream video yield optimization."
+    },
+    {
+      "source": "Onsite Monetization",
+      "target": "Onsite IAB Extension",
+      "type": "INCLUDES",
+      "description": "Onsite monetization includes IAB-compatible extension units replacing low-value widgets."
+    },
+    {
+      "source": "Offsite Monetization",
+      "target": "Offsite Sponsored Content",
+      "type": "INCLUDES",
+      "description": "Offsite monetization scales sponsor campaigns across partner inventory."
+    },
+    {
+      "source": "Offsite Monetization",
+      "target": "Offsite IAB Extension",
+      "type": "INCLUDES",
+      "description": "Offsite monetization expands reach via portable IAB-compatible units."
+    },
+    {
+      "source": "Offsite Monetization",
+      "target": "Genuin Network",
+      "type": "USES",
+      "description": "Offsite monetization taps into the Genuin partner inventory network."
+    },
+    {
+      "source": "Onsite Sponsored Content",
+      "target": "Sponsored Content",
+      "type": "PART_OF",
+      "description": "Onsite sponsored content is a deployment of the Sponsored Content solution on owned properties."
+    },
+    {
+      "source": "Offsite Sponsored Content",
+      "target": "Sponsored Content",
+      "type": "PART_OF",
+      "description": "Offsite sponsored content is a deployment of the Sponsored Content solution across partner inventory."
+    },
+    {
+      "source": "Onsite Programmatic",
+      "target": "Programmatic Advertising",
+      "type": "PART_OF",
+      "description": "Onsite programmatic is a deployment of programmatic video advertising on owned sites."
+    },
+    {
+      "source": "Onsite IAB Extension",
+      "target": "IAB-Compatible Audience Extension",
+      "type": "PART_OF",
+      "description": "Onsite IAB extension applies IAB-compatible audience extension units within owned networks."
+    },
+    {
+      "source": "Offsite IAB Extension",
+      "target": "IAB-Compatible Audience Extension",
+      "type": "PART_OF",
+      "description": "Offsite IAB extension applies IAB-compatible audience extension units across partner sites."
+    },
+    {
+      "source": "IAB-Compatible Audience Extension",
+      "target": "IAB Standards",
+      "type": "DEPENDS_ON",
+      "description": "Audience extension units conform to IAB industry standards for ad units."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Brand Direct Sponsorships",
+      "type": "INCLUDES",
+      "description": "Monetize supports high-touch Brand Direct sponsorships within its unified platform."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Native Video Experiences",
+      "type": "FEATURES",
+      "description": "Monetize delivers monetization via Genuin's native video experiences that preserve engagement."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Control & Transparency",
+      "type": "FEATURES",
+      "description": "Monetize provides granular control and transparency over placements, targeting, pricing, and analytics."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Brands",
+      "type": "TARGETED_AT",
+      "description": "Monetize is designed for brand advertisers seeking to run sponsorships and programmatic campaigns."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Publishers",
+      "type": "TARGETED_AT",
+      "description": "Monetize is designed for publishers monetizing video inventory on owned properties."
+    },
+    {
+      "source": "Genuin Monetize",
+      "target": "Retail Media Networks",
+      "type": "TARGETED_AT",
+      "description": "Monetize is designed for retail and community media networks."
+    },
+    {
+      "source": "Onsite Sponsored Content",
+      "target": "Large Retailers",
+      "type": "TARGETED_AT",
+      "description": "Example use case: large retailers running a brand's sponsored post within product detail pages."
+    },
+    {
+      "source": "Offsite Sponsored Content",
+      "target": "CPG Brands",
+      "type": "TARGETED_AT",
+      "description": "Example use case: a CPG brand distributing its sponsored video campaign across the partner network."
+    },
+    {
+      "source": "Onsite IAB Extension",
+      "target": "Media Brands",
+      "type": "TARGETED_AT",
+      "description": "Example use case: a media brand using IAB banners to offer sponsored content slots within its network."
+    }
+  ],
+  "_src_hash": "24fd887580fd2c3ed0f984e2d5e4b0a65707c71f6660fb97c61f1d937eeb2b0e",
+  "_skill_sig": "4edd28021f3312b1"
+}

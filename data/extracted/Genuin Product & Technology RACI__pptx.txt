@@ -1,0 +1,246 @@
+--- Slide 1 ---
+Products & Technology
+RACI for
+Product Managers,
+Technical Customer Success Managers & Engineering Leaders
+
+--- Slide 2 ---
+The single person who signs off on the task, has final decision-making authority, and owns the outcome.
+This is usually the project manager or owner. There should only be one person accountable per task.
+People who are kept updated on progress, usually after the task is completed or during key milestones.
+This is one-way communication, such as stakeholders or management.
+People whose opinions are sought, usually subject matter experts (SMEs)
+There is semi-regular two-way communication between responsible and consulted teams before the work is completed.
+Defining the RACI
+The person or team who actually performs the work to complete the task.
+There can be multiple people responsible, such as team members executing the work.
+RESPONSIBLE
+ACCOUNTABLE
+CONSULTED
+INFORMED
+
+--- Slide 3 ---
+Vishal D
+(Sanch - in transition)
+Product
+Shrushti APM*
+Devanshu Product*
+Smit Product Manager
+Sanidhya & Team
+(AI)
+Moon Lead Product Designer
+Product Designer (Sanidhya’s team member)
+Ruchita Product Analyst
+Sandeep Technical Writer
+Sushant Pre-Sale Associate
+Shubhangi Product Designer
+*Devanshu and shrusti leading customer integration however will be transitioned to full time product manager role - full transition to product role in 1-2 months as we hire replacement in USA - see page 2
+OPEN ROLES - USA
+OPEN ROLES - India
+
+--- Slide 4 ---
+Product Owners
+Growth Product
+Growth Product
+Growth Product
+Growth Product
+Engagement  Product
+Engagement  Product
+Engagement  Product
+Engagement  Product
+
+--- Slide 5 ---
+Priority RACI
+How we define ownership for different Priorities
+Priority | Initiator | Responsible | Accountable | Consulted | Informed
+P0 (Critical) | Any | Engineering | Product | Product | 
+P1 (Metric-Led) | Product | Product | Product | Design / Engineering | 
+P2 (Customer Demand) | CSM | Product | CSM | Design / Engineering | 
+P3 (Blockers) | CSM | Product | CSM | Design / Engineering | 
+P4 (Roadmap) | Product / Design / Leadership | Product | Product | All Depts | 
+
+--- Slide 6 ---
+Product Owner Responsibilities
+What are the key responsibilities of Product Owners
+Track | Description | Key Stakeholders
+Product Adoption | Product owners are responsible for the adoption of the specific product across all clients | Works with all CSMs to scale adoption of the specific product across clients through Product Pitches, Solving Needs/Blockers and Clear Documentation
+CX + BCC + SDK | Product owners are responsible for the full funnel experience of their product including  
+BCC
+Client SDKs
+Genuin Website(Marketing & Documentation) | Works with design team to ensure the best full funnel experience for consumers and brands
+Documentation | Product owners are responsible for best in class documentation to support self-serve usability | Works with Marketing and Product Marketing to ensure that documentation is Clear & Concise, Actionable & Usable and Easily navigable
+P1-P4 Priority Tracks & Execution | Product owners are responsible for the end to end execution of all P1-P4 tracks of their product line including
+Design
+Requirement Documents
+UAT & Release
+External Documentation updates & Marketing notes | Works with 
+Design
+Engineering
+Product Marketing
+
+--- Slide 7 ---
+Network: Video distribution for max reach
+Product Owner:
+Key Product Metrics | Customer Success (Network Health)
+Cross-Tenant Sync Speed: Time taken for a video or campaign to go live across every site in the selected network | Network Participation Rate: Percentage of brands actively using the network
+Brand Onboarding Speed: The time required to fully integrate and activate a new brand within the network | Total Network Revenue: The combined earnings generated across all websites
+Content Sync Reliability: Percentage of videos shared from the central library that load correctly on all partner sites | Content Sharing Volume: The total number of videos distributed from the parent brand to its sub-brands or network partners
+Dashboard UX: Effective measurement and representation of video content distributed on the network | Partner Growth Rate: The monthly increase in the number of active brands joining the network.
+
+--- Slide 8 ---
+Controls: Organized governance
+Product Owner:
+Product Team (Efficiency & Logic) | Customer Success (Operational & Freshness)
+Ingestion Latency: Time from creator upload to video appearing in the curation queue. | Curation Frequency: Number of times per week the partner updates or reorders their video feed.
+Algorithm Yield: Average number of videos watched per session (feed stickiness). | Content Freshness: Percentage of the top 10 videos in the feed that were added in the last 7 days.
+Curation Speed: Average time taken by a partner admin to approve/reject a video. | Tagging Accuracy: Percentage of videos correctly categorized by the partner for better discovery.
+Admin Self-Serve Rate: % of partners managing roles and permissions without support. | Content Liquidity: Ratio of new videos added versus videos watched by users.
+
+--- Slide 9 ---
+Marketplace: Hub for optimizing workflow
+Product Owner:
+Product Team (Functional and Protocol) | Customer Success (Strategic and Use)
+Discovery Success Rate: Percentage of searches that successfully return a relevant brand capability via the protocol. | Capability Diversity: Total number of unique capabilities available in the marketplace
+Protocol Compliance: Percentage of brand capabilities that meet the technical standards for cross-platform sharing. | Exchange Volume: The number of successful requests made by brands to access and use capabilities from other partners.
+Knowledge Base Processing Speed: The time it takes for a brand's data to be indexed and ready to power a new capability. | Specialization Growth: The increase in the number of unique brands that add their knowledge bases and capabilities
+Capability Execution Reliability: Percentage of times a shared capability runs successfully and accurately | Cross-Brand Value: The measurable impact on engagement when a brand uses a capability from another partner.
+
+--- Slide 10 ---
+Studio: One stop shop for publishing videos
+Product Owner:
+Product Team (Technical Ease) | Customer Success (Participation)
+Invite-to-upload rate: The percentage of people who receive an invite and successfully post a video. | Active contributor count: The number of unique individuals who submit content on a regular basis.
+Upload completion rate: The percentage of started uploads that finish without an error. | Submission volume: The total number of videos received from the invited group over a specific time.
+Mobile recording success: The percentage of videos recorded and sent via a phone browser without issues. | Contributor retention: The percentage of people who return to post a second or third video.
+Average time to post: The total minutes it takes for a person to go from opening the invite to finishing their upload. | Goal completion: Percentage of the partner's content target that has been met by their invited group
+
+--- Slide 11 ---
+Onsite: Discovery for increasing LTV
+Product Owner:
+Product Team (Technical & Functional) | Customer Success (Reach & Strategic)
+Integration Speed: Days from SDK access to first live video. | Audience Reach: Genuin DAU as a % of total Partner DAU.
+P99 Load Time: Speed at which video is ready to play for 99% of users. | Top-Page Coverage: % of the partner's top 10 pages with active video.
+Self-Serve Flexibility: % of design changes made without additional customisation | Visibility Rate: % of time the player is actually seen on-screen (viewability).
+Component Stability: % of sessions without rendering errors. | Interaction Rate: % of viewers who engage with the video feed.
+
+--- Slide 12 ---
+Offsite: Extend relevance across open web
+Product Owner:
+Product Team (Technical & Compatibility) | Customer Success (Traffic & Reach)
+Tag Acceptance Rate: % of generated tags that pass validation on external ad platforms. | Traffic Referral Volume: Total number of users driven back to the partner’s site from offsite ads.
+Redirection Speed: The time it takes for a user to land on the partner site after clicking an offsite ad. | Campaign Activation Rate: % of partners who actively use offsite tags for their monthly promotions.
+Tracking Accuracy: % of clicks that are successfully matched to a session on the partner's website. | Cost Efficiency: The cost to drive outcomes compared to other marketing channels.
+Creative Render Rate: % of times the video ad correctly displays on external CTV or billboard screens. | External Impressions: The total number of people who saw the partner's video content outside of their own site.
+
+--- Slide 13 ---
+Monetize: Unified Revenue strategies
+Product Owner:
+Product Team (Reliability and Setup) | Customer Success (Revenue and Growth)
+Ad Opportunity Utilisation: Total Ad Impressions/Total Ad Opportunities | Revenue Per Viewer: The average amount of money earned for every person who watches a video.
+Transaction Completion Rate: Percentage of users who successfully finish a payment without technical errors. | Feature Adoption: The percentage of partners who have activated at least one revenue-generating tool.
+Feature Setup Speed: Time required for a partner to activate a new revenue model, such as a subscription wall. | Partner Earnings Growth: The monthly percentage increase in total revenue generated by the partner.
+System Availability: Percentage of time that revenue-generating features are fully operational. | Contract Value Increase: The rate at which partners move to higher-tier plans based on their revenue success.
+
+--- Slide 14 ---
+Octo: Make your brand… a vibe
+Product Owner:
+Product Team (Accuracy & Speed) | Customer Success (Usage & Impact)
+Response Latency: The time it takes for the AI to respond to a user query or interaction. | AI Interaction Rate: % of users who engage with conversational features rather than just watching.
+Response Accuracy: % of AI-generated answers or content that meet quality standards. | Conversion Lift: The increase in user actions (like sign-ups or purchases) when Octo is active.
+Generation Success Rate: % of AI-generated videos or other content without technical failure. | Partner Adoption: % of total partners who have activated AI features within their feeds.
+Session Depth: Average number of back-and-forth interactions per user session. | User Satisfaction Score: Direct feedback or sentiment from users regarding the AI experience.
+
+--- Slide 15 ---
+NayanHead of Engineering
+Ankit Gabani PE (Mobile Tech)
+Vishal Nirmal PE (Google Tech)
+Krunal Shah Principal Engineer
+Nilesh VP of Eng.
+Suhanee IOS Developer
+Sujal QA
+Himanshu Frontend Developer
+Bhavesh QA II
+Dhruv P. Backend Developer
+Meet *Principal Engineer
+Ashish IOS Developer
+Shubh Android Developer
+Dhruv G. SDE
+Jimit Solution Architect
+Dhairya Full Stack Developer
+Dev Frontend Developer
+Kashish QA II
+Jalay Full Stack
+Neel DevOps
+Eng. Team
+Om SDE
+Arjav Head of Mobile
+Rohit Frontend Developer
+Jaydeep Frontend Developer
+Kaushal Full Stack Developer
+Riken DevOps Intern
+Dharmil Full Stack Intern
+Harshit DS
+Umang DS
+Vedant DS
+Kirtan DS
+OPEN ROLES - USA
+OPEN ROLES - India
+*Kaushal will lead ad exchanges integration, monetization related integrations  - transition from Meet
+Note - 1) resource planning for eng. Team is open - to be finalized by Feb 28th once product roadmap for 2026 final 2) 24 / 7 team - Sanidhya will assign a resource - in progress
+Dev Changela IOS Developer
+SDE
+
+--- Slide 16 ---
+Autonomous AI Native Tech Organization
+Engineering Owner: Nayan
+
+--- Slide 17 ---
+Robust Design System and Componant Library across all products, SDKs, Experiences.
+Engineering Owner: Alexey
+
+--- Slide 18 ---
+CX: Brand <> Consumer End to End Experience across devices, technologies and platforms.
+Engineering Owner: Krunal
+Product Team (Experience & Performance) | Customer Success (Usage & Impact)
+App/Web Load Time:
+Time taken for the platform (web/app) to become usable for the end user. | User Engagement Rate:
+% of users actively interacting (likes, comments, clicks, scroll depth).
+Video Start Time (TTFF):
+Time taken for video playback to begin after user action. | Session Duration:
+Average time users spend consuming content per session.
+Experience Consistency:
+Consistency of UI/UX across Web, iOS, Android platforms. | Feature Adoption Rate:
+% of users engaging with key features (feeds, discovery, interactions).
+Crash-Free Sessions:
+% of sessions without crashes or major UI failures. | Retention Rate:
+% of users returning to the platform over time.
+Feed Relevance Score:
+Quality of content personalization and recommendation accuracy. | User Satisfaction Score:
+Feedback or sentiment score on overall experience.
+
+--- Slide 19 ---
+BCC : Admin, Analytics, Data, Reporting, Insights.
+Engineering Owner: Jimit / Nilesh
+Product Team (Experience & Performance) | Customer Success (Usage & Impact)
+Data Accuracy: 
+% of data points (events, revenue, engagement) correctly captured and reported across systems. | Insight Adoption Rate: 
+% of partners actively using dashboards for decision-making.
+Dashboard Performance: 
+Time taken to load reports and analytics views across platforms. | Decision Impact: 
+Measurable improvement in partner outcomes driven by insights (e.g., content strategy, monetization).
+Reporting Completeness: 
+% of required metrics (engagement, revenue, retention) available without gaps | Report Utilization: 
+Frequency of report usage by partners (daily/weekly active usage).
+Query Performance: Time taken to process complex analytics queries or generate reports. | Customer Satisfaction Score: Partner feedback on usability and usefulness of analytics tools.
+
+--- Slide 20 ---
+SDK : Cross platform SDKs, developer docs, APIs, 3rd party integrations
+Engineering Owner: Arjav / Krunal
+
+--- Slide 21 ---
+Generative Experiences : Cross platform Agentic Experiences & AI Infrastructure; Onsite & Offsite
+Engineering Owner: Sanidhya
+
+--- Slide 22 ---
+SLA, Governance, Deployment, Observability
+Engineering Owner: Kaushal, Meet

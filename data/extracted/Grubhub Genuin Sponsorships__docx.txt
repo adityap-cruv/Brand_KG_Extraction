@@ -1,0 +1,116 @@
+Grubhub × Genuin
+Offsite Video Sponsored Post and Takeovers
+Overview
+Part 1 — What We Are Building
+Grubhub and Genuin are partnering to power offsite video sponsored posts and takeovers for Grubhub's restaurant network on brand partner destinations — beginning with iHeart. Genuin's platform serves short-form restaurant sponsored posts within iHeart's destination, with Grubhub's data informing which video a given user sees.
+Part 2 — How It Works
+The integration is entirely offsite and server-to-server. Genuin's SDK runs on iHeart's destination — not inside the Grubhub app. When a user encounters a Genuin video placement on iHeart, the SDK calls Grubhub's backend in real time to determine which restaurant videos to show that specific user. For SMB campaigns, this call includes non-PII location signals that Grubhub uses to match the user to nearby restaurants.
+This document covers the five technical components required to make the integration work end to end:
+1. Runtime Flow
+The integration operates on a fully server-to-server model. Genuin SDK runs within the brand partner's destination (e.g. iHeart), which reaches Grubhub's backend to fetch personalised video recommendations at runtime via Genuin’s backend. The SDK initializes as soon as the destination loads and requests a personalised video feed immediately. Videos begin playing only when the placement scrolls into the user's viewport. The seven-step sequence below describes the complete flow.
+Figure 1 — Runtime Flow: Swimlane diagram across Partner App, Genuin Backend, and Grubhub Backend
+2. Video Uploads — Three Ingestion Paths
+ids support arrives in Phase 2.
+Figure 2 — Video Upload Methods: Three ingestion paths converging on Genuin Content Store
+Path 1 — BCC Admin Portal
+The Genuin admin portal supports manual video uploads (drag-and-drop, up to 2GB) and URL-based imports from YouTube, Vimeo, or any direct video URL. This path is best suited to initial onboarding and one-off uploads.
+Path 2 — RSS / MRSS Feed
+Genuin pulls from a standard RSS or MRSS feed URL on a configurable schedule. Standard feed fields are used — custom metadata extensions are not yet supported in Phase 1. This is the primary programmatic ingestion path for Phase 1.
+Path 3 — JSON Endpoint
+Genuin polls a JSON endpoint URL provided by Grubhub on a configurable schedule. The endpoint must return a videos array with standard fields: id, title, video_url, and duration (required); description, thumbnail, and published_at (optional). Field name mapping is supported if the API uses different names. This path is scoped for Phase 2.
+3. Video Metadata Retrieval
+Grubhub's system retrieves the video catalogue held in Genuin via a paginated REST API, called on a nightly batch cadence.
+Figure 3 — Metadata Retrieval: API request/response flow with partner_video_id highlighted
+Endpoint
+GET /goservices/third_party/grubhub/videos
+Accepts optional query parameters: page, page_size, community_id (restaurant UUID). Returns a paginated envelope containing the video array and a next_page_token for cursor-based pagination.
+Key Response Fields
+Sync Cadence
+Nightly batch: Grubhub pulls the full paginated catalogue and refreshes its local mapping table using cursor-based pagination via next_page_token.
+4. Identity Matching
+Because the Genuin SDK runs on a brand partner destination (e.g. iHeart), Grubhub cannot rely on cookies or authenticated sessions to identify the user. Instead, identity resolution uses non-PII signals present in every request. Two resolution options are available.
+Figure 4 — Identity Matching: Decision tree showing Option A (native) and Option B (third-party resolution)
+Available Signals (Non-PII)
+The Genuin SDK collects the following signals from the device environment and passes them to Grubhub's endpoint:
+IP address + request timestamp
+User agent string
+Device type, operating system, and OS version
+Browser name and version (mobile web) or app bundle ID (in-app)
+Option A — Grubhub Native Match
+Grubhub's backend resolves the incoming signals against its own user graph. For logged-in users, this is a deterministic match (email or Grubhub user ID derived from session). For anonymous users, Grubhub applies probabilistic matching based on device fingerprint and IP heuristics. The resolved identity is used internally — it is never returned to Genuin.
+Option B — Third-Party Resolution
+For scenarios where Grubhub's native match rate is insufficient, a third-party identity graph can be introduced as an intermediary. The graph receives the non-PII signals, resolves them against its cross-device graph, and returns a unified ID that Grubhub can use for recommendation lookup.
+5.
+The Three-Level Hierarchy
+Each level serves a distinct purpose in organising and delivering restaurant video content:
+Community — the top-level container, corresponding directly to one restaurant. Each Community is identified by a Genuin UUID and mapped to a Grubhub restaurant name. One restaurant always equals one Community.
+Group — a collection of related videos within a Community, organised by theme or category (e.g. "Spring Menu", "Limited Offers"). In Phase 1, each Community has exactly one Group.
+Video — the individual sponsored video clip within a Group. In Phase 1, each Group contains exactly one active video.
+Phase 1 — One Restaurant · One Community · One Active Video
+In Phase 1, the relationship between Grubhub and Genuin is entirely name-based. When Grubhub's recommendation engine resolves a user's location and returns a restaurant name, Genuin performs a direct lookup against its Community index. Each Community has exactly one Group with one video marked as active. The serving logic requires no video identifier, no ranking, and no additional matching step.
+Phase 2 — One Community · Multiple Videos
+Once the Phase 1 integration is validated, the one-video constraint can be lifted. A single Community (restaurant) can hold multiple Groups, each containing multiple videos. This requires a mechanism for Grubhub to signal which video — or ranked set of videos — should be served for a given user. The specific mechanism (video selection signals, a partner_video_id field, or contextual matching) will be defined during Phase 2 scoping.
+6. Measurement & Attribution
+Genuin provides the following measurement attributes out of the box without any additional integration
+Placement Views
+Video Views
+25% video completion rate
+50% video completion rate
+75% video completion rate
+100% video completion rate
+Clicks
+CTR
+Genuin recommends full funnel measurement via Genuin pixels which allows for tracking of the complete funnel from video views to clicks to landing page visits to actual sales. This needs an additional integration of Genuin pixel for 2 specific steps.
+Genuin Pixel integration on the landing page to track landing page visits
+Genuin Pixel integration on purchase events to track actual purchases inline with the top of the funnel
+ | National / Brand Sponsorships | SMB / Local Sponsorships
+Examples | GH brand creative, March Madness offers, Enterprise merchants (e.g. McDonald's) | Independent restaurants with localised delivery coverage, served to users in matching ZIP codes / neighbourhoods
+Audience | Broad US audience — no precise location matching needed | Precise ZIP / neighbourhood targeting — requires Grubhub identity signals
+Identity Matching | Not required — GH landing pages handle location logic on-click | Required — Genuin must resolve user location before serving restaurant content (Section 4)
+§ | Section | What it covers
+1 | Runtime Flow | The seven-step request/response cycle from viewport detection to video render. Shows exactly where Grubhub's backend is called and why Step 4 is the key junction for SMB targeting.
+2 | Video Uploads | The three ingestion paths for restaurant video content: BCC admin portal (current), RSS/MRSS feed (Phase 1), and JSON endpoint (Phase 2). Standard fields only — custom metadata not yet supported.
+3 | Video Metadata Retrieval | How Grubhub's system retrieves the video catalogue from Genuin via a paginated REST API. Webhook support is scoped for Phase 2.
+4 | Identity Matching | How Genuin resolves the viewing user's location using non-PII signals (IP, device, UA) to enable ZIP-level restaurant targeting for SMB campaigns.
+5 | Content Structure | 
+Sections 1–3 and 5 apply to both National and SMB sponsorships. Section 4 (Identity Matching) is specific to SMB sponsorships and can be bypassed entirely for national brand activations.
+1 | SDK Initialized — The Genuin SDK initializes within the brand partner's destination and immediately requests a personalised video feed — before any video placement is visible to the user.
+2 | Feed Request Sent — The SDK sends the feed request to Genuin's backend, including non-PII user signals (device type, OS, user agent, IP + timestamp).
+3 | Genuin Backend — Genuin's backend prepares the identity payload and routes the request to Grubhub's recommendation endpoint.
+4 | Rec Engine + Identity Match (Key Junction) — Grubhub's recommendation engine receives the signals and resolves the user's identity and location to determine the most relevant restaurant.
+5 | Restaurant Name Returned — Grubhub returns the name of the recommended restaurant back to Genuin. In Phase 1, no video identifier is required — the restaurant name is the only signal needed.
+6 | Genuin Assembles Feed — Genuin matches the restaurant name to its corresponding Community, retrieves the single active video (Phase 1), and assembles the feed.
+7 | When the video placement enters the user's viewport within the destination, the sponsored videos begin playing automatically.
+Key architectural principle: The Genuin SDK runs within the brand partner's destination — not inside Grubhub's destination. All personalisation and identity resolution happens via a server-to-server API call at Step 4. In Phase 1, Grubhub returns a restaurant name; Genuin matches this to a Community and serves the single active video. No PII crosses the boundary.
+Path | Frequency | Status
+BCC Admin Portal | On-demand | Current
+RSS / MRSS Feed | Configurable schedule | Phase 1
+JSON Endpoint | Configurable schedule | Phase 2
+Phase 1 uses RSS/MRSS with standard fields only. The JSON endpoint (Phase 2) enables richer programmatic integration but is not required to launch. Custom metadata extensions are not yet supported across any ingestion path.
+Field | Description
+genuin_uuid | Genuin's internal video identifier
+community_id | Maps to the Grubhub restaurant UUID
+title / thumbnail_url | Display metadata for the video
+duration_sec | Video length in seconds
+published_at | ISO 8601 publication timestamp
+Phase 2: A real-time webhook will allow Genuin to push a video_updated event to Grubhub on publish or removal, eliminating the need to wait for the nightly batch.
+In Phase 1, the nightly batch is the only sync mechanism. Grubhub's system retrieves the catalogue and uses the community_id to match each video to the correct restaurant. The webhook mechanism is scoped for Phase 2.
+Provider | Match Type | Notes
+ID5 | Deterministic | Email-based; strong in logged-in environments
+UID 2.0 | Deterministic | Open-source; IAB Tech Lab standard
+LiveRamp ATS | Deterministic / Probabilistic | Cross-device graph; broad publisher reach
+Lotame Panorama | Probabilistic | Cookie-free; contextual + behavioural signals
+Epsilon CORE ID | Deterministic | PII-based at source; privacy-compliant output
+Privacy note: All identity signals exchanged between Genuin and Grubhub are non-PII at the point of transmission. No email addresses, names, or directly identifying information are included. Deterministic matching at the third-party level uses hashed identifiers only.
+Grubhub Side (Phase 1) | Genuin Side (Phase 1)
+Returns restaurant name only | Matches name to Community UUID
+No video identifier required | Serves the single is_active video
+Single restaurant per request | 
+Ranking/Sequencing is based on community/restaurants | is_active flag managed in BCC admin portal
+Phase 1 constraint: only one video per Community can be marked is_active at a time. This is a deliberate scoping decision — not a platform limitation. It ensures the integration can be validated end-to-end before introducing multi-video complexity.
+Capability | Phase 1 | Phase 2
+Videos per Community | 1 (is_active: true) | Multiple, across Groups
+Video selection | Automatic (only one active) | Grubhub signals or partner_video_id (TBD)
+Grubhub response | Restaurant names only | Restaurant name + video selection signal
+Genuin matching |  | 
+Breaking change required | n/a | No — Phase 1 mapping remains valid

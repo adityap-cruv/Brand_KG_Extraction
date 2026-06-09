@@ -1,0 +1,559 @@
+{
+  "source_doc": "Implementation Guide \u2013 Feed Personalization for Placements",
+  "entities": [
+    {
+      "name": "Feed Personalization for Placements",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Feed Personalization"
+      ],
+      "description": "Capability that lets brands tailor the feed experience per user by passing context signals during placement initialization."
+    },
+    {
+      "name": "Genuin Placement",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Placement",
+        "Placements"
+      ],
+      "description": "Embeddable feed surface that brands initialize on their pages and configure with personalization parameters."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "gen_sdk",
+        "gen-sdk"
+      ],
+      "description": "Client-side JavaScript SDK (gen_sdk.min.js) that renders Genuin placements and accepts data-* attributes for personalization."
+    },
+    {
+      "name": "Placement v2 API",
+      "bucket": "Engineering",
+      "type": "API",
+      "aliases": [
+        "Placement API v2",
+        "Feed Personalization API"
+      ],
+      "description": "Server API for fetching a personalized placement feed; accepts identity, context, filtering, configuration, and pagination parameters."
+    },
+    {
+      "name": "Embed Configuration",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [
+        "embed config",
+        "data-* attributes"
+      ],
+      "description": "Set of HTML data-* attributes on the gen-sdk div used to pass personalization parameters to a placement."
+    },
+    {
+      "name": "Style ID Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "style_id"
+      ],
+      "description": "Required parameter identifying the style applied to a placement feed."
+    },
+    {
+      "name": "Placement ID Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "placement_id"
+      ],
+      "description": "Required identifier of the placement being implemented."
+    },
+    {
+      "name": "Device ID Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "device_id"
+      ],
+      "description": "Required device identifier used for feed recommendation."
+    },
+    {
+      "name": "Geo Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "geo"
+      ],
+      "description": "Optional object with lat, long, and radius_limit (KM) used to filter feed content by location."
+    },
+    {
+      "name": "Place Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "place"
+      ],
+      "description": "Optional object with country (ALPHA-3), state, city, and zipcode for hyper-local feed targeting."
+    },
+    {
+      "name": "Time Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "time"
+      ],
+      "description": "Optional timestamp (ISO 8601) used to show feed content relevant to a specific time."
+    },
+    {
+      "name": "User Segmentation Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "user_segments",
+        "user_segment"
+      ],
+      "description": "Optional object describing age, gender, age range, segment cohorts, race, and interests for audience-tailored feed."
+    },
+    {
+      "name": "PDP URL Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "url"
+      ],
+      "description": "Optional current page URL used to personalize feed against a specific product detail page."
+    },
+    {
+      "name": "User Context Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "user_context"
+      ],
+      "description": "Optional free-form contextual string for deeper personalization (e.g., 'Smart phone')."
+    },
+    {
+      "name": "Brand ID Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "brand_id",
+        "brands_ids"
+      ],
+      "description": "Optional array of brand identifiers restricting feed content to specific brands."
+    },
+    {
+      "name": "Community IDs Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "community_ids"
+      ],
+      "description": "Optional list of UUIDs restricting content to specific communities or group hubs."
+    },
+    {
+      "name": "Group IDs Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "group_ids",
+        "loop_ids"
+      ],
+      "description": "Optional list of UUIDs restricting content to specific thematic loops or content series."
+    },
+    {
+      "name": "User Interests Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "user_interests"
+      ],
+      "description": "Optional array of interest topics used to bias the feed toward a user's stated interests."
+    },
+    {
+      "name": "Posted By User Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "posted_by_user_ids"
+      ],
+      "description": "Optional list of user UUIDs that filter the feed to only include posts from those creators."
+    },
+    {
+      "name": "Previous Page Context Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "previous_page_context"
+      ],
+      "description": "Optional context string describing the page the user navigated from."
+    },
+    {
+      "name": "Page Context Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "page_context"
+      ],
+      "description": "Optional context string describing the user's current page."
+    },
+    {
+      "name": "Brand Context Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "brand_context"
+      ],
+      "description": "Optional array of objects (id + relationship type such as 'podcast' or 'station') used to inject brand relationship context."
+    },
+    {
+      "name": "Video Mark Complete Parameter",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "video_mark_complete"
+      ],
+      "description": "Optional list of video/content UUIDs already finished by the user, used to dedupe or improve recommendation freshness."
+    },
+    {
+      "name": "UI Style Overrides Configuration",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "configuration",
+        "macros"
+      ],
+      "description": "Optional object enabling dynamic feed appearance overrides including style_title, style_subtitle, and per-section title, subtitle, description, cover_url, and thumbnail_url."
+    },
+    {
+      "name": "Section Title Macro",
+      "bucket": "Engineering",
+      "type": "Parameter",
+      "aliases": [
+        "section title"
+      ],
+      "description": "Mandatory macro inside the configuration.sections array; the backend errors with code 6600 if missing."
+    },
+    {
+      "name": "Pagination Parameters",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [
+        "page_session",
+        "last_video_id",
+        "section_id"
+      ],
+      "description": "Set of pagination fields (page_session, last_video_id, section_id) required when paginating through a placement feed."
+    },
+    {
+      "name": "Error Code 6600",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [
+        "6600"
+      ],
+      "description": "Backend error code returned when the sections array or a section title is missing from the macros payload."
+    },
+    {
+      "name": "IP2DB11",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Geo database used to validate supported state and city names for the place parameter."
+    },
+    {
+      "name": "OpenSearch",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "open search"
+      ],
+      "description": "Search backend currently powering placement feed lookups; doing simple search so some macro combinations may return empty results."
+    },
+    {
+      "name": "ISO 8601",
+      "bucket": "Engineering",
+      "type": "Standard",
+      "aliases": [],
+      "description": "Timestamp format required for the time parameter on the Placement v2 API."
+    },
+    {
+      "name": "Shrushti Shah",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Stakeholder whose discussion drove the decision that section title is a mandatory macro field.",
+      "seniority_tier": "OTHER",
+      "role_title": "Stakeholder (Product/Engineering)",
+      "affiliation": "Genuin"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Feed Personalization for Placements",
+      "target": "Genuin Placement",
+      "type": "PART_OF",
+      "description": "Feed personalization is implemented within Genuin placements."
+    },
+    {
+      "source": "Genuin Placement",
+      "target": "Genuin SDK",
+      "type": "POWERS",
+      "description": "The Genuin SDK renders and powers placements on the client."
+    },
+    {
+      "source": "Genuin Placement",
+      "target": "Placement v2 API",
+      "type": "USES",
+      "description": "Placements call the Placement v2 API to fetch personalized feed content."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Embed Configuration",
+      "type": "USES",
+      "description": "The SDK reads embed configuration via data-* attributes to personalize the feed."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "Style ID Parameter",
+      "type": "INCLUDES",
+      "description": "style_id is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "Geo Parameter",
+      "type": "INCLUDES",
+      "description": "geo is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "Place Parameter",
+      "type": "INCLUDES",
+      "description": "place is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "Time Parameter",
+      "type": "INCLUDES",
+      "description": "time is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "User Segmentation Parameter",
+      "type": "INCLUDES",
+      "description": "user_segments is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "PDP URL Parameter",
+      "type": "INCLUDES",
+      "description": "url is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "User Context Parameter",
+      "type": "INCLUDES",
+      "description": "user_context is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "Brand ID Parameter",
+      "type": "INCLUDES",
+      "description": "brand_id/brands_ids are part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "Community IDs Parameter",
+      "type": "INCLUDES",
+      "description": "community_ids is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "Group IDs Parameter",
+      "type": "INCLUDES",
+      "description": "group_ids/loop_ids are part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "User Interests Parameter",
+      "type": "INCLUDES",
+      "description": "user_interests is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "Posted By User Parameter",
+      "type": "INCLUDES",
+      "description": "posted_by_user_ids is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "Previous Page Context Parameter",
+      "type": "INCLUDES",
+      "description": "previous_page_context is part of the embed configuration."
+    },
+    {
+      "source": "Embed Configuration",
+      "target": "Page Context Parameter",
+      "type": "INCLUDES",
+      "description": "page_context is part of the embed configuration."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Placement ID Parameter",
+      "type": "INCLUDES",
+      "description": "placement_id is a required request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Style ID Parameter",
+      "type": "INCLUDES",
+      "description": "style_id is a required request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Device ID Parameter",
+      "type": "INCLUDES",
+      "description": "device_id is a required request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Page Context Parameter",
+      "type": "INCLUDES",
+      "description": "page_context is an optional request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Previous Page Context Parameter",
+      "type": "INCLUDES",
+      "description": "previous_page_context is an optional request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "PDP URL Parameter",
+      "type": "INCLUDES",
+      "description": "url is an optional request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Geo Parameter",
+      "type": "INCLUDES",
+      "description": "geo is an optional request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Place Parameter",
+      "type": "INCLUDES",
+      "description": "place is an optional request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "User Context Parameter",
+      "type": "INCLUDES",
+      "description": "user_context is an optional request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "User Segmentation Parameter",
+      "type": "INCLUDES",
+      "description": "user_segments is an optional request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Time Parameter",
+      "type": "INCLUDES",
+      "description": "time is an optional request body parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Posted By User Parameter",
+      "type": "INCLUDES",
+      "description": "posted_by_user_ids filters feed content by creator UUIDs."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Community IDs Parameter",
+      "type": "INCLUDES",
+      "description": "community_ids restricts content to specific communities."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Group IDs Parameter",
+      "type": "INCLUDES",
+      "description": "loop_ids restricts content to thematic loops."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Brand ID Parameter",
+      "type": "INCLUDES",
+      "description": "brands_ids restricts content to specific brands."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Brand Context Parameter",
+      "type": "INCLUDES",
+      "description": "brand_context lets clients inject brand relationship context."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Video Mark Complete Parameter",
+      "type": "INCLUDES",
+      "description": "video_mark_complete dedupes seen content from recommendations."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "UI Style Overrides Configuration",
+      "type": "INCLUDES",
+      "description": "configuration lets clients override feed UI styling dynamically."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "Pagination Parameters",
+      "type": "INCLUDES",
+      "description": "page_session, last_video_id, and section_id are required for pagination."
+    },
+    {
+      "source": "UI Style Overrides Configuration",
+      "target": "Section Title Macro",
+      "type": "INCLUDES",
+      "description": "Section title is a mandatory macro inside the configuration.sections array."
+    },
+    {
+      "source": "Section Title Macro",
+      "target": "Error Code 6600",
+      "type": "RELATES_TO",
+      "description": "Missing or empty section title in the macros payload triggers error code 6600."
+    },
+    {
+      "source": "Time Parameter",
+      "target": "ISO 8601",
+      "type": "DEPENDS_ON",
+      "description": "The time parameter must be supplied in ISO 8601 format."
+    },
+    {
+      "source": "Place Parameter",
+      "target": "IP2DB11",
+      "type": "DEPENDS_ON",
+      "description": "Only state and city names supported by IP2DB11 are accepted in the place parameter."
+    },
+    {
+      "source": "Placement v2 API",
+      "target": "OpenSearch",
+      "type": "USES",
+      "description": "The placement feed currently relies on simple OpenSearch queries, which can yield empty results for some macro combinations."
+    },
+    {
+      "source": "Shrushti Shah",
+      "target": "Section Title Macro",
+      "type": "MENTIONS",
+      "description": "Discussion with Shrushti Shah established that section title is a mandatory macro field."
+    },
+    {
+      "source": "Shrushti Shah",
+      "target": "AT_TIER",
+      "type": "AT_TIER",
+      "description": "Seniority tier OTHER (role not specified in document)."
+    }
+  ],
+  "_src_hash": "0b3ed6990c5cf95d45723ee01682f9de634764bc6c6f1e384ace36aaa7a54009",
+  "_skill_sig": "4edd28021f3312b1"
+}

@@ -1,0 +1,423 @@
+{
+  "source_doc": "Mastercard CMN (1)",
+  "entities": [
+    {
+      "name": "Mastercard Commerce Media",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Mastercard CMN",
+        "Mastercard Commerce Media Network"
+      ],
+      "description": "Mastercard's commerce media solution powered by Genuin, designed to fast track adoption and maximize margin with every media impression across owned channels and the partner network."
+    },
+    {
+      "name": "Mastercard",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Global payments organization partnering with Genuin to deploy a scaled and differentiated commerce media solution aligned with its 'Priceless' brand."
+    },
+    {
+      "name": "Brand Control Center",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "AI-powered Brand Control Center"
+      ],
+      "description": "AI-powered platform that augments internal planning and activation teams to orchestrate media delivery and outcomes with automation and efficiency."
+    },
+    {
+      "name": "Genuin Network",
+      "bucket": "Audience",
+      "type": "Platform",
+      "aliases": [
+        "Partner Network"
+      ],
+      "description": "Scaled distribution network of premium publisher and retail media O&O sites and apps, reaching 237MM users with 4B impressions/month and 8MM+ logged-in users across 100MM+ devices."
+    },
+    {
+      "name": "Video Feed Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Guaranteed Video Feed Takeover",
+        "Experience Takeover",
+        "Placement Takeover"
+      ],
+      "description": "Upfront sponsorship format delivering carousel, grid, feed, and popup placements across the partner network, including homepage and post-checkout takeovers."
+    },
+    {
+      "name": "Carousel Format",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Carousel"
+      ],
+      "description": "Personalized video carousel placement embedded within partner properties to drive engagement across the customer journey."
+    },
+    {
+      "name": "Feed Format",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Feed"
+      ],
+      "description": "Embedded video community feed format that drives onsite engagement, sales, and media revenue for retailers and publishers."
+    },
+    {
+      "name": "Grid Format",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Grid"
+      ],
+      "description": "High-impact grid placement format compatible across apps, mobile web, and desktop."
+    },
+    {
+      "name": "Standard Wall Format",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Standard Wall"
+      ],
+      "description": "Standard wall placement embedded within partner properties for video content distribution."
+    },
+    {
+      "name": "Popup Format",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Popup video format delivered across the network of partners."
+    },
+    {
+      "name": "Homepage Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Homepage Placement Takeover"
+      ],
+      "description": "Premium placement takeover on partner homepages within the Genuin Network."
+    },
+    {
+      "name": "Post-Checkout Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Post-Checkout Placement Takeover"
+      ],
+      "description": "Video takeover placement triggered after consumer checkout within partner commerce flows."
+    },
+    {
+      "name": "Identity Mapping",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Identity-first activation",
+        "Mastercard identity mapping"
+      ],
+      "description": "Process that maps Genuin user ID to Mastercard user ID via LiveRamp, enabling 1:1 user-level video orchestration tied to credit card spend data."
+    },
+    {
+      "name": "LiveRamp",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Identity resolution partner that maps Genuin user IDs to Mastercard user IDs to enable identity-mapped programmatic activation across the network."
+    },
+    {
+      "name": "Programmatic Video Ad Units",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "300x600 video player Ad unit",
+        "300x250 video player Ad unit",
+        "Genuin-powered Mastercard tag"
+      ],
+      "description": "Identity-mapped video ad units (300x600 and 300x250) activated programmatically via exchanges to curate and activate merchant-specific dealIDs."
+    },
+    {
+      "name": "IAB Compatible Video Feed",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "IAB compliant video"
+      ],
+      "description": "Contextually continuous personalized IAB-compatible video feed scaled across premium publisher and retail media sites and apps."
+    },
+    {
+      "name": "Raw Logs Data Delivery",
+      "bucket": "Engineering",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Capability that returns all raw logs of serving data back to the client's existing data infrastructure to enrich identity-level data and measurement."
+    },
+    {
+      "name": "Priceless Brand",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [
+        "Priceless Media",
+        "Priceless"
+      ],
+      "description": "Mastercard's brand platform that the offsite media experience aligns with, designed to build a more connected experience for all merchants."
+    },
+    {
+      "name": "Priceless Planet Initiative",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Mastercard sustainability initiative referenced as an example for merchant advertising into aligned communities such as TED."
+    },
+    {
+      "name": "Merchants",
+      "bucket": "Audience",
+      "type": "Concept",
+      "aliases": [
+        "Merchant Advertisers",
+        "Brands & Merchant Advertisers"
+      ],
+      "description": "Brands and merchant advertisers who use Mastercard Commerce Media to reach and distribute video assets to engaged audiences across the Genuin Network."
+    },
+    {
+      "name": "Retailers and Publishers",
+      "bucket": "Audience",
+      "type": "Concept",
+      "aliases": [
+        "Retail, Commerce & Publishers",
+        "Retailers & Commerce"
+      ],
+      "description": "Retail, commerce, and publisher partners that embed video community feeds in owned channels to drive onsite engagement, sales, and media revenue."
+    },
+    {
+      "name": "Shoppers",
+      "bucket": "Audience",
+      "type": "Concept",
+      "aliases": [
+        "Consumers"
+      ],
+      "description": "End consumers who receive personalized feeds surfacing relevant content, offers, and social interaction across the Genuin Network."
+    },
+    {
+      "name": "Creators and Influencers",
+      "bucket": "Audience",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Content creators and influencers contributing organic content and ads that flow through the Genuin onsite audience network."
+    },
+    {
+      "name": "Mastercard Merchant Network",
+      "bucket": "Partnerships",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Network of Mastercard merchant partners across which media assets can be bartered while keeping dollars within the Mastercard ecosystem."
+    },
+    {
+      "name": "TED Sustainability Community",
+      "bucket": "Partnerships",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Sustainability community aligned with the Priceless Planet initiative cited as a merchant advertising example."
+    },
+    {
+      "name": "Credit Card Spend Data",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Mastercard credit card spend signal linked to video distribution to enable 1:1 user-level feed orchestration across the Genuin network."
+    },
+    {
+      "name": "Commerce Media Initiative",
+      "bucket": "Business",
+      "type": "Workstream",
+      "aliases": [
+        "Commerce Media Solution"
+      ],
+      "description": "Mastercard's strategic initiative to fast track a scaled and differentiated commerce media solution that diversifies ROI and transforms marketing costs into revenues."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Mastercard Commerce Media",
+      "target": "Mastercard",
+      "type": "OWNED_BY",
+      "description": "Mastercard Commerce Media is Mastercard's commerce media offering."
+    },
+    {
+      "source": "Mastercard",
+      "target": "LiveRamp",
+      "type": "PARTNERS_WITH",
+      "description": "Mastercard partners with LiveRamp for identity mapping between Genuin and Mastercard user IDs."
+    },
+    {
+      "source": "Mastercard Commerce Media",
+      "target": "Genuin Network",
+      "type": "DEPENDS_ON",
+      "description": "Mastercard Commerce Media leverages the Genuin Network for scaled distribution across premium publisher and retail media properties."
+    },
+    {
+      "source": "Mastercard Commerce Media",
+      "target": "Brand Control Center",
+      "type": "INCLUDES",
+      "description": "The solution includes the AI-powered Brand Control Center to orchestrate media delivery and outcomes."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Mastercard Commerce Media",
+      "type": "POWERS",
+      "description": "The Brand Control Center powers planning and activation automation for Mastercard Commerce Media."
+    },
+    {
+      "source": "Video Feed Takeover",
+      "target": "Carousel Format",
+      "type": "INCLUDES",
+      "description": "Video Feed Takeover is delivered through carousel formats."
+    },
+    {
+      "source": "Video Feed Takeover",
+      "target": "Feed Format",
+      "type": "INCLUDES",
+      "description": "Video Feed Takeover is delivered through feed formats."
+    },
+    {
+      "source": "Video Feed Takeover",
+      "target": "Grid Format",
+      "type": "INCLUDES",
+      "description": "Video Feed Takeover is delivered through grid formats."
+    },
+    {
+      "source": "Video Feed Takeover",
+      "target": "Popup Format",
+      "type": "INCLUDES",
+      "description": "Video Feed Takeover is delivered through popup formats."
+    },
+    {
+      "source": "Video Feed Takeover",
+      "target": "Standard Wall Format",
+      "type": "INCLUDES",
+      "description": "Video Feed Takeover is delivered through standard wall formats."
+    },
+    {
+      "source": "Video Feed Takeover",
+      "target": "Homepage Takeover",
+      "type": "INCLUDES",
+      "description": "Homepage Takeover is a placement type within the Video Feed Takeover product."
+    },
+    {
+      "source": "Video Feed Takeover",
+      "target": "Post-Checkout Takeover",
+      "type": "INCLUDES",
+      "description": "Post-Checkout Takeover is a placement type within the Video Feed Takeover product."
+    },
+    {
+      "source": "Mastercard Commerce Media",
+      "target": "Video Feed Takeover",
+      "type": "FEATURES",
+      "description": "Mastercard Commerce Media features guaranteed video feed takeover sponsorships."
+    },
+    {
+      "source": "Mastercard Commerce Media",
+      "target": "IAB Compatible Video Feed",
+      "type": "FEATURES",
+      "description": "Mastercard Commerce Media delivers a contextually continuous personalized IAB-compatible video feed."
+    },
+    {
+      "source": "Mastercard Commerce Media",
+      "target": "Programmatic Video Ad Units",
+      "type": "FEATURES",
+      "description": "The solution activates identity-mapped video ad units programmatically via exchanges with merchant-specific dealIDs."
+    },
+    {
+      "source": "Programmatic Video Ad Units",
+      "target": "Identity Mapping",
+      "type": "DEPENDS_ON",
+      "description": "Programmatic ad units rely on identity mapping to target Mastercard users across the network."
+    },
+    {
+      "source": "Identity Mapping",
+      "target": "LiveRamp",
+      "type": "USES",
+      "description": "Identity mapping uses LiveRamp to translate Genuin user IDs into Mastercard user IDs."
+    },
+    {
+      "source": "Identity Mapping",
+      "target": "Credit Card Spend Data",
+      "type": "USES",
+      "description": "Identity mapping links credit card spend data to video delivery for 1:1 user-level orchestration."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Retailers and Publishers",
+      "type": "INCLUDES",
+      "description": "The Genuin Network includes premium publisher and retail media O&O sites and apps."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Creators and Influencers",
+      "type": "INCLUDES",
+      "description": "Creators and influencers contribute organic content and ads within the Genuin Network."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "Shoppers",
+      "type": "TARGETED_AT",
+      "description": "The Genuin Network surfaces personalized feeds to shoppers across logged-in users and devices."
+    },
+    {
+      "source": "Mastercard Commerce Media",
+      "target": "Merchants",
+      "type": "TARGETED_AT",
+      "description": "Mastercard Commerce Media is sold to merchants and brand advertisers."
+    },
+    {
+      "source": "Mastercard Commerce Media",
+      "target": "Priceless Brand",
+      "type": "PROMOTES",
+      "description": "The offsite media experience aligns merchants with Mastercard's Priceless brand."
+    },
+    {
+      "source": "Priceless Planet Initiative",
+      "target": "Priceless Brand",
+      "type": "PART_OF",
+      "description": "The Priceless Planet sustainability initiative is part of the broader Priceless brand platform."
+    },
+    {
+      "source": "Priceless Planet Initiative",
+      "target": "TED Sustainability Community",
+      "type": "RELATES_TO",
+      "description": "Mastercard Commerce Media references TED's sustainability community as a Priceless Planet-aligned advertising example."
+    },
+    {
+      "source": "Mastercard Commerce Media",
+      "target": "Mastercard Merchant Network",
+      "type": "DISTRIBUTES",
+      "description": "The solution barters media assets across Mastercard's merchant network while keeping dollars in the Mastercard ecosystem."
+    },
+    {
+      "source": "Commerce Media Initiative",
+      "target": "Mastercard",
+      "type": "OWNED_BY",
+      "description": "The Commerce Media Initiative is a Mastercard strategic workstream to transform marketing costs into revenues."
+    },
+    {
+      "source": "Commerce Media Initiative",
+      "target": "Mastercard Commerce Media",
+      "type": "INCLUDES",
+      "description": "The initiative drives delivery of the Mastercard Commerce Media solution."
+    },
+    {
+      "source": "Raw Logs Data Delivery",
+      "target": "Mastercard Commerce Media",
+      "type": "PART_OF",
+      "description": "Raw logs data delivery is part of the Mastercard Commerce Media measurement capability."
+    },
+    {
+      "source": "IAB Compatible Video Feed",
+      "target": "Genuin Network",
+      "type": "DISTRIBUTES",
+      "description": "The IAB compatible video feed is distributed across the Genuin Network of premium publishers and retail media properties."
+    }
+  ],
+  "_src_hash": "3042521e27237de1a7f24584fdf0ca5b7b0ae3eb66b4d6b5d7b91b7d21e26b8f",
+  "_skill_sig": "4edd28021f3312b1"
+}

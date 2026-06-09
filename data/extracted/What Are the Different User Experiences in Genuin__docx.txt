@@ -1,0 +1,154 @@
+What Are the Different User Experiences in Genuin?
+Overview
+Genuin is built for teams that want to launch, operate, and scale a brand-owned Community Media Network, not just publish content. Because a Community Media Network spans strategy, content, technology, governance, and monetization, no single team owns it end to end.
+Use this guide to:
+Understand which Genuin experience applies to your role
+Know where to start inside the platform
+See how different teams work together across the Community Media Network lifecycle
+This matters because Genuin delivers its full value only when these experiences operate as a connected, closed loop, rather than as isolated tools or workflows.
+One Platform, Purpose-Built Experiences
+Genuin is a unified platform that powers Community Media Networks, retail media experiences, and commerce-driven video engagement through a modular, full‑stack architecture.
+Depending on your role, you may interact with:
+Brand Control Center for operating and governing the network
+Content ingestion, curation, and moderation workflows
+SDKs and APIs for embedding and personalization
+Onsite and offsite community feed experiences
+Analytics, reporting, and monetization systems
+Each experience is purpose-built to solve a specific problem, but all connect back to the same underlying system of intelligence, governance, and data.
+Primary User Experiences in Genuin
+1. Brand & Business Experience (Publishers and Brands)
+Owning the network, not just publishing content
+Who this is for
+Publishers operating brand-owned Community Media Networks
+Brands and enterprises building owned communities
+Growth, marketing, revenue, and operations teams
+The problem this experience solves
+Publishers and brands want to own distribution, audience relationships, and monetization. Traditional social platforms fragment workflows, restrict control, and lock away data.
+This experience exists to help teams operate their own Community Media Network end to end, from structure and governance to growth and revenue.
+Primary objectives
+Build and scale brand-owned communities and groups
+Aggregate content from creators, partners, and owned libraries
+Drive engagement, loyalty, and conversion
+Maintain brand safety, governance, and editorial standards
+Monetize engagement without losing control or data ownership
+Where this happens
+Brand Control Center - the operating system for network setup, management, and performance
+What teams do in Brand Control Center
+Create and manage communities and groups
+Configure structure, access, and permissions
+Curate content using AI with human-in-the-loop approval
+Moderate content and users at scale
+Activate sponsorships, commerce, and advertising
+Track engagement, growth, and monetization performance
+2. Retail & Commerce Media Network Experience
+Operating a media network inside commerce environments
+Who this is for
+Retailers and commerce platforms
+Media, monetization, and partnerships teams
+The problem this experience solves
+Retailers are no longer just sellers of products, they are operators of media networks that host multiple brands and advertisers.
+This experience focuses on running a commerce-driven Community Media Network, not managing a single brand presence.
+Primary objectives
+Increase time-on-site and session depth
+Influence purchase decisions through trusted content
+Convert engagement into measurable commerce outcomes
+Unlock brand-safe, first-party media revenue
+How this experience shows up
+Community-powered video feeds embedded across:
+Product Listing Pages (PLPs)
+Product Detail Pages (PDPs)
+Category and discovery pages
+Contextual feeds aligned to product, category, and shopper intent
+Consent-based monetization inside owned properties
+Key outcomes
+Higher content discoverability
+Conversion lift driven by community trust
+Improved Customer Lifetime Value (CLV)
+Reduced Customer Acquisition Cost (CAC)
+Key distinction:
+Publishers and brands operate their own presence.
+Retail and commerce teams operate a network that hosts multiple brands and advertisers.
+3. Product, Engineering & Developer Experience
+Embedding Genuin without compromising performance or control
+Who this is for
+Product managers
+Frontend and backend engineers
+Platform and integration teams
+The problem this experience solves
+Teams need to embed community and video experiences into existing web and app environments while preserving performance, flexibility, and architectural control.
+Primary objectives
+Integrate Genuin seamlessly across platforms
+Enable context-aware personalization
+Maintain scalability and reliability
+Where this happens
+SDK documentation (Web, iOS, Android, React, Flutter)
+API documentation
+Integration and implementation guides
+Key capabilities
+White-labeled, configurable embeds
+Placement, feed, and player configuration
+API-driven personalization and targeting
+Data pipelines to analytics and storage systems
+Genuin Product Overview
+4. Creator & Partner Experience
+Contributing content inside trusted brand ecosystems
+Who this is for
+Creators and influencers
+Brand and media partners
+The problem this experience solves
+Creators want reach and credibility without losing attribution or being buried by opaque algorithms.
+Primary objectives
+Publish and distribute content
+Participate in brand-owned communities
+Reach relevant audiences in a brand-safe environment
+How creators engage
+Social account syncing and uploads
+Clip It for short-form video creation
+Participation in curated communities and campaigns
+Clear attribution and visibility within publisher ecosystems
+5. Moderator & Community Manager Experience
+Scaling trust, relevance, and governance
+Who this is for
+Moderation teams
+Trust and safety teams
+Community managers
+The problem this experience solves
+As Community Media Networks scale, manual moderation alone does not. This experience balances AI efficiency with human oversight.
+Primary objectives
+Maintain content quality and compliance
+Enforce platform, brand, and community guidelines
+Keep communities relevant and trusted
+Where this happens
+Curate > Activity and Task Timeline views
+Key capabilities
+Review content by lifecycle state
+Approve, reject, or move content
+Apply rejection reasons and governance rules
+Leverage AI-assisted classification and moderation
+6. End-User Experience (Consumers)
+Engaging without leaving the brand ecosystem
+Who this is for
+Consumers visiting publisher or brand websites and apps
+The problem this experience solves
+Consumers want authentic, relevant content without intrusive ads or forced redirection to external platforms.
+What consumers experience
+Scrollable, immersive video feeds
+Community- and group-based discovery
+Shoppable and actionable calls to action
+A trust-first, non-disruptive content experience
+How These Experiences Work Together
+Genuin is designed as a closed-loop system, not disconnected tools:
+Brand builds > Creator contributes > AI curates > Product embeds > Consumer engages > Data feeds intelligence
+This loop enables publishers and brands to:
+Own the audience relationship
+Learn continuously from behavior and performance
+Optimize content, communities, and monetization over time
+This is how Genuin turns engagement into scalable, measurable business outcomes.
+Where to Go Next
+Choose your path based on your role:
+Publishers & Brands: Getting Started with Brand Control Center
+Retail & Commerce Teams: Retail Media Network Overview
+Developers: SDK and API Integration Guides
+Moderators: Content Moderation and Brand Safety
+Creators: Uploading and Managing Content
+This guide is your starting point. Each experience is explored in depth across the Genuin Resource Center.

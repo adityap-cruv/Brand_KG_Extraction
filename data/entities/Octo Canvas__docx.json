@@ -1,0 +1,499 @@
+{
+  "source_doc": "Octo Canvas",
+  "entities": [
+    {
+      "name": "Octo Canvas",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Generative destination builder within the Octo product that enables marketers and designers to create and deploy branded web destinations through a conversational, vibe-driven interface."
+    },
+    {
+      "name": "Octo",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Genuin's brand-facing product platform that holds brand identity, persona, tonality, and brand-specific data; parent of Octo Canvas and OctoGPT."
+    },
+    {
+      "name": "Maya",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Genuin's layer of platform intelligence, agent orchestration, growth infrastructure, and UX capabilities that knows how to grow, engage, and monetize a brand digitally."
+    },
+    {
+      "name": "Octo Canvas Agent",
+      "bucket": "Product",
+      "type": "Agent",
+      "aliases": [],
+      "description": "Conversational agent that orchestrates a nine-step journey from intent to deployed subdomain, partnering with brand marketers through design and build phases."
+    },
+    {
+      "name": "OctoGPT",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Conversational agent on video that shares the same Octo brand knowledge and Maya orchestration infrastructure as Octo Canvas."
+    },
+    {
+      "name": "Aria",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Conversational interface powering experiences such as the iHeartVIP destination."
+    },
+    {
+      "name": "Capability Builder Agent",
+      "bucket": "Product",
+      "type": "Agent",
+      "aliases": [],
+      "description": "Phase 2 agent that takes a brand through guided setup to identify a data source, determine a connection method, and deploy a new brand capability on isolated virtual infrastructure."
+    },
+    {
+      "name": "Generative Destination",
+      "bucket": "Product",
+      "type": "Concept",
+      "aliases": [
+        "Generative Destinations"
+      ],
+      "description": "A living web page composed from Maya and Octo layers that draws data from brand capabilities at runtime and is maintained entirely by Genuin post-launch."
+    },
+    {
+      "name": "Brand Knowledge",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Octo Brand Profile"
+      ],
+      "description": "Living, source-fed knowledge base in BCC that is the system of record for everything Octo knows about a brand and the source from which brand capabilities are generated."
+    },
+    {
+      "name": "Capabilities Marketplace",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Catalogue of 9,900+ capabilities created by other brands and partners, browsable by goal and task type, from which a brand can connect capabilities without building their own."
+    },
+    {
+      "name": "Contribution Factors",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Structured inputs that define the sources from which Octo learns about a brand, including brand persona, crawler whitelists, O&O communities, social/ad/CRM connections, and uploaded files."
+    },
+    {
+      "name": "BCC",
+      "bucket": "Product",
+      "type": "Interface",
+      "aliases": [
+        "Brand Command Center"
+      ],
+      "description": "Brand-facing interface where brands manage Brand Knowledge, capability generation, and Octo configuration; entry point through which user intents are routed to product agents."
+    },
+    {
+      "name": "Maya Platform Intelligence",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "Foundational Maya layer holding strategic knowledge of how to grow, engage, and monetize a brand digitally and operational knowledge of the Genuin platform's APIs, placements, and SDK."
+    },
+    {
+      "name": "Maya UX Capabilities",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "Visual rendering components implemented via the Genuin Web SDK and configured via JSON; current scope includes video, GenAI chat interface, text blocks, and image blocks."
+    },
+    {
+      "name": "Maya Agent Orchestration",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "Layer that receives BCC user intents, routes them to the appropriate product agent, and manages runtime connections between brand data and UX components."
+    },
+    {
+      "name": "Maya Growth Infrastructure",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "Genuin platform-level capabilities for growing, engaging, and monetizing a brand's audience, including the personalisation engine, community infrastructure, workflow orchestration, and auto-prompting."
+    },
+    {
+      "name": "Genuin Web SDK",
+      "bucket": "Engineering",
+      "type": "SDK",
+      "aliases": [
+        "Genuin SDK"
+      ],
+      "description": "Standardised SDK whose parameterised components render every Octo Canvas destination; brands never modify components directly, the Agent configures them via JSON."
+    },
+    {
+      "name": "MCP",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "API-as-MCP"
+      ],
+      "description": "Tool-wrapping mechanism used to express discrete, named data or logic services that the Octo Canvas Agent can reference when wiring up a destination layer."
+    },
+    {
+      "name": "Octo Brand Anchor Capabilities",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "Brand-specific data endpoints such as CMS highlights, podcast feeds, contest APIs, and event schedules, built per-brand and deployed on isolated virtual infrastructure."
+    },
+    {
+      "name": "Demo CMS Capability",
+      "bucket": "Engineering",
+      "type": "Capability",
+      "aliases": [],
+      "description": "Mock CMS endpoint returning sample iHeart content \u2014 highlights, articles, and featured moments \u2014 for the Phase 1 demo."
+    },
+    {
+      "name": "Demo Podcast Extraction Capability",
+      "bucket": "Engineering",
+      "type": "Capability",
+      "aliases": [],
+      "description": "Mock podcast feed returning sample audio content with metadata including artist names, episode titles, play counts, and cover art."
+    },
+    {
+      "name": "Demo Contest Capability",
+      "bucket": "Engineering",
+      "type": "Capability",
+      "aliases": [],
+      "description": "Mock contest feed returning sample active contests such as ticket giveaways and meet-and-greet draws, with status, entry mechanics, and deadline data."
+    },
+    {
+      "name": "Demo Live Events Capability",
+      "bucket": "Engineering",
+      "type": "Capability",
+      "aliases": [],
+      "description": "Mock events feed returning sample upcoming live events including concerts, iHeartRadio festival appearances, and artist-specific shows."
+    },
+    {
+      "name": "Personalisation Engine",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "Maya growth infrastructure service that delivers personalised experiences for destinations built on Genuin."
+    },
+    {
+      "name": "Community Infrastructure",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "Maya growth infrastructure service powering community feeds and audience engagement across Genuin destinations."
+    },
+    {
+      "name": "Workflow Orchestration",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [],
+      "description": "Maya growth infrastructure service that coordinates platform workflows and auto-prompting behaviours behind destinations."
+    },
+    {
+      "name": "Brand Identity",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Brand-specific colors, typography, and visual language that Octo Canvas extracts and applies so destinations are brand-native rather than generic."
+    },
+    {
+      "name": "Brand Persona",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Brand-specific personality and behavioural model that Octo holds and that downstream Octo products reference."
+    },
+    {
+      "name": "Brand Tonality",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Brand-specific tone of voice held in the Octo Brand Profile and applied to generated destinations and conversations."
+    },
+    {
+      "name": "Vibe Design",
+      "bucket": "Marketing",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Conversational, intent-first design approach in which a marketer describes objectives and the Agent partners with them through iterative dialogue to reach the destination."
+    },
+    {
+      "name": "Relume.io",
+      "bucket": "Business",
+      "type": "Competitor",
+      "aliases": [],
+      "description": "AI-assisted design platform cited as an adjacent reference point that accelerates the journey from intent to deployable output."
+    },
+    {
+      "name": "Google Stitch",
+      "bucket": "Business",
+      "type": "Competitor",
+      "aliases": [],
+      "description": "AI-assisted design platform cited as an adjacent reference point in the same design space as Octo Canvas."
+    },
+    {
+      "name": "iHeart",
+      "bucket": "Partnerships",
+      "type": "Brand",
+      "aliases": [],
+      "description": "First brand partner for Octo Canvas, with a well-documented brand identity used to demonstrate brand extraction and application in Phase 1."
+    },
+    {
+      "name": "iHeartVIP",
+      "bucket": "Product",
+      "type": "Destination",
+      "aliases": [
+        "iHeartVIP destination"
+      ],
+      "description": "Target Phase 1 destination showcasing iHeart's VIP fan programme via an Aria-powered conversational interface, personalised recommendations, an exclusive content carousel, and contextual CTAs."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Octo Canvas",
+      "target": "Octo",
+      "type": "PART_OF",
+      "description": "Octo Canvas is a generative destination builder within the Octo product."
+    },
+    {
+      "source": "OctoGPT",
+      "target": "Octo",
+      "type": "PART_OF",
+      "description": "OctoGPT is another Octo product that shares the same brand knowledge and orchestration infrastructure as Octo Canvas."
+    },
+    {
+      "source": "Octo Canvas Agent",
+      "target": "Octo Canvas",
+      "type": "PART_OF",
+      "description": "The Octo Canvas Agent is the conversational agent that drives the Octo Canvas workflow."
+    },
+    {
+      "source": "Maya",
+      "target": "Octo Canvas",
+      "type": "POWERS",
+      "description": "Maya provides the platform intelligence, orchestration, and infrastructure that allow Octo Canvas to design and deploy destinations."
+    },
+    {
+      "source": "Maya",
+      "target": "OctoGPT",
+      "type": "POWERS",
+      "description": "Maya provides the shared orchestration and capability infrastructure that OctoGPT runs on."
+    },
+    {
+      "source": "Maya",
+      "target": "Octo Canvas Agent",
+      "type": "POWERS",
+      "description": "Maya's intelligence and platform knowledge let the Octo Canvas Agent make autonomous design and implementation decisions."
+    },
+    {
+      "source": "Maya Platform Intelligence",
+      "target": "Maya",
+      "type": "PART_OF",
+      "description": "Maya Platform Intelligence is Maya's foundational strategic and operational knowledge layer."
+    },
+    {
+      "source": "Maya UX Capabilities",
+      "target": "Maya",
+      "type": "PART_OF",
+      "description": "Maya UX Capabilities are the visual rendering building blocks within Maya."
+    },
+    {
+      "source": "Maya Agent Orchestration",
+      "target": "Maya",
+      "type": "PART_OF",
+      "description": "Maya Agent Orchestration is the routing and runtime connection layer inside Maya."
+    },
+    {
+      "source": "Maya Growth Infrastructure",
+      "target": "Maya",
+      "type": "PART_OF",
+      "description": "Maya Growth Infrastructure is the platform-level growth and monetization layer within Maya."
+    },
+    {
+      "source": "Personalisation Engine",
+      "target": "Maya Growth Infrastructure",
+      "type": "PART_OF",
+      "description": "The personalisation engine is one of the growth services Maya provides to every brand."
+    },
+    {
+      "source": "Community Infrastructure",
+      "target": "Maya Growth Infrastructure",
+      "type": "PART_OF",
+      "description": "Community infrastructure is part of Maya's growth services available to all brands."
+    },
+    {
+      "source": "Workflow Orchestration",
+      "target": "Maya Growth Infrastructure",
+      "type": "PART_OF",
+      "description": "Workflow orchestration is part of Maya's growth services available to all brands."
+    },
+    {
+      "source": "Maya UX Capabilities",
+      "target": "Genuin Web SDK",
+      "type": "USES",
+      "description": "Maya UX components are implemented via the Genuin Web SDK and configured through JSON schemas."
+    },
+    {
+      "source": "Octo Canvas Agent",
+      "target": "Maya Agent Orchestration",
+      "type": "PART_OF",
+      "description": "Maya's orchestration layer routes BCC user intents to the Octo Canvas Agent and other product agents."
+    },
+    {
+      "source": "Octo Canvas Agent",
+      "target": "Maya Platform Intelligence",
+      "type": "USES",
+      "description": "The Octo Canvas Agent draws on Maya's strategic and operational knowledge to make design and implementation decisions."
+    },
+    {
+      "source": "Octo Canvas Agent",
+      "target": "Brand Knowledge",
+      "type": "USES",
+      "description": "The Agent references the brand's Octo Brand Profile and capabilities when designing destinations."
+    },
+    {
+      "source": "Octo Canvas Agent",
+      "target": "Octo Brand Anchor Capabilities",
+      "type": "USES",
+      "description": "The Agent wires brand anchor capabilities into destination layers at design and runtime."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Generative Destination",
+      "type": "CREATED",
+      "description": "Octo Canvas produces generative destinations as its output rather than traditional static websites."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Vibe Design",
+      "type": "USES",
+      "description": "Octo Canvas is positioned as a vibe design platform that uses conversational, iterative design to build destinations."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Relume.io",
+      "type": "COMPARED_TO",
+      "description": "Octo Canvas occupies an adjacent design space to Relume.io but differs in deployment, maintenance, and brand-native design."
+    },
+    {
+      "source": "Octo Canvas",
+      "target": "Google Stitch",
+      "type": "COMPARED_TO",
+      "description": "Octo Canvas occupies an adjacent design space to Google Stitch but is built for zero-maintenance Genuin-deployed destinations."
+    },
+    {
+      "source": "Brand Knowledge",
+      "target": "Octo",
+      "type": "PART_OF",
+      "description": "Brand Knowledge is Octo's system of record for what is known about a brand and the source of its capabilities."
+    },
+    {
+      "source": "Brand Knowledge",
+      "target": "Contribution Factors",
+      "type": "INCLUDES",
+      "description": "Brand Knowledge is built through Contribution Factors \u2014 the structured inputs that feed the knowledge base."
+    },
+    {
+      "source": "BCC",
+      "target": "Brand Knowledge",
+      "type": "INCLUDES",
+      "description": "Brand Knowledge is managed inside BCC, where contribution factors and capability generation live."
+    },
+    {
+      "source": "BCC",
+      "target": "Capabilities Marketplace",
+      "type": "INCLUDES",
+      "description": "The Capabilities Marketplace is one of two BCC pathways through which a brand can assemble its capability set."
+    },
+    {
+      "source": "Octo",
+      "target": "Brand Identity",
+      "type": "INCLUDES",
+      "description": "Brand identity tokens are part of the Octo layer that is brand-specific."
+    },
+    {
+      "source": "Octo",
+      "target": "Brand Persona",
+      "type": "INCLUDES",
+      "description": "Brand persona is part of the Octo brand layer applied during destination design."
+    },
+    {
+      "source": "Octo",
+      "target": "Brand Tonality",
+      "type": "INCLUDES",
+      "description": "Brand tonality is part of the Octo brand layer used by Octo product agents."
+    },
+    {
+      "source": "Octo",
+      "target": "Octo Brand Anchor Capabilities",
+      "type": "INCLUDES",
+      "description": "Octo brand anchor capabilities are the brand-specific data endpoints that sit in the Octo layer."
+    },
+    {
+      "source": "Octo Brand Anchor Capabilities",
+      "target": "MCP",
+      "type": "USES",
+      "description": "Brand anchor capabilities are expressed as tools, MCPs, or API-as-MCP wrappers that the Agent can reference."
+    },
+    {
+      "source": "Capability Builder Agent",
+      "target": "Octo Brand Anchor Capabilities",
+      "type": "CREATED",
+      "description": "The Phase 2 Capability Builder Agent creates new brand anchor capabilities and deploys them on isolated virtual infrastructure."
+    },
+    {
+      "source": "iHeart",
+      "target": "Octo Canvas",
+      "type": "USES",
+      "description": "iHeart is the first brand using Octo Canvas to vibe-design a destination in Phase 1."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "iHeart",
+      "type": "PART_OF",
+      "description": "iHeartVIP is iHeart's VIP fan programme destination produced via Octo Canvas."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Octo Canvas",
+      "type": "BUILT_BY",
+      "description": "iHeartVIP is the target Phase 1 destination built end-to-end through the Octo Canvas workflow."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Aria",
+      "type": "FEATURES",
+      "description": "The iHeartVIP destination showcases iHeart's VIP programme through an Aria-powered conversational interface."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Demo CMS Capability",
+      "type": "DEPENDS_ON",
+      "description": "The demo destination consumes a mock CMS endpoint of sample iHeart highlights and articles."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Demo Podcast Extraction Capability",
+      "type": "DEPENDS_ON",
+      "description": "The demo destination consumes a mock podcast feed of sample audio content with metadata."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Demo Contest Capability",
+      "type": "DEPENDS_ON",
+      "description": "The demo destination consumes a mock contest feed for ticket giveaways and meet-and-greet draws."
+    },
+    {
+      "source": "iHeartVIP",
+      "target": "Demo Live Events Capability",
+      "type": "DEPENDS_ON",
+      "description": "The demo destination consumes a mock live events feed for concerts and iHeartRadio appearances."
+    }
+  ],
+  "_src_hash": "517431ce1eb514cab69fe00fd1dcdfff8f97031f5931e4a12fdf5b45d10d1168",
+  "_skill_sig": "4edd28021f3312b1"
+}

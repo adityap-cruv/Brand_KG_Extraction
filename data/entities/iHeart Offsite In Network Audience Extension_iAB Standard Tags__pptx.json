@@ -1,0 +1,537 @@
+{
+  "source_doc": "iHeart Offsite In Network Audience Extension_iAB Standard Tags",
+  "entities": [
+    {
+      "name": "Offsite In-Network Sponsorship",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Offsite In-Network",
+        "In-Network Sponsorship"
+      ],
+      "description": "A Q1 2026 product offering from Genuin that enables Commerce Media Teams to extend audio, programmatic, and social budgets across a network of publishers via iAB-compatible session takeover units."
+    },
+    {
+      "name": "iAB Compatible Session Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Session Takeover",
+        "Onsite Or Offsite Session Takeover"
+      ],
+      "description": "An iAB-standard placement unit supporting 300x600 and 300x250 demo sizes that enables full-funnel activation across onsite and offsite contexts."
+    },
+    {
+      "name": "Offsite Tag",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Offsite Ad Tag"
+      ],
+      "description": "A tag created by Genuin for iHeart with 5 ad slots into which iHeart routes their demand for offsite in-network campaigns."
+    },
+    {
+      "name": "Monetized Infrastructure",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Genuin's revenue model in which publishers pay for monetized infrastructure, while advertisers pay zero infrastructure fees and all media spend passes through transparently to network partners."
+    },
+    {
+      "name": "Pay Genuin Direct",
+      "bucket": "Business",
+      "type": "Process",
+      "aliases": [
+        "Direct Pay"
+      ],
+      "description": "Activation path where the marketer pays Genuin directly for all campaigns; Genuin generates the invoice and resolves payouts to all network publishers with full visibility."
+    },
+    {
+      "name": "Pay Publisher Direct",
+      "bucket": "Business",
+      "type": "Process",
+      "aliases": [],
+      "description": "Activation path where the marketer leverages an existing direct relationship and payment setup with the publisher, requiring no new billing relationship with Genuin."
+    },
+    {
+      "name": "Pay via RMN",
+      "bucket": "Business",
+      "type": "Process",
+      "aliases": [
+        "RMN Payment Path"
+      ],
+      "description": "Activation path where the marketer pays their Retail Media Network, which then pays Genuin via a Genuin-generated invoice; Genuin resolves all publisher payouts."
+    },
+    {
+      "name": "Retail Media Network",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "RMN"
+      ],
+      "description": "Third-party retail media networks that marketers pay directly, which subsequently pay Genuin via Genuin-generated invoices in the RMN activation path."
+    },
+    {
+      "name": "Full Funnel Measurement & Optimization",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Full Funnel Activation"
+      ],
+      "description": "Measurement capability that tracks out-of-market to in-market audience conversion with closed-loop attribution across every publisher placement."
+    },
+    {
+      "name": "Zero-Party Data Ownership",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Zero-Party Data"
+      ],
+      "description": "Data model where all engagement data (views, interactions, CTAs) belongs to the advertiser, sent back in raw format to their existing data infrastructure destinations."
+    },
+    {
+      "name": "Reach, Frequency & Budget Optimization",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Capability to see activity on each publisher by payment path, reallocate budget in real time, and invite best-performing programmatic publishers directly into the network."
+    },
+    {
+      "name": "Raw Data Shipback",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Raw Data, Shipped Back"
+      ],
+      "description": "Process that returns all campaign data in raw format including publisher-level activity, spend, reach, frequency, engagement, and CTAs to the advertiser."
+    },
+    {
+      "name": "MMP & Data Stack Mapping",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "MMP Mapping"
+      ],
+      "description": "Integration step that connects campaign data to the advertiser's existing MMP, attribution partners, and analytics tools, pushing directly to their data warehouse."
+    },
+    {
+      "name": "Certified Data Destinations",
+      "bucket": "Engineering",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Set of approved destinations (Google GCP, Amazon AWS, Oracle OCI, MixPanel, Snowflake, customer warehouse) to which Genuin delivers raw campaign data."
+    },
+    {
+      "name": "Google GCP",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [
+        "GCP"
+      ],
+      "description": "Google Cloud Platform listed as a certified data destination for Genuin campaign data."
+    },
+    {
+      "name": "Amazon AWS",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [
+        "AWS"
+      ],
+      "description": "Amazon Web Services listed as a certified data destination for Genuin campaign data."
+    },
+    {
+      "name": "Oracle OCI",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [
+        "OCI"
+      ],
+      "description": "Oracle Cloud Infrastructure listed as a certified data destination for Genuin campaign data."
+    },
+    {
+      "name": "MixPanel",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Analytics platform listed as a certified data destination for Genuin campaign data."
+    },
+    {
+      "name": "Snowflake",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Cloud data warehouse listed as a certified data destination for Genuin campaign data."
+    },
+    {
+      "name": "Data Processor Role",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Genuin's stated legal/operational posture in which it acts as a Data Processor rather than a Data Controller for advertiser engagement data."
+    },
+    {
+      "name": "Network Tier Pricing",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [
+        "Join the Network Tiers"
+      ],
+      "description": "Three-tier SOV pricing structure: T1 Test at $50k, T2 Launch at $500k, and T3 Scale at $5M for joining the network."
+    },
+    {
+      "name": "iHeart",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "iHeartMedia"
+      ],
+      "description": "Network partner publisher that routes ad demand through Genuin via Beeswax Ad Server and runs audience extension budgets at $1.70 CPM across the Genuin network of Infolink onsite properties."
+    },
+    {
+      "name": "Grubhub",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Network partner publisher cited as an example destination for transparent advertiser pass-through media payments."
+    },
+    {
+      "name": "Us Weekly",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Network partner publisher cited as an example destination for transparent advertiser pass-through media payments."
+    },
+    {
+      "name": "Infolinks",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "Infolink"
+      ],
+      "description": "Partner that traffics the offsite tag across its 30K+ network of publishers with audio-on, providing dealIDs and fallback demand for iHeart campaigns."
+    },
+    {
+      "name": "Beeswax Ad Server",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [
+        "Beeswax"
+      ],
+      "description": "Ad server where iHeart connects multiple demand sources, performs ID sync with exchanges, and traffics VAST video and audio tags with fallback logic to Infolinks demand after 200 ms."
+    },
+    {
+      "name": "Cookie Sync for Audience Extension",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "ID Sync"
+      ],
+      "description": "Step 2 of the offsite in-network onboarding flow where iHeart provides ID sync to Infolinks so Beeswax buys and traffics only when ID mapping is established."
+    },
+    {
+      "name": "VAST Tag",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Video VAST",
+        "Audio VAST"
+      ],
+      "description": "Video and audio VAST tags created from Beeswax ad server by iHeart, with fallback logic to Infolinks demand if no ads render from the iHeart ad server within 200 ms."
+    },
+    {
+      "name": "Audience Extension Buy",
+      "bucket": "Marketing",
+      "type": "Process",
+      "aliases": [
+        "Audience Extension"
+      ],
+      "description": "iHeart-funded buy that runs audio and video ads at $1.70 CPM across the Genuin network of Infolinks onsite properties in iAB-compatible session takeover units."
+    },
+    {
+      "name": "Trade Media Solution Subsidiary",
+      "bucket": "Business",
+      "type": "Organization",
+      "aliases": [
+        "Genuin Subsidiary"
+      ],
+      "description": "Genuin subsidiary that earns $0.10-$2 arbitrage margin by optimizing consumer experience curation, billed to Infolinks as a trade media solution and feed algorithm billing."
+    },
+    {
+      "name": "JR LLC",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Partner LLC contracted with the Genuin subsidiary on a Year 1 30% / Year 2 20% / Year 3 10% revenue share, bringing other publishers and activating audience extension below $1 CPM to increase subsidiary margin."
+    },
+    {
+      "name": "Commerce Media Teams",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [],
+      "description": "Target audience for the Q1 2026 Offsite In-Network 'Getting Started' guide, focused on extending audio, programmatic, and social budgets."
+    },
+    {
+      "name": "Marketers",
+      "bucket": "Audience",
+      "type": "Audience",
+      "aliases": [
+        "Advertisers"
+      ],
+      "description": "Buy-side audience that activates campaigns through one of the three payment paths (Pay Genuin Direct, Pay Publisher Direct, or Pay via RMN) and retains zero-party ownership of engagement data."
+    },
+    {
+      "name": "Peter Bavaro",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "US Partnership Sales contact at Genuin (peter@begenuin.com) named as the point of contact in the deck.",
+      "seniority_tier": "DIRECTOR",
+      "role_title": "US Partnership Sales",
+      "affiliation": "Genuin"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Offsite In-Network Sponsorship",
+      "target": "Commerce Media Teams",
+      "type": "TARGETED_AT",
+      "description": "The Q1 2026 Getting Started guide for Offsite In-Network Sponsorship is aimed at Commerce Media Teams."
+    },
+    {
+      "source": "Offsite In-Network Sponsorship",
+      "target": "iAB Compatible Session Takeover",
+      "type": "INCLUDES",
+      "description": "Offsite In-Network Sponsorship activates through iAB-compatible session takeover placement units."
+    },
+    {
+      "source": "iAB Compatible Session Takeover",
+      "target": "Full Funnel Measurement & Optimization",
+      "type": "INCLUDES",
+      "description": "Session takeover units support full-funnel activation and measurement."
+    },
+    {
+      "source": "Offsite In-Network Sponsorship",
+      "target": "Pay Genuin Direct",
+      "type": "INCLUDES",
+      "description": "Pay Genuin Direct is one of three activation/payment paths for Offsite In-Network Sponsorship."
+    },
+    {
+      "source": "Offsite In-Network Sponsorship",
+      "target": "Pay Publisher Direct",
+      "type": "INCLUDES",
+      "description": "Pay Publisher Direct is one of three activation/payment paths for Offsite In-Network Sponsorship."
+    },
+    {
+      "source": "Offsite In-Network Sponsorship",
+      "target": "Pay via RMN",
+      "type": "INCLUDES",
+      "description": "Pay via RMN is one of three activation/payment paths for Offsite In-Network Sponsorship."
+    },
+    {
+      "source": "Pay via RMN",
+      "target": "Retail Media Network",
+      "type": "DEPENDS_ON",
+      "description": "The Pay via RMN path depends on the marketer's Retail Media Network paying Genuin via invoice."
+    },
+    {
+      "source": "Monetized Infrastructure",
+      "target": "Offsite In-Network Sponsorship",
+      "type": "POWERS",
+      "description": "Monetized Infrastructure is the revenue model underpinning Offsite In-Network Sponsorship, with publishers paying Genuin in all activation paths."
+    },
+    {
+      "source": "Pay Genuin Direct",
+      "target": "iHeart",
+      "type": "DISTRIBUTES",
+      "description": "Marketer dollars paid to Genuin pass through transparently to network partners including iHeart."
+    },
+    {
+      "source": "Pay Genuin Direct",
+      "target": "Grubhub",
+      "type": "DISTRIBUTES",
+      "description": "Marketer dollars paid to Genuin pass through transparently to network partners including Grubhub."
+    },
+    {
+      "source": "Pay Genuin Direct",
+      "target": "Us Weekly",
+      "type": "DISTRIBUTES",
+      "description": "Marketer dollars paid to Genuin pass through transparently to network partners including Us Weekly."
+    },
+    {
+      "source": "Full Funnel Measurement & Optimization",
+      "target": "Zero-Party Data Ownership",
+      "type": "INCLUDES",
+      "description": "Full-funnel measurement includes zero-party ownership of all engagement data by the advertiser."
+    },
+    {
+      "source": "Full Funnel Measurement & Optimization",
+      "target": "Reach, Frequency & Budget Optimization",
+      "type": "INCLUDES",
+      "description": "Reach, frequency, and budget optimization is part of the full-funnel measurement offering."
+    },
+    {
+      "source": "Zero-Party Data Ownership",
+      "target": "Raw Data Shipback",
+      "type": "DEPENDS_ON",
+      "description": "Zero-party data ownership is delivered via raw data shipped back to the advertiser."
+    },
+    {
+      "source": "Raw Data Shipback",
+      "target": "MMP & Data Stack Mapping",
+      "type": "DEPENDS_ON",
+      "description": "Raw data shipback is mapped against the advertiser's MMP and data stack as the next step."
+    },
+    {
+      "source": "MMP & Data Stack Mapping",
+      "target": "Certified Data Destinations",
+      "type": "DEPENDS_ON",
+      "description": "MMP and data stack mapping pushes data into certified data destinations."
+    },
+    {
+      "source": "Certified Data Destinations",
+      "target": "Google GCP",
+      "type": "INCLUDES",
+      "description": "Google GCP is listed as a certified data destination."
+    },
+    {
+      "source": "Certified Data Destinations",
+      "target": "Amazon AWS",
+      "type": "INCLUDES",
+      "description": "Amazon AWS is listed as a certified data destination."
+    },
+    {
+      "source": "Certified Data Destinations",
+      "target": "Oracle OCI",
+      "type": "INCLUDES",
+      "description": "Oracle OCI is listed as a certified data destination."
+    },
+    {
+      "source": "Certified Data Destinations",
+      "target": "MixPanel",
+      "type": "INCLUDES",
+      "description": "MixPanel is listed as a certified data destination."
+    },
+    {
+      "source": "Certified Data Destinations",
+      "target": "Snowflake",
+      "type": "INCLUDES",
+      "description": "Snowflake is listed as a certified data destination."
+    },
+    {
+      "source": "Zero-Party Data Ownership",
+      "target": "Data Processor Role",
+      "type": "DEPENDS_ON",
+      "description": "Zero-party data ownership rests on Genuin acting as a Data Processor rather than a Data Controller."
+    },
+    {
+      "source": "Offsite In-Network Sponsorship",
+      "target": "Network Tier Pricing",
+      "type": "INCLUDES",
+      "description": "Joining the Offsite In-Network Sponsorship network follows the T1/T2/T3 SOV pricing tiers."
+    },
+    {
+      "source": "Offsite Tag",
+      "target": "iHeart",
+      "type": "BUILT_BY",
+      "description": "Genuin creates the offsite tag with 5 ad slots specifically for iHeart to route their demand into."
+    },
+    {
+      "source": "Offsite Tag",
+      "target": "Infolinks",
+      "type": "DISTRIBUTES",
+      "description": "Infolinks traffics the offsite tag across its 30K+ network of publishers with audio-on."
+    },
+    {
+      "source": "iHeart",
+      "target": "Beeswax Ad Server",
+      "type": "USES",
+      "description": "iHeart connects ad demand from multiple sources at Beeswax Ad Server and traffics campaigns from it."
+    },
+    {
+      "source": "iHeart",
+      "target": "Cookie Sync for Audience Extension",
+      "type": "DEPENDS_ON",
+      "description": "iHeart provides ID sync to Infolinks as the second onboarding step for audience extension."
+    },
+    {
+      "source": "Cookie Sync for Audience Extension",
+      "target": "Beeswax Ad Server",
+      "type": "DEPENDS_ON",
+      "description": "Beeswax performs ID sync with exchanges, only buying and trafficking when ID mapping is established."
+    },
+    {
+      "source": "VAST Tag",
+      "target": "Beeswax Ad Server",
+      "type": "BUILT_BY",
+      "description": "iHeart creates video and audio VAST tags from Beeswax Ad Server for routing campaigns."
+    },
+    {
+      "source": "VAST Tag",
+      "target": "Infolinks",
+      "type": "DEPENDS_ON",
+      "description": "Fallback logic after 200 ms routes to Infolinks' existing demand if no iHeart ads render."
+    },
+    {
+      "source": "Audience Extension Buy",
+      "target": "iAB Compatible Session Takeover",
+      "type": "USES",
+      "description": "iHeart runs audience extension audio and video ads at $1.70 CPM in iAB-compatible session takeover units."
+    },
+    {
+      "source": "Audience Extension Buy",
+      "target": "Infolinks",
+      "type": "DISTRIBUTES",
+      "description": "Audience extension budget runs across the Genuin network of Infolinks onsite properties with audio on."
+    },
+    {
+      "source": "iHeart",
+      "target": "Audience Extension Buy",
+      "type": "SPONSORS",
+      "description": "iHeart funds the audience extension buy and gives Infolinks a $1.70 CPM IO for all offsite campaigns."
+    },
+    {
+      "source": "Trade Media Solution Subsidiary",
+      "target": "Infolinks",
+      "type": "HAS_AGREEMENT_WITH",
+      "description": "The Genuin subsidiary bills Infolinks as a trade media solution and feed algorithm billing arrangement, earning $0.10-$2 arbitrage margin."
+    },
+    {
+      "source": "Trade Media Solution Subsidiary",
+      "target": "JR LLC",
+      "type": "HAS_AGREEMENT_WITH",
+      "description": "The Genuin subsidiary has a revenue-share contract with JR LLC at Year 1 30%, Year 2 20%, and Year 3 10% of subsidiary revenue."
+    },
+    {
+      "source": "JR LLC",
+      "target": "Audience Extension Buy",
+      "type": "SUPPLIES",
+      "description": "JR LLC brings other publishers and activates audience extension below $1 CPM to increase subsidiary margin."
+    },
+    {
+      "source": "Peter Bavaro",
+      "target": "Offsite In-Network Sponsorship",
+      "type": "LEADS",
+      "description": "Peter Bavaro, US Partnership Sales, is the named contact for the Offsite In-Network Sponsorship Q1 2026 program."
+    },
+    {
+      "source": "Marketers",
+      "target": "Pay Genuin Direct",
+      "type": "USES",
+      "description": "Marketers can activate by paying Genuin directly for all campaigns under this transparent pass-through path."
+    },
+    {
+      "source": "Marketers",
+      "target": "Pay Publisher Direct",
+      "type": "USES",
+      "description": "Marketers can activate using their existing direct relationship and payment setup with the publisher."
+    },
+    {
+      "source": "Marketers",
+      "target": "Pay via RMN",
+      "type": "USES",
+      "description": "Marketers can pay their Retail Media Network, which then pays Genuin for campaign delivery."
+    }
+  ],
+  "_src_hash": "b93191a20a7677370a1bd3ed26d9cf4248080f61a53380d6ffa19bb8fddd471e",
+  "_skill_sig": "4edd28021f3312b1"
+}

@@ -1,6 +1,6 @@
 settings.env
 venv/
 __pycache__/
-data/
-bench/
+# data/
+# bench/
 GraphRAG-Benchmark/

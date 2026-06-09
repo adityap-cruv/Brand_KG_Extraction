@@ -1,0 +1,246 @@
+Tab 1
+Implementation Guide – Feed Personalization for Placements
+This document serves as a guide for implementing feed personalization within various placements. It details out the personalization parameters that brands can leverage to tailor the user personalisation. By passing these specific parameters during the initialization of a placement, brands gain the ability to create a highly personalized and contextualized feed for each individual user.
+1. Personalization Parameters
+Below are the available parameters you can use as part of embed configuration to personalize experience based on context signals.
+1.1 Style ID
+Objective: Show feed content relevant to mentioned style ID
+Parameter Name: style_id
+Example: 68c29867baf74a077145b040
+1.2 Location
+Objective: Show feed content relevant to a user’s location
+Parameter Name: geo
+Example: {"lat":24.2422, "long":34.332, "radius_limit":10}
+1.3 Place
+Objective: Show feed content relevant to a place
+Parameter Name: place
+Example: place
+= {"country":"USA", "state":"", "city":"", "zipcode":000000}
+1.4 Time
+Objective: Show feed content relevant to a specific time
+Parameter Name: time
+Example: "1756128872"
+1.5 User Segmentation
+Objective: Show content tailored to a specific audience segment (e.g., Premium members, First-time buyers, age).
+Parameter Name: user_segment
+Example: {"age":33,"min_age":13,"max_age":90,"segment":"Premium/","gender":"M/F/O","race":"Asian"}'
+1.6 Product Detail Page (PDP) URL
+Objective: Personalize feed content related to a specific product page being displayed.
+Parameter Name: url
+Example: "https://www.walmart.com/"
+1.7 Custom Context
+Objective: Pass any other contextual data for deeper personalization
+Parameter Name: user_context
+Example Usage: "Smart phone"
+1.8 Brand ID
+Objective: Show feed content relevant to a specific brands.
+Parameter Name: brand_id
+Example Usage: [1234, 5678]
+1.9 Community & Group ID
+Objective: Show feed content relevant to a specific community & groups.
+Parameter Name: community_ids, group_ids
+Example Usage: community_ids='["49a7c012-d666-472a-bd21-acd4d39d3421","453e6e33-5bda-4035-b9ca-168a185f9741"]'
+group_ids='["f76b9d96-5e6a-4a75-83fc-441c03748388","5cd91cb9-9fcd-4fd9-9077-d0023b54b88c"]
+2.0 User Interest
+Objective: Show feed content relevant to a user’s interest
+Parameter Name: user_interests
+Example Usage: user_interests=[""]
+2.1 Posted by user
+Objective: Show feed content relevant to a specific user’s posts.
+Parameter Name: posted_by_user_ids
+Example Usage: posted_by_user_ids='["5cd91fr9-9fcd-4fd9-9077-d0023b54b88c","49a7c012-d666-472a-bd21-acd4d39d3421"]'
+2.2 Previous Page Context
+Objective: Personalise feed content related to user’s previous page journeys
+Parameter Name: previous_page_context
+Example Usage: previous_page_context="Samsung Galaxy"
+2.3 Page Context
+Objective: Personalise feed content related to user’s current page
+Parameter Name: page_context
+Example Usage: page_context="Samsung Galaxy"
+2. Combined Example
+<div
+id="gen-sdk" class="gen-sdk-class"
+style="width: 300px; height: 600px; background: #efefef"
+data-page-context="LG TV, Samsung TV"
+data-previous-page-context="Samsung Galaxy"
+data-user-context="Smart phone"
+data-geo='{"lat":24.2422, "long":34.332, "radius_limit":10}'
+data-place='{"country":"USA", "state":"", "city":"", "zipcode":000000}'
+data-time="1756128872"
+data-user-segments='{"age":33,"min_age":13,"max_age":90,"segment":"Premium/","gender":"M/F/O","race":"Asian"}'
+data-url="https://www.walmart.com/"
+data-brands-ids="[123,345]"
+data-user-interests='[""]'
+data-posted-by-user-ids='["5cd91fr9-9fcd-4fd9-9077-d0023b54b88c","49a7c012-d666-472a-bd21-acd4d39d3421"]'
+data-community-ids='["49a7c012-d666-472a-bd21-acd4d39d3421","453e6e33-5bda-4035-b9ca-168a185f9741"]'
+data-loop-ids='["f76b9d96-5e6a-4a75-83fc-441c03748388","5cd91cb9-9fcd-4fd9-9077-d0023b54b88c"]'></div>
+<script src="https://media.qa.begenuin.com/sdk/v2/gen_sdk.min.js"></script>
+
+API docs for placment v2
+API Implementation Guide – Feed Personalization for Placements
+Request Body Parameters
+1. Identity & Placement
+placement_id (string, Required)  ID of placement which need to be implemented
+style_id (string, Required) ID of style which is going to be used
+device_id (string, Required) ID to identify device id (for feed recommendation purpose)
+2. Page Context
+page_context (string, Optional) : current page context
+previous_page_context (string, Optional): previous page (from which user is visited current page) context
+url (string, Optional)  current page url
+3. Geographic Context (geo & place)
+geo (object, Optional)
+lat (float64): Latitude coordinates.
+long (float64): Longitude coordinates.
+radius_limit (float64): radius limit till location need filter/recommendation (in KM)
+place (object, Optional)
+country (string):  ALPHA-3 country code or name.
+state (string): State or Province name.
+city (string): Local city name.
+zipcode (string): Postal/Zip code for hyper-local targeting.
+Note: - state and city name only valid which are supported in IP2DB11
+4. User Context & Segmentation (user_segments)
+user_context (string, Optional): user specific context
+user_segments (object, Optional)
+age (string): The user's specific age.
+gender (string): Specified as "M", "F", or "O".
+min_age (integer): Lower bound of the user's age group.
+max_age (integer): Upper bound of the user's age group.
+segment (array of strings): Internal marketing or behavioral cohorts (e.g., ["VIP", "SPORTS_FAN"]).
+race (array of strings): Demographic identifier for localized content relevance.
+interests (array of strings): Specific topics the user follows (e.g., ["technology", "fitness"]).
+5. Filtering & Time Context
+time (string, Optional) The timestamp in ISO 8601 format.
+posted_by_user_ids (array of strings(UUID), Optional) Filters the feed to only include content from these specific user IDs.
+community_ids (array of strings(UUID), Optional) Restricts content to specific groups or community hubs.
+loop_ids (array of strings(UUID), Optional) Restricts content to specific thematic "loops" or content series.
+brands_ids (array of integer, Optional) Restricts content to specific thematic "brands" or content series.
+brand_context (array of objects, Optional)
+id (string): The unique brand identifier.
+type (string): The relationship type (e.g., "podcast", "station").
+video_mark_complete (array of strings(UUID), Optional) A list of Video/Content IDs that the user has already finished. The engine uses this to filter out seen content  or improve recommendation freshness.
+6. UI Style Overrides (configuration)
+This section allows for dynamic adjustment of the feed's appearance without changing app code.
+configuration (object, Optional)
+style_title (string): Custom title for the feed header.
+style_subtitle (string): Custom subtitle for the feed header.
+sections (array of objects):
+title (string): Heading for a specific sub-section.
+subtitle (string): Sub-heading for the section.
+description (string): Detailed text for the section.
+cover_url (string):
+thumbnail_url (string):
+7. Pagination & Session Management
+Below are required if using pagination
+page_session (string, Optional)  session id of current serving feed
+last_video_id (string(UUID), Optional) last video UUID which is on feed
+section_id (string, Optional)  if multiple section feed is there, then must need to pass for section identification
+{
+// needed for feed
+"placement_id": "string",
+"style_id": "string",
+"device_id": "string",
+// page context (optional)
+"page_context": "string (optional)",
+"previous_page_context": "string (optional)",
+"url": "string (optional)",
+// geo location context (optional)
+"geo": {
+"lat": "float64 ",
+"long": "float64",
+"radius_limit": "float64 (optional)" // (in KM)
+},
+"place": { //(optional)
+"country": "string (optional)", // alpha-3 code
+"state": "string (optional)",
+"city": "string (optional)",
+"zipcode": "string (optional)"
+},
+// user context
+"user_context": "string (optional)",
+"user_segments": { // (optional)
+"age": "string (optional)",
+"gender": "M/F/O",
+"min_age": "integer (optional)",
+"max_age": "integer (optional)",
+"segment": [
+"string (optional)"
+],
+"race": [
+"string (optional)"
+],
+"interests": [
+"string (optional)"
+]
+},
+// time context (must be in ISO 8601 format)
+"time": "string (optional)",
+// filters
+"posted_by_user_ids": [
+"string/UUID (optional)"
+],
+"community_ids": [
+"string/UUID (optional)"
+],
+"loop_ids": [
+"string/UUID (optional)"
+],
+"brands_ids": [
+"int (optional)"
+],
+"brand_context": [
+{
+"id": "string (optional)",
+"type": "string (optional)"
+}
+],
+// video completion context (to. make video recommendations better)
+"video_mark_complete": [
+"string/UUID (optional)"
+],
+// style overrides(macros)
+"configuration": {
+"style_title": "string (optional)",
+"style_subtitle": "string (optional)",
+"sections": [
+{
+"title": "string (optional)",
+"subtitle": "string (optional)",
+"description": "string (optional)",
+"cover_url": "string (optional)",
+"thumbnail_url": "string (optional)",
+}
+]
+},
+// pagination
+"page_session": "string (optional)",
+"last_video_id": "string/UUID (optional)",
+"section_id": "string (optional)"
+}
+
+Payload scenarios
+Bases on discussion with Shrushti Shah section title is mandatory file so below are the scenario for payload
+Notes:-
+In Macros all kind value will be valid
+If for few values feed show empty results  it is valid case as current we are doing simple search on open search
+Value passed and macros are not define passed value will have no effect
+For  Section title
+if empty section array you will get below issue
+{
+"code": "6600",
+"message": "no sections array in payload to enrich macros",
+"data": null
+}
+
+If empty title found you will get below issue
+{
+"code": "6600",
+"message": "section title is empty/missing in payload to enrich macros",
+"data": null
+}
+
+Generic error message for the frontend: ‘Please check your configuration and try again.’
+Filed with macro | Value pass by client | Value not passed by client
+Style Title | Show the title | Hide the title (done by FE)
+Style sub title | Show the sub title | Hide the sub title (done by FE)
+Section title | BE will server the value in  feed | BE will throw error (if section title or section array is missing)
+Section subtitle,thumbnail_url, cover_url | BE will server the value in feed | BE will not return the key if value is not passed or section array is not passed

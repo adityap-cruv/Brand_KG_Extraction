@@ -1,0 +1,215 @@
+{
+  "source_doc": "O&O Data Flow",
+  "entities": [
+    {
+      "name": "Genuin SDK",
+      "bucket": "Product",
+      "type": "SDK",
+      "aliases": [
+        "Genuin Video Player SDK"
+      ],
+      "description": "Genuin's software development kit, distributed as a compiled native library for Android/iOS and as a JavaScript library for web, that publishers integrate to request video content from Genuin servers and render the Genuin Player."
+    },
+    {
+      "name": "Genuin Player",
+      "bucket": "Product",
+      "type": "Player",
+      "aliases": [],
+      "description": "The video player rendered via the Genuin SDK that plays content video returned by Genuin servers in publisher placements."
+    },
+    {
+      "name": "Google IMA SDK",
+      "bucket": "Engineering",
+      "type": "SDK",
+      "aliases": [
+        "IMA SDK"
+      ],
+      "description": "Google's Interactive Media Ads SDK, integrated inside the Genuin SDK, used to request, render, and fire trackers for audio/video advertisements."
+    },
+    {
+      "name": "Triton",
+      "bucket": "Partnerships",
+      "type": "AdServer",
+      "aliases": [
+        "Triton Digital",
+        "streamtheworld"
+      ],
+      "description": "Third-party audio ad server (cmod-na.live.streamtheworld.com) that returns VAST audio ad responses to the IMA SDK when the Genuin SDK requests an ad."
+    },
+    {
+      "name": "iHeart",
+      "bucket": "Partnerships",
+      "type": "Publisher",
+      "aliases": [
+        "iHeartMedia",
+        "iheart.com"
+      ],
+      "description": "Publisher partner whose web property (iheart.com) and station/podcast profiles host Genuin placements such as Highlights and Article Pages."
+    },
+    {
+      "name": "ODSPY",
+      "bucket": "Partnerships",
+      "type": "AdSystem",
+      "aliases": [
+        "odspy.com",
+        "od-spy"
+      ],
+      "description": "Ad serving system named in the VAST response adsystem field, delivering audio ad creatives and tracking endpoints via Triton."
+    },
+    {
+      "name": "VAST",
+      "bucket": "Engineering",
+      "type": "Standard",
+      "aliases": [
+        "IAB VAST",
+        "VAST 4.3"
+      ],
+      "description": "IAB Video Ad Serving Template standard (version 4.3) used to structure ad responses, linear creatives, companion resources, and tracking events."
+    },
+    {
+      "name": "IAB",
+      "bucket": "Partnerships",
+      "type": "StandardsBody",
+      "aliases": [
+        "Interactive Advertising Bureau"
+      ],
+      "description": "Industry standards body that defines the VAST specification and IAB content category taxonomy referenced in ad responses."
+    },
+    {
+      "name": "Highlights",
+      "bucket": "Product",
+      "type": "Placement",
+      "aliases": [
+        "Highlights tab",
+        "Highlights feed"
+      ],
+      "description": "iHeart Highlights tab on station and podcast profiles where the Genuin SDK widget loads short video clips and streams Stream_Start/Track_Start analytics events."
+    },
+    {
+      "name": "Article Pages",
+      "bucket": "Product",
+      "type": "Placement",
+      "aliases": [],
+      "description": "iHeart article page placements where the Genuin SDK widget renders alongside editorial content."
+    },
+    {
+      "name": "Genuin BCC",
+      "bucket": "Product",
+      "type": "Tool",
+      "aliases": [
+        "BCC",
+        "Brand Content Configuration"
+      ],
+      "description": "Genuin Brand Content Configuration tool where brands configure video category and topic metadata that is then attached to clips as video_category_topic."
+    },
+    {
+      "name": "Elvis Duran and the Morning Show",
+      "bucket": "Audience",
+      "type": "Community",
+      "aliases": [
+        "Elvis Duran"
+      ],
+      "description": "An iHeart-owned community on the Genuin platform (brand_id 1729, community handle elvisdurancooler1785) whose Latest Clips loop is served through Genuin placements."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Genuin SDK",
+      "target": "Google IMA SDK",
+      "type": "INTEGRATES_WITH",
+      "description": "Genuin SDK embeds Google IMA SDK to issue ad requests and execute ad trackers for audio and video advertisements."
+    },
+    {
+      "source": "Genuin Player",
+      "target": "Genuin SDK",
+      "type": "PART_OF",
+      "description": "The Genuin Player is rendered via the Genuin SDK as the playback surface for content video."
+    },
+    {
+      "source": "iHeart",
+      "target": "Genuin SDK",
+      "type": "INTEGRATES_WITH",
+      "description": "iHeart integrates the Genuin SDK into its web property to render Highlights and Article Pages video placements."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Triton",
+      "type": "USES",
+      "description": "The Genuin SDK, via IMA, calls Triton's streamtheworld endpoint to request audio ads with parameters like stid, episode-url, and type=midroll."
+    },
+    {
+      "source": "Google IMA SDK",
+      "target": "Triton",
+      "type": "USES",
+      "description": "The IMA SDK inside Genuin SDK fires VAST impression and quartile trackers to Triton-hosted od-spy URLs."
+    },
+    {
+      "source": "Triton",
+      "target": "VAST",
+      "type": "USES",
+      "description": "Triton serves audio ad responses formatted per the IAB VAST 4.3 specification."
+    },
+    {
+      "source": "ODSPY",
+      "target": "VAST",
+      "type": "USES",
+      "description": "ODSPY is identified as the adsystem inside VAST responses and provides linear creative plus companion resources in VAST format."
+    },
+    {
+      "source": "ODSPY",
+      "target": "Triton",
+      "type": "PARTNERS_WITH",
+      "description": "ODSPY's ad creatives and tracking endpoints (od-spy.live.streamtheworld.com) are delivered through Triton's streaming infrastructure."
+    },
+    {
+      "source": "VAST",
+      "target": "IAB",
+      "type": "PART_OF",
+      "description": "VAST is an IAB-published advertising standard whose 4.3 version and content category taxonomy are referenced in ad payloads."
+    },
+    {
+      "source": "Highlights",
+      "target": "iHeart",
+      "type": "PART_OF",
+      "description": "The Highlights tab is a feature of iHeart station and podcast profiles."
+    },
+    {
+      "source": "Article Pages",
+      "target": "iHeart",
+      "type": "PART_OF",
+      "description": "Article Pages are sections of the iHeart web property where Genuin placements appear."
+    },
+    {
+      "source": "Highlights",
+      "target": "Genuin SDK",
+      "type": "FEATURES",
+      "description": "The Highlights placement is powered by the Genuin SDK widget, emitting Placement Initialized, Video Inview, and quartile analytics events."
+    },
+    {
+      "source": "Article Pages",
+      "target": "Genuin SDK",
+      "type": "FEATURES",
+      "description": "Article Pages embed the Genuin SDK widget to deliver video clips alongside editorial content."
+    },
+    {
+      "source": "Genuin BCC",
+      "target": "Genuin SDK",
+      "type": "PART_OF",
+      "description": "Genuin BCC is the brand-side configuration tool whose category/topic settings flow through the Genuin SDK as video metadata attributes."
+    },
+    {
+      "source": "Elvis Duran and the Morning Show",
+      "target": "iHeart",
+      "type": "OWNED_BY",
+      "description": "The Elvis Duran and the Morning Show community on Genuin is owned by iHeart (brand_id 1729) and surfaced through iHeart placements."
+    },
+    {
+      "source": "Elvis Duran and the Morning Show",
+      "target": "Genuin SDK",
+      "type": "APPEARS_IN",
+      "description": "Clips from the Elvis Duran and the Morning Show community are returned in the Step 2 video response payload and played by the Genuin SDK."
+    }
+  ],
+  "_src_hash": "df418015f0b53de5e364b8e169df046f571a59a625d5d15bf2b0c248e38d54f1",
+  "_skill_sig": "4edd28021f3312b1"
+}

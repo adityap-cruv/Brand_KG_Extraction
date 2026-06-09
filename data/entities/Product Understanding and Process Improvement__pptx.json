@@ -1,0 +1,1011 @@
+{
+  "source_doc": "Product Understanding and Process Improvement",
+  "entities": [
+    {
+      "name": "Placement",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Introducing Placement"
+      ],
+      "description": "Genuin product that lets customers integrate video galleries on item pages and other surfaces across web, mobile, app, and desktop."
+    },
+    {
+      "name": "Curate",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Product that allows customers to aggregate, curate, and publish social videos and content, including integrations with third-party content platforms."
+    },
+    {
+      "name": "Brand Control Center",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "BCC"
+      ],
+      "description": "Admin platform for brands to control content, sponsorships, and ad operations; includes flows like Sponsored Videos, Ad Configurations, and Banner Ads."
+    },
+    {
+      "name": "Octo",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [],
+      "description": "AI capabilities marketplace introduced to customers during the adoption phase, integrated with external tools and models for brand-consumer engagement automation."
+    },
+    {
+      "name": "Maya",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [],
+      "description": "AI/automation platform referenced alongside Octo for integration with external tools and models in the product roadmap."
+    },
+    {
+      "name": "Genuin SDKs",
+      "bucket": "Product",
+      "type": "Technology",
+      "aliases": [
+        "SDKs"
+      ],
+      "description": "Software development kits used by customers to embed Genuin video experiences across their digital ecosystem."
+    },
+    {
+      "name": "Sponsored Videos Flow",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Sponsored Videos"
+      ],
+      "description": "Workflow in BCC for managing sponsored video placements, planned in upcoming sprint as P3 priority."
+    },
+    {
+      "name": "Banner Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Banner advertising feature on the product roadmap as a P4 priority item."
+    },
+    {
+      "name": "Ad Configurations",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Ad configuration capability on the product roadmap as a P4 priority item."
+    },
+    {
+      "name": "Scheduler",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Scheduling feature within Curate raised by customers IE, TED, and McClatchy and planned in the next sprint."
+    },
+    {
+      "name": "Moon",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Owns UX copy, flow checks, and failure-scenario reviews; generates P0 design tasks and participates in brainstorming, concept flow, and design sign-off.",
+      "seniority_tier": "MANAGER",
+      "role_title": "UX Lead",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Shubhangi",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Designer who executes P0 design tasks created by Moon and participates in the concept flow stage of Figma design.",
+      "seniority_tier": "IC",
+      "role_title": "Designer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Arjav",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Front-end engineer who checks latency and end-to-end data flows and contributes to tech feasibility and design sign-off.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Krunal",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Front-end engineer involved in latency checks, concept flow, tech feasibility, design sign-off, and active development.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Jimit",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Front-end engineer who checks front-end latency and end-to-end data flows for production release P0 checks.",
+      "seniority_tier": "IC",
+      "role_title": "Frontend Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Nilesh",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Backend engineer running scale tests against six-month traffic projections and contributing to concept flow and tech feasibility.",
+      "seniority_tier": "IC",
+      "role_title": "Backend Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Nayan",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Backend and DevOps engineer leading scale testing, observability, and analytics validation; participates in brainstorming and tech feasibility.",
+      "seniority_tier": "IC",
+      "role_title": "Backend / DevOps Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Kaushal",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "DevOps engineer responsible for data tracking, events, analytics, and scale testing tied to the observability dashboard.",
+      "seniority_tier": "IC",
+      "role_title": "DevOps Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Meet",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "DevOps and tech-feasibility contributor focused on observability, latency checks, and design sign-off.",
+      "seniority_tier": "IC",
+      "role_title": "DevOps Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Bhargav",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Participates in brainstorming, the not-considering review, and concept-flow stages of the Figma design process.",
+      "seniority_tier": "IC",
+      "role_title": "Product Contributor",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sanidhya",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Brainstorming participant contributing to ideation on new features and products.",
+      "seniority_tier": "IC",
+      "role_title": "Product Contributor",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Sanch",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Participates in brainstorming and PRD-Done stages of the design and product workflow.",
+      "seniority_tier": "IC",
+      "role_title": "Product Contributor",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Matt",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Reviewer in the Not-Considering stage, validating whether new ideas address a real market need.",
+      "seniority_tier": "IC",
+      "role_title": "Reviewer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Vishal",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Contributor to concept flow, PRD documentation, and design sign-off.",
+      "seniority_tier": "IC",
+      "role_title": "Product Manager",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Smit",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Covers PRD documentation, tech feasibility, design sign-off, and active development; spans product and engineering responsibilities.",
+      "seniority_tier": "IC",
+      "role_title": "Product Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Shrushti",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Contributor responsible for finalizing PRD documentation in the PRD-Done stage.",
+      "seniority_tier": "IC",
+      "role_title": "Product Contributor",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Devanshu",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Contributor to PRD-Done documentation alongside the product team.",
+      "seniority_tier": "IC",
+      "role_title": "Product Contributor",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Ruchita",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Contributor to the PRD-Done documentation stage of the design flow.",
+      "seniority_tier": "IC",
+      "role_title": "Product Contributor",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Kashish",
+      "bucket": "People",
+      "type": "Person",
+      "aliases": [],
+      "description": "Engineer participating in the In-Development stage of the design-to-development handoff.",
+      "seniority_tier": "IC",
+      "role_title": "Engineer",
+      "affiliation": "Genuin"
+    },
+    {
+      "name": "Priority Assessment Framework",
+      "bucket": "Business",
+      "type": "Process",
+      "aliases": [
+        "Priority Framework"
+      ],
+      "description": "P0-P4 prioritization framework with associated SLA timelines used to classify and resolve bugs, features, and roadmap items."
+    },
+    {
+      "name": "Customer Product Journey",
+      "bucket": "Business",
+      "type": "Process",
+      "aliases": [],
+      "description": "Lifecycle from brand entering the ecosystem through CSM-led implementation, programmatic monetization, sponsored placements, UGC, and Octo adoption."
+    },
+    {
+      "name": "Product Adoption Managers KPIs",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Adoption KPIs including BG portfolio rollout, quarterly placement additions, monthly video upload frequency, and AI-generated video output."
+    },
+    {
+      "name": "PRD Story Framework",
+      "bucket": "Business",
+      "type": "Process",
+      "aliases": [],
+      "description": "User-persona-based product story framework covering destination brand, partner brand, creator, and consumer perspectives for each epic."
+    },
+    {
+      "name": "Product Development Flow",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Jira Boards"
+      ],
+      "description": "End-to-end product flow across Design, Develop, and Market boards tracking stories from concept through deployment and marketing asset publication."
+    },
+    {
+      "name": "Figma Design Flow",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [],
+      "description": "Color-coded design progression in Figma from Brainstorming and Not Considering through Concept Flow, PRD Done, Tech Feasibility, Design Sign Off, and In Development."
+    },
+    {
+      "name": "24/7 Support Team",
+      "bucket": "Engineering",
+      "type": "Team",
+      "aliases": [],
+      "description": "On-call team responsible for acknowledging and resolving P0 issues within minutes-to-hours via Slack escalation."
+    },
+    {
+      "name": "Observability Dashboard",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Dashboard tracking events, analytics, and latency such as SDK video load times, used to detect P1 issues against benchmark thresholds."
+    },
+    {
+      "name": "PRD",
+      "bucket": "Marketing",
+      "type": "Document",
+      "aliases": [
+        "Product Requirements Document"
+      ],
+      "description": "Finalized product requirements document capturing problem, solution, scope, generative/regenerative features, monetization, and consumer experience improvements."
+    },
+    {
+      "name": "Product Marketing Asset Creation",
+      "bucket": "Marketing",
+      "type": "Process",
+      "aliases": [
+        "Asset Creation"
+      ],
+      "description": "Marketing track of the product flow covering creation, review, and publishing of product marketing assets."
+    },
+    {
+      "name": "Destination Brand",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [
+        "Retailer",
+        "App Owner",
+        "Retail App"
+      ],
+      "description": "Media, retail, and consumer brands with existing traffic that adopt Genuin to power shoppable and video-powered experiences and generate sponsorship revenue."
+    },
+    {
+      "name": "Distributor Brand",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [
+        "Partner Brand",
+        "CPG Brand",
+        "Sponsor"
+      ],
+      "description": "Brand marketers and CPG sponsors looking to distribute content and sponsor video experiences on retail destinations to drive measurable sales lift."
+    },
+    {
+      "name": "Celebrity Creators",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [
+        "Creator",
+        "UGC Creator"
+      ],
+      "description": "Creators with access to BCC and the studio app who distribute branded video content across multiple destinations and build incentivized communities."
+    },
+    {
+      "name": "Consumer Shopper",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [
+        "Consumer",
+        "Shopper",
+        "User"
+      ],
+      "description": "End user consuming video experiences with brand sponsorships that feel timely and useful as part of a personalized shopping journey."
+    },
+    {
+      "name": "RMN Leader",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [
+        "Yield Leader",
+        "CRO Leader"
+      ],
+      "description": "Retail media / yield / CRO buyer persona seeking to grow digital media revenue, build a data moat, and improve onsite and offsite media margin."
+    },
+    {
+      "name": "CMO Marketers",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [
+        "CMO"
+      ],
+      "description": "Marketing leaders looking to reclaim their brand destination, increase engagement, and maximize value from content and community strategies."
+    },
+    {
+      "name": "Cross Platform Developers",
+      "bucket": "Audience",
+      "type": "Persona",
+      "aliases": [],
+      "description": "Developer buyer persona seeking a plug-and-play platform to reduce launch time for video experiences across their digital ecosystem."
+    },
+    {
+      "name": "TikTok",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "Tiktok"
+      ],
+      "description": "Short-form video platform cited as a consumer-experience reference for Genuin product design."
+    },
+    {
+      "name": "Instagram",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "IG"
+      ],
+      "description": "Social platform referenced as consumer-experience inspiration for Genuin video products."
+    },
+    {
+      "name": "Facebook",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "FB"
+      ],
+      "description": "Social platform referenced as consumer-experience inspiration for Genuin."
+    },
+    {
+      "name": "YouTube",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "YT"
+      ],
+      "description": "Video platform cited as consumer-experience reference for Genuin product design."
+    },
+    {
+      "name": "Netflix",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Streaming platform cited as a product reference for consumer experience design."
+    },
+    {
+      "name": "Reddit",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Community platform referenced as consumer-experience inspiration."
+    },
+    {
+      "name": "Substack",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Content publishing platform referenced as a consumer-experience inspiration source."
+    },
+    {
+      "name": "ChatGPT",
+      "bucket": "Partnerships",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Generative AI assistant cited as a product reference for the AI-powered consumer experience."
+    },
+    {
+      "name": "Gemini",
+      "bucket": "Partnerships",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Generative AI assistant referenced alongside ChatGPT as a product inspiration."
+    },
+    {
+      "name": "Shopify",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Commerce platform cited as a Brand Control Center reference."
+    },
+    {
+      "name": "Google GAM",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "GAM"
+      ],
+      "description": "Google Ad Manager cited as a reference for the Brand Control Center ad operations."
+    },
+    {
+      "name": "Braze",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Customer engagement platform cited as a Brand Control Center reference."
+    },
+    {
+      "name": "Klaviyo",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Marketing automation platform referenced as inspiration for the Brand Control Center."
+    },
+    {
+      "name": "Sprout Social",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Social media management platform cited as a Brand Control Center reference."
+    },
+    {
+      "name": "Opusclip",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Video clipping tool referenced as a product inspiration for creator workflows."
+    },
+    {
+      "name": "Caption",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Captioning tool referenced as a product inspiration for creator workflows."
+    },
+    {
+      "name": "WordPress",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "Wordpress"
+      ],
+      "description": "CMS referenced as a product inspiration in the SDKs and integrations landscape."
+    },
+    {
+      "name": "JWPlayer",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "JWplayer"
+      ],
+      "description": "Video player platform cited as an SDK product reference."
+    },
+    {
+      "name": "Tolstoy",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Interactive video platform referenced as an SDK product inspiration."
+    },
+    {
+      "name": "Firework",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Short-video commerce platform cited as a direct product reference for Genuin SDKs."
+    },
+    {
+      "name": "Stripe",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Payments platform referenced in the SDK and integrations landscape."
+    },
+    {
+      "name": "Mux",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Video infrastructure provider referenced as an SDK product inspiration."
+    },
+    {
+      "name": "Storyly",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [],
+      "description": "Story-format video platform cited as an SDK product reference."
+    },
+    {
+      "name": "iHeart",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Customer for which an SDK code re-write in SwiftUI is planned as a P3 priority."
+    },
+    {
+      "name": "IE",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Customer that raised the Scheduler request in Curate, planned in the next sprint."
+    },
+    {
+      "name": "TED",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Customer that raised the Scheduler request in Curate, planned in the next sprint."
+    },
+    {
+      "name": "McClatchy",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Customer that raised the Scheduler request in Curate, planned in the next sprint."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sponsored Videos Flow",
+      "target": "Brand Control Center",
+      "type": "PART_OF",
+      "description": "Sponsored Videos flow is a workflow inside BCC scheduled in the next sprint as P3."
+    },
+    {
+      "source": "Banner Ads",
+      "target": "Brand Control Center",
+      "type": "PART_OF",
+      "description": "Banner Ads sit in the BCC roadmap as a P4 priority."
+    },
+    {
+      "source": "Ad Configurations",
+      "target": "Brand Control Center",
+      "type": "PART_OF",
+      "description": "Ad Configurations are part of the BCC roadmap as a P4 priority."
+    },
+    {
+      "source": "Scheduler",
+      "target": "Curate",
+      "type": "PART_OF",
+      "description": "Scheduler is a feature within Curate raised by customers and planned in the next sprint."
+    },
+    {
+      "source": "Maya",
+      "target": "Octo",
+      "type": "INTEGRATES_WITH",
+      "description": "Maya is referenced alongside Octo for integration with external tools and models."
+    },
+    {
+      "source": "PRD Story Framework",
+      "target": "PRD",
+      "type": "PART_OF",
+      "description": "The PRD Story Framework defines the user-persona stories that feed into each PRD."
+    },
+    {
+      "source": "Priority Assessment Framework",
+      "target": "Product Development Flow",
+      "type": "PART_OF",
+      "description": "Priority Assessment Framework governs how tasks are categorized and routed within the product development flow."
+    },
+    {
+      "source": "24/7 Support Team",
+      "target": "Priority Assessment Framework",
+      "type": "RESPONDS_TO",
+      "description": "The 24/7 team executes against P0/P1 SLAs defined in the Priority Assessment Framework."
+    },
+    {
+      "source": "Figma Design Flow",
+      "target": "Product Development Flow",
+      "type": "PART_OF",
+      "description": "Figma Design Flow is the design-stage track of the broader product development flow."
+    },
+    {
+      "source": "Product Marketing Asset Creation",
+      "target": "Product Development Flow",
+      "type": "PART_OF",
+      "description": "Asset creation and review form the Market track of the Jira product flow."
+    },
+    {
+      "source": "Placement",
+      "target": "Destination Brand",
+      "type": "TARGETED_AT",
+      "description": "Placement is built for destination brands integrating video galleries across web, mobile, app, and desktop."
+    },
+    {
+      "source": "Curate",
+      "target": "Destination Brand",
+      "type": "TARGETED_AT",
+      "description": "Curate enables destination brands to aggregate and publish their content in one place."
+    },
+    {
+      "source": "Sponsored Videos Flow",
+      "target": "Distributor Brand",
+      "type": "TARGETED_AT",
+      "description": "Sponsored Videos flow enables CPG sponsors to monetize destination brand video experiences."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "CMO Marketers",
+      "type": "TARGETED_AT",
+      "description": "BCC serves CMOs reclaiming brand destinations and maximizing engagement from content and community."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "RMN Leader",
+      "type": "TARGETED_AT",
+      "description": "BCC supports RMN/yield leaders seeking revenue growth and media margin improvements."
+    },
+    {
+      "source": "Genuin SDKs",
+      "target": "Cross Platform Developers",
+      "type": "TARGETED_AT",
+      "description": "SDKs are aimed at cross-platform developers seeking plug-and-play video experiences."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Celebrity Creators",
+      "type": "TARGETED_AT",
+      "description": "Celebrity creators access BCC and the studio app to distribute branded video content."
+    },
+    {
+      "source": "Placement",
+      "target": "Consumer Shopper",
+      "type": "TARGETED_AT",
+      "description": "Placement delivers timely, non-intrusive shoppable video experiences to end consumers."
+    },
+    {
+      "source": "Moon",
+      "target": "Figma Design Flow",
+      "type": "WORKS_ON",
+      "description": "Moon checks UX copy, flows, and failure scenarios across the Figma design stages."
+    },
+    {
+      "source": "Shubhangi",
+      "target": "Figma Design Flow",
+      "type": "WORKS_ON",
+      "description": "Shubhangi executes P0 design tasks generated by Moon in the design flow."
+    },
+    {
+      "source": "Bhargav",
+      "target": "Figma Design Flow",
+      "type": "WORKS_ON",
+      "description": "Bhargav participates in brainstorming and not-considering reviews in the design flow."
+    },
+    {
+      "source": "Sanidhya",
+      "target": "Figma Design Flow",
+      "type": "WORKS_ON",
+      "description": "Sanidhya contributes to brainstorming in the Figma design flow."
+    },
+    {
+      "source": "Matt",
+      "target": "Figma Design Flow",
+      "type": "WORKS_ON",
+      "description": "Matt reviews ideas in the Not-Considering stage of the design flow."
+    },
+    {
+      "source": "Vishal",
+      "target": "Figma Design Flow",
+      "type": "WORKS_ON",
+      "description": "Vishal contributes to concept flow, PRD documentation, and design sign-off."
+    },
+    {
+      "source": "Arjav",
+      "target": "Product Development Flow",
+      "type": "WORKS_ON",
+      "description": "Arjav handles front-end latency, data flows, tech feasibility, and design sign-off."
+    },
+    {
+      "source": "Krunal",
+      "target": "Product Development Flow",
+      "type": "WORKS_ON",
+      "description": "Krunal contributes across concept flow, tech feasibility, design sign-off, and development."
+    },
+    {
+      "source": "Jimit",
+      "target": "Product Development Flow",
+      "type": "WORKS_ON",
+      "description": "Jimit checks front-end latency and end-to-end data flows as part of the P0 process."
+    },
+    {
+      "source": "Nilesh",
+      "target": "Product Development Flow",
+      "type": "WORKS_ON",
+      "description": "Nilesh runs backend scale tests against projected traffic and contributes to tech feasibility."
+    },
+    {
+      "source": "Nayan",
+      "target": "Product Development Flow",
+      "type": "WORKS_ON",
+      "description": "Nayan owns backend scale testing, DevOps, and observability validation across the flow."
+    },
+    {
+      "source": "Smit",
+      "target": "Product Development Flow",
+      "type": "WORKS_ON",
+      "description": "Smit spans PRD documentation, tech feasibility, design sign-off, and active development."
+    },
+    {
+      "source": "Kashish",
+      "target": "Product Development Flow",
+      "type": "WORKS_ON",
+      "description": "Kashish participates in the In-Development stage of the design-to-development handoff."
+    },
+    {
+      "source": "Kaushal",
+      "target": "Observability Dashboard",
+      "type": "WORKS_ON",
+      "description": "Kaushal ensures data tracking, events, and analytics flow into the observability dashboard."
+    },
+    {
+      "source": "Meet",
+      "target": "Observability Dashboard",
+      "type": "WORKS_ON",
+      "description": "Meet contributes to observability and scale-test analytics validation."
+    },
+    {
+      "source": "Shrushti",
+      "target": "PRD",
+      "type": "WORKS_ON",
+      "description": "Shrushti contributes to PRD documentation in the PRD-Done stage."
+    },
+    {
+      "source": "Devanshu",
+      "target": "PRD",
+      "type": "WORKS_ON",
+      "description": "Devanshu finalizes PRD documentation alongside the product team."
+    },
+    {
+      "source": "Ruchita",
+      "target": "PRD",
+      "type": "WORKS_ON",
+      "description": "Ruchita contributes to PRD-Done documentation in the design flow."
+    },
+    {
+      "source": "Sanch",
+      "target": "PRD",
+      "type": "WORKS_ON",
+      "description": "Sanch participates in brainstorming and PRD-Done documentation."
+    },
+    {
+      "source": "iHeart",
+      "target": "Genuin SDKs",
+      "type": "USES",
+      "description": "An iHeart SDK code re-write in SwiftUI is planned as a P3 priority."
+    },
+    {
+      "source": "IE",
+      "target": "Curate",
+      "type": "USES",
+      "description": "IE raised the Scheduler request inside Curate."
+    },
+    {
+      "source": "TED",
+      "target": "Curate",
+      "type": "USES",
+      "description": "TED raised the Scheduler request inside Curate."
+    },
+    {
+      "source": "McClatchy",
+      "target": "Curate",
+      "type": "USES",
+      "description": "McClatchy raised the Scheduler request inside Curate."
+    },
+    {
+      "source": "Octo",
+      "target": "ChatGPT",
+      "type": "COMPARED_TO",
+      "description": "ChatGPT is cited as a product reference and inspiration for Octo's AI capabilities."
+    },
+    {
+      "source": "Octo",
+      "target": "Gemini",
+      "type": "COMPARED_TO",
+      "description": "Gemini is cited as a product reference for Octo's AI capabilities."
+    },
+    {
+      "source": "Curate",
+      "target": "TikTok",
+      "type": "COMPARED_TO",
+      "description": "TikTok is referenced as a consumer-experience inspiration that informs Curate."
+    },
+    {
+      "source": "Curate",
+      "target": "Instagram",
+      "type": "COMPARED_TO",
+      "description": "Instagram is cited as a consumer-experience reference for Curate."
+    },
+    {
+      "source": "Curate",
+      "target": "Facebook",
+      "type": "COMPARED_TO",
+      "description": "Facebook is cited as a consumer-experience reference for Curate."
+    },
+    {
+      "source": "Curate",
+      "target": "YouTube",
+      "type": "COMPARED_TO",
+      "description": "YouTube is cited as a consumer-experience reference for Curate."
+    },
+    {
+      "source": "Curate",
+      "target": "Netflix",
+      "type": "COMPARED_TO",
+      "description": "Netflix is referenced as a consumer-experience inspiration."
+    },
+    {
+      "source": "Curate",
+      "target": "Reddit",
+      "type": "COMPARED_TO",
+      "description": "Reddit is cited as a consumer-experience reference."
+    },
+    {
+      "source": "Curate",
+      "target": "Substack",
+      "type": "COMPARED_TO",
+      "description": "Substack is cited as a consumer-experience reference."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Shopify",
+      "type": "COMPARED_TO",
+      "description": "Shopify is cited as a Brand Control Center reference."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Google GAM",
+      "type": "COMPARED_TO",
+      "description": "Google GAM is cited as a Brand Control Center reference for ad operations."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Braze",
+      "type": "COMPARED_TO",
+      "description": "Braze is cited as a Brand Control Center reference."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Klaviyo",
+      "type": "COMPARED_TO",
+      "description": "Klaviyo is cited as a Brand Control Center reference."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Sprout Social",
+      "type": "COMPARED_TO",
+      "description": "Sprout Social is cited as a Brand Control Center reference."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Opusclip",
+      "type": "COMPARED_TO",
+      "description": "Opusclip is referenced as inspiration for BCC creator workflows."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "Caption",
+      "type": "COMPARED_TO",
+      "description": "Caption is referenced as inspiration for BCC creator workflows."
+    },
+    {
+      "source": "Brand Control Center",
+      "target": "WordPress",
+      "type": "COMPARED_TO",
+      "description": "WordPress is cited as a product reference in the BCC/integrations landscape."
+    },
+    {
+      "source": "Genuin SDKs",
+      "target": "JWPlayer",
+      "type": "COMPARED_TO",
+      "description": "JWPlayer is cited as a direct SDK product reference."
+    },
+    {
+      "source": "Genuin SDKs",
+      "target": "Tolstoy",
+      "type": "COMPARED_TO",
+      "description": "Tolstoy is cited as an SDK product reference."
+    },
+    {
+      "source": "Genuin SDKs",
+      "target": "Firework",
+      "type": "COMPARED_TO",
+      "description": "Firework is cited as a direct SDK product reference."
+    },
+    {
+      "source": "Genuin SDKs",
+      "target": "Stripe",
+      "type": "COMPARED_TO",
+      "description": "Stripe is referenced in the SDK and integrations landscape."
+    },
+    {
+      "source": "Genuin SDKs",
+      "target": "Mux",
+      "type": "COMPARED_TO",
+      "description": "Mux is referenced as an SDK product inspiration."
+    },
+    {
+      "source": "Genuin SDKs",
+      "target": "Storyly",
+      "type": "COMPARED_TO",
+      "description": "Storyly is referenced as an SDK product inspiration."
+    }
+  ],
+  "_src_hash": "c9ac8481c1b6333fd00e481a4b91bbce2e0458ee779321f3e50cc7acc76ea441",
+  "_skill_sig": "4edd28021f3312b1"
+}

@@ -1,0 +1,214 @@
+About this document
+This guide abstracts the core methodology for building AI agents that collect structured information through conversational interfaces. It covers the four foundational mechanisms for preventing drift and enforcing step-by-step form progression, and provides reusable templates you can adapt to any form-filling use case.
+The patterns here apply equally to simple 3-question flows and complex multi-branch enterprise forms.
+1. Core Problem: Why Naive Agents Drift
+A conversational AI by default is trained to be helpful across any topic. When tasked with collecting form data step-by-step, three failure modes emerge:
+2. The Four Mechanisms
+2.1  State Injection (Every Turn)
+This is the single most impactful mechanism. The current step, total steps, and all previously collected answers must be injected into the system prompt on every turn — not just at the start.
+2.2  Validation Layer (Application-side)
+Never trust the model alone to determine whether an answer is valid. Build a typed validation layer in your application code that sits between the user's input and the next state transition.
+The step counter only increments when validate() returns { valid: true }. Invalid responses trigger an immediate re-ask without advancing state.
+2.3  Anti-Drift Instructions + Few-Shot Examples
+Prompt engineering specifically for tangent handling. These instructions override the model's default helpfulness instinct:
+2.4  Tangent Detection (Application-side)
+Implement a lightweight pattern-matching layer in code that intercepts off-topic input before it reaches the model. This is faster, cheaper, and more reliable than asking the model to self-police.
+3. State Object Design
+Design your state object to be serialisable and injected into every prompt. Keep it flat and minimal:
+4. Conditional Branching
+Most real-world forms have conditional logic — some steps only appear based on previous answers. Handle this entirely in the application layer, not in the prompt.
+5. Step Schema Template
+Each step in your form should conform to this schema. Define all steps upfront before writing any agent code:
+6. System Prompt Template
+Use this as your base system prompt. Replace all {placeholders} with runtime values on every API call:
+7. Implementation Checklist
+Use this checklist when building any new form agent:
+Before you write any code
+Map all form fields and their data types
+Identify all conditional branches (which steps depend on which answers)
+Define validation rules for each field
+Write the step schema for each question
+Define your tangent pattern list for this domain
+System prompt
+State is fully injected on every API call (not cached from turn 1)
+Current step is explicitly stated in the prompt
+Anti-drift instructions are included with at least one concrete example
+Agent persona is scoped — "You are NOT a general assistant"
+Completion condition is defined
+Application layer
+Tangent detection runs before the LLM call (not inside it)
+Each step has a typed validate() function
+Step counter only increments on validate() success
+getNextStep() handles all conditional branching logic
+State object is serialised and injected into every prompt
+redirectCount is tracked for analytics and escalation
+UX
+Progress indicator shows [Question N of Total] on every agent turn
+Quick reply suggestions provided where answer space is bounded
+Invalid answer handling re-asks with the hint text, not a generic error
+Form output is visually separate from conversation (live preview)
+8. Mechanism Comparison
+Use this table to decide which mechanisms to implement for your use case:
+9. Advanced: Multi-Agent Architecture
+For complex forms or high-stakes data collection, split responsibility across two agents:
+With this architecture, drift is structurally impossible — each agent has a scoped job and cannot wander into another agent's domain.
+10. Quick Reference
+—  End of document  —
+OCTO FOR BCC CONFIGURATION
+Design & Implementation Guide
+A methodology for building reliable, drift-proof conversational form agents
+Failure Mode | Description
+Topic drift | The agent answers unrelated questions the user asks mid-form, losing track of the current step.
+State amnesia | Without explicit state management, the model forgets which question it was on — especially in long conversations.
+Premature completion | The agent interprets a partial answer as sufficient and skips required fields.
+Key Insight
+The model has no persistent memory between turns. Every response is generated fresh from the conversation history. Any drift or state loss happens because the application layer didn't inject the current state explicitly.
+// Pseudo-code: system prompt template
+SYSTEM_PROMPT = `
+  You are a form-filling agent. Your ONLY job is to collect
+  answers to the form questions below, one at a time.
+
+  CURRENT STATE:
+  - Current step: {currentStep} of {totalSteps}
+  - Answers collected so far: {collectedAnswers}
+  - Steps remaining: {pendingSteps}
+
+  RULES:
+  - Ask ONLY the question for step {currentStep}
+  - Do NOT advance until the user gives a valid answer
+  - If the user goes off-topic, redirect in one sentence
+`
+Why this works
+The model cannot lose track of state because you are re-declaring it on every API call. The conversation history provides context; the injected state provides ground truth.
+// Each step has a validator function
+const steps = [
+  {
+    id: 1,
+    question: "Should engagement icons be shown? (yes/no)",
+    validate: (input) => {
+      const v = input.toLowerCase();
+      if (v.includes('yes') || v.includes('on'))  return { valid: true, value: true };
+      if (v.includes('no')  || v.includes('off')) return { valid: true, value: false };
+      return { valid: false }; // triggers re-ask
+    }
+  },
+  // ... more steps
+]
+You are NOT a general assistant.
+You are a form-collection agent with one job: collect answers
+to {totalSteps} questions in order.
+
+If the user asks ANYTHING unrelated to the current question:
+  1. Respond in ONE sentence maximum to acknowledge
+  2. Immediately redirect: "Let's get back to the form — [repeat question]"
+  3. NEVER answer the tangential question in depth
+
+Example of correct handling:
+  User: "What's the weather like?"
+  Agent: "Happy to chat later! For now — [Question 2 of 5]: What is your company name?"
+Pro tip
+Two or three concrete few-shot examples in the prompt outperform a long list of rules. Models follow demonstrated patterns more reliably than abstract instructions.
+const TANGENT_PATTERNS = [
+  /weather|news|sports|joke|story|recipe/i,
+  /what is|tell me about|explain|help me with/i,
+  /who are you|what can you do/i,
+  /thanks|bye|hello|good morning/i
+];
+
+function isTangent(input) {
+  return TANGENT_PATTERNS.some(p => p.test(input));
+}
+
+// In your message handler:
+if (isTangent(userInput)) {
+  redirectCount++;
+  return agentRedirectResponse(currentStep); // do NOT advance state
+}
+{
+  "currentStep": 2,
+  "totalSteps": 5,
+  "answers": {
+    "1": "John Smith",
+    "2": null
+  },
+  "redirectCount": 1,
+  "conditionalSkips": [],
+  "done": false
+}
+Field | Purpose
+currentStep | The single source of truth for where the agent is. Injected into every system prompt.
+totalSteps | May differ from your static step count if conditional branching is active.
+answers | Map of step ID to collected value. Injected so the model can reference prior answers.
+redirectCount | Useful for analytics and for triggering escalation after N redirects.
+conditionalSkips | Steps to skip based on prior answers (e.g. skip Step 3 if Step 1 was 'No').
+done | Terminal flag. Once true, all input is ignored.
+function getNextStep(currentStep, answers) {
+  if (currentStep === 1 && answers[1] === false) {
+    return 'DONE'; // Skip all remaining steps
+  }
+  if (currentStep === 2 && !answers[2].includes('Octo')) {
+    return 4; // Skip step 3 (Octo-only)
+  }
+  return currentStep + 1;
+}
+Design principle
+Conditional logic belongs in your code, not in the model's reasoning. If you rely on the model to decide which step to skip, you introduce a new category of drift: logic drift.
+{
+  id: number,              // Unique step identifier
+  question: string,        // Exact text the agent asks
+  hint: string,            // Re-ask hint when validation fails
+  inputType: "text"        // text | boolean | multiselect | rank | number
+           | "boolean"
+           | "multiselect"
+           | "rank"
+           | "number",
+  options: string[],       // For multiselect/rank steps only
+  required: boolean,       // Whether step can be skipped
+  condition: function,     // (answers) => boolean — show this step?
+  validate: function,      // (input) => { valid: boolean, value: any }
+  quickReplies: string[]   // Suggested responses shown to user (optional)
+}
+You are a form-filling agent. Your ONLY purpose is to collect
+answers to a {totalSteps}-question form, one question at a time.
+
+=== CURRENT STATE ===
+Current step: {currentStep} of {totalSteps}
+Current question: {currentQuestion}
+Answers collected: {collectedAnswers}
+
+=== RULES ===
+1. Ask ONLY the current question. Do not ask multiple at once.
+2. Do not advance to the next step until the user gives a valid answer.
+3. If the user's answer is unclear, ask for clarification — do not guess.
+4. If the user goes off-topic, acknowledge in one sentence and redirect.
+5. Always show progress: [Question {n} of {total}] before each question.
+6. You are NOT a general assistant. Decline all unrelated requests politely.
+
+=== TANGENT HANDLING ===
+Correct pattern: "Got it! Let's get back to the form —
+[Question {n} of {total}]: {currentQuestion}"
+
+=== COMPLETION ===
+When all steps are complete, summarise all answers and thank the user.
+Do not ask any additional questions after the form is complete.
+Mechanism | Reliability | Implementation Cost
+State injection every turn | Very High | Low — add to system prompt builder
+Typed validation layer | Very High | Low — one function per step
+Anti-drift prompt instructions | Medium-High | Low — copy template from Section 6
+Few-shot redirect examples | Medium-High | Low — 2–3 examples in prompt
+Application-side tangent detection | High | Low — regex pattern list
+Conditional branching in code | Very High | Medium — getNextStep() function
+Multi-agent architecture | Very High | High — separate controller + responder agents
+Practical recommendation
+For most use cases, combine state injection + typed validation + anti-drift prompt + tangent detection. This handles ~90% of drift scenarios without the overhead of a full multi-agent architecture. Add multi-agent only when form logic is highly complex or when errors have significant real-world consequences.
+Agent | Responsibility
+Controller agent | Owns the state machine. Decides which step is active, validates answers, handles branching. Never exposed to the user directly.
+Responder agent | Handles only the current step. Receives a narrow context window with a single question. Generates natural-sounding responses.
+FAQ handler (optional) | A third agent that handles tangential questions and returns a flag to bring the user back. Keeps the responder agent focused.
+Symptom | Root Cause + Fix
+Agent forgets which step it's on | State not injected every turn. Add state to system prompt on each API call.
+Agent answers off-topic questions | Missing anti-drift instructions or tangent detection. Add both.
+Agent accepts invalid/empty answers | No validation layer. Add validate() to each step.
+Agent skips required steps | Conditional logic inside the prompt. Move all branching to getNextStep() in code.
+Agent re-asks already-answered questions | Collected answers not included in injected state. Add answers map to prompt.
+Agent completes form prematurely | Done condition triggered too early. Add explicit terminal flag and check all steps.

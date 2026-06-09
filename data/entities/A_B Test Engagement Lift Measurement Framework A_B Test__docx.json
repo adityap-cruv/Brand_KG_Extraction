@@ -1,0 +1,975 @@
+{
+  "source_doc": "A_B Test Engagement Lift Measurement Framework A_B Test",
+  "entities": [
+    {
+      "name": "Engagement Lift Measurement Framework",
+      "bucket": "Product",
+      "type": "Framework",
+      "aliases": [
+        "A/B Test Framework",
+        "Engagement Lift A/B Test"
+      ],
+      "description": "An A/B testing framework designed to measure the impact of in-stream ads on engagement for MCC videos distributed through the Genuin carousel, comparing monetization gains against engagement degradation."
+    },
+    {
+      "name": "Genuin Carousel",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "Carousel"
+      ],
+      "description": "A Genuin-hosted placement on partner sites that displays MCC videos and serves as the unit of measurement for impressions, clicks, and video starts in the experiment."
+    },
+    {
+      "name": "MCC Videos",
+      "bucket": "Product",
+      "type": "Content",
+      "aliases": [
+        "MCC Video Content",
+        "Genuin-hosted MCC videos"
+      ],
+      "description": "Video content uploaded by MCC to Genuin and distributed via the Genuin carousel, serving as the content pool tested for ad-supported vs no-ads engagement."
+    },
+    {
+      "name": "MCC",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Content partner that uploads videos to Genuin and places the Genuin carousel on its site; the business stakeholder whose engagement and monetization goals shape the test thresholds."
+    },
+    {
+      "name": "In-Stream Ads",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "VAST In-Stream Ads"
+      ],
+      "description": "Pre-roll or mid-roll ads delivered inside MCC videos via VAST requests in the Treatment variant of the test."
+    },
+    {
+      "name": "Control Variant (No Ads)",
+      "bucket": "Product",
+      "type": "Variant",
+      "aliases": [
+        "No Ads",
+        "Control"
+      ],
+      "description": "Experiment arm where the player does not send a VAST request and content starts immediately when the user plays a video."
+    },
+    {
+      "name": "Treatment Variant (Ads)",
+      "bucket": "Product",
+      "type": "Variant",
+      "aliases": [
+        "Ads Variant",
+        "Treatment"
+      ],
+      "description": "Experiment arm where the player issues a VAST request on play and serves an in-stream ad before or during content when fill is available."
+    },
+    {
+      "name": "VAST",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "VAST Protocol",
+        "VAST Request"
+      ],
+      "description": "Video Ad Serving Template protocol used by the Genuin player to request and render in-stream ads from the ad server."
+    },
+    {
+      "name": "Ad Server",
+      "bucket": "Engineering",
+      "type": "System",
+      "aliases": [],
+      "description": "Backend system that responds to VAST requests with ad creatives and is the source for fill rate, response time, and creative metadata."
+    },
+    {
+      "name": "Genuin Video Player",
+      "bucket": "Engineering",
+      "type": "Component",
+      "aliases": [
+        "Player"
+      ],
+      "description": "Client player that loads videos, fires VAST requests, plays ads and content, and emits the experiment's tracking events such as video_start, content_start, and ad_impression."
+    },
+    {
+      "name": "Revenue per Eligible Session",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [
+        "Revenue/Session"
+      ],
+      "description": "Primary monetization KPI defined as total ad revenue divided by eligible sessions, used to assess the commercial impact of enabling in-stream ads."
+    },
+    {
+      "name": "Average Watch Time per Eligible Session",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [
+        "Avg Watch Time/Session",
+        "Watch Time per Session"
+      ],
+      "description": "Primary engagement KPI defined as total content watch time divided by eligible sessions, capturing actual consumption and indirect ad friction."
+    },
+    {
+      "name": "Completion Rate",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Guardrail engagement KPI equal to content_complete divided by content_start, monitored to ensure ads do not collapse video completion."
+    },
+    {
+      "name": "Content Start Rate",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Funnel KPI equal to content_start divided by video_start; isolates how often actual editorial content begins after a play attempt."
+    },
+    {
+      "name": "Carousel CTR",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [
+        "Carousel Click-Through Rate"
+      ],
+      "description": "Funnel KPI equal to carousel item clicks divided by carousel impressions, measuring upstream interest in the carousel."
+    },
+    {
+      "name": "Video Start Rate",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Funnel KPI equal to video_start divided by carousel_impression, capturing how often carousel views convert into play attempts."
+    },
+    {
+      "name": "Ad Request Rate",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Ad funnel KPI equal to ad_request divided by video_start, indicating how often eligible plays trigger a VAST call."
+    },
+    {
+      "name": "Ad Fill Rate",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [
+        "Fill Rate"
+      ],
+      "description": "Ad funnel KPI equal to filled ad_response divided by ad_request, reflecting ad server supply for the test inventory."
+    },
+    {
+      "name": "Ad Impression Rate",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Ad funnel KPI equal to ad_impressions divided by video_starts, showing how often a video start produces a valid ad exposure."
+    },
+    {
+      "name": "Ad Completion Rate",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Ad KPI equal to ad_complete divided by ad_start, measuring how often started ads play to completion."
+    },
+    {
+      "name": "Ad Error Rate",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Quality KPI equal to ad_error divided by ad_request, used as a technical guardrail for ad delivery health."
+    },
+    {
+      "name": "Revenue per Content Start",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Monetization KPI equal to total ad revenue divided by content_start, isolating revenue per actual content consumption event."
+    },
+    {
+      "name": "eCPM per 1,000 Eligible Sessions",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [
+        "eCPM"
+      ],
+      "description": "Monetization KPI computed as (total ad revenue / eligible sessions) \u00d7 1000, expressing revenue intensity per thousand sessions."
+    },
+    {
+      "name": "Videos per Session",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [],
+      "description": "Engagement KPI equal to total content starts divided by eligible sessions, capturing breadth of consumption per visit."
+    },
+    {
+      "name": "Exit Rate after Play Start",
+      "bucket": "Business",
+      "type": "Metric",
+      "aliases": [
+        "Exit Rate after Play Attempt"
+      ],
+      "description": "Guardrail engagement metric equal to video_exit after video_start divided by video_start, flagging abandonment driven by ad friction."
+    },
+    {
+      "name": "Lift Formula",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Standard A/B readout calculation Lift % = ((Treatment / Control) - 1) \u00d7 100, applied to revenue, watch time, and completion KPIs."
+    },
+    {
+      "name": "Decision Rule",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [
+        "Recommended Decision Rule"
+      ],
+      "description": "Framework rule that launches Ads broadly only if revenue/session lifts significantly while watch time, completion, and quality stay within acceptable thresholds."
+    },
+    {
+      "name": "Event Tracking Schema",
+      "bucket": "Engineering",
+      "type": "Schema",
+      "aliases": [
+        "Tracking Schema"
+      ],
+      "description": "Practical event model defining identity join keys (experiment_id, variant_id, session_id, etc.) and core carousel, player, ad, and revenue events for the experiment."
+    },
+    {
+      "name": "carousel_impression",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when the Genuin carousel is rendered or viewable per the agreed measurement rule, carrying carousel, placement, page, and viewability properties."
+    },
+    {
+      "name": "carousel_item_click",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when a user clicks or taps a video tile in the carousel, with video_id, item_position, content_category, and thumbnail_type properties."
+    },
+    {
+      "name": "video_player_load",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when the player initializes, carrying video_id, player_id, autoplay, muted, and player_size properties."
+    },
+    {
+      "name": "video_start",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when playback starts from user intent, with start_type indicating click, autoplay, or similar trigger."
+    },
+    {
+      "name": "content_start",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when actual editorial content begins; distinct from video_start in ad-supported flows so engagement loss is not hidden."
+    },
+    {
+      "name": "content_progress",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired at 25%, 50%, and 75% milestones with progress_pct and watch_time_seconds properties."
+    },
+    {
+      "name": "content_complete",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when content reaches the completion rule, carrying watch_time_seconds and completion_pct."
+    },
+    {
+      "name": "video_exit",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when a user exits the player or page before completion, with exit_reason and watch_time_seconds."
+    },
+    {
+      "name": "ad_request",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when a VAST call is sent, carrying ad_server, ad_unit_id, request_id, ad_position, and timeout_setting_ms."
+    },
+    {
+      "name": "ad_response",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when the ad server responds, with fill_status, creative_id, advertiser, campaign_id, and response_time_ms."
+    },
+    {
+      "name": "ad_impression",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when an ad impression is validly served, carrying creative_id, campaign_id, ad_duration_seconds, and skippable flags."
+    },
+    {
+      "name": "ad_start",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when ad playback begins for an in-stream ad in the Treatment variant."
+    },
+    {
+      "name": "ad_complete",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when an in-stream ad finishes, carrying ad_watch_time_seconds."
+    },
+    {
+      "name": "ad_skip",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when a user skips a skippable ad, with skip_offset_seconds."
+    },
+    {
+      "name": "ad_error",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired on ad playback or render failure, with error_code and error_message properties."
+    },
+    {
+      "name": "ad_revenue",
+      "bucket": "Engineering",
+      "type": "Event",
+      "aliases": [],
+      "description": "Event fired when revenue is attributed, carrying revenue_amount, currency, pricing_model, creative_id, and campaign_id."
+    },
+    {
+      "name": "Experiment Guardrails",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [
+        "Guardrails"
+      ],
+      "description": "Rules that exclude bots, internal QA traffic, broken placements, sessions with missing assignment or mid-session variant flips, and require sticky assignment and parallel run dates."
+    },
+    {
+      "name": "Segmentation Plan",
+      "bucket": "Audience",
+      "type": "Process",
+      "aliases": [],
+      "description": "Plan to cut the analysis by device, geography, traffic source, page template, new vs returning users, placement position, content category, player size, and connection quality."
+    },
+    {
+      "name": "New vs Returning Users",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [
+        "New vs Returning Visitor"
+      ],
+      "description": "User segment dimension used in the analysis to assess differential ad friction impact between new and returning visitors."
+    },
+    {
+      "name": "Device Segment",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [
+        "Device Type"
+      ],
+      "description": "Mobile, desktop, and tablet split used to compare ad friction impact across device classes."
+    },
+    {
+      "name": "Geography Segment",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [
+        "Country Segment"
+      ],
+      "description": "Geographic cut (country) applied to engagement and revenue comparisons across variants."
+    },
+    {
+      "name": "Traffic Source Segment",
+      "bucket": "Audience",
+      "type": "Segment",
+      "aliases": [],
+      "description": "Cut of traffic by acquisition source used to detect source-specific ad friction or monetization patterns."
+    },
+    {
+      "name": "Dashboard Layout",
+      "bucket": "Marketing",
+      "type": "Dashboard",
+      "aliases": [
+        "Recommended Dashboard"
+      ],
+      "description": "Recommended reporting layout with Executive Summary, Funnel View, Segment View, and Quality View tiles for the A/B readout."
+    },
+    {
+      "name": "Executive Summary View",
+      "bucket": "Marketing",
+      "type": "Report",
+      "aliases": [],
+      "description": "Top-level dashboard tile showing revenue/session, watch time/session, completion rate, net lift %, and decision status across variants."
+    },
+    {
+      "name": "Funnel View",
+      "bucket": "Marketing",
+      "type": "Report",
+      "aliases": [],
+      "description": "Dashboard view tracing impression \u2192 click \u2192 video start \u2192 ad start \u2192 content start \u2192 completion across variants."
+    },
+    {
+      "name": "Quality View",
+      "bucket": "Marketing",
+      "type": "Report",
+      "aliases": [],
+      "description": "Dashboard view monitoring ad errors, buffering, timeout rate, and player failures as technical guardrails."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Genuin Carousel",
+      "type": "MEASURES",
+      "description": "The framework measures the impact of in-stream ads on engagement for videos served through the Genuin carousel."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "MCC Videos",
+      "type": "MEASURES",
+      "description": "The test specifically evaluates engagement and monetization tradeoffs for MCC video content."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "MCC",
+      "type": "RUN_BY",
+      "description": "The framework's thresholds and business goals are set in collaboration with MCC as the content partner."
+    },
+    {
+      "source": "MCC",
+      "target": "MCC Videos",
+      "type": "CREATED",
+      "description": "MCC uploads its own video content that is distributed through the Genuin carousel."
+    },
+    {
+      "source": "MCC",
+      "target": "Genuin Carousel",
+      "type": "USES",
+      "description": "MCC places the Genuin carousel on its site to surface MCC videos to its audience."
+    },
+    {
+      "source": "Genuin Carousel",
+      "target": "MCC Videos",
+      "type": "DISTRIBUTES",
+      "description": "The carousel surfaces MCC-hosted videos to end users on partner sites."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Control Variant (No Ads)",
+      "type": "INCLUDES",
+      "description": "Defines the No Ads control arm where playback begins without any VAST request."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Treatment Variant (Ads)",
+      "type": "INCLUDES",
+      "description": "Defines the Ads treatment arm where a VAST request is fired on play to serve in-stream ads."
+    },
+    {
+      "source": "Treatment Variant (Ads)",
+      "target": "In-Stream Ads",
+      "type": "FEATURES",
+      "description": "The treatment arm enables in-stream ads before or during MCC video content."
+    },
+    {
+      "source": "Treatment Variant (Ads)",
+      "target": "VAST",
+      "type": "USES",
+      "description": "Treatment variant relies on VAST requests issued by the player to fetch ads."
+    },
+    {
+      "source": "In-Stream Ads",
+      "target": "VAST",
+      "type": "DEPENDS_ON",
+      "description": "In-stream ads are delivered through VAST protocol requests and responses."
+    },
+    {
+      "source": "VAST",
+      "target": "Ad Server",
+      "type": "INTEGRATES_WITH",
+      "description": "VAST requests are sent to and answered by the ad server."
+    },
+    {
+      "source": "Genuin Video Player",
+      "target": "VAST",
+      "type": "USES",
+      "description": "The Genuin player issues VAST requests on play when ads are enabled."
+    },
+    {
+      "source": "Genuin Video Player",
+      "target": "In-Stream Ads",
+      "type": "FEATURES",
+      "description": "The player renders pre-roll or mid-roll in-stream ads inside MCC videos."
+    },
+    {
+      "source": "Genuin Video Player",
+      "target": "Event Tracking Schema",
+      "type": "DEPENDS_ON",
+      "description": "The player emits the carousel, content, ad, and revenue events defined by the tracking schema."
+    },
+    {
+      "source": "Genuin Carousel",
+      "target": "Genuin Video Player",
+      "type": "INTEGRATES_WITH",
+      "description": "Carousel item clicks instantiate the Genuin video player to begin playback."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "carousel_impression",
+      "type": "INCLUDES",
+      "description": "Schema defines carousel_impression as the carousel render/viewability event."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "carousel_item_click",
+      "type": "INCLUDES",
+      "description": "Schema defines carousel_item_click for user clicks/taps on carousel video tiles."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "video_player_load",
+      "type": "INCLUDES",
+      "description": "Schema defines video_player_load for player initialization."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "video_start",
+      "type": "INCLUDES",
+      "description": "Schema defines video_start as the user-intent playback event."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "content_start",
+      "type": "INCLUDES",
+      "description": "Schema defines content_start to mark when editorial content actually begins."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "content_progress",
+      "type": "INCLUDES",
+      "description": "Schema defines content_progress milestones at 25/50/75%."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "content_complete",
+      "type": "INCLUDES",
+      "description": "Schema defines content_complete for content completion."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "video_exit",
+      "type": "INCLUDES",
+      "description": "Schema defines video_exit for early exits with reason and watch time."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "ad_request",
+      "type": "INCLUDES",
+      "description": "Schema defines ad_request to mark outgoing VAST calls."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "ad_response",
+      "type": "INCLUDES",
+      "description": "Schema defines ad_response with fill status and creative metadata."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "ad_impression",
+      "type": "INCLUDES",
+      "description": "Schema defines ad_impression for validly served ad exposures."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "ad_start",
+      "type": "INCLUDES",
+      "description": "Schema defines ad_start for ad playback initiation."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "ad_complete",
+      "type": "INCLUDES",
+      "description": "Schema defines ad_complete for ad finish events."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "ad_skip",
+      "type": "INCLUDES",
+      "description": "Schema defines ad_skip for skip interactions on skippable ads."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "ad_error",
+      "type": "INCLUDES",
+      "description": "Schema defines ad_error for ad playback or render failures."
+    },
+    {
+      "source": "Event Tracking Schema",
+      "target": "ad_revenue",
+      "type": "INCLUDES",
+      "description": "Schema defines ad_revenue for revenue attribution events."
+    },
+    {
+      "source": "Revenue per Eligible Session",
+      "target": "ad_revenue",
+      "type": "DEPENDS_ON",
+      "description": "Revenue/session is computed from ad_revenue events aggregated over eligible sessions."
+    },
+    {
+      "source": "Average Watch Time per Eligible Session",
+      "target": "content_progress",
+      "type": "DEPENDS_ON",
+      "description": "Average watch time is derived from content_progress and related watch-time signals over eligible sessions."
+    },
+    {
+      "source": "Completion Rate",
+      "target": "content_complete",
+      "type": "DEPENDS_ON",
+      "description": "Completion rate is computed from content_complete events relative to content_start."
+    },
+    {
+      "source": "Completion Rate",
+      "target": "content_start",
+      "type": "DEPENDS_ON",
+      "description": "Completion rate uses content_start as its denominator."
+    },
+    {
+      "source": "Content Start Rate",
+      "target": "content_start",
+      "type": "DEPENDS_ON",
+      "description": "Content Start Rate is content_start divided by video_start."
+    },
+    {
+      "source": "Content Start Rate",
+      "target": "video_start",
+      "type": "DEPENDS_ON",
+      "description": "Content Start Rate uses video_start as its denominator."
+    },
+    {
+      "source": "Carousel CTR",
+      "target": "carousel_item_click",
+      "type": "DEPENDS_ON",
+      "description": "Carousel CTR uses carousel_item_click as its numerator."
+    },
+    {
+      "source": "Carousel CTR",
+      "target": "carousel_impression",
+      "type": "DEPENDS_ON",
+      "description": "Carousel CTR uses carousel_impression as its denominator."
+    },
+    {
+      "source": "Video Start Rate",
+      "target": "video_start",
+      "type": "DEPENDS_ON",
+      "description": "Video Start Rate uses video_start as its numerator over carousel impressions."
+    },
+    {
+      "source": "Video Start Rate",
+      "target": "carousel_impression",
+      "type": "DEPENDS_ON",
+      "description": "Video Start Rate uses carousel_impression as its denominator."
+    },
+    {
+      "source": "Ad Request Rate",
+      "target": "ad_request",
+      "type": "DEPENDS_ON",
+      "description": "Ad Request Rate uses ad_request events over video_starts."
+    },
+    {
+      "source": "Ad Fill Rate",
+      "target": "ad_response",
+      "type": "DEPENDS_ON",
+      "description": "Ad Fill Rate uses filled ad_response events as numerator."
+    },
+    {
+      "source": "Ad Fill Rate",
+      "target": "ad_request",
+      "type": "DEPENDS_ON",
+      "description": "Ad Fill Rate uses ad_request as its denominator."
+    },
+    {
+      "source": "Ad Impression Rate",
+      "target": "ad_impression",
+      "type": "DEPENDS_ON",
+      "description": "Ad Impression Rate uses ad_impression events over video_starts."
+    },
+    {
+      "source": "Ad Completion Rate",
+      "target": "ad_complete",
+      "type": "DEPENDS_ON",
+      "description": "Ad Completion Rate uses ad_complete over ad_start."
+    },
+    {
+      "source": "Ad Completion Rate",
+      "target": "ad_start",
+      "type": "DEPENDS_ON",
+      "description": "Ad Completion Rate uses ad_start as its denominator."
+    },
+    {
+      "source": "Ad Error Rate",
+      "target": "ad_error",
+      "type": "DEPENDS_ON",
+      "description": "Ad Error Rate uses ad_error events over ad_request."
+    },
+    {
+      "source": "Revenue per Content Start",
+      "target": "ad_revenue",
+      "type": "DEPENDS_ON",
+      "description": "Revenue per Content Start aggregates ad_revenue over content_start events."
+    },
+    {
+      "source": "Revenue per Content Start",
+      "target": "content_start",
+      "type": "DEPENDS_ON",
+      "description": "Revenue per Content Start uses content_start as its denominator."
+    },
+    {
+      "source": "eCPM per 1,000 Eligible Sessions",
+      "target": "Revenue per Eligible Session",
+      "type": "RELATES_TO",
+      "description": "eCPM per 1,000 eligible sessions is computed by scaling revenue per eligible session by 1000."
+    },
+    {
+      "source": "Exit Rate after Play Start",
+      "target": "video_exit",
+      "type": "DEPENDS_ON",
+      "description": "Exit Rate after Play Start uses video_exit events following video_start."
+    },
+    {
+      "source": "Videos per Session",
+      "target": "content_start",
+      "type": "DEPENDS_ON",
+      "description": "Videos per Session is computed as total content_start events divided by eligible sessions."
+    },
+    {
+      "source": "Decision Rule",
+      "target": "Revenue per Eligible Session",
+      "type": "DEPENDS_ON",
+      "description": "The decision rule launches ads only if revenue per eligible session lifts significantly."
+    },
+    {
+      "source": "Decision Rule",
+      "target": "Average Watch Time per Eligible Session",
+      "type": "DEPENDS_ON",
+      "description": "The decision rule requires that watch time per eligible session remain within an acceptable decline threshold."
+    },
+    {
+      "source": "Decision Rule",
+      "target": "Completion Rate",
+      "type": "DEPENDS_ON",
+      "description": "The decision rule requires that completion rate not materially collapse."
+    },
+    {
+      "source": "Decision Rule",
+      "target": "Content Start Rate",
+      "type": "DEPENDS_ON",
+      "description": "The decision rule monitors content start rate to ensure no material drop-off in actual content consumption."
+    },
+    {
+      "source": "Lift Formula",
+      "target": "Revenue per Eligible Session",
+      "type": "RELATES_TO",
+      "description": "Lift Formula is applied to revenue per eligible session to compute monetization lift."
+    },
+    {
+      "source": "Lift Formula",
+      "target": "Average Watch Time per Eligible Session",
+      "type": "RELATES_TO",
+      "description": "Lift Formula is applied to average watch time per eligible session to compute engagement lift or drop."
+    },
+    {
+      "source": "Lift Formula",
+      "target": "Completion Rate",
+      "type": "RELATES_TO",
+      "description": "Lift Formula is applied to completion rate to compute completion lift or drop."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Revenue per Eligible Session",
+      "type": "INCLUDES",
+      "description": "Defines Revenue per Eligible Session as the primary monetization KPI."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Average Watch Time per Eligible Session",
+      "type": "INCLUDES",
+      "description": "Defines Average Watch Time per Eligible Session as the primary engagement KPI."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Completion Rate",
+      "type": "INCLUDES",
+      "description": "Includes Completion Rate as a guardrail KPI."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Content Start Rate",
+      "type": "INCLUDES",
+      "description": "Includes Content Start Rate as a guardrail KPI."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Exit Rate after Play Start",
+      "type": "INCLUDES",
+      "description": "Includes Exit Rate after Play Start as a guardrail KPI."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Carousel CTR",
+      "type": "INCLUDES",
+      "description": "Includes Carousel CTR among secondary funnel metrics."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Video Start Rate",
+      "type": "INCLUDES",
+      "description": "Includes Video Start Rate among secondary funnel metrics."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Ad Request Rate",
+      "type": "INCLUDES",
+      "description": "Includes Ad Request Rate among ad funnel metrics."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Ad Fill Rate",
+      "type": "INCLUDES",
+      "description": "Includes Ad Fill Rate among ad funnel metrics."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Ad Impression Rate",
+      "type": "INCLUDES",
+      "description": "Includes Ad Impression Rate among ad funnel metrics."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Ad Completion Rate",
+      "type": "INCLUDES",
+      "description": "Includes Ad Completion Rate among ad funnel metrics."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Ad Error Rate",
+      "type": "INCLUDES",
+      "description": "Includes Ad Error Rate as a quality KPI."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Videos per Session",
+      "type": "INCLUDES",
+      "description": "Includes Videos per Session as a secondary engagement metric."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Revenue per Content Start",
+      "type": "INCLUDES",
+      "description": "Includes Revenue per Content Start as a secondary monetization metric."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "eCPM per 1,000 Eligible Sessions",
+      "type": "INCLUDES",
+      "description": "Includes eCPM per 1,000 Eligible Sessions as a monetization KPI."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Event Tracking Schema",
+      "type": "DEPENDS_ON",
+      "description": "The framework relies on the tracking schema to produce the events feeding its KPIs."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Experiment Guardrails",
+      "type": "INCLUDES",
+      "description": "Defines exclusion and integrity guardrails that protect the validity of the comparison."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Segmentation Plan",
+      "type": "INCLUDES",
+      "description": "Specifies cuts of analysis by device, geography, traffic source, page template, and more."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Decision Rule",
+      "type": "INCLUDES",
+      "description": "Specifies the recommended decision rule for launching, iterating, or holding ads."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Lift Formula",
+      "type": "INCLUDES",
+      "description": "Defines the Lift % formula used in readouts."
+    },
+    {
+      "source": "Engagement Lift Measurement Framework",
+      "target": "Dashboard Layout",
+      "type": "INCLUDES",
+      "description": "Recommends the dashboard layout used to communicate the readout."
+    },
+    {
+      "source": "Dashboard Layout",
+      "target": "Executive Summary View",
+      "type": "INCLUDES",
+      "description": "The dashboard layout includes an Executive Summary tile for top-line KPIs and decision status."
+    },
+    {
+      "source": "Dashboard Layout",
+      "target": "Funnel View",
+      "type": "INCLUDES",
+      "description": "The dashboard layout includes a Funnel View tracing impression-to-completion."
+    },
+    {
+      "source": "Dashboard Layout",
+      "target": "Quality View",
+      "type": "INCLUDES",
+      "description": "The dashboard layout includes a Quality View for ad and player errors and buffering."
+    },
+    {
+      "source": "Segmentation Plan",
+      "target": "Device Segment",
+      "type": "INCLUDES",
+      "description": "Segmentation includes device type cuts (mobile/desktop/tablet)."
+    },
+    {
+      "source": "Segmentation Plan",
+      "target": "Geography Segment",
+      "type": "INCLUDES",
+      "description": "Segmentation includes geography (country) cuts."
+    },
+    {
+      "source": "Segmentation Plan",
+      "target": "Traffic Source Segment",
+      "type": "INCLUDES",
+      "description": "Segmentation includes traffic source cuts."
+    },
+    {
+      "source": "Segmentation Plan",
+      "target": "New vs Returning Users",
+      "type": "INCLUDES",
+      "description": "Segmentation includes new vs returning user cuts."
+    },
+    {
+      "source": "Experiment Guardrails",
+      "target": "Event Tracking Schema",
+      "type": "DEPENDS_ON",
+      "description": "Guardrails rely on tracking schema fields like experiment_id and variant_id to detect missing assignment or mid-session flips."
+    }
+  ],
+  "_src_hash": "6f53053be30d5da1f77460fe051b317dbdc1213f69ce0bda9071d922f20975b1",
+  "_skill_sig": "4edd28021f3312b1"
+}

@@ -1,0 +1,431 @@
+{
+  "source_doc": "Genuin x iHeart - Monetize O&O, Audience Extension Framework",
+  "entities": [
+    {
+      "name": "iHeart",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "iHeartMedia"
+      ],
+      "description": "Established brand partner on the Genuin Network. Owns Triton TAP (its SSP) and the targeting decisioning across direct and programmatic execution in this integration."
+    },
+    {
+      "name": "PMC",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "pmc.com"
+      ],
+      "description": "Publisher domain (pmc.com) onboarded into iHeart's extended network using Genuin-generated Web SDK tags under Option A."
+    },
+    {
+      "name": "MCC",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Example publisher in Genuin's existing brand network used under Option B (Offsite Audience Extension)."
+    },
+    {
+      "name": "TED",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Example publisher in Genuin's existing brand network used under Option B (Offsite Audience Extension)."
+    },
+    {
+      "name": "LiveRamp",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Enterprise-grade third-party identity provider with deep integrations across publisher and advertiser ecosystems; preferred for programmatic audio identity resolution."
+    },
+    {
+      "name": "ID5",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Open, privacy-first identity solution with strong cookieless reach and wide DSP integration, listed as a third-party identity partner option."
+    },
+    {
+      "name": "Lotame",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "Panorama ID"
+      ],
+      "description": "Identity provider specialising in data collaboration with flexible matching for mid-market platforms."
+    },
+    {
+      "name": "UID 2.0",
+      "bucket": "Partnerships",
+      "type": "Identity",
+      "aliases": [
+        "Unified ID 2.0"
+      ],
+      "description": "Privacy-preserving universal ID \u2014 email-based pseudonymous identifier with growing publisher adoption \u2014 operated by The Trade Desk."
+    },
+    {
+      "name": "The Trade Desk",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [
+        "TTD"
+      ],
+      "description": "Operator of UID 2.0, the universal pseudonymous identifier referenced as a third-party identity option."
+    },
+    {
+      "name": "Triton TAP",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [
+        "Triton"
+      ],
+      "description": "iHeart-owned SSP that receives ad requests from Genuin SDK, packages signals into oRTB 2.x bid requests, runs the programmatic auction, and returns VAST audio creatives."
+    },
+    {
+      "name": "Beeswax",
+      "bucket": "Engineering",
+      "type": "Platform",
+      "aliases": [],
+      "description": "DSP / demand platform that applies its own targeting model on oRTB bid requests from Triton TAP and selects the winning audio creative."
+    },
+    {
+      "name": "oRTB 2.x",
+      "bucket": "Engineering",
+      "type": "Protocol",
+      "aliases": [
+        "OpenRTB 2.x"
+      ],
+      "description": "OpenRTB 2.x bid-request protocol used by Triton TAP to package contextual and device signals when sending demand requests to Beeswax."
+    },
+    {
+      "name": "VAST",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "VAST tag"
+      ],
+      "description": "Video Ad Serving Template format used to return the winning audio creative (with impression and click trackers) from Triton TAP back to Genuin SDK."
+    },
+    {
+      "name": "Ads.txt",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Publisher authorisation file whose entries iHeart manages for newly onboarded publisher domains under Option A."
+    },
+    {
+      "name": "Sellers.json",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Supply-chain transparency file whose entries iHeart manages for new publisher domains under Option A."
+    },
+    {
+      "name": "BYOA",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [
+        "Bring Your Own Algorithm"
+      ],
+      "description": "Direct-sponsorship targeting mode in which iHeart's proprietary algorithm replaces Genuin's default targeting and decisions on users to target using forwarded signals."
+    },
+    {
+      "name": "Identity Matching",
+      "bucket": "Engineering",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Framework for resolving Genuin-supplied non-PII matching signals (hashed device IDs, UA, truncated IP, geo, contextual signals, fingerprints) to iHeart user IDs either directly via Triton/Beeswax or via a third-party identity partner pre-mapping."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Client-side SDK that collects contextual/device signals from Genuin Placement, sends ad requests to Triton TAP, fetches video from Genuin BCC, and stitches video and audio at impression time."
+    },
+    {
+      "name": "Genuin BCC",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Brand Control Center",
+        "Video Post Serving Engine"
+      ],
+      "description": "Genuin's brand-side video upload and post-serving engine where iHeart manages its video library and from which Genuin SDK fetches video creatives at runtime."
+    },
+    {
+      "name": "Genuin Placement",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "On-page Genuin-powered placement that initialises in viewport, collects contextual and device signals, and renders the sponsored takeover."
+    },
+    {
+      "name": "Genuin Player",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [],
+      "description": "Runtime player that stitches abstract video assets with programmatic audio assets at impression time."
+    },
+    {
+      "name": "Sponsored Takeover",
+      "bucket": "Product",
+      "type": "Format",
+      "aliases": [
+        "Session Takeover",
+        "IAB Session Takeover"
+      ],
+      "description": "Highest-impact session-level placement that converts a Genuin-powered publisher feed into a fully branded experience; video is served from iHeart's creative library on Genuin and audio is served programmatically via Beeswax/Triton TAP."
+    },
+    {
+      "name": "Sponsored Post",
+      "bucket": "Product",
+      "type": "Format",
+      "aliases": [],
+      "description": "Ad format in scope for the Genuin x iHeart integration, alongside Sponsored Takeover and Programmatic Activation."
+    },
+    {
+      "name": "Programmatic InFeed",
+      "bucket": "Product",
+      "type": "Format",
+      "aliases": [],
+      "description": "Programmatic in-feed ad format identified as the primary format for the initial launch of the iHeart integration."
+    },
+    {
+      "name": "Web SDK",
+      "bucket": "Product",
+      "type": "Product",
+      "aliases": [
+        "Genuin Web SDK"
+      ],
+      "description": "Web tag/SDK variant generated by Genuin for iHeart to place on new publisher pages such as PMC to extend iHeart's network under Option A."
+    },
+    {
+      "name": "Genuin Network",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [
+        "Genuin Brand Partners"
+      ],
+      "description": "Genuin's existing network of publisher inventory and brand partners (e.g., MCC, TED) used to deliver iHeart's offsite audience extension without new publisher contracts."
+    },
+    {
+      "name": "Audience Extension",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [],
+      "description": "Commercial concept of extending iHeart's audience reach via Genuin's publisher inventory, executed through either Option A (publisher network expansion) or Option B (offsite extension)."
+    },
+    {
+      "name": "iHeart Network Expansion",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [
+        "Option A",
+        "Build Your Own Network"
+      ],
+      "description": "Execution model where iHeart uses Genuin-generated Web SDK tags to independently onboard new publisher domains (e.g., PMC), signing its own publisher agreements and managing Ads.txt/Sellers.json."
+    },
+    {
+      "name": "Offsite Audience Extension",
+      "bucket": "Business",
+      "type": "Concept",
+      "aliases": [
+        "Option B"
+      ],
+      "description": "Execution model where Genuin delivers iHeart's audience extension across Genuin's existing brand-partner network via a session-level sponsored takeover, with no new publisher contracts required."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Triton TAP",
+      "target": "iHeart",
+      "type": "OWNED_BY",
+      "description": "Triton TAP is iHeart's owned SSP that runs the programmatic auction for the integration."
+    },
+    {
+      "source": "Beeswax",
+      "target": "Triton TAP",
+      "type": "INTEGRATES_WITH",
+      "description": "Beeswax receives oRTB 2.x bid requests from Triton TAP and returns winning audio creatives back to it."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Triton TAP",
+      "type": "INTEGRATES_WITH",
+      "description": "Genuin SDK sends ad requests with collected signals to Triton TAP and receives VAST tags in response."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "Genuin BCC",
+      "type": "USES",
+      "description": "Genuin SDK sends a video fetch request to Genuin BCC and renders the returned video creative."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "VAST",
+      "type": "USES",
+      "description": "Genuin SDK consumes the VAST tag returned by Triton TAP to play the winning audio creative."
+    },
+    {
+      "source": "Beeswax",
+      "target": "oRTB 2.x",
+      "type": "USES",
+      "description": "Beeswax operates on oRTB 2.x bid requests packaged by Triton TAP."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Genuin SDK",
+      "type": "RUN_BY",
+      "description": "Genuin SDK stitches video and audio client-side and renders the sponsored takeover in the placement."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Triton TAP",
+      "type": "DEPENDS_ON",
+      "description": "The sponsored takeover relies on Triton TAP to run the audio auction and return VAST creative."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Beeswax",
+      "type": "DEPENDS_ON",
+      "description": "Beeswax provides the winning audio creative for the sponsored takeover."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Genuin BCC",
+      "type": "DEPENDS_ON",
+      "description": "Video creative for the sponsored takeover is served by Genuin BCC."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Genuin Player",
+      "type": "DEPENDS_ON",
+      "description": "Genuin Player performs runtime stitching of abstract video and programmatic audio assets for the takeover."
+    },
+    {
+      "source": "Web SDK",
+      "target": "Genuin SDK",
+      "type": "PART_OF",
+      "description": "The Web SDK tag is the web-delivery variant of the Genuin SDK stack used to onboard new publisher domains."
+    },
+    {
+      "source": "Genuin Placement",
+      "target": "Genuin SDK",
+      "type": "PART_OF",
+      "description": "Genuin Placement initialises in viewport and feeds collected signals into Genuin SDK."
+    },
+    {
+      "source": "iHeart Network Expansion",
+      "target": "PMC",
+      "type": "INCLUDES",
+      "description": "PMC (pmc.com) is given as the example new publisher domain onboarded under Option A."
+    },
+    {
+      "source": "Offsite Audience Extension",
+      "target": "MCC",
+      "type": "INCLUDES",
+      "description": "MCC is an example publisher in the Genuin network used under Option B."
+    },
+    {
+      "source": "Offsite Audience Extension",
+      "target": "TED",
+      "type": "INCLUDES",
+      "description": "TED is an example publisher in the Genuin network used under Option B."
+    },
+    {
+      "source": "Audience Extension",
+      "target": "iHeart Network Expansion",
+      "type": "INCLUDES",
+      "description": "iHeart Network Expansion (Option A) is one of the two audience-extension execution models."
+    },
+    {
+      "source": "Audience Extension",
+      "target": "Offsite Audience Extension",
+      "type": "INCLUDES",
+      "description": "Offsite Audience Extension (Option B) is one of the two audience-extension execution models."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "MCC",
+      "type": "INCLUDES",
+      "description": "MCC is part of Genuin's existing brand-partner network."
+    },
+    {
+      "source": "Genuin Network",
+      "target": "TED",
+      "type": "INCLUDES",
+      "description": "TED is part of Genuin's existing brand-partner network."
+    },
+    {
+      "source": "UID 2.0",
+      "target": "The Trade Desk",
+      "type": "OWNED_BY",
+      "description": "UID 2.0 is the universal pseudonymous identifier operated by The Trade Desk."
+    },
+    {
+      "source": "Identity Matching",
+      "target": "LiveRamp",
+      "type": "INCLUDES",
+      "description": "LiveRamp is listed as a preferred third-party identity partner for programmatic audio resolution."
+    },
+    {
+      "source": "Identity Matching",
+      "target": "ID5",
+      "type": "INCLUDES",
+      "description": "ID5 is listed as a privacy-first identity partner option for resolving Genuin signals."
+    },
+    {
+      "source": "Identity Matching",
+      "target": "Lotame",
+      "type": "INCLUDES",
+      "description": "Lotame (Panorama ID) is listed as an identity partner option for mid-market matching."
+    },
+    {
+      "source": "Identity Matching",
+      "target": "UID 2.0",
+      "type": "INCLUDES",
+      "description": "UID 2.0 is listed as a universal-ID identity partner option."
+    },
+    {
+      "source": "BYOA",
+      "target": "Identity Matching",
+      "type": "PART_OF",
+      "description": "BYOA is the direct-sponsorship targeting mode within the identity-matching framework where iHeart's algorithm performs all decisioning on Genuin-forwarded signals."
+    },
+    {
+      "source": "iHeart",
+      "target": "PMC",
+      "type": "HAS_AGREEMENT_WITH",
+      "description": "Under Option A, iHeart signs direct commercial agreements with new publisher domains such as PMC."
+    },
+    {
+      "source": "iHeart",
+      "target": "Beeswax",
+      "type": "USES",
+      "description": "iHeart relies on Beeswax to apply targeting and select winning audio creatives in programmatic execution."
+    },
+    {
+      "source": "iHeart",
+      "target": "Triton TAP",
+      "type": "USES",
+      "description": "iHeart uses its owned Triton TAP SSP to route demand and run the audio auction for the integration."
+    },
+    {
+      "source": "Programmatic InFeed",
+      "target": "Sponsored Takeover",
+      "type": "PART_OF",
+      "description": "Programmatic InFeed is the primary in-feed format launching alongside the Sponsored Takeover placement family."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Sponsored Takeover",
+      "type": "RELATES_TO",
+      "description": "Sponsored Post is grouped with Sponsored Takeover and Programmatic Activation as the ad formats in scope for the integration."
+    }
+  ],
+  "_src_hash": "a3572f6318f5bb099956e865e5cd9be6f2b266775a1cb504c64b73c6af419c75",
+  "_skill_sig": "4edd28021f3312b1"
+}

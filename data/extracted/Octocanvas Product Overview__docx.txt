@@ -1,0 +1,319 @@
+ˇ
+OCTOCANVAS
+Architecture & Product Overview
+Genuin Platform
+Table of Contents
+1.  Executive Summary3
+2.  Platform Overview: Octo Canvas4
+3.  Platform Architecture Diagram5
+4.  Module 1: Brand Control Center6
+5.  Module 2: Brand-Specific Demo Creation9
+6.  Module 3: Brand-Specific Generative Destinations12
+7.  Module 4: Brand-Specific Generative SDK Creation15
+8.  Context & Knowledge Architecture18
+9.  Security & Multi-Tenant Isolation21
+10.  Infrastructure & Deployment22
+11.  Observability & Monitoring23
+12.  Roles & Permissions24
+13.  Future Roadmap25
+1. Executive Summary
+Octocanvas is Genuin's AI-powered brand experience platform. It gives brands and their teams a unified workspace to build, preview, customize, and deploy digital experiences, from full web destinations to embedded video placements entirely through natural language prompting, without writing a single line of code.
+The platform is organized into four integrated modules that span the complete brand experience lifecycle:
+Brand Control Center: the master workspace where brand teams manage and evolve their prototype web experiences using an AI chat interface with full version control.
+Brand-Specific Demo Creation:  a rapid demo-generation engine that lets brands produce polished, shareable product demos by referencing a screenshot or a live URL, powered by brand knowledge from Maya.
+Brand-Specific Generative Destinations: a full web publishing system where brands generate and deploy production-ready web pages at their own URLs, using Genuin's component library or their own.
+Brand-Specific Generative SDK Creation: a tool for configuring and deploying Genuin's embeddable video placements across any web property, with AI-assisted customization and a real-time preview panel.
+All four modules share a common AI layer, Octo, which is context-aware, brand-specific, and powered by knowledge retrieved from Genuin's Maya system. Every interaction is grounded in the brand's own identity, content strategy, and platform configuration.
+2. Platform Overview, Octo Canvas
+WHAT IS OCTO CANVAS?
+Octo Canvas is the top-level product layer that houses all four modules. It operates in two distinct modes that serve different audiences and use cases within a brand organization.
+GENUIN INTEGRATION LAYER
+Sitting beneath Octo Canvas is the Genuin Integration Layer, the connective tissue that links all four modules to Genuin's backend services, brand knowledge systems, and deployment infrastructure. This layer ensures that every module operates with the correct brand context and outputs are consistently routed to the right destination.
+THE FOUR MODULES AT A GLANCE
+OCTO: THE AI ENGINE
+Octo is the AI assistant embedded inside every module. It accepts natural language instructions from users and translates them into visual, structural, or configuration changes in real time. Octo is not a generic AI; it is specifically trained and grounded in each brand's knowledge, retrieved dynamically from Maya, Genuin's brand intelligence system.
+This means every prompt Octo receives is answered with awareness of the brand's visual identity, content history, audience strategy, and product configuration, ensuring outputs are always on-brand, relevant, and production-ready.
+3. Platform Architecture Diagrams
+The diagrams below illustrate the complete Octocanvas architecture, from the top-level platform structure down to the detailed flow of each module.
+3.1  Overall Platform Architecture
+This diagram shows how Octo Canvas sits above the Genuin Integration Layer and routes user interactions through each of the four modules to their respective destinations.
+Figure 1: Octocanvas Overall Platform Architecture
+3.2  Module 1: Brand Control Center
+The flow from entry through path selection, Octo-powered editing, session management, and rebasing, through to Pull Request creation and developer review.
+Figure 2, Module 1: Brand Control Center Flow Diagram
+3.3  Module 2: Brand-Specific Demo Creation
+The complete demo creation flow including reference input handling (screenshot, URL, or none), Maya knowledge retrieval, demo naming, and static deployment to S3 / Bunny Bucket.
+Figure 3, Module 2: Brand-Specific Demo Creation Flow Diagram
+3.4  Module 3: Brand-Specific Generative Destinations
+The generative destinations flow shows both path options, component library selection, multi-session considerations, and production deployment.
+Figure 4,  Module 3: Brand-Specific Generative Destinations Flow Diagram
+3.5  Module 4: Brand-Specific Generative SDK Creation
+The SDK creation workspace shows the three-panel layout (Config Form, Octo Chat, Live Preview), the iterative refinement loop, and the JSON config generation and deployment pipeline.
+Figure 5,  Module 4: Brand-Specific Generative SDK Creation Flow Diagram
+3.6  Context & Knowledge Architecture
+How every Octo interaction retrieves brand knowledge from Maya, assembles a structured context, enriches the prompt, and ensures complete isolation between brands.
+Figure 6, Context & Knowledge Architecture: Maya Integration
+4. Module 1: Brand Control Center
+OBJECTIVE
+The Brand Control Center is the master workspace for building and evolving a brand's prototype web experience. It is designed for teams who need precise control over web page paths, with full version history, multi-user collaboration, and a structured approval workflow before changes go live.
+ENTRY POINT
+prototype.brands.begenuin.com
+HOW IT WORKS
+When a user enters the Brand Control Center, they are presented with a list of all existing page paths managed by their brand. From here, they have two options:
+Option A: Edit an Existing Path
+The current version of that path loads in the workspace alongside the Octo chat interface.
+The user prompts Octo to make changes, restructuring content, updating layouts, adjusting copy, or modifying components.
+Every change is reflected instantly in the live preview panel.
+When the user is satisfied, they request that Octo raise a Pull Request against the repository.
+A developer then reviews and merges the PR, at which point the changes go live.
+Option B: Create a New Path
+The user specifies a new URL path for the page they want to build.
+An empty canvas loads with the Octo chat interface.
+The user prompts Octo to generate the page from scratch.
+Live preview updates in real time as the page takes shape.
+On completion, a Pull Request is raised for developer review.
+SESSION & VERSION MANAGEMENT
+Each path in the Brand Control Center supports multiple editing sessions, from the same user over time or from different team members. To prevent conflicts and ensure every session builds on the most current approved state:
+Every new session or resumed session automatically rebases the working branch against the QA or Develop branch before editing begins.
+This ensures accumulated changes from other contributors are always incorporated, and that the Pull Request raised at the end of a session contains only clean, non-conflicting changes.
+KNOWLEDGE SOURCE
+The Brand Control Center always operates using the knowledge and context of Brand Genuin (brandID = 99). This is the master global knowledge layer. All Octo responses, component suggestions, and generated content are grounded in this master brand context, retrieved from Genuin's knowledge infrastructure.
+END-TO-END FLOW
+5. Module 2: Brand-Specific Demo Creation
+OBJECTIVE
+The Demo Creation module enables brand teams to rapidly produce polished, shareable interactive demos: standalone static web pages that showcase how Genuin's platform integrates with a brand's digital experience. These demos can be generated from scratch, from a screenshot of an existing page, or directly from a live URL.
+ENTRY POINT
+prototype.iheartvip.begenuin.com/demo
+HOW IT WORKS
+On entering the module, the user sees a list of all previously created demos for their brand, alongside a Create New button. From here, two paths are available:
+Option A: Edit an Existing Demo
+The current version of the selected demo loads with the Octo chat interface.
+The user prompts Octo to modify or refine the demo.
+Changes appear in the live preview instantly.
+On completion, the user deploys the demo directly to S3 / Bunny Bucket as a static file.
+Option B: Create a New Demo
+A blank canvas loads with the Octo chat interface.
+The user prompts Octo to generate the demo.
+Live preview updates in real time.
+On completion, the demo is deployed to S3 / Bunny Bucket.
+REFERENCE INPUT: HOW OCTO BUILDS FROM CONTEXT
+One of the most powerful capabilities in this module is Octo's ability to generate demos from real-world brand page references. Users can provide one of three types of input to guide generation:
+DEMO NAMING & URL STRUCTURE
+When deploying a demo, the user can specify a custom demo name. If no name is provided, Octo automatically generates a random but meaningful identifier. The demo is then available at:
+iheartvip.begenuin.com/demo/${demoname}
+KNOWLEDGE SOURCE
+This module retrieves brand knowledge dynamically from the specific brand's data stored in Maya. Every generation, modification, and placement decision is grounded in that brand's identity, content strategy, and Genuin configuration, not a generic template.
+END-TO-END FLOW
+6. Module 3: Brand-Specific Generative Destinations
+OBJECTIVE
+The Generative Destinations module enables brand teams to build, edit, and publish full production web pages at their brand's live URL. Unlike the Demo Creation module, which produces shareable static files, this module writes directly to production, making it the primary tool for maintaining and evolving a brand's live web presence on the Genuin platform.
+ENTRY POINT
+prototype.iheartvip.begenuin.com  (staging environment)
+HOW IT WORKS
+The user enters via the staging web app and is presented with a list of all existing page paths managed under their brand. Two options are available:
+Option A: Edit an Existing Path
+The current version of that path loads in the workspace with the Octo chat interface.
+The user prompts Octo to make updates or modifications.
+Components used can come from Genuin's own component library or from the brand's proprietary component library, both are supported.
+Changes are reflected live in the preview panel.
+On completion, the user initiates a production deployment.
+Option B: Generate a New Path
+The user specifies the URL path for the new page.
+A blank canvas loads with the Octo chat interface.
+The user prompts Octo to generate the page, using Genuin components or brand-owned components.
+Live preview updates in real time.
+On completion, the user initiates a production deployment.
+COMPONENT LIBRARY SUPPORT
+This module explicitly supports two component sources side by side. Brands are not locked into Genuin's component library, they can bring their own design system, ensuring that every page generated or edited through Octo aligns with the brand's existing development standards and visual identity.
+SESSION MANAGEMENT: OPEN QUESTION
+Each path supports multiple editing sessions from the same user or different users. An open architectural question remains around how concurrent sessions are managed at the codebase level, specifically, how to handle conflicting edits from multiple contributors to the same path without version divergence. This is a key area for the next phase of platform design.
+PRODUCTION DESTINATION
+iheartvip.begenuin.com/${Path}
+KNOWLEDGE SOURCE
+Like all brand-specific modules, Generative Destinations retrieves knowledge dynamically from the specific brand's data in Maya. Octo's understanding of the brand's identity, content strategy, and visual language informs every generation and modification made through the interface.
+END-TO-END FLOW
+7. Module 4: Brand-Specific Generative SDK Creation
+OBJECTIVE
+The Generative SDK Creation module is the tool through which brand teams configure, customize, and deploy Genuin's embeddable video placements, the SDKs and card components that sit inside third-party web pages, apps, and platforms. It brings AI-assisted customization to what was previously a manual, configuration-heavy process.
+ENTRY POINT
+Embed / Placement Create or Edit Screen within the Genuin platform
+HOW IT WORKS
+Before completing the creation or editing of an Embed or Placement, the user has access to Octo directly within the configuration screen. Two paths exist:
+Option A: Create a New Embed or Placement
+An empty configuration form loads alongside the Octo chat interface and a live preview panel.
+The user prompts Octo to define the appearance and behaviour of the placement.
+Every change is instantly reflected in the live preview panel.
+The user iterates with further prompts until the experience is exactly right.
+Clicking Generate finalizes the placement and saves the configuration.
+Option B: Edit an Existing Embed or Placement
+The existing configuration loads in the form alongside the Octo chat interface.
+The user prompts Octo to make modifications.
+Live preview reflects every change in real time.
+Clicking Update saves the revised configuration.
+THE THREE-PANEL WORKSPACE
+Unlike the other modules, the SDK Creation module presents users with a three-panel layout within a single screen:
+OUTPUT: JSON CONFIGURATION
+When the user clicks Generate or Update, the final output is a JSON-based SDK configuration object. This configuration defines every parameter of the placement, its layout, data sources, visual style, interaction model, and integration settings. The JSON config is:
+Stored in the database against the brand's account.
+Served dynamically by Genuin's SDK infrastructure to every active placement instance across the web.
+Updated in real time, changes deployed through this module propagate to all live placements immediately.
+KNOWLEDGE SOURCE
+This module retrieves brand knowledge dynamically from the specific brand's data in Maya. Octo uses this knowledge to ensure that every placement configuration it generates reflects the brand's visual identity, content preferences, and audience targeting parameters.
+END-TO-END FLOW
+8. Context & Knowledge Architecture
+OVERVIEW
+Every interaction across all four Octocanvas modules is powered by Octo, but Octo does not operate from a generic understanding of the world. It operates from a precise, brand-specific knowledge layer that is retrieved in real time from Genuin's Maya system. This section explains how that knowledge is structured, retrieved, and injected into every Octo interaction.
+MAYA: GENUIN'S BRAND INTELLIGENCE SYSTEM
+Maya is Genuin's central brand knowledge repository. It stores structured information about every brand on the platform, their identity, visual language, content history, audience parameters, integration settings, and platform configuration. When Octo receives a prompt from a user, it first retrieves the relevant brand context from Maya before formulating a response or generating output.
+This retrieval process ensures that Octo's outputs are never generic. A prompt to 'add a hero section' on iHeartVIP will produce a result that reflects iHeartVIP's brand identity, not a default template.
+KNOWLEDGE SOURCE RULES BY MODULE
+BRAND ISOLATION
+A fundamental principle of the Octocanvas architecture is complete brand isolation. Each brand's knowledge, embeddings, prompts, configurations, and generated outputs are stored and processed independently. There is no cross-contamination between brand contexts. This ensures:
+Brand A cannot see, influence, or accidentally receive content from Brand B.
+Each brand's Octo interactions are grounded exclusively in that brand's own data.
+Enterprise brands with strict data governance requirements can trust that their knowledge stays within their isolated context.
+HOW CONTEXT IS RETRIEVED AND INJECTED
+When a user sends a prompt to Octo, the following sequence occurs before a response is generated:
+The brand ID associated with the current session is identified.
+Relevant brand knowledge is retrieved from Maya, which includes brand identity, visual guidelines, content history, component preferences, and integration settings.
+This knowledge is assembled into a structured context object and injected into the prompt sent to the AI model.
+The AI model generates its response with full awareness of the brand's specific context.
+The response is returned to the user and rendered in the live preview.
+GENERATIVE MEMORY
+Octo maintains awareness of the current session's editing history. Within a session, each prompt builds on the previous state, Octo knows what has already been changed and can make incremental refinements without re-generating from scratch. This session memory is scoped to the current editing session and does not persist across independent sessions unless explicitly saved.
+MULTI-BRAND TENANCY
+The platform is designed to serve many brands simultaneously. Each brand operates in its own isolated knowledge space. The architecture scales horizontally, adding a new brand to the platform does not affect the performance or isolation of existing brands. Brand onboarding triggers the initialization of that brand's knowledge context in Maya, after which all four modules are immediately available for that brand.
+9. Security & Multi-Tenant Isolation
+PRINCIPLES
+Every user action is authenticated and associated with a specific brand account.
+Brand data, knowledge, configurations, and generated outputs are strictly isolated; no cross-brand data access is possible.
+All content transmitted between the user, Octo, and the platform is encrypted in transit.
+Generated configurations and deployments are validated before being stored or published.
+Access to production deployment functions requires appropriate role permissions within the brand's team.
+ROLE-BASED ACCESS
+PRODUCTION DEPLOYMENT CONTROLS
+Production deployments, whether to a live URL (Module 3), a static demo host (Module 2), or the SDK infrastructure (Module 4), are gated actions. They require a user with sufficient permissions and, in the case of Module 1, a formal Pull Request review and merge by a developer. This two-step process ensures that no AI-generated content reaches production without human review.
+10. Infrastructure & Deployment
+DEPLOYMENT TARGETS BY MODULE
+STAGING VS. PRODUCTION
+All editing and preview activity takes place on staging environments (prototype subdomains). Production deployments are a deliberate, permissioned action taken after the user has reviewed and approved their changes in the live preview. This ensures that staging acts as a complete sandbox, any experimentation, iteration, or failed generation has no impact on live experiences until explicitly promoted.
+STATIC FILE DELIVERY (MODULE 2)
+Demo files generated in Module 2 are deployed as self-contained static HTML files to S3 or Bunny Bucket. These files include all Genuin placement integrations, brand styling, and content, making them fully portable and independently shareable at their unique demo URL without any server-side dependencies.
+SDK CONFIG DELIVERY (MODULE 4)
+JSON configurations generated in Module 4 are stored in Genuin's database and delivered in real time to all active SDK placement instances. When a brand updates a placement configuration, the change propagates to all live instances immediately; no redeployment of the host page is required.
+11. Observability & Monitoring
+WHAT IS MONITORED
+AUDIT TRAIL
+Every action taken within Octocanvas is recorded in a tamper-evident audit log. This log captures who made a change, when it was made, what module it occurred in, and what the resulting output was. This is particularly important for enterprise brands with compliance or governance requirements, they can always trace the origin of any live content back to a specific user action.
+12. Roles & Permissions
+MODULE-LEVEL PERMISSION MATRIX
+13. Future Roadmap
+IMMEDIATE PRIORITIES
+Resolve the session management and codebase concurrency challenge in Module 3, define how simultaneous editors on the same path are coordinated without version conflicts.
+Expand brand component library support in Modules 3 and 4, streamline the process for brands to register and version their own component libraries within the platform.
+Deepen Maya integration, increase the richness of brand knowledge available to Octo, including audience insights, performance data, and content effectiveness signals.
+MEDIUM-TERM ENHANCEMENTS
+A/B testing support in Modules 2 and 3 allows brands to generate multiple variants of a page or demo and run controlled comparisons.
+Scheduled deployments allow brands to queue production deployments for specific dates and times.
+Collaborative editing indicators show which team members are currently active in the same workspace, reducing the likelihood of conflicting sessions.
+Expanded reference input types in Module 2, support Figma file imports and design token feeds as generation references.
+LONG-TERM VISION
+Autonomous optimization, Octo proactively suggests improvements to live pages and placements based on performance data, without waiting for user prompts.
+Cross-brand insights aggregate anonymized learnings from across the platform to improve generation quality for all brands, while maintaining strict data isolation.
+Native mobile application support, extend Octocanvas capabilities to iOS and Android deployment workflows.
+Expanded knowledge sources, connect Maya to additional brand data streams, including CRM data, commerce platforms, and audience intelligence tools.
+Octocanvas, Confidential Product Documentation  ·  Genuin Platform
+KNOWLEDGE SOURCE ARCHITECTURE: OCTO_MAYA_Features
+Mode | Who It Is For | Primary Use
+Dev Mode | Engineering and technical teams | Precision editing, version control, pull request workflows, codebase management
+Vibe Mode | Marketing, brand, and creative teams | Natural language prompting, visual generation, and no-code experience building
+Module | Entry Point | Primary Output | Destination
+1. Brand Control Center | prototype.brands.begenuin.com | Pull request on the repository | Developer review and merge
+2. Brand-Specific Demo Creation | prototype.iheartvip.begenuin.com/demo | Static HTML file | iheartvip.begenuin.com/demo/${demoname}
+3. Brand-Specific Generative Destinations | prototype.iheartvip.begenuin.com | Production web page | iheartvip.begenuin.com/${Path}
+4. Brand-Specific Generative SDK Creation | Embed / Placement screen | JSON SDK config | Stored to the database, served via the SDK
+Step | Action | Who
+1 | User enters Brand Control Center | Brand team member
+2 | Selects an existing path or creates a new one | Brand team member
+3 | Workspace loads with Octo chat and live preview | System
+4 | User prompts Octo to make changes | Brand team member
+5 | Changes render in live preview in real time | System / Octo
+6 | Session rebase against QA/Develop branch (on new or resumed sessions) | System
+7 | User completes editing and requests a Pull Request | Brand team member
+8 | PR raised on repository | System
+9 | Developer reviews, approves, and merges | Developer
+Reference Type | What Happens | Output
+Page Screenshot | Octo retrieves brand knowledge from Maya, analyses the screenshot layout, and generates complete HTML that mirrors the page structure with Genuin placements integrated throughout. | New HTML page with Genuin placements
+Page URL | Octo retrieves brand knowledge from Maya, scrapes the HTML from the provided URL, and modifies the existing HTML to inject Genuin placements at appropriate positions. | Modified HTML with injected Genuin placements
+No Reference | Octo retrieves brand knowledge from Maya and generates a brand-appropriate page with Genuin placements from first principles. | Brand-new HTML page with Genuin placements
+Step | Action | Who
+1 | User enters the Demo Creation module | Brand team member
+2 | Selects existing demo or creates a new one | Brand team member
+3 | Optionally attaches a screenshot or a URL as a reference | Brand team member
+4 | Octo retrieves brand knowledge from Maya | System / Octo
+5 | Octo generates or modifies HTML with Genuin placements | Octo AI
+6 | Live preview renders the updated page | System
+7 | User iterates with further prompts if needed | Brand team member
+8 | Demo name entered or auto-generated | User / System
+9 | Demo deployed to S3 / Bunny Bucket as static file | System
+10 | Demo live at branded URL | System
+Step | Action | Who
+1 | User enters Generative Destinations via staging environment | Brand team member
+2 | Selects existing path or specifies a new path | Brand team member
+3 | Workspace loads with Octo chat and live preview | System
+4 | Octo retrieves brand knowledge from Maya | System / Octo
+5 | User prompts Octo to generate or modify page content | Brand team member
+6 | Components selected from the Genuin library or the brand library | Octo / User
+7 | Live preview renders updates in real time | System
+8 | User iterates with further prompts if needed | Brand team member
+9 | User initiates production deployment | Brand team member
+10 | Page deployed to production URL | System
+11 | Page live at iheartvip.begenuin.com/${Path} | System
+Panel | Purpose
+Configuration Form | The structured fields and settings for the embed or placement, layout type, content feed, visual parameters, and interaction rules.
+Octo Chat Interface | The natural language interface through which the user prompts Octo to make adjustments. Octo translates these prompts into configuration changes.
+Live Preview Panel | A real-time rendering of the embed or placement exactly as it will appear when deployed. Updates instantly with every change from Octo.
+Step | Action | Who
+1 | User enters the Embed / Placement Create or Edit screen | Brand team member
+2 | Selects create new or edit existing | Brand team member
+3 | Three-panel workspace loads (form + Octo + preview) | System
+4 | Octo retrieves brand knowledge from Maya | System / Octo
+5 | User prompts Octo to configure placement experience | Brand team member
+6 | Octo updates the configuration in real time | Octo AI
+7 | Live preview panel reflects changes instantly | System
+8 | User iterates with further prompts until satisfied | Brand team member
+9 | User clicks Generate / Update CTA | Brand team member
+10 | JSON SDK config generated and stored to database | System
+11 | Embed / Placement active, config served via SDK to all placements | System
+Module | Knowledge Source | Brand ID
+Brand Control Center | Brand Genuin, master global knowledge layer | brandID = 99 (fixed)
+Brand-Specific Demo Creation | The specific brand's knowledge in Maya | Dynamic, per brand
+Brand-Specific Generative Destinations | The specific brand's knowledge in Maya | Dynamic, per brand
+Brand-Specific Generative SDK Creation | The specific brand's knowledge in Maya | Dynamic, per brand
+Role | Capabilities
+Admin | Full access to all modules, deployment, team management, and brand settings
+Editor | Create and edit paths, demos, and SDK configurations. Cannot deploy to production without approval.
+Viewer | Read-only access to existing configurations and previews. Cannot make changes.
+Developer | Pull request review and merge rights in Module 1. Technical configuration access.
+Module | Deployment Target | Infrastructure
+Brand Control Center | Git repository (PR-based) | Version-controlled codebase, developer-reviewed
+Demo Creation | S3 / Bunny Bucket | Static file hosting, CDN-served
+Generative Destinations | Production web server | Live URL, CDN-cached
+Generative SDK Creation | Database + SDK delivery network | JSON config stored in DB, served via Genuin SDK infrastructure
+Area | What Is Tracked
+Octo interactions | Every prompt, response, and generation event, logged per session, per user, per brand
+Live preview performance | Render time, error rates, and preview accuracy against the final output
+Deployment events | Every PR raised, demo deployed, page published, and SDK config updated, with timestamp and user attribution
+Knowledge retrieval | Maya queries latency, cache hit rates, and context assembly timing
+Session activity | Session start, duration, rebase events, and completion actions
+Action | Admin | Editor | Viewer | Developer
+Create or edit a path (Module 1) | Yes | Yes | No | No
+Raise a Pull Request (Module 1) | Yes | Yes | No | No
+Review and merge a PR (Module 1) | Yes | No | No | Yes
+Create or edit a demo (Module 2) | Yes | Yes | No | No
+Deploy a demo (Module 2) | Yes | Yes | No | No
+Create or edit a destination page (Module 3) | Yes | Yes | No | No
+Deploy to production (Module 3) | Yes | No | No | No
+Create or edit an embed/placement (Module 4) | Yes | Yes | No | No
+Generate / Update SDK config (Module 4) | Yes | Yes | No | No
+Manage team members and brand settings | Yes | No | No | No

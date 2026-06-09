@@ -1,0 +1,315 @@
+{
+  "source_doc": "Advertising on Genuin for TikTok",
+  "entities": [
+    {
+      "name": "TikTok",
+      "bucket": "Partnerships",
+      "type": "Organization",
+      "aliases": [],
+      "description": "Advertiser partner for whom this document outlines advertising opportunities across Genuin's network of premium brands."
+    },
+    {
+      "name": "Genuin SDK",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "Genuin Web SDK",
+        "Genuin Mobile SDK"
+      ],
+      "description": "SDK embedded in each in-network publisher's app or web property that renders the Genuin-powered video feed; available as JavaScript Web SDK or native iOS/Android Mobile SDK."
+    },
+    {
+      "name": "Genuin Video Player",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [],
+      "description": "Native ad rendering component used to render Genuin-served sponsorship ads within the feed."
+    },
+    {
+      "name": "Google IMA SDK",
+      "bucket": "Engineering",
+      "type": "Technology",
+      "aliases": [
+        "IMA SDK"
+      ],
+      "description": "Integrated within the Genuin SDK to render programmatic in-stream and in-feed video creatives natively in the feed or player."
+    },
+    {
+      "name": "Brand Content Console",
+      "bucket": "Product",
+      "type": "Platform",
+      "aliases": [
+        "Genuin BCC",
+        "BCC"
+      ],
+      "description": "Genuin's content console where advertisers like TikTok upload branded video content for Genuin to serve into in-network feed slots."
+    },
+    {
+      "name": "Sponsored Takeover",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Genuin's highest-impact placement where an advertiser's brand videos take over the entire content feed on a selected in-network brand, giving 100% share of voice."
+    },
+    {
+      "name": "Sponsored Post",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Branded video cards that appear naturally within the organic content feed at brand-configured ad-slot positions, with a subtle 'Sponsored' label."
+    },
+    {
+      "name": "Programmatic Audience Extension",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Allows advertisers to extend programmatic campaigns to Genuin's programmatically enabled in-network brands via direct ad server integration with top priority in the unified auction."
+    },
+    {
+      "name": "In-Feed Video",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Programmatic video creatives appearing as native cards within the Genuin-powered content feed, rendered by the IMA SDK and played automatically as the user scrolls."
+    },
+    {
+      "name": "In-Stream Video",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "Linear video ads running around content on in-network brand properties, available as pre-roll, mid-roll, or post-roll with first-look priority."
+    },
+    {
+      "name": "Pre-roll",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "In-stream ad position that plays before video content starts."
+    },
+    {
+      "name": "Mid-roll",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "In-stream ad position that plays at the video mid-point."
+    },
+    {
+      "name": "Post-roll",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [],
+      "description": "In-stream ad position that plays after video content ends."
+    },
+    {
+      "name": "Unified Auction",
+      "bucket": "Engineering",
+      "type": "Process",
+      "aliases": [],
+      "description": "Each in-network brand's ad server auction into which advertiser programmatic demand is integrated; top-priority demand is evaluated before all other programmatic sources."
+    },
+    {
+      "name": "Bring Your Own Algorithm",
+      "bucket": "Product",
+      "type": "Feature",
+      "aliases": [
+        "BYOA"
+      ],
+      "description": "Capability for advertisers to connect their own targeting algorithm directly to the Genuin feed, making the targeting decision for every impression in real time for sponsored placements."
+    },
+    {
+      "name": "Genuin Audience Targeting",
+      "bucket": "Audience",
+      "type": "Feature",
+      "aliases": [
+        "Out-of-the-box audience targeting"
+      ],
+      "description": "Genuin's default audience targeting capability available on selected in-network brands as an alternative to advertiser-controlled targeting."
+    },
+    {
+      "name": "In-Network Brands",
+      "bucket": "Partnerships",
+      "type": "Concept",
+      "aliases": [
+        "Genuin in-network brands",
+        "Premium brands network"
+      ],
+      "description": "The network of premium publisher brands that integrate Genuin's SDK and host advertising placements served by Genuin."
+    },
+    {
+      "name": "TikTok DSP",
+      "bucket": "Partnerships",
+      "type": "Platform",
+      "aliases": [
+        "TikTok's demand-side platform",
+        "TikTok's programmatic intermediary"
+      ],
+      "description": "TikTok's demand-side platform that owns end-to-end targeting decisions and submits bids directly at the ad server level for Programmatic Audience Extension."
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Sponsored Takeover",
+      "target": "Brand Content Console",
+      "type": "DEPENDS_ON",
+      "description": "Advertisers upload branded video to BCC and Genuin serves it into every feed slot for the takeover."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Brand Content Console",
+      "type": "DEPENDS_ON",
+      "description": "Advertisers upload branded video to BCC and Genuin serves it at brand-defined ad-slot positions within the feed."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Genuin Video Player",
+      "type": "USES",
+      "description": "Sponsorship ads are rendered by the Genuin Video Player."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Genuin Video Player",
+      "type": "USES",
+      "description": "Sponsorship ads are rendered by the Genuin Video Player."
+    },
+    {
+      "source": "In-Stream Video",
+      "target": "Google IMA SDK",
+      "type": "USES",
+      "description": "In-stream video ads are rendered via the Google IMA SDK integrated within the Genuin SDK."
+    },
+    {
+      "source": "In-Feed Video",
+      "target": "Google IMA SDK",
+      "type": "USES",
+      "description": "Programmatic in-feed video creatives are rendered by the IMA SDK as native cards in the feed."
+    },
+    {
+      "source": "Google IMA SDK",
+      "target": "Genuin SDK",
+      "type": "PART_OF",
+      "description": "The IMA SDK is integrated within the Genuin SDK to render programmatic creatives natively."
+    },
+    {
+      "source": "Genuin SDK",
+      "target": "In-Network Brands",
+      "type": "INTEGRATES_WITH",
+      "description": "Each in-network publisher's app or web property embeds the Genuin SDK to render the video feed."
+    },
+    {
+      "source": "Programmatic Audience Extension",
+      "target": "In-Feed Video",
+      "type": "INCLUDES",
+      "description": "Programmatic Audience Extension covers in-feed video placements within the content feed."
+    },
+    {
+      "source": "Programmatic Audience Extension",
+      "target": "In-Stream Video",
+      "type": "INCLUDES",
+      "description": "Programmatic Audience Extension covers in-stream video placements around content."
+    },
+    {
+      "source": "In-Stream Video",
+      "target": "Pre-roll",
+      "type": "INCLUDES",
+      "description": "Pre-roll is an in-stream ad position that plays before content begins."
+    },
+    {
+      "source": "In-Stream Video",
+      "target": "Mid-roll",
+      "type": "INCLUDES",
+      "description": "Mid-roll is an in-stream ad position that plays at content mid-point."
+    },
+    {
+      "source": "In-Stream Video",
+      "target": "Post-roll",
+      "type": "INCLUDES",
+      "description": "Post-roll is an in-stream ad position that plays after content ends."
+    },
+    {
+      "source": "Programmatic Audience Extension",
+      "target": "Unified Auction",
+      "type": "DEPENDS_ON",
+      "description": "TikTok's demand is integrated into each brand's unified ad auction with top priority across in-feed and in-stream placements."
+    },
+    {
+      "source": "TikTok",
+      "target": "Programmatic Audience Extension",
+      "type": "USES",
+      "description": "TikTok extends its programmatic campaigns to Genuin's in-network brands via Programmatic Audience Extension."
+    },
+    {
+      "source": "TikTok",
+      "target": "Sponsored Takeover",
+      "type": "USES",
+      "description": "TikTok can buy Sponsored Takeover placements for 100% share of voice across an in-network brand's feed."
+    },
+    {
+      "source": "TikTok",
+      "target": "Sponsored Post",
+      "type": "USES",
+      "description": "TikTok can buy Sponsored Post placements that appear natively in the organic content feed."
+    },
+    {
+      "source": "TikTok",
+      "target": "Brand Content Console",
+      "type": "USES",
+      "description": "TikTok uploads branded video content to Genuin's BCC for sponsorship campaigns."
+    },
+    {
+      "source": "TikTok",
+      "target": "TikTok DSP",
+      "type": "OWNED_BY",
+      "description": "TikTok's demand-side platform is owned and controlled by TikTok and submits bids into Genuin's unified auction."
+    },
+    {
+      "source": "TikTok DSP",
+      "target": "Unified Auction",
+      "type": "INTEGRATES_WITH",
+      "description": "TikTok's DSP bids directly at the ad server level into each in-network brand's unified auction with top priority."
+    },
+    {
+      "source": "Bring Your Own Algorithm",
+      "target": "Sponsored Takeover",
+      "type": "PART_OF",
+      "description": "BYOA is available for Sponsored Takeover, letting the advertiser's server make targeting decisions in real time."
+    },
+    {
+      "source": "Bring Your Own Algorithm",
+      "target": "Sponsored Post",
+      "type": "PART_OF",
+      "description": "BYOA is available for Sponsored Post, letting the advertiser's server make targeting decisions in real time."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "Genuin Audience Targeting",
+      "type": "USES",
+      "description": "Sponsored Takeover supports Genuin's out-of-the-box audience targeting on the selected in-network brand."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "Genuin Audience Targeting",
+      "type": "USES",
+      "description": "Sponsored Post supports Genuin's out-of-the-box audience targeting on the selected in-network brand."
+    },
+    {
+      "source": "Sponsored Takeover",
+      "target": "In-Network Brands",
+      "type": "OPERATES_IN",
+      "description": "Sponsored Takeover runs across the selected in-network brand's full video feed."
+    },
+    {
+      "source": "Sponsored Post",
+      "target": "In-Network Brands",
+      "type": "OPERATES_IN",
+      "description": "Sponsored Posts run as branded video cards within the content feed across in-network brands."
+    },
+    {
+      "source": "Programmatic Audience Extension",
+      "target": "In-Network Brands",
+      "type": "OPERATES_IN",
+      "description": "Programmatic Audience Extension is supported across all programmatically enabled Genuin in-network brands."
+    }
+  ],
+  "_src_hash": "e18c442ea51eadfab30a4e351651d7cacb01310f9e11ea26eeef7335121b7fc2",
+  "_skill_sig": "4edd28021f3312b1"
+}
