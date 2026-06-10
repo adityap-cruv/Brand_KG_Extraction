@@ -36,7 +36,7 @@ import time
 log = logging.getLogger("brandkg.engine")
 
 DEFAULT_BASE_URL = "https://d180-103-91-222-46.ngrok-free.app/v1"
-DEFAULT_MODEL = "qwen3.6:35b"
+DEFAULT_MODEL = "qwen2.5:32b-instruct"
 
 
 def _flag(name: str, default: str = "1") -> bool:
@@ -130,3 +130,29 @@ class LocalEngine(Engine):
                 if i < attempts - 1:
                     time.sleep(min(_retry_base() * (3 ** i), 60.0))
         raise last_exc
+
+
+class OpenAIEngine(LocalEngine):
+    """A commercial OpenAI (or OpenAI-compatible) model, e.g. for generating answers
+    while KG extraction stays on the local model. Same client machinery as
+    LocalEngine; only the endpoint/model/key differ. Authenticates with LLM_API_KEY
+    (the key the GraphRAG-Bench evaluator already uses).
+
+    Env: LLM_API_KEY/OPENAI_API_KEY (required), BRANDKG_OPENAI_MODEL (default
+    gpt-4o-mini), BRANDKG_OPENAI_BASE_URL, BRANDKG_OPENAI_MAX_TOKENS.
+    """
+    name = "openai"
+
+    def __init__(self):
+        from openai import OpenAI
+        api_key = os.getenv("LLM_API_KEY") or os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise RuntimeError(
+                "openai engine requires LLM_API_KEY (or OPENAI_API_KEY) — "
+                "uncomment LLM_API_KEY in config/settings.env.")
+        self.base_url = os.getenv("BRANDKG_OPENAI_BASE_URL", "https://api.openai.com/v1")
+        self.model = os.getenv("BRANDKG_OPENAI_MODEL", "gpt-4o-mini")
+        self.max_tokens = int(os.getenv("BRANDKG_OPENAI_MAX_TOKENS", "4096"))
+        self.min_timeout = int(os.getenv("BRANDKG_OPENAI_MIN_TIMEOUT", "120"))
+        self.json_mode = _flag("BRANDKG_OPENAI_JSON_MODE", "1")
+        self._client = OpenAI(api_key=api_key, base_url=self.base_url, max_retries=2)

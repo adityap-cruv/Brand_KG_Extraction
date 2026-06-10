@@ -214,7 +214,12 @@ def run(subset, sample=None, corpus_limit=None, bench_repo=None, force=False,
         raise SystemExit(f"benchmark parquet not found under {repo} (looked for {cpath.name}, {qpath.name})")
 
     schema = config.schema("generic_schema.json")
-    engine = get_engine(config.ENGINE)
+    engine = get_engine(config.ENGINE)            # builds the KG
+    # Answers may use a different (e.g. commercial) engine; reuse the build engine
+    # when they're the same so we don't open two clients needlessly.
+    answer_engine = engine if config.ANSWER_ENGINE == config.ENGINE else get_engine(config.ANSWER_ENGINE)
+    if answer_engine is not engine:
+        log.info("engines: build=%s answer=%s", config.ENGINE, config.ANSWER_ENGINE)
     corpora = pd.read_parquet(cpath).to_dict("records")
     if corpus_limit:
         corpora = corpora[:corpus_limit]
@@ -267,7 +272,7 @@ def run(subset, sample=None, corpus_limit=None, bench_repo=None, force=False,
         if answer_source in {"llm", "hybrid"}:
             ctext = c["context"]
             text_fn = lambda question, question_type=None, _t=ctext: answer_from_text(
-                engine, question, _t, question_type=question_type)
+                answer_engine, question, _t, question_type=question_type)
         for rec in answer_corpus(drv, name, todo, config.CONCURRENCY,
                                  answer_source=answer_source, text_answer_fn=text_fn,
                                  kg_query_mode=kg_query_mode):

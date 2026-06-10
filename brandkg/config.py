@@ -40,6 +40,10 @@ NEO4J_URI = env("BRANDKG_NEO4J_URI", "bolt://localhost:7688")
 NEO4J_AUTH = (env("BRANDKG_NEO4J_USER", "neo4j"), env("BRANDKG_NEO4J_PASSWORD", "brandkg2026"))
 SOURCE_DIR = env("BRANDKG_SOURCE_DIR", "")
 ENGINE = env("BRANDKG_ENGINE", "claude")
+# Engine used for ANSWER generation (graphrag-bench). Defaults to ENGINE, but can be
+# set independently — e.g. ENGINE=local for cheap KG building, ANSWER_ENGINE=openai
+# for higher-quality commercial answers.
+ANSWER_ENGINE = env("BRANDKG_ANSWER_ENGINE", ENGINE)
 CONCURRENCY = int(env("BRANDKG_CONCURRENCY", "6"))
 BENCH_REPO = env("BRANDKG_BENCH_REPO", "")
 BENCH_PYTHON = env("BRANDKG_BENCH_PYTHON", "")

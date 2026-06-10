@@ -16,9 +16,10 @@ import os
 from .base import Engine
 from .claude_engine import ClaudeEngine
 from .codex_engine import CodexEngine
-from .local_engine import LocalEngine
+from .local_engine import LocalEngine, OpenAIEngine
 
-_REGISTRY = {"claude": ClaudeEngine, "codex": CodexEngine, "local": LocalEngine}
+_REGISTRY = {"claude": ClaudeEngine, "codex": CodexEngine,
+             "local": LocalEngine, "openai": OpenAIEngine}
 
 
 def get_engine(name: str | None = None) -> Engine:

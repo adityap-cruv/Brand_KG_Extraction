@@ -327,7 +327,7 @@ def retrieve_fast_context(session, corpus, question):
 
 def answer_fast_with_context(question: str, corpus: str, session=None, verbose: bool = False,
                              question_type: str | None = None):
-    engine = get_engine(config.ENGINE)
+    engine = get_engine(config.ANSWER_ENGINE)
 
     def _answer(s):
         contexts = retrieve_fast_context(s, corpus, question)
@@ -371,7 +371,7 @@ def answer_with_context(question: str, corpus: str, session=None, verbose: bool 
     If `session` is provided it is reused (no driver churn across many questions);
     otherwise a driver/session is opened and closed for this call.
     """
-    engine = get_engine(config.ENGINE)
+    engine = get_engine(config.ANSWER_ENGINE)
     task_question = (
         f"QUESTION TYPE: {question_type or 'Unspecified'}\n"
         f"ANSWER STYLE: {_answer_guidance(question_type)}\n"
